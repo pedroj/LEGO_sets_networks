@@ -1,0 +1,16 @@
+download.file("https://m.rebrickable.com/media/downloads/colors.csv",
+  "colors.csv")
+download.file("https://m.rebrickable.com/media/downloads/inventories.csv",
+  "inventories.csv")
+download.file("https://m.rebrickable.com/media/downloads/inventory_parts.csv",
+  "inventory_parts.csv")
+download.file("https://m.rebrickable.com/media/downloads/inventory_sets.csv",
+  "inventory_sets.csv")
+download.file("https://m.rebrickable.com/media/downloads/parts.csv",
+  "parts.csv")
+download.file("https://m.rebrickable.com/media/downloads/part_categories.csv",
+  "part_categories.csv")
+download.file("https://m.rebrickable.com/media/downloads/sets.csv",
+  "sets.csv")
+download.file("https://cdn.rebrickable.com/media/downloads/themes.csv.gz",
+  "themes.csv")
