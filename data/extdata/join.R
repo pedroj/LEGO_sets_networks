@@ -6,7 +6,7 @@
 # 4 . , colors
 # 5 . , sets
 # 6 . , themes
-
+       
 library("dplyr")
 dleft <- left_join(inventory_parts, inventory_sets, by="inventory_id")
 dim(dleft)
