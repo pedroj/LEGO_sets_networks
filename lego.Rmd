@@ -1,0 +1,194 @@
+---
+title: "LEGO sets"
+author: "Pedro Jordano"
+date: "febrero 18, 2015"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### LEGO sets diversity and connectivity analysis
+
+This is an analysis of LEGO sets patterns of component parts: their diversity and connectivity forms. 
+
+```{r}
+library(dplyr)
+library(stringr)
+library(vegan)
+library(here)
+
+```
+
+
+## Input data
+
+Input inventory datasets from [BrickLink][http://www.bricklink.com]
+
+```{r input_lego }
+colors <- readr::read_csv(here::here("data/extdata/colors.csv"))
+inventories <- readr::read_csv("data/extdata/inventories.csv")
+inventory_parts <- readr::read_csv("data/extdata/inventory_parts.csv")
+inventory_sets <- readr::read_csv("data/extdata/inventory_sets.csv")
+part_categories <- readr::read_csv("data/extdata/part_categories.csv")
+parts <- readr::read_csv("data/extdata/parts.csv")
+sets <- readr::read_csv("data/extdata/sets.csv")
+themes <- readr::read_csv("data/extdata/themes.csv")
+elements <- readr::read_csv("data/extdata/elements.csv")
+inventory_minifigs <- readr::read_csv("data/extdata/inventory_minifigs.csv")
+minifigs <- readr::read_csv("data/extdata/minifigs.csv")
+part_relationships <- readr::read_csv("data/extdata/part_relationships.csv")
+
+```
+
+
+Create joined datasets with different informatioon on sets and parts.
+```{r joined_datasets}
+dleft <- left_join(inventory_parts, inventory_sets, by="inventory_id")
+names(dleft)
+
+dleft <- left_join(sets, inventory_sets, by="set_num")
+dleft<- dleft[,1:5,7]
+dleft %>% dplyr::filter(grepl('odracer', name))
+
+dleft01 <- left_join(inventory_parts, inventories, by=c("inventory_id" = "id"))
+names(dleft01)
+
+dleft02 <- left_join(dleft01, parts, by="part_num")
+names(dleft02)
+
+dleft03 <- left_join(dleft02, part_categories, by=c("part_cat_id"="id"))
+names(dleft03)
+
+dleft03 <- rename(dleft03, "part_name"=name.x, "part_category"=name.y)
+names(dleft03)
+
+
+dleft04 <- left_join(dleft03, colors, by=c("color_id"="id"))
+names(dleft04)
+
+dleft04 <- rename(dleft04, color_name="name")
+
+dleft05 <- left_join(dleft04, sets, by="set_num")
+names(dleft05)
+
+dleft06 <- left_join(dleft05, themes, by=c("theme_id" = "id"))
+names(dleft06)
+
+dleft06 <- rename(dleft06, "set_name"=name.x, "theme"=name.y)
+names(dleft06)
+dim(dleft06)
+
+main<- left_join(dleft06, elements, by=c("part_num","color_id"))
+names(main)
+dim(main)
+write_csv(main,"data/extdata/main.csv")
+
+```
+
+## Diversity
+
+```{r subsets}
+# Anakin Skywalker and Sebulba's Podracers
+AnaSebPodRac_7962 <- dleft06 %>%
+    dplyr::filter(set_num == "7962-1")  
+
+AnaSebPodRac_7962 <- left_join(AnaSebPodRac_7962, elements, by=c("part_num","color_id"))
+dim(xxx)
+names(xxx)
+write_csv(AnaSebPodRac_7962,"data/models_adj/AnaSebPodRac_7962.csv")
+
+#####
+
+themes %>%
+    dplyr::filter(name == "Star Wars") 
+
+podracers<- dleft05 %>%
+         dplyr::filter(grepl('odracer', name))
+
+dleft06 %>% dplyr::filter(grepl('Star', theme))
+
+podracers %>%
+    group_by(name) %>%
+    dplyr::summarize(H= vegan::diversity(quantity, 
+                 index = "shannon", MARGIN = 1, base = exp(1)))
+
+toMatch <- c("209", "261")  # Star Wars
+toMatch <- c("214","228", "514","627","673","674")  # Creator
+
+
+Starwars<- dleft05 %>%
+         dplyr::select(set_num, theme_id, inventory_id, name, 
+                       part_num, part_name, quantity)  %>% 
+         dplyr::filter(grepl(toMatch, theme_id))
+         
+tt <- themes %>%
+         dplyr::filter(name=="Star Wars") 
+
+
+Creator<- dleft05 %>%
+        dplyr::select(set_num, theme_id, inventory_id, name, 
+                       part_num, part_name, quantity) %>% 
+        dplyr::filter(grepl(toMatch, theme_id))
+
+
+```
+
+
+```{r diversity_set, echo=FALSE}
+H <- vegan::diversity(table(AnaSebPodRac_7962$part_num))
+
+H <- vegan::diversity(table(AnaSebPodRac_7962$part_num), 
+                 index = "shannon", MARGIN = 1, base = exp(1))
+
+simp <- vegan::diversity(table(AnaSebPodRac_7962$part_num), "simpson")
+invsimp <- vegan::diversity(table(AnaSebPodRac_7962$part_num), "inv")
+## Unbiased Simpson (Hurlbert 1971, eq. 5) with rarefy:
+unbias.simp <- vegan::rarefy(table(AnaSebPodRac_7962$part_num), 2) - 1
+
+## Fisher alpha
+alpha <- vegan::fisher.alpha(table(AnaSebPodRac_7962$part_num))
+S <- vegan::specnumber(table(AnaSebPodRac_7962$part_num)) ## rowSums(Qty > 0) does the same...
+J <- H/log(S)
+
+## Plot all
+cbind(H, simp, invsimp, unbias.simp, alpha, S, J)
+
+
+```
+
+
+```{r diversity_themes}
+Starwars %>%
+    group_by(name) %>%
+    dplyr::summarize(H= vegan::diversity(quantity, 
+                 index = "shannon", MARGIN = 1, base = exp(1)))
+
+Creator %>%
+    group_by(name) %>%
+    dplyr::summarize(H= vegan::diversity(quantity, 
+                 index = "shannon", MARGIN = 1, base = exp(1)))
+
+
+```
+
+
+
+
+
+```{r test, echo=FALSE}
+impshuttle <- read.table("./data/LEGO_Star Wars_Mini_Star Wars Episode 456_Imperial shuttle_20016-1.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
+
+vegan::diversity(impshuttle$Qty, 
+                 index = "shannon", MARGIN = 1, base = exp(1))
+H <- vegan::diversity(impshuttle$Qty)
+
+```
+
+----------------------------------
+```{r}
+sessionInfo()
+```
+
+----------------------------------
