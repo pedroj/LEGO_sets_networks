@@ -1,2 +1,4 @@
-# LEGO_sets_networks
-Analysis of linkage patterns in LEGO sets and parts diversity.
+# LEGO_sets
+An analysis of LEGO pieces linkage patterns and model complexity.
+
+![Isogawa model #158](./images/isogawa_158.png)
