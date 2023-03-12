@@ -265,10 +265,98 @@ cbind(H, simp, invsimp, unbias.simp, alpha, S, J)
 
 ```{r diversity_all_sets}
 # Sets and Themes.
+# Subsetting main themes (those with ≥ 10 sets).
+names(lego_sets)
+subset_themes_n10<- lego_sets %>% # Subsetting main themes (those with ≥ 10 sets).
+                                  # There are 51 themes with at least 10 parts,
+                                  # and are not Minifigures, Value Packs, or
+                                  # Audio and Visual Media.
+     dplyr::select(theme_name, theme_id, set_name, year, num_parts) %>% 
+     dplyr::group_by(theme_name) %>%
+     dplyr::summarise(sum_parts = sum(num_parts), n = n()) %>% 
+     dplyr::filter(sum_parts> 0) %>% 
+     dplyr::filter(!grepl('Audio and', theme_name)) %>% 
+     dplyr::filter(!grepl('Minifig', theme_name)) %>% 
+     dplyr::filter(!grepl('Key Chain', theme_name)) %>% 
+     dplyr::filter(!grepl('Books', theme_name)) %>% 
+     dplyr::filter(!grepl('Service Packs', theme_name)) %>% 
+     dplyr::filter(!grepl('Stationery and Office Supplies', theme_name)) %>% 
+     dplyr::filter(!grepl('Duplo and Explore', theme_name)) %>% 
+     dplyr::filter(!grepl('Houseware', theme_name)) %>% 
+     dplyr::filter(!grepl('Clocks and Watches', theme_name)) %>% 
+     dplyr::filter(!grepl('Storage', theme_name)) %>% 
+     dplyr::filter(!grepl('Bulk Bricks', theme_name)) %>% 
+     dplyr::filter(!grepl('Duplo', theme_name)) %>% 
+     dplyr::filter(!grepl('Magnets', theme_name)) %>% 
+     dplyr::filter(!grepl('Primo', theme_name)) %>% 
+     dplyr::filter(!grepl('Tabletop Games and Puzzles', theme_name)) %>% 
+     dplyr::filter(!grepl('LEGO Originals', theme_name)) %>% 
+     dplyr::filter(!grepl('Power Functions', theme_name)) %>% 
+     dplyr::filter(!grepl('Powered Up', theme_name)) %>% 
+     dplyr::filter(!grepl('Books', theme_name)) %>% 
+     dplyr::filter(!grepl('Books', theme_name)) %>% 
+     dplyr::filter(!grepl('Value', theme_name)) %>% 
+     dplyr::filter(n > 9) %>% dplyr::arrange(desc(n))
+print(subset_themes_n10, n=300)
 
+# Select rows in lego_parts that match those sets listed in 'subset_themes_n10'.
+#
+subset_parts_themes_n10<- lego_parts %>% 
+     # Subsetting main themes (those with ≥ 10 sets).
+     # Here I filter those themes not included in 
+     # subset_themes_n10, but using the whole list
+     # of parts.
+     select(theme_name, 
+                      theme_id, 
+                      set_img_url,
+                      set_num, 
+                      set_name, 
+                      year, 
+                      num_parts,
+                      inventory_id, 
+                      part_cat_id,
+                      part_category,
+                      part_num, 
+                      part_name,
+                      quantity,
+                      part_img_url,
+                      part_material,
+                      color_id,
+                      color_name,
+                      is_trans,
+                      rgb,
+                      parent_id,
+                      is_spare,
+                      version) %>% 
+     #dplyr::group_by(theme_name, set_name) %>%
+     #dplyr::summarise(sum_parts = sum(num_parts), n = n()) %>% 
+     #dplyr::filter(sum_parts> 0) %>% 
+     dplyr::filter(!grepl('Audio and', theme_name)) %>% 
+     dplyr::filter(!grepl('Minifig', theme_name)) %>% 
+     dplyr::filter(!grepl('Key Chain', theme_name)) %>% 
+     dplyr::filter(!grepl('Books', theme_name)) %>% 
+     dplyr::filter(!grepl('Service Packs', theme_name)) %>% 
+     dplyr::filter(!grepl('Stationery and Office Supplies', theme_name)) %>% 
+     dplyr::filter(!grepl('Duplo and Explore', theme_name)) %>% 
+     dplyr::filter(!grepl('Houseware', theme_name)) %>% 
+     dplyr::filter(!grepl('Clocks and Watches', theme_name)) %>% 
+     dplyr::filter(!grepl('Storage', theme_name)) %>% 
+     dplyr::filter(!grepl('Bulk Bricks', theme_name)) %>% 
+     dplyr::filter(!grepl('Duplo', theme_name)) %>% 
+     dplyr::filter(!grepl('Magnets', theme_name)) %>% 
+     dplyr::filter(!grepl('Primo', theme_name)) %>% 
+     dplyr::filter(!grepl('Tabletop Games and Puzzles', theme_name)) %>% 
+     dplyr::filter(!grepl('LEGO Originals', theme_name)) %>% 
+     dplyr::filter(!grepl('Power Functions', theme_name)) %>% 
+     dplyr::filter(!grepl('Powered Up', theme_name)) %>% 
+     dplyr::filter(!grepl('Books', theme_name)) %>% 
+     dplyr::filter(!grepl('Books', theme_name)) %>% 
+     dplyr::filter(!grepl('Value', theme_name)) #%>% 
+     #dplyr::filter(n > 9) %>% dplyr::arrange(desc(n))
 
-
+#------------------------------------------------------------------------------
 # Groups of models
+# ALL SETS.
 all_H<- lego_parts %>%
     group_by(set_name) %>%
     dplyr::summarize(H= vegan::diversity(table(quantity), 
@@ -293,8 +381,8 @@ all_S<- lego_parts %>%
 all_J<- as.data.frame(cbind(set_name=all_H$set_name, J= all_H$H/log(all_S$S)))
 #(J= H/log(S))
 
-
-#-----------------------------------
+#------------------------------------------------------------------------------
+# ALL SETS INCLUDED. 
 allsets_div<- as.data.frame(cbind(
                             all_H, 
                             simp= all_Simp$simp,
@@ -324,8 +412,131 @@ gg <- ggplot(allsets_div, aes(x = num_parts, y = H)) +
     scale_x_log10() + scale_y_log10() +
     theme_bw()
 gg
+#------------------------------------------------------------------------------
 
-#------------------------------------------------------------------------
+```
+
+### Analyses for part-related themes; subsetted
+
+Here I subsetted those themes that have actaul part-related sets., i.e., 
+excluding themes like Books, Gear, etc.
+
+I'm usismg the whole part list in order to estimate diversity parameters on sets.
+
+```{r}
+# Select rows in lego_parts that match those sets listed in 'subset_themes_n10'.
+#
+subset_parts_themes_n10<- lego_parts %>% 
+     # Subsetting main themes (those with ≥ 10 sets).
+     # Here I filter those themes not included in 
+     # subset_themes_n10, but using the whole list
+     # of parts.
+     select(theme_name, 
+                      theme_id, 
+                      set_img_url,
+                      set_num, 
+                      set_name, 
+                      year, 
+                      num_parts,
+                      inventory_id, 
+                      part_cat_id,
+                      part_category,
+                      part_num, 
+                      part_name,
+                      quantity,
+                      part_img_url,
+                      part_material,
+                      color_id,
+                      color_name,
+                      is_trans,
+                      rgb,
+                      parent_id,
+                      is_spare,
+                      version) %>% 
+     #dplyr::group_by(theme_name, set_name) %>%
+     #dplyr::summarise(sum_parts = sum(num_parts), n = n()) %>% 
+     #dplyr::filter(sum_parts> 0) %>% 
+     dplyr::filter(!grepl('Audio and', theme_name)) %>% 
+     dplyr::filter(!grepl('Minifig', theme_name)) %>% 
+     dplyr::filter(!grepl('Key Chain', theme_name)) %>% 
+     dplyr::filter(!grepl('Books', theme_name)) %>% 
+     dplyr::filter(!grepl('Service Packs', theme_name)) %>% 
+     dplyr::filter(!grepl('Stationery and Office Supplies', theme_name)) %>% 
+     dplyr::filter(!grepl('Duplo and Explore', theme_name)) %>% 
+     dplyr::filter(!grepl('Houseware', theme_name)) %>% 
+     dplyr::filter(!grepl('Clocks and Watches', theme_name)) %>% 
+     dplyr::filter(!grepl('Storage', theme_name)) %>% 
+     dplyr::filter(!grepl('Bulk Bricks', theme_name)) %>% 
+     dplyr::filter(!grepl('Duplo', theme_name)) %>% 
+     dplyr::filter(!grepl('Magnets', theme_name)) %>% 
+     dplyr::filter(!grepl('Primo', theme_name)) %>% 
+     dplyr::filter(!grepl('Tabletop Games and Puzzles', theme_name)) %>% 
+     dplyr::filter(!grepl('LEGO Originals', theme_name)) %>% 
+     dplyr::filter(!grepl('Power Functions', theme_name)) %>% 
+     dplyr::filter(!grepl('Powered Up', theme_name)) %>% 
+     dplyr::filter(!grepl('Books', theme_name)) %>% 
+     dplyr::filter(!grepl('Books', theme_name)) %>% 
+     dplyr::filter(!grepl('Value', theme_name)) #%>% 
+     #dplyr::filter(n > 9) %>% dplyr::arrange(desc(n))
+
+------------------------------------------------------------------------------
+# Groups of models
+# ALL SETS.
+subset_parts_themes_n10_H<- subset_parts_themes_n10 %>%
+    group_by(set_name) %>%
+    dplyr::summarize(H= vegan::diversity(table(quantity), 
+                 index = "shannon", MARGIN = 1, base = exp(1)))
+subset_parts_themes_n10_Simp<- subset_parts_themes_n10 %>%
+    group_by(set_name) %>%
+    dplyr::summarize(simp= vegan::diversity(table(quantity), "simpson")) 
+subset_parts_themes_n10_invSimp<- subset_parts_themes_n10 %>%
+    group_by(set_name) %>%
+    dplyr::summarize(invSimp= vegan::diversity(table(quantity), 
+                 index = "inv")) 
+subset_parts_themes_n10_unbSimp<- subset_parts_themes_n10 %>%
+    group_by(set_name) %>%
+    dplyr::summarize(unbias.simp= vegan::rarefy(table(quantity), 
+                     2) - 1) 
+# stw_alpha<- Starwars %>%
+#     group_by(set_name) %>%
+#     dplyr::summarize(alpha= vegan::fisher.alpha(table(quantity))) 
+subset_parts_themes_n10_S<- subset_parts_themes_n10 %>%
+    group_by(set_name) %>%
+    dplyr::summarize(S= vegan::specnumber(table(quantity)))
+subset_parts_themes_n10_J<- as.data.frame(cbind(set_name=subset_parts_themes_n10_H$set_name, J= subset_parts_themes_n10_H$H/log(subset_parts_themes_n10_S$S)))
+#(J= H/log(S))
+
+#------------------------------------------------------------------------------
+# ALL SETS INCLUDED. 
+subset_parts_themes_n10_div<- as.data.frame(cbind(
+                            all_H, 
+                            simp= all_Simp$simp,
+                            invSimp= all_invSimp$invSimp,
+                            unbias.simp= all_unbSimp$unbias.simp,
+                            S= all_S$S,
+                            J= all_J$J
+                            ))
+
+tt<- as.data.frame(table(subset_parts_themes_n10$set_name))
+tt <- rename(tt, "set_name"=Var1, "num_parts"=Freq)
+tt<- inner_join(tt, subset_parts_themes_n10[,c(4,5,6,1,2,8,11,12)], by = "set_name",multiple="first")
+
+# allsets_div<-  as.data.frame(cbind(tt,allsets_div))
+subset_parts_themes_n10_div <- left_join(tt, subset_parts_themes_n10_div,
+  by="set_name") 
+
+subset_parts_themes_n10_div<- subset_parts_themes_n10_div %>% # Filtering out H'=0 records.
+        dplyr::filter(H > 0.5)  %>% 
+        dplyr::filter(num_parts> 15)
+
+# Plots of H' vs no. parts for sets.
+# 
+plot(subset_parts_themes_n10_div$num_parts,subset_parts_themes_n10_div$H)
+gg <- ggplot(subset_parts_themes_n10_div, aes(x = num_parts, y = H)) +
+    geom_point() +
+    scale_x_log10() + scale_y_log10() +
+    theme_bw()
+gg
 
 ```
 
@@ -347,6 +558,9 @@ V(model75344.g)$color <- com$membership+1
 pal2 <- rainbow(5, alpha=.5)
 vertex_attr(model75344.g)
 
+# Plot of parts interactions. Numbers are LEGo part numbers.
+# Colors are clusters.
+# 
 igraph::plot.igraph(model75344.g, layout = layout.fruchterman.reingold, 
      # === vertex
      # === vertex label
@@ -364,6 +578,8 @@ igraph::plot.igraph(model75344.g, layout = layout.fruchterman.reingold,
      # === Other
      margin= c(0,0,0,0), rescale= TRUE
      )
+
+# A 3D plot, interactive. Needs X11.
 coords <- layout_with_fr(model75344.g, dim=3)
 rglplot(model75344.g, 
         layout=coords,
