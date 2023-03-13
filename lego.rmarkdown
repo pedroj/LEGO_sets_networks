@@ -624,7 +624,8 @@ ggp <- ggraph(model75344.g, 'igraph', algorithm = 'kk') +
   coord_fixed() + 
   scale_edge_alpha('model75344[,4]') +
   geom_node_point(color = 'steelblue', size = 6, alpha= 0.7) +
-  ggforce::theme_no_axes()
+  ggforce::theme_no_axes() +
+  ggtitle("75344-1-Boba Fett's Starship")
 
 # readPNG function to load an image that we have stored on our computer:
 my_image <- readPNG("images/75344-1-Boba Fett's Starship.png", native = TRUE)
@@ -636,7 +637,7 @@ ggp_image <- ggp +                  # Combine plot & image
                 left = 0.65,
                 bottom = 0.1,
                 right = 0.9,
-                top = 0.35, align_to = 'full', clip=T)
+                top = 0.45, align_to = 'full', clip=T)
 ggp_image                           # Draw combined plot
 
 ```
@@ -646,7 +647,6 @@ ggp_image                           # Draw combined plot
 ```{r}
 sessionInfo()
 ```
-
 
 ----------------------------------
 
