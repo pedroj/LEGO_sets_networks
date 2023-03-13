@@ -9,9 +9,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 ### LEGO sets diversity and connectivity analysis
 
 This is an analysis of LEGO sets patterns of component parts: their diversity and connectivity forms. 
+
 
 ```{r packages, message=FALSE}
 library(dplyr)
@@ -26,9 +28,11 @@ library("patchwork")                # Load patchwork
 
 ```
 
+
 ## Input data
 
 Input inventory datasets from [BrickLink][http://www.bricklink.com]
+
 
 ```{r input_lego }
 # Input from local drive; previously downloaded files from Rebrickable.
@@ -88,7 +92,9 @@ part_relationships <- dwld(urlpart_relationships)
 ```
 
 
+
 Create joined datasets with different informatioon on sets and parts.
+
 ```{r joined_datasets}
 # Joins:
 # 0 inventory_parts
@@ -149,7 +155,9 @@ write_csv(lego_sets, "data/extdata/lego_sets.csv")
 
 ```
 
+
 ## Diversity
+
 
 ```{r subsets}
 # Anakin Skywalker and Sebulba's Podracers
@@ -241,7 +249,9 @@ gg
 
 ```
 
+
 #### Diversity for specific sets
+
 ```{r diversity_set, echo=FALSE}
 # For a specific model.
 H <- vegan::diversity(table(AnaSebPodRac_7962$part_num))
@@ -264,7 +274,9 @@ cbind(H, simp, invsimp, unbias.simp, alpha, S, J)
 
 ```
 
+
 ### Diversity analysis for all LEGO sets.
+
 
 ```{r diversity_all_sets}
 # Sets and Themes.
@@ -419,12 +431,14 @@ gg
 
 ```
 
+
 ### Analyses for part-related themes; subsetted
 
 Here I subsetted those themes that have actaul part-related sets., i.e., 
 excluding themes like Books, Gear, etc.
 
 I'm usismg the whole part list in order to estimate diversity parameters on sets.
+
 
 ```{r}
 # Select rows in lego_parts that match those sets listed in 'subset_themes_n10'.
@@ -544,7 +558,9 @@ gg
 ```
 
 
+
 ### Network plots
+
 
 ```{r networks, echo=TRUE, fig.height=12, fig.width=12}
 # Input edgelist
@@ -595,7 +611,9 @@ rglplot(model75344.g,
 
 ```
 
+
 ### Plots with `ggraph`
+
 
 ```{r ggraph_plots, echo=TRUE, message=FALSE, fig.height=12, fig.width=12}
 library(ggraph)
@@ -622,9 +640,13 @@ ggp_image <- ggp +                  # Combine plot & image
 ggp_image                           # Draw combined plot
 
 ```
+
 ----------------------------------
+
 ```{r}
 sessionInfo()
 ```
 
+
 ----------------------------------
+
