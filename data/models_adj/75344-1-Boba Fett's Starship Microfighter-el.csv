@@ -4,8 +4,8 @@ part1,part2,step,w,part_name,num_parts,color
 3068b,54383,9,1,Tile 2 x 2 with Groove,1,Black
 3068b,54384,9,1,Tile 2 x 2 with Groove,1,Black
 3068b,3020,9,1,Tile 2 x 2 with Groove,1,Black
-32952,35480,24,2,Brick Special 1 x 1 x 1 2/3 with Studs on 1 Side,2,Black
-32952,24307,34,1,Brick Special 1 x 1 x 1 2/3 with Studs on 1 Side,2,Black
+32952,35480,24,2,Brick Special 1 x 1 x 1 2-3 with Studs on 1 Side,2,Black
+32952,24307,34,1,Brick Special 1 x 1 x 1 2-3 with Studs on 1 Side,2,Black
 64567,20482,41,2,Weapon Lightsaber Hilt with Bottom Ring,1,Black
 11458,41682,32,2,Plate Special 1 x 2 with Pin Hole on Top,4,Dark Bluish Gray
 11458,26601,39,1,Plate Special 1 x 2 with Pin Hole on Top,4,Dark Bluish Gray
@@ -16,12 +16,12 @@ part1,part2,step,w,part_name,num_parts,color
 32064a,3020,16,2,Technic Brick 1 x 2 with Axle Hole Type 1 [+ Opening] and Bottom Pin,2,Dark Bluish Gray
 35480,2419,3,2,Plate Special 1 x 2 Rounded with 2 Open Studs,4,Dark Bluish Gray
 35480,3020,3,2,Plate Special 1 x 2 Rounded with 2 Open Studs,4,Dark Bluish Gray
-4865b,76766,25,1,Panel 1 x 2 x 1 [Rounded Corners],1,Dark Bluish Gray
-73562,85080,15,2,Bracket 3 x 2 x 1 1/3 with Bottom Stud Holder,1,Dark Bluish Gray
-27925,36840,36,4,Tile 2 x 2 Curved, Macaroni,4,Dark Green
-27925,99207,36,4,Tile 2 x 2 Curved, Macaroni,4,Dark Green
-54200,3020,27,2,Slope 30° 1 x 1 x 2/3 (Cheese Slope),1,Dark Green
-85984,3020,28,1,Slope 30° 1 x 2 x 2/3,1,Dark Green
+4865b,76766,25,1,Panel 1 x 2 x 1 Rounded Corners,1,Dark Bluish Gray
+73562,85080,15,2,Bracket 3 x 2 x 1 1-3 with Bottom Stud Holder,1,Dark Bluish Gray
+27925,36840,36,4,Tile 2 x 2 Curved Macaroni,4,Dark Green
+27925,99207,36,4,Tile 2 x 2 Curved Macaroni,4,Dark Green
+54200,3020,27,2,Slope 30° 1 x 1 x 2-3 (Cheese Slope),1,Dark Green
+85984,3020,28,1,Slope 30° 1 x 2 x 2-3,1,Dark Green
 85984,41682,28,1,Slope 30° 1 x 2 x 2/3,1,Dark Green
 13548,2419,6,2,Wedge Sloped 45° 2 x 2 Corner,4,Dark Red
 13548,73562,7,2,Wedge Sloped 45° 2 x 2 Corner,4,Dark Red
@@ -40,21 +40,21 @@ part1,part2,step,w,part_name,num_parts,color
 2419,73562,7,1,Wedge Plate 3 x 6 Cut Corners,1,Light Bluish Gray
 26601,11458,37,1,Wedge Plate 2 x 2 Cut Corner,2,Light Bluish Gray
 32803,35480,20,1,Slope Curved 2 x 2 Inverted,2,Light Bluish Gray
-36840,3040b,14,4,Bracket 1 x 1 - 1 x 1 Inverted,4,Light Bluish Gray
+36840,3040b,14,4,Bracket 1 x 1-1 x 1 Inverted,4,Light Bluish Gray
 3713,18651,10,2,Technic Bush,1,Light Bluish Gray
 41682,76766,26,1,Bracket 2 x 2 with 1 x 2 Vertical Studs,1,Light Bluish Gray
-44861,44861,30,2,Plate Special 1 x 2 [Open O Top Clip],2,Light Bluish Gray
+44861,44861,30,2,Plate Special 1 x 2 Open O Top Clip,2,Light Bluish Gray
 4740,2419,3,1,Dish 2 x 2 Inverted [Radar],1,Light Bluish Gray
 54383,3034,5,1,Wedge Plate 6 x 3 Right,1,Light Bluish Gray
 54384,3034,5,1,Wedge Plate 6 x 3 Left,1,Light Bluish Gray
 76766,35480,23,1,Bracket 5 x 2 x 2 1/3 with Inside Stud Holder,1,Light Bluish Gray
 76766,42862,35,1,Bracket 5 x 2 x 2 1/3 with Inside Stud Holder,1,Light Bluish Gray
 76766,48165,35,1,Bracket 5 x 2 x 2 1/3 with Inside Stud Holder,1,Light Bluish Gray
-85080,36840,15,2,Brick Round Corner 2 x 2 Macaroni with Stud Notch and Reinforced Underside [New Style],2,Light Bluish Gray
-85984,3020,27,1,Slope 30° 1 x 2 x 2/3,1,Light Bluish Gray
-85984,41682,27,1,Slope 30° 1 x 2 x 2/3,1,Light Bluish Gray
+85080,36840,15,2,Brick Round Corner 2 x 2 Macaroni with Stud Notch and Reinforced Underside New Style,2,Light Bluish Gray
+85984,3020,27,1,Slope 30° 1 x 2 x 2-3,1,Light Bluish Gray
+85984,41682,27,1,Slope 30° 1 x 2 x 2-3,1,Light Bluish Gray
 99207,32064a,16,2,Bracket 1 x 2 - 2 x 2 Inverted,2,Light Bluish Gray
-15068,11458,33,2,Slope Curved 2 x 2 x 2/3,2,Sand Green
+15068,11458,33,2,Slope Curved 2 x 2 x 2-3,2,Sand Green
 3020,3034,1,1,Plate 2 x 4,2,Sand Green
 3020,3023,4,2,Plate 2 x 4,2,Sand Green
 3020,73562,7,1,Plate 2 x 4,2,Sand Green
