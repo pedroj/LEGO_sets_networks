@@ -592,6 +592,19 @@ rglplot(model75344.g,
 
 ```
 
+### Plots with `ggraph`
+
+```{r ggraph_plots, echo=TRUE, fig.width=12}
+library(ggraph)
+ggraph(model75344.g, 'igraph', algorithm = 'tree', circular = TRUE) + 
+  geom_edge_diagonal(aes(alpha = after_stat(index))) +
+  coord_fixed() + 
+  scale_edge_alpha('Direction', guide = 'edge_direction') +
+  geom_node_point(aes(filter = degree(model75344.g, mode = 'out') == 0), 
+                 color = 'steelblue', size = 1) +
+  ggforce::theme_no_axes()
+
+```
 ----------------------------------
 ```{r}
 sessionInfo()
