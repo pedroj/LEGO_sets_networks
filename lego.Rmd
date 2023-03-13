@@ -602,7 +602,7 @@ rglplot(model75344.g,
 library(ggraph)
 require(tidygraph)
 wt<- as.vector(model75344[,4])
-ggp <- ggraph(model75344.g, 'igraph', algorithm = 'fr') + 
+ggp <- ggraph(model75344.g, 'igraph', algorithm = 'kk') + 
   #geom_edge_link(aes(width = wt), alpha = 0.60, edge_color = "grey20") +
   geom_edge_arc(strength = 0.4) +
   #scale_edge_width_continuous(model75344[,4]) +
