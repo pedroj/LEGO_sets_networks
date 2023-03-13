@@ -1167,20 +1167,21 @@ zero-extent matrix</code></pre>
 <span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>() <span class="sc">+</span> </span>
 <span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_edge_alpha</span>(<span class="st">'model75344[,4]'</span>) <span class="sc">+</span></span>
 <span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_point</span>(<span class="at">color =</span> <span class="st">'steelblue'</span>, <span class="at">size =</span> <span class="dv">6</span>, <span class="at">alpha=</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">theme_no_axes</span>()</span>
-<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a><span class="co"># readPNG function to load an image that we have stored on our computer:</span></span>
-<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>my_image <span class="ot">&lt;-</span> <span class="fu">readPNG</span>(<span class="st">"images/75344-1-Boba Fett's Starship.png"</span>, <span class="at">native =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the inset_element function to add our picture to our ggplot2 graphic:</span></span>
-<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a>ggp_image <span class="ot">&lt;-</span> ggp <span class="sc">+</span>                  <span class="co"># Combine plot &amp; image</span></span>
-<span id="cb57-17"><a href="#cb57-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inset_element</span>(<span class="at">p =</span> my_image,</span>
-<span id="cb57-18"><a href="#cb57-18" aria-hidden="true" tabindex="-1"></a>                <span class="at">left =</span> <span class="fl">0.65</span>,</span>
-<span id="cb57-19"><a href="#cb57-19" aria-hidden="true" tabindex="-1"></a>                <span class="at">bottom =</span> <span class="fl">0.1</span>,</span>
-<span id="cb57-20"><a href="#cb57-20" aria-hidden="true" tabindex="-1"></a>                <span class="at">right =</span> <span class="fl">0.9</span>,</span>
-<span id="cb57-21"><a href="#cb57-21" aria-hidden="true" tabindex="-1"></a>                <span class="at">top =</span> <span class="fl">0.45</span>, <span class="at">align_to =</span> <span class="st">'full'</span>, <span class="at">clip=</span>T)</span>
-<span id="cb57-22"><a href="#cb57-22" aria-hidden="true" tabindex="-1"></a>ggp_image                           <span class="co"># Draw combined plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">theme_no_axes</span>() <span class="sc">+</span></span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"75344-1-Boba Fett's Starship"</span>)</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a><span class="co"># readPNG function to load an image that we have stored on our computer:</span></span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a>my_image <span class="ot">&lt;-</span> <span class="fu">readPNG</span>(<span class="st">"images/75344-1-Boba Fett's Starship.png"</span>, <span class="at">native =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the inset_element function to add our picture to our ggplot2 graphic:</span></span>
+<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-17"><a href="#cb57-17" aria-hidden="true" tabindex="-1"></a>ggp_image <span class="ot">&lt;-</span> ggp <span class="sc">+</span>                  <span class="co"># Combine plot &amp; image</span></span>
+<span id="cb57-18"><a href="#cb57-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inset_element</span>(<span class="at">p =</span> my_image,</span>
+<span id="cb57-19"><a href="#cb57-19" aria-hidden="true" tabindex="-1"></a>                <span class="at">left =</span> <span class="fl">0.65</span>,</span>
+<span id="cb57-20"><a href="#cb57-20" aria-hidden="true" tabindex="-1"></a>                <span class="at">bottom =</span> <span class="fl">0.1</span>,</span>
+<span id="cb57-21"><a href="#cb57-21" aria-hidden="true" tabindex="-1"></a>                <span class="at">right =</span> <span class="fl">0.9</span>,</span>
+<span id="cb57-22"><a href="#cb57-22" aria-hidden="true" tabindex="-1"></a>                <span class="at">top =</span> <span class="fl">0.45</span>, <span class="at">align_to =</span> <span class="st">'full'</span>, <span class="at">clip=</span>T)</span>
+<span id="cb57-23"><a href="#cb57-23" aria-hidden="true" tabindex="-1"></a>ggp_image                           <span class="co"># Draw combined plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Using the `size` aesthetic in this geom was deprecated in ggplot2 3.4.0.
 ℹ Please use `linewidth` in the `default_aes` field and elsewhere instead.</code></pre>
