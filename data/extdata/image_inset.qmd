@@ -29,7 +29,7 @@ ggp <- ggplot(data, aes(x, y)) +    # Create ggplot2 plot
 ggp                                 # Draw ggplot2 plot
 
 # readPNG function to load an image that we have stored on our computer:
-my_image <- readPNG("images/isogawa_158.png", native = TRUE)
+my_image <- readPNG("images/75344-1-Boba Fett's Starship.png", native = TRUE)
 
 # Use the inset_element function to add our picture to our ggplot2 graphic:
 
