@@ -149,6 +149,40 @@ write_csv(lego_sets, "data/extdata/lego_sets.csv")
 
 ```
 
+## Reationships between no. parts in set and no. part types
+```{r n_parts-vs-n_part-types }
+
+by_set_part<- Starwars %>% 
+    dplyr::group_by(set_name, part_name)
+tt<- by_set_part %>% 
+    dplyr::count(part_name) 
+by_set_nparts_ntypes<- tt %>% 
+    group_by(set_name) %>% 
+    dplyr::summarize(nparts= sum(n))
+
+ttt<-  tt %>% 
+    group_by(set_name) %>% 
+    tally()
+colnames(ttt)<- c("set_name","ntypes")
+by_set_nparts_ntypes<- as.data.frame(cbind(by_set_nparts_ntypes,ttt[,2]))
+
+by_set_nparts_ntypes<- by_set_nparts_ntypes %>% 
+         dplyr::filter(nparts>10)
+
+# Plots of no. total part in set vs no. part types.
+# 
+plot(by_set_nparts_ntypes$nparts,by_set_nparts_ntypes$ntypes)
+gg <- ggplot(by_set_nparts_ntypes, aes(x = nparts, y = ntypes)) +
+    geom_point() +
+    scale_x_log10() + scale_y_log10()     +
+         xlab="Number of LEGO parts"      +
+         ylab="Number of LEGO part types" +
+    main="Starwars",
+    theme_bw()
+gg
+
+```
+
 ## Diversity
 
 ```{r subsets}
@@ -242,6 +276,7 @@ gg
 ```
 
 #### Diversity for specific sets
+
 ```{r diversity_set, echo=FALSE}
 # For a specific model.
 H <- vegan::diversity(table(AnaSebPodRac_7962$part_num))
