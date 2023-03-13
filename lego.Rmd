@@ -627,7 +627,7 @@ ggp_image                           # Draw combined plot
 
 ```
 ----------------------------------
-```{r}
+```{r session-info}
 sessionInfo()
 ```
 ----------------------------------
