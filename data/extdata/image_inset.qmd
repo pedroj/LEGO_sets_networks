@@ -1,0 +1,46 @@
+---
+title: "Inset image in plot"
+author: "Pedro Jordano"
+date: "febrero 18, 2015"
+output: html_document
+---
+```{r packages_data}
+library("ggplot2")                  # Load ggplot2 package
+# install.packages("png")           # Install png package
+library("png")                      # Load png package
+install.packages("patchwork")       # Install patchwork package
+library("patchwork")                # Load patchwork
+
+data <- data.frame(x = 1:6,         # Creating example data
+                   y = 10:5)
+data                                # Printing example data
+#   x  y
+# 1 1 10
+# 2 2  9
+# 3 3  8
+# 4 4  7
+# 5 5  6
+# 6 6  5
+
+# Draw our data in a basic ggplot2 without an image:
+
+ggp <- ggplot(data, aes(x, y)) +    # Create ggplot2 plot
+  geom_point(size=4)
+ggp                                 # Draw ggplot2 plot
+
+# readPNG function to load an image that we have stored on our computer:
+my_image <- readPNG("images/isogawa_158.png", native = TRUE)
+
+# Use the inset_element function to add our picture to our ggplot2 graphic:
+
+ggp_image <- ggp +                  # Combine plot & image
+  inset_element(p = my_image,
+                left = 0.5,
+                bottom = 0.55,
+                right = 0.95,
+                top = 0.95)
+ggp_image                           # Draw combined plot
+
+```
+
+
