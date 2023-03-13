@@ -173,13 +173,25 @@ by_set_nparts_ntypes<- by_set_nparts_ntypes %>%
 # 
 plot(by_set_nparts_ntypes$nparts,by_set_nparts_ntypes$ntypes)
 gg <- ggplot(by_set_nparts_ntypes, aes(x = nparts, y = ntypes)) +
-    geom_point() +
-    scale_x_log10() + scale_y_log10()     +
-         xlab="Number of LEGO parts"      +
-         ylab="Number of LEGO part types" +
-    main="Starwars",
+    geom_point()                           +
+    scale_x_log10() + scale_y_log10()      +
+    labs(x = "Number of LEGO parts", 
+         y = "Number of LEGO part types")  +
+         ggtitle("Starwars")               +
     theme_bw()
 gg
+# readPNG function to load an image that we have stored on our computer:
+my_image <- readPNG("images/sw_logo.png", native = TRUE)
+
+# Use the inset_element function to add our picture to our ggplot2 graphic:
+ggp_image <- gg +                  # Combine plot & image
+  inset_element(p = my_image,
+                left = 0.15,
+                bottom = 0.75,
+                right = 0.4,
+                top = 0.9, align_to = 'full', clip=T)
+ggp_image                           # Draw combined plot
+
 
 ```
 
