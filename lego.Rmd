@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 This is an analysis of LEGO sets patterns of component parts: their diversity and connectivity forms. 
 
 ```{r packages, message=FALSE}
-library(dplyr)
+library(tidyverse)
 library(igraph)
 library(gt)
 library(stringr)
@@ -173,7 +173,7 @@ by_set_nparts_ntypes<- by_set_nparts_ntypes %>%
 # 
 plot(by_set_nparts_ntypes$nparts,by_set_nparts_ntypes$ntypes)
 gg <- ggplot(by_set_nparts_ntypes, aes(x = nparts, y = ntypes)) +
-    geom_point()                           +
+    geom_point(size= 3, alpha=0.4)                           +
     scale_x_log10() + scale_y_log10()      +
     labs(x = "Number of LEGO parts", 
          y = "Number of LEGO part types")  +
