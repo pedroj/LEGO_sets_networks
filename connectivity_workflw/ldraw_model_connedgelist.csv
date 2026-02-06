@@ -1,0 +1,9 @@
+part_instance_a,part_id_a,part_instance_b,part_id_b,connection_type,distance
+p1,3001.dat,p2,3001.dat,stud_tube,19.701776569639602
+p1,3001.dat,p2,3001.dat,stud_tube,15.104966070799364
+p1,3001.dat,p2,3001.dat,stud_tube,29.46455497712463
+p1,3001.dat,p2,3001.dat,stud_tube,36.71729837556135
+p1,3001.dat,p2,3001.dat,tube_stud,36.71729837556135
+p1,3001.dat,p2,3001.dat,tube_stud,19.701776569639602
+p1,3001.dat,p2,3001.dat,tube_stud,15.104966070799364
+p1,3001.dat,p2,3001.dat,tube_stud,29.46455497712463
