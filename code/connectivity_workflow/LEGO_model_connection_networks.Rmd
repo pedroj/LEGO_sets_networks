@@ -298,8 +298,8 @@ nodes <- tibble::tibble(part_id = V(g)$part_id)
 # 2) Left-join image URLs from filtered parts by part number
 nodes <- nodes %>%
   left_join(
-    parts_4489_filtered %>%
-    dplyr::select(part_num, img_url),
+    parts_7131_unique %>%
+    dplyr::select(part_num, img_path),
     by = c("part_id" = "part_num")
   )
 
@@ -308,7 +308,7 @@ nrow(nodes)          # should be 31
 vcount(g)            # should also be 31
 
 # 4) Assign to graph
-V(g)$img_url <- nodes$img_url
+V(g)$img_url <- nodes$img_path
 
 ```
 
@@ -338,8 +338,8 @@ ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
         inherit.aes = FALSE
     ) +
     geom_node_text(aes(label = name),
-                   vjust = 3.25,
-                   size = 6,
+                   vjust = 2.25,
+                   size = 4,
                    color = "black") +
     theme_graph() +
     labs(title = "LEGO Parts Network (Rebrickable Images)")
