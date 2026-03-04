@@ -1,0 +1,445 @@
+---
+title: "test_lego_model_network"
+author: "Pedro Jordano"
+date: "2026-03-04"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(here)
+library(stringr)
+library(tidyr)
+library(igraph)
+library(ggnetwork); library(intergraph)
+library(igraph)
+library(ggraph)
+library(ggplot2)
+library(GGally)
+
+library(jsonlite)  # For API
+library(purrr)
+library(httr)
+library(ggimage)
+
+```
+
+## Introduction
+
+Here is a minimal R workflow that parses this MPD and builds a simple **part–part**
+contact network by treating parts that appear in the same submodel as connected. You can
+refine the contact criterion later (e.g. geometric distance) if you wish.
+
+## **1. Read and parse the MPD**
+
+Parse an `.ldr` or and `.mpd` file to get the part list.
+
+```{r parse, echo=TRUE}
+# 1) Read file
+mpd_lines <- readLines(here::here("connectivity_workflow/613-1-Biplane.mpd"))
+
+# Helper: identify FILE sections
+file_idx  <- grep("^0 FILE", mpd_lines)
+file_idx_end <- c(file_idx[-1] - 1, length(mpd_lines))
+
+files_df <- tibble(
+    file_start = file_idx,
+    file_end   = file_idx_end,
+    file_header = mpd_lines[file_idx]
+) %>%
+    mutate(
+        file_name = str_trim(str_remove(file_header, "^0 FILE")),
+        file_name = str_replace(file_name, "^\\d+\\s+-\\s+", "")  # strip leading "106 - "
+    )
+
+files_df
+
+```
+
+## **2. Extract part instances (LDraw type 1 lines)**
+
+You can also embed plots, for example:
+
+```{r parse_1, echo=TRUE}
+# Function to parse "1 ..." lines inside a FILE block
+parse_file_parts <- function(lines, file_name) {
+  # LDraw "1" line: 1 col x y z a b c d e f g h i part.dat or subfile.ldr
+  part_lines_idx <- grep("^1\\s", lines)
+  if (length(part_lines_idx) == 0) return(NULL)
+
+  # Split by whitespace
+  tokens <- str_split(lines[part_lines_idx], "\\s+", simplify = FALSE)
+
+  # Map to data frame
+  parts <- lapply(tokens, function(tok) {
+    # minimum length check
+    if (length(tok) < 15) return(NULL)
+    tibble(
+      file      = file_name,
+      color     = tok[2],
+      x         = as.numeric(tok[3]),
+      y         = as.numeric(tok[4]),
+      z         = as.numeric(tok[5]),
+      a         = as.numeric(tok[6]),
+      b         = as.numeric(tok[7]),
+      c         = as.numeric(tok[8]),
+      d         = as.numeric(tok[9]),
+      e         = as.numeric(tok[10]),
+      f         = as.numeric(tok[11]),
+      g         = as.numeric(tok[12]),
+      h         = as.numeric(tok[13]),
+      i         = as.numeric(tok[14]),
+      part_raw  = paste(tok[15:length(tok)], collapse = " ")
+    )
+  })
+
+  bind_rows(parts)
+}
+
+# Apply to each FILE block
+parts_all <- purrr::map2_dfr(
+  files_df$file_start,
+  files_df$file_end,
+  ~{
+    block_lines <- mpd_lines[.x:.y]
+    fname <- files_df$file_name[files_df$file_start == .x]
+    parse_file_parts(block_lines, fname)
+  }
+)
+
+parts_all
+
+```
+
+This gives a table with one row per placed element (including submodels like
+`106 - car.ldr`, `106 - Minifig.ldr`, and `106 - wheel assembly.ldr`).
+
+## **3. Decide what counts as a “part” and “connection”**
+
+For a first simple network, you can:
+
+-   Represent each **part file** (`*.dat`, `*.ldr`) as a node.
+
+-   Add an edge between two parts if they appear together in the same FILE (submodel).
+
+Below I create a co‑occurrence network at the level of **part_raw** (so `3004.dat` etc.
+are nodes). You can easily switch to unique instance IDs if you want a multigraph.
+
+```{r parts_as_nodes, echo=TRUE}
+# 3) Clean part name (strip leading "106 - " from submodels, keep .dat etc.)
+parts_all <- parts_all %>%
+  mutate(
+    part = str_trim(part_raw)
+  )
+
+# 4) Build co-occurrence edges:
+# For each FILE, connect all distinct part types that co-occur
+edges_df <- parts_all %>%
+  group_by(file) %>%
+  summarise(parts = list(unique(part)), .groups = "drop") %>%
+  mutate(
+    edges = purrr::map(parts, ~{
+      p <- .x
+      if (length(p) < 2) return(NULL)
+      # all unordered pairs
+      comb <- t(combn(p, 2))
+      tibble(from = comb[,1], to = comb[,2])
+    })
+  ) %>%
+  select(edges) %>%
+  unnest(edges)
+
+edges_df
+
+```
+
+## **4. Build igraph object and analyze**
+
+```{r build_graph, echo=TRUE}
+# 5) Create graph
+g <- graph_from_data_frame(edges_df, directed = FALSE)
+
+# Basic stats
+print(g)
+degree(g)
+
+# Example: plot
+plot(
+  g,
+  vertex.size = 5,
+  vertex.label.cex = 0.6,
+  vertex.label.dist = 0.5,
+  main = "LEGO parts co-occurrence network"
+)
+
+# Using ggraph (Recommended)
+# ggraph extends ggplot2 for networks and works directly with igraph.
+
+ggraph(g, layout = "fr") +  # Fruchterman-Reingold layout
+# geom_edge_link(aes(width = 0.0005), alpha = 0.2) +
+  geom_edge_link(aes(alpha= 0.6)) +
+# geom_edge_bend0() +
+  geom_node_point(aes(size = degree(g)), color = "blue") +
+  geom_node_text(aes(label = name), repel = TRUE) +
+  theme_graph() +
+  labs(title = "igraph Network with ggraph")
+
+```
+
+## **5. Optional: distinguish submodels vs primitive parts**
+
+We can tag nodes as “submodel” when they are `.ldr` vs `.dat`, which might help link to
+assembly hierarchy.
+
+```{r submodels, echo=TRUE}
+node_attr <- tibble(
+  part = V(g)$name
+) %>%
+  mutate(
+    is_submodel = str_detect(part, "\\.ldr$"),
+    is_primitive = str_detect(part, "\\.dat$")
+  )
+
+V(g)$is_submodel  <- node_attr$is_submodel[match(V(g)$name, node_attr$part)]
+V(g)$is_primitive <- node_attr$is_primitive[match(V(g)$name, node_attr$part)]
+
+```
+
+We may prefer the network at the level of **individual brick instances** (each physical
+brick a node) with edges defined by spatial proximity, or is this part‑type co‑occurrence
+representation what we want?
+
+### See file `LEGO_model_networks_ind-parts.Rmd`
+
+# Network visualization with part images
+
+Below is an end‑to‑end pattern tailored to a Rebrickable parts table and LEGO‑network workflow.
+
+
+## 1. Download and cache images locally
+Assume you already have a parts data.frame like parts_4489 from get_set_parts():
+parts_4489 columns: part_num, part_name, color_id, color_name, img_url, quantity
+
+```{r dowload_part_images, echo=TRUE}
+api_key <- "40c6692458e8b4c27074486ab114d6cc"
+download_part_images <- function(urls, destdir = "images/part_images") {
+    dir.create(destdir, showWarnings = FALSE)
+    paths <- file.path(destdir, basename(urls))
+    
+    mapply(
+        function(u, p) {
+            if (!file.exists(p) && !is.na(u) && nzchar(u)) {
+                try(download.file(u, p, mode = "wb"), silent = TRUE)
+            }
+        },
+        urls, paths
+    )
+    
+    paths
+}
+
+parts_4489$img_path <- download_part_images(parts_4489$img_url, 
+                                            destdir = "images/part_images")
+
+# Subsetting the parts file to just unique part types (no color or duplications).
+parts_4489_unique <- parts_4489 %>%
+    distinct(part_num, .keep_all = TRUE)
+
+# NO parts_4489_unique$part_num en V(g)$part_id: 44567,30000,4592,4593,4489 - Head.ldr,
+exclude_parts <- c("44567", "30000", "4592", "4593", "4489 - Head.ldr")
+
+parts_4489_filtered <- parts_4489_unique %>%
+    dplyr::filter(!part_num %in% exclude_parts)
+
+```
+
+Basename(urls) keeps names simple; we can choose more informative filenames if we want 
+(e.g., paste `part_num` and `color_id`).
+
+After this step, `parts_4489_filtered$img_path` points to local PNG files.
+
+
+## 2. Attach image paths to igraph nodes
+
+Assume:
+    The igraph object is g.
+Each node name equals a part_num (e.g., "3001", "3024").
+Ensure node names are part_nums
+V(g)$name already something like "3001", "3024", ...
+Assume V(g)$name are part_ids like "3001"; map 20 nodes
+
+```{r iamges_to_nodes,echo=TRUE}
+# This sets url of part images to the nodes identified by their part number.
+
+V(g)$part_id <- sub("\\.dat$", "", V(g)$name) #V(g)$name  # Or your mapping
+V(g)$color_id <- 7         # parts_4489new$color_id  
+                           # Light_grey example; get from parts_json$results$color_id
+# V(g)$image <-parts_4489_filtered$img_url
+
+# 1) Build node table from graph vertices
+nodes <- tibble::tibble(part_id = V(g)$part_id)
+
+# 2) Left-join image URLs from filtered parts by part number
+nodes <- nodes %>%
+  left_join(
+    parts_4489_filtered %>%
+    dplyr::select(part_num, img_url),
+    by = c("part_id" = "part_num")
+  )
+
+# 3) Check alignment
+nrow(nodes)          # should be 31
+vcount(g)            # should also be 31
+
+# 4) Assign to graph
+V(g)$img_url <- nodes$img_url
+
+```
+
+
+## 3. Compute layout and node data frame and plot with Rebrickable URLs
+
+```{r plotting, echo=TRUE}
+set.seed(1)
+coords <- layout_with_fr(g) * 1.5
+
+nodes_plot <- data.frame(
+    x       = coords[,1],
+    y       = coords[,2],
+    name    = V(g)$part_id,  # or V(g)$name
+    img_url = V(g)$img_url
+)
+
+# 3) Test 
+
+ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
+    geom_edge_link(width = 0.1, alpha = 0.8) +
+    geom_node_point(size = 0, alpha = 0) +
+    geom_image(
+        data = nodes_plot,
+        aes(x = x, y = y, image = img_url), # This grabs the image from Rebrickable url.
+        size = 0.06,
+        inherit.aes = FALSE
+    ) +
+    geom_node_text(aes(label = name),
+                   vjust = 3.25,
+                   size = 6,
+                   color = "black") +
+    theme_graph() +
+    labs(title = "LEGO Parts Network (Rebrickable Images)")
+
+```
+
+Now let's each node having a `V(g)$img_path` pointing to a local file.
+
+## 4. Plot with ggraph + ggimage using local files
+
+### Key points:
+In `geom_image()`, we can pass the vector directly or construct a tibble with node attributes and map `aes(image = img_path)`.
+
+`size` is relative to the plot; adjust (e.g. 0.07–0.12) to fit ~20 nodes.
+
+
+## 5. Optional: safer filename scheme
+
+To avoid clashes when two URLs share the same basename:
+
+```{r safer_scheme, echo=TRUE}
+download_part_images <- function(part_num, color_id, urls, destdir = "images/part_images/") {
+    dir.create(destdir, showWarnings = FALSE)
+    filenames <- paste0(part_num, "_", color_id, ".png")
+    paths <- file.path(destdir, filenames)
+    mapply(
+        function(u, p) {
+            if (!file.exists(p) && !is.na(u) && nzchar(u)) {
+                try(download.file(u, p, mode = "wb"), silent = TRUE)
+            }
+        },
+        urls, paths
+    )
+    
+    paths
+}
+
+parts_4489$img_path <- download_part_images(
+    part_num = parts_4489$part_num,
+    color_id = parts_4489$color_id,
+    urls     = parts_4489$img_url,
+    destdir  = "images/part_images/"
+)
+
+# parts_4489$img_path <- download_part_images(parts_4489$img_url, destdir = "images")
+
+#Check part names include .dat
+#parts_4489 <- parts_4489 %>%
+#    dplyr::mutate(part_num2= paste0(part_num,".dat"))
+
+# download.file(V(g)$image, destdir = "part_imgs/")
+V(g)$loc.image <- paste0("images/part_images/", V(g)$part_id, "_", V(g)$color_id, ".png")
+
+
+# 3. Plot with ggraph + ggimage using local files
+# 1) Layout
+coords <- layout_with_fr(g) * 1.5
+
+# 2) Node data frame with coords + attributes
+nodes <- data.frame(
+    x        = coords[, 1],
+    y        = coords[, 2],
+    name     = V(g)$part_id,  # or V(g)$name
+    img_path = V(g)$loc.image,
+    degree   = degree(g)
+)
+
+# 3) Plot: ggraph uses g + manual layout; geom_image uses nodes with its own aes
+ ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
+   geom_edge_link(width = 0.1, alpha = 0.8) +
+    geom_node_point(size = 0, alpha = 0) +
+    geom_image(
+        data = nodes,
+        aes(x = x, y = y, image = img_path),
+        size = 0.065,                 # fixed, reasonable size
+        inherit.aes = FALSE
+    ) +
+    geom_node_text(aes(label = name),
+                   vjust = 3.25,
+                   size = 6,
+                   color = "black") +
+    theme_graph() +
+    labs(title = "LEGO Parts Network (Images)")
+
+# Key points:
+#    nodes must contain columns literally named x and y.
+
+# In geom_image(...) we set data = nodes and aes(x = x, y = y, image = img_path, size = degree) so all needed aesthetics exist in that data.
+
+# inherit.aes = FALSE stops it from looking for x/y in the ggraph layout environment, so there is no ambiguity.
+
+# size is relative to the plot; adjust (e.g. 0.07–0.12) to fit ~20 nodes.
+
+
+```
+
+-----------------------------------------------------------------------------------------------
+
+# With function
+# CHECK
+```{r plot_lego_set_connectivity, echo=TRUE}
+#Sys.setenv(REBRICKABLE_KEY = "40c6692458e8b4c27074486ab114d6cc")
+
+#g_689 <- plot_lego_set_connectivity("689-1")
+
+```
+
+
+
+
+-----------------------------------------------------------------------------------------------
+## Session Info
+
+```{r session, echo=TRUE}
+session_info()
+
+```
+
