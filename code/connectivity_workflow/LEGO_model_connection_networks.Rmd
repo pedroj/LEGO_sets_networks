@@ -37,7 +37,7 @@ Parse an `.ldr` or and `.mpd` file to get the part list.
 
 ```{r parse, echo=TRUE}
 # 1) Read file
-mpd_lines <- readLines(here::here("connectivity_workflow/613-1-Biplane.mpd"))
+mpd_lines <- readLines(here::here("data/models/7131-1-Anakin-Podracer.mpd"))
 
 # Helper: identify FILE sections
 file_idx  <- grep("^0 FILE", mpd_lines)
@@ -164,23 +164,23 @@ g <- graph_from_data_frame(edges_df, directed = FALSE)
 print(g)
 degree(g)
 
-# Example: plot
-plot(
-  g,
-  vertex.size = 5,
-  vertex.label.cex = 0.6,
-  vertex.label.dist = 0.5,
-  main = "LEGO parts co-occurrence network"
-)
+# # Example: plot
+# plot(
+#   g,
+#   vertex.size = 5,
+#   vertex.label.cex = 0.6,
+#   vertex.label.dist = 0.5,
+#   main = "LEGO parts co-occurrence network"
+# )
 
 # Using ggraph (Recommended)
 # ggraph extends ggplot2 for networks and works directly with igraph.
 
 ggraph(g, layout = "fr") +  # Fruchterman-Reingold layout
 # geom_edge_link(aes(width = 0.0005), alpha = 0.2) +
-  geom_edge_link(aes(alpha= 0.6)) +
+  geom_edge_link(aes(alpha= 0.3)) +
 # geom_edge_bend0() +
-  geom_node_point(aes(size = degree(g)), color = "blue") +
+  geom_node_point(aes(size = degree(g)), color = "blue", alpha= 0.65) +
   geom_node_text(aes(label = name), repel = TRUE) +
   theme_graph() +
   labs(title = "igraph Network with ggraph")
@@ -222,7 +222,22 @@ Assume you already have a parts data.frame like parts_4489 from get_set_parts():
 parts_4489 columns: part_num, part_name, color_id, color_name, img_url, quantity
 
 ```{r dowload_part_images, echo=TRUE}
+# CSV download with function get_set_parts.R: 
+# https://cdn.rebrickable.com/media/downloads/sets.csv.zip?
 api_key <- "40c6692458e8b4c27074486ab114d6cc"
+source(here::here("./code/connectivity_workflow/functions/get_set_parts.R"))
+
+# Dataframe with parts list for a set.
+parts_7131 <- get_set_parts("7131-1", api_key)
+head(parts_4489)
+parts_7131 <- parts_7131 %>%
+    dplyr::mutate(
+        part_num_trim = sub("\\.dat$", "", part_num)
+    )
+parts_7131new <- parts_7131 %>%
+    dplyr::filter(part_num_trim %in% V(g)$part_id)
+#
+
 download_part_images <- function(urls, destdir = "images/part_images") {
     dir.create(destdir, showWarnings = FALSE)
     paths <- file.path(destdir, basename(urls))
@@ -239,18 +254,18 @@ download_part_images <- function(urls, destdir = "images/part_images") {
     paths
 }
 
-parts_4489$img_path <- download_part_images(parts_4489$img_url, 
+parts_7131$img_path <- download_part_images(parts_7131$img_url, 
                                             destdir = "images/part_images")
 
 # Subsetting the parts file to just unique part types (no color or duplications).
-parts_4489_unique <- parts_4489 %>%
+parts_7131_unique <- parts_7131 %>%
     distinct(part_num, .keep_all = TRUE)
 
 # NO parts_4489_unique$part_num en V(g)$part_id: 44567,30000,4592,4593,4489 - Head.ldr,
-exclude_parts <- c("44567", "30000", "4592", "4593", "4489 - Head.ldr")
+# exclude_parts <- c("44567", "30000", "4592", "4593", "4489 - Head.ldr")
 
-parts_4489_filtered <- parts_4489_unique %>%
-    dplyr::filter(!part_num %in% exclude_parts)
+# parts_4489_filtered <- parts_4489_unique %>%
+#    dplyr::filter(!part_num %in% exclude_parts)
 
 ```
 
@@ -362,10 +377,10 @@ download_part_images <- function(part_num, color_id, urls, destdir = "images/par
     paths
 }
 
-parts_4489$img_path <- download_part_images(
-    part_num = parts_4489$part_num,
-    color_id = parts_4489$color_id,
-    urls     = parts_4489$img_url,
+parts_7131$img_path <- download_part_images(
+    part_num = parts_7131$part_num,
+    color_id = parts_7131$color_id,
+    urls     = parts_7131$img_url,
     destdir  = "images/part_images/"
 )
 
@@ -399,12 +414,12 @@ nodes <- data.frame(
     geom_image(
         data = nodes,
         aes(x = x, y = y, image = img_path),
-        size = 0.065,                 # fixed, reasonable size
+        size = 0.035,                 # fixed, reasonable size
         inherit.aes = FALSE
     ) +
     geom_node_text(aes(label = name),
                    vjust = 3.25,
-                   size = 6,
+                   size = 4,
                    color = "black") +
     theme_graph() +
     labs(title = "LEGO Parts Network (Images)")
@@ -431,9 +446,6 @@ nodes <- data.frame(
 #g_689 <- plot_lego_set_connectivity("689-1")
 
 ```
-
-
-
 
 -----------------------------------------------------------------------------------------------
 ## Session Info
