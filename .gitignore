@@ -10,6 +10,7 @@
 .Ruserdata
 /data/extdata/*.csv  
 *.png
+*.jpg
 /data/rebrickable/*.csv
 
 # Example code in package build process
