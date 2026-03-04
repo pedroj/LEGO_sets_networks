@@ -18,6 +18,11 @@ library(ggraph)
 library(ggplot2)
 library(GGally)
 
+library(jsonlite)  # For API
+library(purrr)
+library(httr)
+library(ggimage)
+
 ```
 
 ## Introduction
@@ -32,7 +37,7 @@ Parse an `.ldr` or and `.mpd` file to get the part list.
 
 ```{r parse, echo=TRUE}
 # 1) Read file
-mpd_lines <- readLines(here::here("connectivity_workflw/689-1_Mobile_crane.mpd"))
+mpd_lines <- readLines(here::here("connectivity_workflow/4489-1-AT-AT-Mini.mpd"))
 
 # Helper: identify FILE sections
 file_idx  <- grep("^0 FILE", mpd_lines)
@@ -108,7 +113,7 @@ parts_all
 ```
 
 This gives a table with one row per placed element (including submodels like
-`106 - car.ldr`, `106 - Minifig.ldr`, and `106 - wheel assembly.ldr`).​
+`106 - car.ldr`, `106 - Minifig.ldr`, and `106 - wheel assembly.ldr`).
 
 ## **3. Decide what counts as a “part” and “connection”**
 
@@ -116,7 +121,7 @@ For a first simple network, you can:
 
 -   Represent each **part file** (`*.dat`, `*.ldr`) as a node.
 
--   Add an edge between two parts if they appear together in the same FILE (submodel).​
+-   Add an edge between two parts if they appear together in the same FILE (submodel).
 
 Below I create a co‑occurrence network at the level of **part_raw** (so `3004.dat` etc.
 are nodes). You can easily switch to unique instance IDs if you want a multigraph.
@@ -172,7 +177,9 @@ plot(
 # ggraph extends ggplot2 for networks and works directly with igraph.
 
 ggraph(g, layout = "fr") +  # Fruchterman-Reingold layout
-  geom_edge_link(aes(width = 0.05), alpha = 0.8) +
+# geom_edge_link(aes(width = 0.0005), alpha = 0.2) +
+  geom_edge_link(aes(alpha= 0.6)) +
+# geom_edge_bend0() +
   geom_node_point(aes(size = degree(g)), color = "blue") +
   geom_node_text(aes(label = name), repel = TRUE) +
   theme_graph() +
@@ -578,7 +585,7 @@ V(g_inst)$is_submodel <- node_attr_inst$is_submodel[match(V(g_inst)$name, node_a
 V(g_inst)$is_primitive<- node_attr_inst$is_primitive[match(V(g_inst)$name, node_attr_inst$instance_id)]\`
 
 This way we keep your **instance‑level** network but still know which LEGO element file
-each node comes from.​
+each node comes from.
 
 Is your goal to eventually collapse instance‑level contacts into a part‑type interaction
 network (e.g. a weighted projection of brick contacts)?
@@ -587,7 +594,7 @@ eventually collapse instance‑level contacts into a part‑type interaction net
 weighted projection of brick contacts)
 
 You can project the brick‑instance contact network onto part types by grouping edges by
-the pair of part files and counting how many instance‑level contacts each pair has.​
+the pair of part files and counting how many instance‑level contacts each pair has.
 
 ## **1. Start from instance‑level data**
 
@@ -595,15 +602,15 @@ Assume you already have:
 
 -   `world_parts`: one row per instance, with `instance_id` and `part`.
 
--   `edges_instances`: contacts between instances (`from`, `to`).​
+-   `edges_instances`: contacts between instances (`from`, `to`).
 
 ## **2. Build weighted part‑type interaction table**
 
-\`library(dplyr)
+library(dplyr)
 
 # Map instance IDs to their part types
 
-inst_to_part \<- world_parts %\>% select(instance_id, part)
+inst_to_part <- world_parts %>% select(instance_id, part)
 
 edges_part \<- edges_instances %\>% left_join(inst_to_part, by = c("from" =
 "instance_id")) %\>% rename(part_from = part) %\>% left_join(inst_to_part, by = c("to" =
