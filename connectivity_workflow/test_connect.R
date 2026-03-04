@@ -1,10 +1,11 @@
 # Test for LEGO network analysis.
 library(dplyr)
+library(here)
 library(readr)
 library(stringr)
 library(purrr)
 
-ldr_path <- "example.ldr"
+ldr_path <- here::here("connectivity_workflw/test.ldr")
 
 # Read all lines, keep only type-1 lines
 ldr_lines <- read_lines(ldr_path)
@@ -75,3 +76,4 @@ connector_catalog <- tribble(
 )
 
 # 
+
