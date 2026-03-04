@@ -9,6 +9,8 @@
 # User-specific files
 .Ruserdata
 /data/extdata/*.csv  
+*.png
+/data/rebrickable/*.csv
 
 # Example code in package build process
 *-Ex.R
