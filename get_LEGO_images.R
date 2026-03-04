@@ -27,12 +27,17 @@ source(here::here("./functions/get_set_parts.R"))
 # Dataframe with parts list for a set.
 parts_4489 <- get_set_parts("4489-1", api_key)
 head(parts_4489)
-
+parts_4489 <- parts_4489 %>%
+    dplyr::mutate(
+        part_num_trim = sub("\\.dat$", "", part_num)
+    )
+parts_4489new <- parts_4489 %>%
+    dplyr::filter(part_num_trim %in% V(g)$part_id)
 #
 # Assume V(g)$name are part_ids like "3001"; map 20 nodes
-V(g)$part_id <- V(g)$name  # Or your mapping
-V(g)$color_id <- 11  # Black example; get from parts_json$results$color_id
-V(g)$image <- paste0("https://img.bricklink.com/ItemImage/P/", V(g)$part_id, "/", V(g)$color_id, ".png")
+V(g)$part_id <- sub("\\.dat$", "", V(g)$name) #V(g)$name  # Or your mapping
+V(g)$color_id <- parts_4489new$color_id  # Black example; get from parts_json$results$color_id
+V(g)$image <- paste0("https://img.bricklink.com/ItemImage/P/", V(g)$part_id, V(g)$color_id, ".png")
 # Example for color 0 (White): https://img.bricklink.com/ItemImage/P/3001/0.png
 
 
