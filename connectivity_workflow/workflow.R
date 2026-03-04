@@ -105,9 +105,7 @@ world_connectors <- model_parts %>%
 #----------------------------------------------------------------
 # 4. Detect connections between parts
 # We now:
-#     
-#     Compare pairs of connectors from different instances.
-# 
+# Compare pairs of connectors from different instances.
 # Keep those within a distance tolerance and with compatible types.
 
 # Distance tolerance in LDraw units (tune to real geometry)
