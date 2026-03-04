@@ -22,7 +22,7 @@ library(ggimage)
 # CSV download with function get_set_parts.R: 
 # https://cdn.rebrickable.com/media/downloads/sets.csv.zip?
 api_key <- "40c6692458e8b4c27074486ab114d6cc"
-source(here::here("./functions/get_set_parts.R"))
+source(here::here("./code/connectivity_workflow/functions/get_set_parts.R"))
 
 # Dataframe with parts list for a set.
 parts_4489 <- get_set_parts("4489-1", api_key)
