@@ -37,7 +37,7 @@ Parse an `.ldr` or and `.mpd` file to get the part list.
 
 ```{r parse, echo=TRUE}
 # 1) Read file
-mpd_lines <- readLines(here::here("data/models/7131-1-Anakin-Podracer.mpd"))
+mpd_lines <- readLines(here::here("data/models/4489-1-AT-AT-Mini.mpd"))
 
 # Helper: identify FILE sections
 file_idx  <- grep("^0 FILE", mpd_lines)
@@ -228,13 +228,13 @@ api_key <- "40c6692458e8b4c27074486ab114d6cc"
 source(here::here("./code/connectivity_workflow/functions/get_set_parts.R"))
 
 # Dataframe with parts list for a set.
-parts_7131 <- get_set_parts("7131-1", api_key)
+parts_4489 <- get_set_parts("4489-1", api_key)
 head(parts_4489)
-parts_7131 <- parts_7131 %>%
+parts_4489 <- parts_4489 %>%
     dplyr::mutate(
         part_num_trim = sub("\\.dat$", "", part_num)
     )
-parts_7131new <- parts_7131 %>%
+parts_4489new <- parts_4489 %>%
     dplyr::filter(part_num_trim %in% V(g)$part_id)
 #
 
@@ -254,18 +254,18 @@ download_part_images <- function(urls, destdir = "images/part_images") {
     paths
 }
 
-parts_7131$img_path <- download_part_images(parts_7131$img_url, 
+parts_4489$img_path <- download_part_images(parts_4489$img_url, 
                                             destdir = "images/part_images")
 
 # Subsetting the parts file to just unique part types (no color or duplications).
-parts_7131_unique <- parts_7131 %>%
+parts_4489_unique <- parts_4489 %>%
     distinct(part_num, .keep_all = TRUE)
 
 # NO parts_4489_unique$part_num en V(g)$part_id: 44567,30000,4592,4593,4489 - Head.ldr,
-# exclude_parts <- c("44567", "30000", "4592", "4593", "4489 - Head.ldr")
+exclude_parts <- c("44567", "30000", "4592", "4593", "4489 - Head.ldr")
 
-# parts_4489_filtered <- parts_4489_unique %>%
-#    dplyr::filter(!part_num %in% exclude_parts)
+parts_4489_filtered <- parts_4489_unique %>%
+    dplyr::filter(!part_num %in% exclude_parts)
 
 ```
 
@@ -298,7 +298,7 @@ nodes <- tibble::tibble(part_id = V(g)$part_id)
 # 2) Left-join image URLs from filtered parts by part number
 nodes <- nodes %>%
   left_join(
-    parts_7131_unique %>%
+    parts_4489_unique %>%
     dplyr::select(part_num, img_path),
     by = c("part_id" = "part_num")
   )
@@ -316,33 +316,33 @@ V(g)$img_url <- nodes$img_path
 ## 3. Compute layout and node data frame and plot with Rebrickable URLs
 
 ```{r plotting, echo=TRUE}
-set.seed(1)
-coords <- layout_with_fr(g) * 1.5
-
-nodes_plot <- data.frame(
-    x       = coords[,1],
-    y       = coords[,2],
-    name    = V(g)$part_id,  # or V(g)$name
-    img_url = V(g)$img_url
-)
-
-# 3) Test 
-
-ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
-    geom_edge_link(width = 0.1, alpha = 0.8) +
-    geom_node_point(size = 0, alpha = 0) +
-    geom_image(
-        data = nodes_plot,
-        aes(x = x, y = y, image = img_url), # This grabs the image from Rebrickable url.
-        size = 0.06,
-        inherit.aes = FALSE
-    ) +
-    geom_node_text(aes(label = name),
-                   vjust = 2.25,
-                   size = 4,
-                   color = "black") +
-    theme_graph() +
-    labs(title = "LEGO Parts Network (Rebrickable Images)")
+# set.seed(1)
+# coords <- layout_with_fr(g) * 1.5
+# 
+# nodes_plot <- data.frame(
+#     x       = coords[,1],
+#     y       = coords[,2],
+#     name    = V(g)$part_id,  # or V(g)$name
+#     img_url = V(g)$img_url
+# )
+# 
+# # 3) Test 
+# 
+# ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
+#     geom_edge_link(width = 0.1, alpha = 0.8) +
+#     geom_node_point(size = 0, alpha = 0) +
+#     geom_image(
+#         data = nodes_plot,
+#         aes(x = x, y = y, image = img_url), # This grabs the image from Rebrickable url.
+#         size = 0.06,
+#         inherit.aes = FALSE
+#     ) +
+#     geom_node_text(aes(label = name),
+#                    vjust = 2.25,
+#                    size = 4,
+#                    color = "black") +
+#     theme_graph() +
+#     labs(title = "LEGO Parts Network (4489-1 AT-AT-Mini)")
 
 ```
 
@@ -377,10 +377,10 @@ download_part_images <- function(part_num, color_id, urls, destdir = "images/par
     paths
 }
 
-parts_7131$img_path <- download_part_images(
-    part_num = parts_7131$part_num,
-    color_id = parts_7131$color_id,
-    urls     = parts_7131$img_url,
+parts_4489$img_path <- download_part_images(
+    part_num = parts_4489$part_num,
+    color_id = parts_4489$color_id,
+    urls     = parts_4489$img_url,
     destdir  = "images/part_images/"
 )
 
@@ -391,7 +391,7 @@ parts_7131$img_path <- download_part_images(
 #    dplyr::mutate(part_num2= paste0(part_num,".dat"))
 
 # download.file(V(g)$image, destdir = "part_imgs/")
-V(g)$loc.image <- paste0("images/part_images/", V(g)$part_id, "_", V(g)$color_id, ".png")
+V(g)$loc.image <- paste0("images/part_images/", V(g)$part_id, ".png")
 
 
 # 3. Plot with ggraph + ggimage using local files
@@ -414,15 +414,15 @@ nodes <- data.frame(
     geom_image(
         data = nodes,
         aes(x = x, y = y, image = img_path),
-        size = 0.035,                 # fixed, reasonable size
+        size = 0.05,                 # fixed, reasonable size
         inherit.aes = FALSE
     ) +
     geom_node_text(aes(label = name),
-                   vjust = 3.25,
+                   vjust = 4.25,
                    size = 4,
                    color = "black") +
     theme_graph() +
-    labs(title = "LEGO Parts Network (Images)")
+    labs(title = "LEGO Parts Network (4489-1 AT-AT-Mini)")
 
 # Key points:
 #    nodes must contain columns literally named x and y.
