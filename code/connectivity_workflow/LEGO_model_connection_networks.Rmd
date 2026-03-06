@@ -432,7 +432,7 @@ ggp<- ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
   geom_edge_link(width = 0.1, alpha = 0.8) +
   geom_image(
         data = nodes,
-        aes(x = x, y = y, image = img_path),
+        aes(x = x, y = y, image = img_path), use_cache=FALSE,
         size = 0.05,                 # fixed, reasonable size
         inherit.aes = FALSE
     ) +
@@ -448,11 +448,30 @@ ggp<- ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
 img_array <- readPNG("images/4489-1-AT-AT-Mini.png", native = TRUE)
 my_image_grob <- rasterGrob(img_array, interpolate = TRUE)
 
+# If still see overlap, shrink further:
+# decrease width: increase left to 0.1 or decrease right to 0.3
+# decrease height: increase bottom to 0.7
 ggp_image <- ggp +
-  inset_element(my_image_grob,
-                left = 0.65, bottom = 0.1, right = 0.9, top = 0.45,
-                align_to = 'full', clip = TRUE)
-ggp_image
+  inset_element(
+    my_image_grob,
+    left   = 0,
+    bottom = 0.8,
+    right  = 1,
+    top    = 0.98,
+    align_to = "full",
+    clip     = TRUE
+  )
+ggp_image <- ggp +
+  inset_element(
+    my_image_grob,
+    left   = 0.80,  # 35% from left
+    right  = 0.95,  # 65% from left -> 30% width
+    bottom = 0.35,  # 35% from bottom
+    top    = 0.988,  # 65% from bottom -> 30% height
+    align_to = "full",
+    clip     = F
+  )
+
 ggp_image                           # Draw combined plot
 
 # Key points:
