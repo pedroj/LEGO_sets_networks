@@ -1,5 +1,5 @@
 # Use BrickLink/Rebrickable to map your V(g)$name (assume Design IDs like "3001") to images, then integrate in ggraph.
-# Fetch Set 4489 Parts (R Code)
+# Fetch Set 7131 Parts (R Code)
 # Download unique parts data:
 library(jsonlite)  # For API
 library(here)
@@ -15,8 +15,8 @@ library(ggimage)
 # top20_parts <- parts_json$results %>%
 #    count(part_id, color_id, sort = TRUE) %>%
 #    head(20)  # Top 20 unique parts
-#    parts_4489.1_json <- fromJSON("https://rebrickable.com/api/v3/lego/sets/4489-1/parts/?key=40c6692458e8b4c27074486ab114d6cc&includecolor=yes")
-#    set_4489_parts<- parts_4489.1_json$results$part
+#    parts_7131.1_json <- fromJSON("https://rebrickable.com/api/v3/lego/sets/7131-1/parts/?key=40c6692458e8b4c27074486ab114d6cc&includecolor=yes")
+#    set_7131_parts<- parts_7131.1_json$results$part
 # NOT RUN ------------------------------------------------------------------------------
 
 # CSV download with fucntion get_set_parts.R: 
@@ -25,28 +25,29 @@ api_key <- "40c6692458e8b4c27074486ab114d6cc"
 source(here::here("./functions/get_set_parts.R"))
 
 # Dataframe with parts list for a set.
-parts_4489 <- get_set_parts("4489-1", api_key)
-head(parts_4489)
-parts_4489 <- parts_4489 %>%
+parts_7131 <- get_set_parts("7131-1", api_key)
+head(parts_7131)
+parts_7131 <- parts_7131 %>%
     dplyr::mutate(
         part_num_trim = sub("\\.dat$", "", part_num)
     )
-parts_4489new <- parts_4489 %>%
+parts_7131new <- parts_7131 %>%
     dplyr::filter(part_num_trim %in% V(g)$part_id)
 #
 # Assume V(g)$name are part_ids like "3001"; map 20 nodes
 V(g)$part_id <- sub("\\.dat$", "", V(g)$name) #V(g)$name  # Or your mapping
-V(g)$color_id <- parts_4489new$color_id  # Black example; get from parts_json$results$color_id
+V(g)$color_id <- 7  # Black example; get from parts_json$results$color_id
 V(g)$image <- paste0("https://img.bricklink.com/ItemImage/P/", V(g)$part_id, V(g)$color_id, ".png")
 # Example for color 0 (White): https://img.bricklink.com/ItemImage/P/3001/0.png
 
 
 # 1. Download and cache images locally
-# Assume you already have a parts data.frame like parts_4489 from get_set_parts():
-# parts_4489 columns: part_num, part_name, color_id, color_name, img_url, quantity
-download_part_images <- function(part_num, color_id, urls, destdir = "images/part_images/") {
+# Assume you already have a parts data.frame like parts_7131 from get_set_parts():
+# parts_7131 columns: part_num, part_name, color_id, color_name, img_url, quantity
+download_part_images <- function(part_num, color_id, urls, 
+                                 destdir = "images/downloaded_images/") {
     dir.create(destdir, showWarnings = FALSE)
-    filenames <- paste0(part_num, "_", color_id, ".png")
+    filenames <- paste0(part_num,".png")
     paths <- file.path(destdir, filenames)
     mapply(
         function(u, p) {
@@ -60,21 +61,21 @@ download_part_images <- function(part_num, color_id, urls, destdir = "images/par
     paths
 }
 
-parts_4489$img_path <- download_part_images(
-    part_num = parts_4489$part_num,
-    color_id = parts_4489$color_id,
-    urls     = parts_4489$img_url,
-    destdir  = "images/part_images/"
+parts_7131$img_path <- download_part_images(
+    part_num = parts_7131$part_num,
+    color_id = parts_7131$color_id,
+    urls     = parts_7131$img_url,
+    destdir  = "images/downloaded_images/"
 )
 
-# parts_4489$img_path <- download_part_images(parts_4489$img_url, destdir = "images")
+# parts_7131$img_path <- download_part_images(parts_7131$img_url, destdir = "images")
 
 #Check part names include .dat
-#parts_4489 <- parts_4489 %>%
+#parts_7131 <- parts_7131 %>%
 #    dplyr::mutate(part_num2= paste0(part_num,".dat"))
 
 # download.file(V(g)$image, destdir = "part_imgs/")
-V(g)$loc.image <- paste0("images/part_images/", V(g)$part_id, "_", V(g)$color_id, ".png")
+V(g)$loc.image <- paste0("images/part_images/", V(g)$part_id, ".png")
 
 
 # 3. Plot with ggraph + ggimage using local files
@@ -97,12 +98,12 @@ ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
     geom_image(
         data = nodes,
         aes(x = x, y = y, image = img_path),
-        size = 0.13,                 # fixed, reasonable size
+        size = 0.06,                 # fixed, reasonable size
         inherit.aes = FALSE
     ) +
     geom_node_text(aes(label = name),
-                   vjust = 1.8,
-                   size = 3,
+                   vjust = 4.25,
+                   size = 4,
                    color = "black") +
     theme_graph() +
     labs(title = "LEGO Parts Network (Images)")
@@ -115,41 +116,4 @@ ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
 # inherit.aes = FALSE stops it from looking for x/y in the ggraph layout environment, so there is no ambiguity.
 
 # size is relative to the plot; adjust (e.g. 0.07–0.12) to fit ~20 nodes.
-
-# 4. Optional: safer filename scheme
-# To avoid clashes when two URLs share the same basename:
-
-download_part_images <- function(part_num, color_id, urls, destdir = "part_imgs") {
-    dir.create(destdir, showWarnings = FALSE)
-    filenames <- paste0(part_num, "_", color_id, ".png")
-    paths <- file.path(destdir, filenames)
-    mapply(
-        function(u, p) {
-            if (!file.exists(p) && !is.na(u) && nzchar(u)) {
-                try(download.file(u, p, mode = "wb"), silent = TRUE)
-            }
-        },
-        urls, paths
-    )
-    
-    paths
-}
-
-parts_4489$img_path <- download_part_images(
-    part_num = parts_4489$part_num,
-    color_id = parts_4489$color_id,
-    urls     = parts_4489$img_url,
-    destdir  = "part_imgs"
-)
-
-# That keeps our cache stable and unique per part/color.
-
-# Tune size = 0.12 for visibility with 20 nodes.
-# Quick R Mapping for Your 20 Nodes
-# Assume V(g)$name = c("3024", "3001", ...)  # Your 20 Design IDs
-V(g)$part_id <- V(g)$name
-V(g)$color_id <- c(7, 0, 7, 1, ...)  # From table or API
-V(g)$image <- paste0("https://img.bricklink.com/ItemImage/P/", 
-                     V(g)$part_id, "/", V(g)$color_id, ".png")
-
 
