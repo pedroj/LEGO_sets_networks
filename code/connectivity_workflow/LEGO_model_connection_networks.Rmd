@@ -465,10 +465,10 @@ ggp_image <- ggp +
 ggp_image <- ggp +
   inset_element(
     my_image_grob,
-    left   = 0.80,  # 35% from left
-    right  = 0.95,  # 65% from left -> 30% width
-    bottom = 0.75,  # 35% from bottom
-    top    = 0.9888,  # 65% from bottom -> 30% height
+    left   = 0.15,  # 15% from left
+    right  = 0.15,  # 65% from left -> 30% width
+    bottom = 0.90,  # 35% from bottom
+    top    = 0.6,  # 65% from bottom -> 30% height
     align_to = "full",
     clip     = F
   )
