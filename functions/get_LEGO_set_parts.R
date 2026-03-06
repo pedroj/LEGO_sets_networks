@@ -1,10 +1,9 @@
-get_set_parts <- function(set_num, api_key) {
+get_LEGO_set_parts <- function(set_num= "4489-1", api_key= "40c6692458e8b4c27074486ab114d6cc") {
     url <- paste0(
         "https://rebrickable.com/api/v3/lego/sets/",
         set_num,
         "/parts/?page=1&page_size=1000"
     )
-    
     resp <- GET(
         url,
         add_headers(Authorization = paste("key", api_key))
@@ -13,7 +12,6 @@ get_set_parts <- function(set_num, api_key) {
     
     dat <- content(resp, as = "text", encoding = "UTF-8") |>
         fromJSON()
-    
     parts <- dat$results %>%
         unnest_wider(part,  names_sep = "_") %>%
         unnest_wider(color, names_sep = "_") %>%
@@ -28,6 +26,5 @@ get_set_parts <- function(set_num, api_key) {
    # if (!is.null(color_id_filter)) {
    #     parts <- parts %>% filter(color_id %in% color_id_filter)
    #}
-    
     parts
 }
