@@ -22,6 +22,9 @@ library(jsonlite)  # For API
 library(purrr)
 library(httr)
 library(ggimage)
+library("png")                      # Load png package
+# install.packages("patchwork")       # Install patchwork package
+library("patchwork")                # Load patchwork
 
 ```
 
@@ -176,14 +179,27 @@ degree(g)
 # Using ggraph (Recommended)
 # ggraph extends ggplot2 for networks and works directly with igraph.
 
-ggraph(g, layout = "fr") +  # Fruchterman-Reingold layout
+ggp <- ggraph(g, layout = "fr") +  # Fruchterman-Reingold layout
 # geom_edge_link(aes(width = 0.0005), alpha = 0.2) +
   geom_edge_link(aes(alpha= 0.3)) +
 # geom_edge_bend0() +
   geom_node_point(aes(size = degree(g)), color = "blue", alpha= 0.65) +
   geom_node_text(aes(label = name), repel = TRUE) +
   theme_graph() +
-  labs(title = "igraph Network with ggraph")
+  labs(title = "Network with 4489-1-AT-AT-Mini")
+
+# readPNG function to load an image that we have stored on our computer:
+my_image <- readPNG("images/4489-1-AT-AT-Mini.png", native = TRUE)
+
+# Use the inset_element function to add our picture to our ggplot2 graphic:
+
+ggp_image <- ggp +                  # Combine plot & image
+  inset_element(p = my_image,
+                left = 0.65,
+                bottom = 0.1,
+                right = 0.9,
+                top = 0.45, align_to = 'full', clip=T)
+ggp_image                           # Draw combined plot
 
 ```
 
@@ -408,7 +424,7 @@ nodes <- data.frame(
 )
 
 # 3) Plot: ggraph uses g + manual layout; geom_image uses nodes with its own aes
- ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
+ggp<- ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
    geom_edge_link(width = 0.1, alpha = 0.8) +
     geom_node_point(size = 0, alpha = 0) +
     geom_image(
@@ -423,6 +439,19 @@ nodes <- data.frame(
                    color = "black") +
     theme_graph() +
     labs(title = "LEGO Parts Network (4489-1 AT-AT-Mini)")
+
+ # readPNG function to load an image that we have stored on our computer:
+my_image <- readPNG("images/4489-1-AT-AT-Mini.png", native = TRUE)
+
+# Use the inset_element function to add our picture to our ggplot2 graphic:
+
+ggp_image <- ggp +                  # Combine plot & image
+  inset_element(p = my_image,
+                left = 0.65,
+                bottom = 0.1,
+                right = 0.9,
+                top = 0.45, align_to = 'full', clip=T)
+ggp_image                           # Draw combined plot
 
 # Key points:
 #    nodes must contain columns literally named x and y.
