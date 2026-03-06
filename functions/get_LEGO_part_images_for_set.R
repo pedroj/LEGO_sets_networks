@@ -1,4 +1,5 @@
-get_LEGO_part_images <- function(my_set="4489-1",api_key="40c6692458e8b4c27074486ab114d6cc") {
+get_LEGO_part_images_for_set <- function(my_set="4489-1",
+                                         api_key="40c6692458e8b4c27074486ab114d6cc") {
   # Use BrickLink/Rebrickable to download image files fpr LEGO parts. Then map the V(g)$name (assume Design IDs like "3001") to images, then integrate in ggraph.
   # Fetch Set 7131 Parts (R Code)
   # Download unique parts data:
@@ -29,7 +30,7 @@ get_LEGO_part_images <- function(my_set="4489-1",api_key="40c6692458e8b4c2707448
   # CSV download with function get_set_parts.R: 
   # https://cdn.rebrickable.com/media/downloads/sets.csv.zip?
  # api_key <- "40c6692458e8b4c27074486ab114d6cc"
-  source(here::here("functions/get_set_parts.R"))
+  source(here::here("functions/get_LEGO_set_parts.R"))
   
   # Dataframe with parts list for a set.
   my_parts <- get_set_parts(my_set, api_key)
@@ -60,7 +61,7 @@ get_LEGO_part_images <- function(my_set="4489-1",api_key="40c6692458e8b4c2707448
                                               destdir = "images/part_images")
 #  my_parts
   cat("Downloaded", nrow(my_parts), "parts for set", my_set, "\n")
-  head(my_parts)
+  print(head(my_parts))
   
 # Subsetting the parts file to just unique part types (no color or duplications).
 #  parts_4489_unique <- parts_4489 %>%
