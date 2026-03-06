@@ -22,6 +22,7 @@ library(jsonlite)  # For API
 library(purrr)
 library(httr)
 library(ggimage)
+library(grid)
 library("png")                      # Load png package
 # install.packages("patchwork")       # Install patchwork package
 library("patchwork")                # Load patchwork
