@@ -41,7 +41,11 @@ Parse an `.ldr` or and `.mpd` file to get the part list.
 
 ```{r parse, echo=TRUE}
 # 1) Read a .mdp file for the selected LEGO set.
-mpd_lines <- readLines(here::here("data/models/4489-1-AT-AT-Mini.mpd"))
+mpd_lines <- readLines(here::here("data/models/starwars/7110-1.mpd"))
+
+# Helper: extract setname.
+source(here::here("functions/extract_mpd_set_name.R"))
+setname<- extract_mpd_set_name(here::here("data/models/starwars/7110-1.mpd"))
 
 # Helper: identify FILE sections
 file_idx  <- grep("^0 FILE", mpd_lines)
