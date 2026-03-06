@@ -466,8 +466,8 @@ ggp_image <- ggp +
     my_image_grob,
     left   = 0.80,  # 35% from left
     right  = 0.95,  # 65% from left -> 30% width
-    bottom = 0.35,  # 35% from bottom
-    top    = 0.988,  # 65% from bottom -> 30% height
+    bottom = 0.75,  # 35% from bottom
+    top    = 0.9888,  # 65% from bottom -> 30% height
     align_to = "full",
     clip     = F
   )
