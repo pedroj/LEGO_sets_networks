@@ -238,8 +238,8 @@ Below is an end‑to‑end pattern tailored to a Rebrickable parts table and LEG
 
 
 ## 1. Download and cache images locally
-Assume you already have a parts data.frame like parts_4489 from get_set_parts():
-parts_4489 columns: part_num, part_name, color_id, color_name, img_url, quantity
+Assume we already have a parts `data.frame` like `parts_4489` from function `get_set_parts()`:
+`parts_4489` columns: `part_num`, `part_name`, `color_id`, `color_name`, `img_url`, `quantity`
 
 ```{r dowload_part_images, echo=TRUE}
 # CSV download with function get_set_parts.R: 
