@@ -67,7 +67,6 @@ files_df
 
 ## **2. Extract part instances (LDraw type 1 lines)**
 
-You can also embed plots, for example:
 
 ```{r parse_1, echo=TRUE}
 # Function to parse "1 ..." lines inside a FILE block
@@ -184,7 +183,8 @@ degree(g)
 # Using ggraph (Recommended)
 # ggraph extends ggplot2 for networks and works directly with igraph.
 
-ggp <- ggraph(g, layout = "fr") +  # Fruchterman-Reingold layout
+ggp <- ggraph(g, layout = "fr",
+              niter= 300) +  # Fruchterman-Reingold layout
 # geom_edge_link(aes(width = 0.0005), alpha = 0.2) +
 #  geom_edge_link(aes(alpha= 0.3)) +
 #  geom_edge_link(width = 0.1, alpha = 0.7) +
@@ -192,18 +192,39 @@ ggp <- ggraph(g, layout = "fr") +  # Fruchterman-Reingold layout
   geom_node_point(aes(size = degree(g)), color = "blue", alpha= 0.65) +
   geom_node_text(aes(label = name), repel = TRUE) +
   theme_graph() +
-  labs(title = "Network with 4489-1-AT-AT-Mini")
+  labs(title = print(setname))
+
+# Pre-compute bounds for compact area (adjust based on your g)
+# n_nodes <- vcount(g)
+# area_size <- sqrt(n_nodes) * 3  # Scales with graph size
+# minC <- rep(-area_size/2, 2)
+# maxC <- rep(area_size/2, 2)
+
+# More ompact arrangement.
+# ggp <- ggraph(g, 
+#               layout = "fr", 
+#               niter = 300) +  # Fewer iterations = tighter/faster
+#   geom_edge_bend0(width = 0.18, alpha = 0.7) +
+#   geom_node_point(aessize = degree(g), #(size = pmin(degree(g), 8)), 
+#                   color = "blue", alpha = 0.7) +
+#   geom_node_text(aes(label = name), repel = TRUE) +
+# #  geom_node_text(aes(label = ifelse(degree(g) > 2, name, "")), 
+# #                 repel = TRUE, size = 2.5) +
+#   theme_graph() +
+#   labs(title = setname) +
+#   coord_fixed(0.6)
+
 
 # readPNG function to load an image that we have stored on our computer:
-my_image <- readPNG("images/4489-1-AT-AT-Mini.png", native = TRUE)
+my_image <- readPNG("images/7110-Landspeeder.png", native = TRUE)
 
 # Use the inset_element function to add our picture to our ggplot2 graphic:
 
 ggp_image <- ggp +                  
   inset_element(p = my_image,
-                left = 0.4,
-                bottom = 1,
-                right = 0.3,
+                left = 0.05,
+                bottom = 0.5,
+                right = 0.19,
                 top = 0.8, 
                 align_to = 'full', 
                 clip = TRUE)
