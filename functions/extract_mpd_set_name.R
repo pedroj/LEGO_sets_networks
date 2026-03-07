@@ -3,29 +3,27 @@
 # set_name <- extract_mpd_set_name("path/to/your_file.mpd")
 # print(set_name)  # "7110 - Landspeeder."
 # 
+library(stringr)
+
 extract_mpd_set_name <- function(mpd_path) {
-    # Read all lines
-    lines <- readLines(mpd_path)
+    lines <- readLines(mpd_path, warn = FALSE)
     
-    # Find first 0 FILE line (usually line 3+ after headers)
-    file_line_idx <- grep("^0\\s+FILE\\s+", lines)[1]
+    name_idx <- grep("^0\\s+Name:\\s+", lines)[1]
+    if (is.na(name_idx)) return(NA_character_)
     
-    if (is.na(file_line_idx)) {
-        return(NA_character_)
-    }
-    
-    # Extract filename from that line
-    line <- lines[file_line_idx]
+    line   <- lines[name_idx]
     tokens <- unlist(strsplit(trimws(line), "\\s+"))
-    
-    if (length(tokens) < 3 || tokens[1] != "0" || tokens[2] != "FILE") {
+    if (length(tokens) < 3 || tokens[1] != "0" || tokens[2] != "Name:") {
         return(NA_character_)
     }
     
-    # Set name is everything after "FILE"
     set_name <- paste(tokens[3:length(tokens)], collapse = " ")
+    set_name <- stringr::str_squish(set_name)
+    set_name <- gsub("\\s-\\s", "-", set_name)
+    set_name <- gsub("\\.(mpd|ldr)$", "", set_name, ignore.case = TRUE)
     
-    # Optionally strip .ldr extension
-    gsub("\\.ldr$", "", set_name, ignore.case = TRUE)
+    if (grepl("^[0-9]+-", set_name)) {
+        set_name <- sub("^([0-9]+)-", "\\1-1-", set_name)
+    }
 }
 

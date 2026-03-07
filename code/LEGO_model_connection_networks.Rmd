@@ -23,6 +23,7 @@ library(purrr)
 library(httr)
 library(ggimage)
 library(grid)
+library(colouR)
 library("png")                      # Load png package
 # install.packages("patchwork")       # Install patchwork package
 library("patchwork")                # Load patchwork
@@ -41,17 +42,22 @@ Parse an `.ldr` or and `.mpd` file to get the part list.
 
 ```{r parse, echo=TRUE}
 # 1) Read a .mdp file for the selected LEGO set.
-set_id<- "8008-1" ###### <<<<<------- Input set code here.
+set_id<- "4489-1" ###### <<<<<------- Input set code here.
+set_num<- set_id
 mpd_lines <- readLines(here::here(paste0("data/models/starwars/",set_id,".mpd")))
 
 # Helper: extract setname.
 source(here::here("functions/extract_mpd_set_name.R"))
-setname<- extract_mpd_set_name(here::here("data/models/starwars/7110-1.mpd"))
+setname<- extract_mpd_set_name(here::here("data/models/starwars/4489-1.mpd"))
 
 # readPNG function to load an image of the set that we have stored on our computer:
 # For later use as inset in a network graph.
-my_image <- readPNG(here::here(paste0("images/",setname,"png"), 
-                               native = TRUE))
+my_image <- readPNG(here::here(paste0("images/",setname,".png"))) #, 
+                             #  native = TRUE))
+set_image_row <- sets %>%
+  dplyr::filter(set_num == set_id)
+
+set_image_url <- set_image_row$img_url
 
 # Helper: identify FILE sections
 file_idx  <- grep("^0 FILE", mpd_lines)
@@ -221,15 +227,25 @@ ggp <- ggraph(g, layout = "fr",
 
 # Use the inset_element function to add our picture to our ggplot2 graphic:
 
-ggp_image <- ggp +                  
-  inset_element(p = my_image,
-                left = 0.05,
-                bottom = 0.5,
-                right = 0.19,
-                top = 0.8, 
-                align_to = 'full', 
-                clip = TRUE)
-ggp_image                           # Draw combined plot
+my_image_array <- readPNG(here::here(paste0("images/", setname, ".png")))
+
+p_logo <- ggplot() +
+  annotation_custom(
+    rasterGrob(my_image_array, interpolate = TRUE),
+    xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf
+  ) +
+  theme_void()
+
+ggp_image <- ggp +
+  inset_element(
+    p_logo,
+    left   = 0.05,
+    bottom = 0.5,
+    right  = 0.19,
+    top    = 0.8,
+    align_to = "full",
+    clip     = TRUE
+  )
 
 ```
 
