@@ -1,0 +1,477 @@
+---
+title: "test_lego_model_network"
+author: "Pedro Jordano"
+date: "2026-03-04"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(here)
+library(stringr)
+library(tidyr)
+library(igraph)
+library(ggnetwork); library(intergraph)
+library(igraph)
+library(ggraph)
+library(ggplot2)
+library(GGally)
+
+library(jsonlite)  # For API
+library(purrr)
+library(httr)
+library(ggimage)
+
+```
+
+
+
+## 6. Network at the level of individual brick instances (each physical brick a node)
+
+To get a network where each node is a physical brick instance, we treat every LDraw
+`1` line as a unique element and then define edges by geometric proximity in world
+coordinates.
+
+Below is a self‑contained R script that:
+
+-   Parses the MPD, including nested submodels (`.ldr` inside `.ldr`).
+
+-   Computes global coordinates for every brick instance.
+
+-   Builds a simple contact network: edge if distance between brick centroids is below a
+    chosen threshold (e.g. 20 LDraw units ≈ 2 studs).
+
+
+```{r indiv_bricks_network, echo=TRUE}
+library(dplyr)
+library(stringr)
+library(purrr)
+library(tidyr)
+library(igraph)
+
+#-----------------------------
+# 1. Read MPD and split FILEs
+#-----------------------------
+mpd_lines <- readLines(here::here("connectivity_workflw/106-Unicef_Truck.mpd"))
+
+file_idx      <- grep("^0 FILE", mpd_lines)
+file_idx_end  <- c(file_idx[-1] - 1, length(mpd_lines))
+
+files_df <- tibble(
+  file_start = file_idx,
+  file_end   = file_idx_end,
+  file_header = mpd_lines[file_idx]
+) %>%
+  mutate(
+    file_name_raw = str_trim(str_remove(file_header, "^0 FILE")),
+    # e.g. "106 - car.ldr" -> "car.ldr"
+    file_name = file_name_raw %>%
+      str_replace("^\\d+\\s+-\\s+", "") %>%
+      str_trim()
+  )
+
+#-----------------------------------
+# 2. Parse part instances per FILE
+#-----------------------------------
+parse_file_parts <- function(lines, file_name) {
+  idx <- grep("^1\\s", lines)
+  if (length(idx) == 0) return(NULL)
+
+  tokens_list <- str_split(lines[idx], "\\s+", simplify = FALSE)
+
+  rows <- map(tokens_list, function(tok) {
+    if (length(tok) < 15) return(NULL)
+    tibble(
+      file      = file_name,
+      color     = tok[2],
+      x         = as.numeric(tok[3]),
+      y         = as.numeric(tok[4]),
+      z         = as.numeric(tok[5]),
+      a         = as.numeric(tok[6]),
+      b         = as.numeric(tok[7]),
+      c         = as.numeric(tok[8]),
+      d         = as.numeric(tok[9]),
+      e         = as.numeric(tok[10]),
+      f         = as.numeric(tok[11]),
+      g         = as.numeric(tok[12]),
+      h         = as.numeric(tok[13]),
+      i         = as.numeric(tok[14]),
+      part_raw  = paste(tok[15:length(tok)], collapse = " ")
+    )
+  })
+
+  bind_rows(rows)
+}
+
+parts_local <- map2_dfr(
+  files_df$file_start,
+  files_df$file_end,
+  ~{
+    block_lines <- mpd_lines[.x:.y]
+    fname <- files_df$file_name[files_df$file_start == .x]
+    parse_file_parts(block_lines, fname)
+  }
+)
+
+# Give each local instance an ID within its FILE
+parts_local <- parts_local %>%
+  group_by(file) %>%
+  mutate(local_id = row_number()) %>%
+  ungroup()
+
+#-----------------------------------
+# 3. Build file lookup (submodels)
+#-----------------------------------
+file_lookup <- files_df %>%
+  select(file_name) %>%
+  mutate(is_submodel = TRUE)
+
+# A part is a submodel if its name (after cleaning) matches a FILE name
+parts_local <- parts_local %>%
+  mutate(
+    part = str_trim(part_raw),
+    # also strip "106 - " from part if present
+    part_clean = part %>%
+      str_replace("^\\d+\\s+-\\s+", "") %>%
+      str_trim()
+  ) %>%
+  left_join(file_lookup, by = c("part_clean" = "file_name")) %>%
+  mutate(is_submodel = ifelse(is.na(is_submodel), FALSE, is_submodel))
+
+#-----------------------------------
+# 4. Recursive expansion to world coords
+#-----------------------------------
+# Represent transforms as 3x3 matrix + translation vector
+mat_from_row <- function(row) {
+  matrix(c(row$a, row$b, row$c,
+           row$d, row$e, row$f,
+           row$g, row$h, row$i),
+         nrow = 3, byrow = TRUE)
+}
+
+# Depth-first traversal: expand submodels to primitive brick instances
+expand_file <- function(file_name, parent_mat, parent_trans, parent_path) {
+  # parent_mat: 3x3 matrix
+  # parent_trans: length-3 numeric
+  # parent_path: character string to track hierarchy
+
+  df <- parts_local %>% filter(file == file_name)
+
+  if (nrow(df) == 0) return(NULL)
+
+  res_list <- vector("list", nrow(df))
+
+  for (k in seq_len(nrow(df))) {
+    row <- df[k, ]
+
+    # local transform of this instance
+    mat_local <- mat_from_row(row)
+    trans_local <- c(row$x, row$y, row$z)
+
+    # compose transform: global = parent_mat %*% local + parent_trans
+    mat_global <- parent_mat %*% mat_local
+    trans_global <- as.numeric(parent_mat %*% trans_local + parent_trans)
+
+    this_path <- paste0(parent_path, "/", row$file, "[", row$local_id, "]")
+
+    if (isTRUE(row$is_submodel)) {
+      # recurse into submodel
+      sub_expanded <- expand_file(
+        file_name   = row$part_clean,
+        parent_mat  = mat_global,
+        parent_trans = trans_global,
+        parent_path = this_path
+      )
+      res_list[[k]] <- sub_expanded
+    } else {
+      # primitive brick instance: store its global transform
+      res_list[[k]] <- tibble(
+        instance_id = paste0(this_path, ":", row$part),
+        file_origin = row$file,
+        part        = row$part,
+        color       = row$color,
+        x_global    = trans_global[1],
+        y_global    = trans_global[2],
+        z_global    = trans_global[3],
+        # flatten rotation matrix for later if needed
+        a = mat_global[1,1], b = mat_global[1,2], c = mat_global[1,3],
+        d = mat_global[2,1], e = mat_global[2,2], f = mat_global[2,3],
+        g = mat_global[3,1], h = mat_global[3,2], i = mat_global[3,3]
+      )
+    }
+  }
+
+  bind_rows(res_list)
+}
+
+# Start from main model (first FILE) – here "main.ldr"
+root_file <- files_df$file_name[1]
+
+world_parts <- expand_file(
+  file_name   == root_file,
+  parent_mat  == diag(3),
+  parent_trans == c(0, 0, 0),
+  parent_path == root_file
+)
+
+# world_parts now has one row per physical brick instance in world coordinates. [file:1]
+world_parts
+
+#-----------------------------------
+# 5. Build contact network between instances
+#-----------------------------------
+# Simple rule: connect two bricks if their centroids are closer than a threshold.
+# LDraw units: 20 LDU ≈ 1 LEGO plate, 24 LDU ≈ 1 stud height; adjust threshold as desired.
+dist_threshold <- 25  # tune as needed
+
+coords <- world_parts %>%
+  select(instance_id, x_global, y_global, z_global)
+
+n <- nrow(coords)
+
+# pairwise distances (naive O(n^2) – fine for small model)
+ij <- t(combn(seq_len(n), 2))
+dx <- coords$x_global[ij[,1]] - coords$x_global[ij[,2]]
+dy <- coords$y_global[ij[,1]] - coords$y_global[ij[,2]]
+dz <- coords$z_global[ij[,1]] - coords$z_global[ij[,2]]
+dist <- sqrt(dx^2 + dy^2 + dz^2)
+
+contact_idx <- which(dist <= dist_threshold)
+
+edges_instances <- tibble(
+  from = coords$instance_id[ij[contact_idx, 1]],
+  to   = coords$instance_id[ij[contact_idx, 2]],
+  distance = dist[contact_idx]
+)
+
+edges_instances
+
+#-----------------------------------
+# 6. Create igraph and do basic analysis
+#-----------------------------------
+g_inst <- graph_from_data_frame(edges_instances, vertices = world_parts, directed = FALSE)
+
+g_inst
+degree(g_inst)
+
+plot(
+  g_inst,
+  vertex.size = 4,
+  vertex.label = NA,
+  main = "LEGO brick-instance contact network"
+)
+
+```
+
+This gives us a brick‑instance graph where each node is one physical element in the
+assembled model, and edges approximate direct contacts based on centroid distance in LDraw
+coordinates.
+
+We now want to restrict “contacts” to bricks that are on the same layer (e.g. similar `yy`)
+to better approximate actual stud–tube connections, rather than generic spatial proximity.
+
+## 7. Restrict “contacts” to bricks that are on the same layer (e.g. similar `yy`)
+
+We now add a vertical “layer” constraint by only allowing contacts between bricks whose
+global yy coordinates are within a small tolerance, and then apply the distance threshold
+in the horizontal plane or in full 3D.
+
+Assuming we already have `world_parts` as in the previous script, here is a modified
+contact‑network section.
+
+### **1. Define layer tolerance and distance metric**
+
+```{r tolerance, echo=TRUE}
+# world_parts: one row per brick instance, with x_global, y_global, z_global
+
+layer_tol      <- 5    # max |Δy| for bricks to be considered on same layer
+dist_threshold <- 25   # max 3D distance (or horizontal) for contact
+
+```
+
+### **2. Compute pairwise contacts with layer restriction**
+
+```{r pairw_contacts, echo=TRUE}
+coords <- world_parts %>%
+  select(instance_id, x_global, y_global, z_global)
+
+n  <- nrow(coords)
+ij <- t(combn(seq_len(n), 2))
+
+dx <- coords$x_global[ij[,1]] - coords$x_global[ij[,2]]
+dy <- coords$y_global[ij[,1]] - coords$y_global[ij[,2]]
+dz <- coords$z_global[ij[,1]] - coords$z_global[ij[,2]]
+
+# 3D distance (we could also use horizontal only: sqrt(dx^2 + dz^2))
+dist3d <- sqrt(dx^2 + dy^2 + dz^2)
+
+same_layer <- abs(dy) <= layer_tol
+close_enough <- dist3d <= dist_threshold
+
+contact_idx <- which(same_layer & close_enough)
+
+edges_instances <- tibble(
+  from      = coords$instance_id[ij[contact_idx, 1]],
+  to        = coords$instance_id[ij[contact_idx, 2]],
+  distance  = dist3d[contact_idx],
+  dy        = dy[contact_idx]
+)
+
+edges_instances
+
+```
+
+## **3. Build the instance‑level graph**
+
+```{r instance_level_graph, echo=TRUE}
+g_inst <- graph_from_data_frame(
+  edges_instances,
+  vertices = world_parts,
+  directed = FALSE
+)
+
+g_inst
+degree(g_inst)
+
+plot(
+  g_inst,
+  vertex.size = 4,
+  vertex.label = NA,
+  main = "Brick-instance contact network (same-layer restriction)"
+)
+
+```
+
+We can tune `layer_tol` to match the expected plate/brick heights in LDraw units; for
+example, for only strictly coplanar bricks we set it close to 0, while a slightly
+larger window will capture small numerical offsets from rotations.
+
+Now classify layers automatically (e.g. cluster `yy` values into discrete
+levels and then restrict contacts to within a level).
+
+```{r classify_layers, echo=TRUE}
+node_attr <- tibble(
+    part = V(g)$name ) %>% 
+    mutate(is_submodel = str_detect(part,"\\.ldr$"), 
+           is_primitive = str_detect(part, "\\.dat$"))
+
+V(g)$is_submodel <- node_attr$is_submodel[match(V(g)$name, 
+                                                node_attr$part)]
+V(g)$is_primitive <- node_attr$is_primitive[match(V(g)$name, 
+                                                  node_attr$part)]
+
+```
+
+
+That snippet tags graph nodes as submodels (`.ldr`) or primitive parts (`.dat`); with
+brick‑instance nodes you should adapt it to use instance attributes instead of
+`V(g)$name`.
+
+For the **part‑type** network (earlier `g`):
+
+```         
+r
+```
+
+\`library(stringr) library(tibble) library(dplyr)
+
+node_attr \<- tibble( part = V(g)$name
+) %>%
+  mutate(
+    is_submodel  = str_detect(part, "\\.ldr$"), is_primitive = str_detect(part,
+"\\.dat\$") )
+
+V(g)$is_submodel  <- node_attr$is_submodel[match(V(g)$name, node_attr$part)]
+V(g)$is_primitive <- node_attr$is_primitive[match(V(g)$name, node_attr$part)]\`
+
+For the **brick‑instance** network (`g_inst`, vertices from `world_parts`), a more useful
+version is:
+
+```         
+r
+```
+
+\`node_attr_inst \<- world_parts %\>% transmute( instance_id, part, color, is_submodel =
+str_detect(part, "\\.ldr$"),
+    is_primitive = str_detect(part, "\\.dat$") )
+
+V(g_inst)$part        <- node_attr_inst$part[match(V(g_inst)$name, node_attr_inst$instance_id)]
+V(g_inst)$color       <- node_attr_inst$color[match(V(g_inst)$name, node_attr_inst$instance_id)]
+V(g_inst)$is_submodel <- node_attr_inst$is_submodel[match(V(g_inst)$name, node_attr_inst$instance_id)]
+V(g_inst)$is_primitive<- node_attr_inst$is_primitive[match(V(g_inst)$name, node_attr_inst$instance_id)]\`
+
+This way we keep your **instance‑level** network but still know which LEGO element file
+each node comes from.
+
+Is your goal to eventually collapse instance‑level contacts into a part‑type interaction
+network (e.g. a weighted projection of brick contacts)?
+
+eventually collapse instance‑level contacts into a part‑type interaction network (e.g. a
+weighted projection of brick contacts)
+
+You can project the brick‑instance contact network onto part types by grouping edges by
+the pair of part files and counting how many instance‑level contacts each pair has.
+
+## **1. Start from instance‑level data**
+
+Assume you already have:
+
+-   `world_parts`: one row per instance, with `instance_id` and `part`.
+
+-   `edges_instances`: contacts between instances (`from`, `to`).
+
+## **2. Build weighted part‑type interaction table**
+
+library(dplyr)
+
+# Map instance IDs to their part types
+
+inst_to_part <- world_parts %>% select(instance_id, part)
+
+edges_part \<- edges_instances %\>% left_join(inst_to_part, by = c("from" =
+"instance_id")) %\>% rename(part_from = part) %\>% left_join(inst_to_part, by = c("to" =
+"instance_id")) %\>% rename(part_to = part) %\>% \# drop self-contacts between instances
+of same type if you want only heterotypic \# filter(part_from != part_to) %\>% mutate( \#
+undirected canonical ordering of part-pair p1 = pmin(part_from, part_to), p2 =
+pmax(part_from, part_to) ) %\>% group_by(p1, p2) %\>% summarise( weight = n(), \# number
+of instance-level contacts mean_distance = mean(distance), \# optional summary .groups =
+"drop" )
+
+edges_part\`
+
+## **3. Create the part‑type graph**
+
+```         
+r
+```
+
+\`library(igraph)
+
+g_part \<- graph_from_data_frame( edges_part, directed = FALSE )
+
+E(g_part)$weight        <- edges_part$weight
+E(g_part)$mean_distance <- edges_part$mean_distance
+
+g_part\`
+
+## **4. Optional: add node attributes (type, color diversity, etc.)**
+
+```         
+r
+```
+
+\`# simple flag for primitive vs submodel at part level parts_attr \<- tibble( part =
+V(g_part)$name
+) %>%
+  mutate(
+    is_submodel  = str_detect(part, "\\.ldr$"), is_primitive = str_detect(part,
+"\\.dat\$") )
+
+V(g_part)$is_submodel  <- parts_attr$is_submodel[match(V(g_part)$name, parts_attr$part)]
+V(g_part)$is_primitive <- parts_attr$is_primitive[match(V(g_part)$name, parts_attr$part)]\`
+
+Now `g_part` is a weighted interaction network between LEGO part types, derived from the
+underlying brick‑instance contacts.
+
+
