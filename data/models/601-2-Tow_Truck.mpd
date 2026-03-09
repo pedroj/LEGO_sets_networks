@@ -1,13 +1,13 @@
-0 FILE 601-2 - Tow Truck Main.ldr
+0 FILE 601-2-Tow_Truck.mdp
 0 Tow Truck Main
-0 Name: 601-2 - Tow Truck Main.ldr
+0 Name: 601-2-Tow_Truck.mdp
 0 Author: Marc Giraudet [MadMarc]
 0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
 0 !LDRAW_ORG Model
 1 16 0 0 0 1 0 0 0 1 0 0 0 1 601-2 - Tow Truck.ldr
-0 FILE 601-2 - Tow Truck.ldr
-0 Tow Truck
-0 Name: 601-2 - Tow Truck.ldr
+0 FILE 601-2-Tow_Truck.mdp
+0 Tow_Truck
+0 Name: 601-2-Tow_Truck.mdp
 0 Author: Marc Giraudet [Mad_Marc]
 0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
 0 !LDRAW_ORG Model

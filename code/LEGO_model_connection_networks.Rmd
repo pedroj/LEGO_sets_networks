@@ -41,19 +41,23 @@ refine the contact criterion later (e.g. geometric distance) if needed.
 Parse an `.ldr` or and `.mpd` file to get the part list.
 
 ```{r parse, echo=TRUE}
-# 1) Read a .mdp file for the selected LEGO set.
-set_id<- "4489-1" ###### <<<<<------- Input set code here.
+# 1) Read a .mpd file for the selected LEGO set.
+set_id<- "601-1" ###### <<<<<------- Input set code here.
 set_num<- set_id
+mpd_lines <- readLines(here::here("data/models/601-2-Tow_Truck.mpd"))
+# For Star Wars models
 mpd_lines <- readLines(here::here(paste0("data/models/starwars/",set_id,".mpd")))
 
 # Helper: extract setname.
 source(here::here("functions/extract_mpd_set_name.R"))
-setname<- extract_mpd_set_name(here::here("data/models/starwars/4489-1.mpd"))
+setname<- extract_mpd_set_name(here::here("data/models/601-2-Tow_Truck.mpd"))
 
 # readPNG function to load an image of the set that we have stored on our computer:
 # For later use as inset in a network graph.
 my_image <- readPNG(here::here(paste0("images/",setname,".png"))) #, 
                              #  native = TRUE))
+my_image <- readPNG(here::here(paste0("images/601-1-Tow_Truck.png"))) #, 
+
 set_image_row <- sets %>%
   dplyr::filter(set_num == set_id)
 
@@ -289,13 +293,13 @@ Assume we already have a parts `data.frame` like `parts_4489` from function `get
 # `parts_4489` columns: `part_num`, `part_name`, `color_id`, `color_name`, 
 # `img_url`, `quantity`
 #######################################
-target_set<- c("4489-1")
+target_set<- c("609-1")
 #######################################
 #
 # CSV download with function get_set_parts.R: 
 # https://cdn.rebrickable.com/media/downloads/sets.csv.zip?
 api_key <- "40c6692458e8b4c27074486ab114d6cc"
-source(here::here("./code/connectivity_workflow/functions/get_set_parts.R"))
+source(here::here("./functions/get_set_parts.R"))
 
 # Dataframe with parts list for a set.
 target_set_parts <- get_set_parts(target_set, api_key)
@@ -360,7 +364,7 @@ vcount(g)            # should also be 31
 V(g)$loc.image <- paste0("images/part_images/", V(g)$part_id, ".png")
 
 ##############
-# Plottng.
+# Plotting.
 ##############
 source(here::here("functions/setup_graph_plot.R"))
 setup_graph_plot(target_set)
