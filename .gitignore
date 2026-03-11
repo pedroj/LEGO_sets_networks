@@ -12,6 +12,7 @@
 *.png
 *.jpg
 /data/rebrickable/*.csv
+/images/rebrickable/*.*
 /code/LEGO_set_explorer/*.csv
 /code/LEGO_set_explorer/*.rds
 lego_sets.csv
