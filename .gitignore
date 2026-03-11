@@ -12,6 +12,8 @@
 *.png
 *.jpg
 /data/rebrickable/*.csv
+/code/LEGO_set_explorer/*.csv
+/code/LEGO_set_explorer/*.rds
 
 # Example code in package build process
 *-Ex.R
