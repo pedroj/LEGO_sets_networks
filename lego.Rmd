@@ -329,6 +329,70 @@ gg
 
 ```
 
+#### Hill numbers
+
+```{r hill, echo=TRUE}
+library(dplyr)
+library(purrr)
+
+# helper: Hill numbers from a vector of abundances
+hill_numbers <- function(x) {
+  x <- x[x > 0]
+  p <- x / sum(x)
+  # q = 0: richness
+  D0 <- length(x)
+  # q = 1: exp(Shannon)
+  H  <- -sum(p * log(p))
+  D1 <- exp(H)
+  # q = 2: inverse Simpson
+  D2 <- 1 / sum(p^2)
+  c(D0 = D0, D1 = D1, D2 = D2)
+}
+
+hill_df <- Starwars %>%
+#  filter(set_num %in% tt$set_num) %>%        # To select subsets.
+  dplyr::group_by(set_num, set_name) %>%
+  dplyr::summarise(
+    vals = list(hill_numbers(table(quantity))),
+    .groups = "drop"
+  ) %>%
+  dplyr::mutate(
+    D0 = map_dbl(vals, 1),
+    D1 = map_dbl(vals, 2),
+    D2 = map_dbl(vals, 3)
+  ) %>%
+  dplyr::select(-vals)
+
+# This gives one row per set with Hill D0 (richness), D1 (exp‑Shannon), 
+# and D2 (inverse Simpson).
+
+library(tidyr)
+
+hill_long <- hill_df %>%
+  pivot_longer(
+    cols = starts_with("D"),
+    names_to  = "q",
+    values_to = "D"
+  )
+# Plot (bars by set, facets by q).
+# 
+ggplot(hill_long, aes(x = reorder(set_num, D), y = D, fill = q)) +
+  geom_col(show.legend = TRUE) +
+  coord_flip() +
+  facet_wrap(~ q, scales = "free_x") +
+  labs(
+    x = "Set number",
+    y = "Hill number D",
+    title = "Hill numbers (q = 0, 1, 2) for 80 Star Wars sets"
+  ) +
+  theme_minimal()
+# This shows how effective diversity declines from q=0 (richness) to q=2 (dominance‑weighted),
+# revealing which LEGO Star Wars sets have both high part richness and evenness.
+
+```
+
+
+
 #### Diversity for specific sets
 
 ```{r diversity_set, echo=FALSE}
