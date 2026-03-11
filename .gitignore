@@ -11,6 +11,7 @@
 /data/extdata/*.csv  
 *.png
 *.jpg
+/images/*.*
 /data/rebrickable/*.csv
 /images/rebrickable/*.*
 /code/LEGO_set_explorer/*.csv
