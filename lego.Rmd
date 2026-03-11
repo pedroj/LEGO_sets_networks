@@ -15,6 +15,7 @@ This is an analysis of LEGO sets patterns of component parts: their diversity an
 
 ```{r packages, message=FALSE}
 library(tidyverse)
+library("dplyr")
 library(igraph)
 library(gt)
 library(stringr)
@@ -32,18 +33,18 @@ Input inventory datasets from [BrickLink][http://www.bricklink.com]
 
 ```{r input_lego }
 # Input from local drive; previously downloaded files from Rebrickable.
-colors <- readr::read_csv(here::here("data/rebrickable/colors.csv"))
-inventories <- readr::read_csv("data/rebrickable/inventories.csv")
-inventory_parts <- readr::read_csv("data/rebrickable/inventory_parts.csv")
-inventory_sets <- readr::read_csv("data/rebrickable/inventory_sets.csv")
-part_categories <- readr::read_csv("data/rebrickable/part_categories.csv")
-parts <- readr::read_csv("data/rebrickable/parts.csv")
-sets <- readr::read_csv("data/rebrickable/sets.csv")
-themes <- readr::read_csv("data/rebrickable/themes.csv")
-elements <- readr::read_csv("data/rebrickable/elements.csv")
-inventory_minifigs <- readr::read_csv("data/rebrickable/inventory_minifigs.csv")
-minifigs <- readr::read_csv("data/rebrickable/minifigs.csv")
-part_relationships <- readr::read_csv("data/rebrickable/part_relationships.csv")
+# colors <- readr::read_csv(here::here("data/rebrickable/colors.csv"))
+# inventories <- readr::read_csv("data/rebrickable/inventories.csv")
+# inventory_parts <- readr::read_csv("data/rebrickable/inventory_parts.csv")
+# inventory_sets <- readr::read_csv("data/rebrickable/inventory_sets.csv")
+# part_categories <- readr::read_csv("data/rebrickable/part_categories.csv")
+# parts <- readr::read_csv("data/rebrickable/parts.csv")
+# sets <- readr::read_csv("data/rebrickable/sets.csv")
+# themes <- readr::read_csv("data/rebrickable/themes.csv")
+# elements <- readr::read_csv("data/rebrickable/elements.csv")
+# inventory_minifigs <- readr::read_csv("data/rebrickable/inventory_minifigs.csv")
+# minifigs <- readr::read_csv("data/rebrickable/minifigs.csv")
+# part_relationships <- readr::read_csv("data/rebrickable/part_relationships.csv")
 
 # Direct download from Rebrickable.
 urlthemes <- "https://cdn.rebrickable.com/media/downloads/themes.csv.gz"
@@ -58,6 +59,9 @@ urlinventories <- "https://cdn.rebrickable.com/media/downloads/inventories.csv.g
 urlinventory_parts<- "https://cdn.rebrickable.com/media/downloads/inventory_parts.csv.gz"
 urlinventory_sets<- "https://cdn.rebrickable.com/media/downloads/inventory_sets.csv.gz"
 urlinventory_minifigs<- "https://cdn.rebrickable.com/media/downloads/inventory_minifigs.csv.gz"
+
+# sets <- read_csv("https://cdn.rebrickable.com/media/downloads/sets.csv.gz")
+# themes <- read_csv("https://cdn.rebrickable.com/media/downloads/themes.csv.gz")
 
 ##----------------------------
 dwld <- function(url) {
@@ -99,31 +103,31 @@ Create joined datasets with different informatioon on sets and parts.
 # 5 . , sets
 # 6 . , themes
 
-library("dplyr")
-lego_sets <- left_join(sets, themes, by=c("theme_id" = "id"))
-lego_sets <- rename(lego_sets, "set_name"=name.x, "theme_name"=name.y,
+lego_sets <- dplyr::left_join(sets, themes, by=c("theme_id" = "id"))
+lego_sets <- dplyr::rename(lego_sets, "set_name"=name.x, "theme_name"=name.y,
                     "set_img_url"= img_url)
-write_csv(lego_sets, "data/extdata/lego_sets.csv")
+write_csv(lego_sets, "data/rebrickable/lego_sets.csv")
 
 # main<- left_join(dleft06, elements, by=c("part_num","color_id"))
 # names(main)
 # dim(main)
 # write_csv(main,"data/extdata/main.csv")
 
-lego_parts <- left_join(inventory_parts, inventories,
+lego_parts <- dplyr::left_join(inventory_parts, inventories,
   by=c("inventory_id" = "id")) %>%
-  left_join(parts, by="part_num") %>%
-  left_join(part_categories, by=c("part_cat_id"="id")) %>%
-  rename("part_name"=name.x, "part_category"=name.y) %>%
-  left_join(colors, by=c("color_id"="id")) %>%
-  rename(color_name="name") %>%
-  left_join(sets, by="set_num") %>%
-  left_join(themes, by=c("theme_id" = "id")) %>%
-  rename("set_name"=name.x, "theme_name"=name.y)
+  dplyr::left_join(parts, by="part_num") %>%
+  dplyr::left_join(part_categories, by=c("part_cat_id"="id")) %>%
+  dplyr::rename("part_name"=name.x, "part_category"=name.y) %>%
+  dplyr::left_join(colors, by=c("color_id"="id")) %>%
+  dplyr::rename(color_name="name") %>%
+  dplyr::left_join(sets, by="set_num") %>%
+  dplyr::left_join(themes, by=c("theme_id" = "id")) %>%
+  dplyr::rename("set_name"=name.x, "theme_name"=name.y)
 
-lego_parts <- rename(lego_parts, "set_img_url"=img_url.y, "part_img_url"=img_url.x)
+lego_parts <- dplyr::rename(lego_parts, "set_img_url"=img_url.y, 
+                            "num_parts"= num_parts.y, "part_img_url"= img_url.x)
 
-lego_parts<- lego_parts %>% select(theme_name, 
+lego_parts<- lego_parts %>% dplyr::select(theme_name, 
                       theme_id, 
                       set_img_url,
                       set_num, 
@@ -145,12 +149,22 @@ lego_parts<- lego_parts %>% select(theme_name,
                       parent_id,
                       is_spare,
                       version)
-write_csv(lego_parts, "data/extdata/lego_parts.csv")
+write_csv(lego_parts, "data/rebrickable/set_parts.csv")
 
 ```
 
 ## Reationships between no. parts in set and no. part types
 ```{r n_parts-vs-n_part-types }
+# List the theme_names
+set_cnt_by_theme<- lego_sets  %>% 
+     dplyr::count(theme_name, sort = TRUE, name = "set_count")
+
+head(set_cnt_by_theme[,1],50L)
+
+# Select a theme.
+# 
+Starwars<- lego_parts  %>% 
+    dplyr::filter(theme_name== "Star Wars")
 
 by_set_part<- Starwars %>% 
     dplyr::group_by(set_name, part_name)
@@ -161,8 +175,8 @@ by_set_nparts_ntypes<- tt %>%
     dplyr::summarize(nparts= sum(n))
 
 ttt<-  tt %>% 
-    group_by(set_name) %>% 
-    tally()
+    dplyr::group_by(set_name) %>% 
+    dplyr::tally()
 colnames(ttt)<- c("set_name","ntypes")
 by_set_nparts_ntypes<- as.data.frame(cbind(by_set_nparts_ntypes,ttt[,2]))
 
@@ -173,7 +187,7 @@ by_set_nparts_ntypes<- by_set_nparts_ntypes %>%
 # 
 plot(by_set_nparts_ntypes$nparts,by_set_nparts_ntypes$ntypes)
 gg <- ggplot(by_set_nparts_ntypes, aes(x = nparts, y = ntypes)) +
-    geom_point(size= 3, alpha=0.4)                           +
+    geom_point(size= 3, color= "blue", alpha=0.35)                           +
     scale_x_log10() + scale_y_log10()      +
     labs(x = "Number of LEGO parts", 
          y = "Number of LEGO part types")  +
@@ -203,13 +217,14 @@ AnaSebPodRac_7962 <- lego_parts %>%
 
 tt<-AnaSebPodRac_7962  %>% 
     group_by(part_num)  %>% 
-    dplyr::summarize(n = n())
+    dplyr::summarize(n = n())  %>% 
+    arrange(desc(n))
 
 ##################
 # SUBSETS
 # 
-lego_parts %>%
-    dplyr::filter(theme_name == "Star Wars") 
+# lego_parts %>%
+#     dplyr::filter(theme_name == "Star Wars") 
 
 podracers<- lego_parts %>%
          dplyr::filter(grepl('odracer', set_name))
@@ -228,12 +243,40 @@ Creator<- lego_parts %>%
 
 ```
 
+```{r diversity_set, echo=TRUE}
+# Filtering some sets
+tt<- Starwars %>% dplyr::filter(set_num %in% c(tail(stw_H$set_num,80)))  %>% 
+        dplyr::group_by(set_num) %>%  # Group to compute H per set
+        dplyr::summarize(H= vegan::diversity(table(quantity), 
+                 index = "shannon", MARGIN = 1, base = exp(1)))
+
+# Just a set:
+tt<- Starwars %>% dplyr::filter(set_num == "66535-1")  %>% 
+        dplyr::summarize(H= vegan::diversity(table(quantity), 
+                 index = "shannon", MARGIN = 1, base = exp(1)))
+
+```
+
+
 ```{r diversity_themes}
 # Groups of models
 stw_H<- Starwars %>%
-    group_by(set_name) %>%
+    group_by(set_num, set_name) %>%
     dplyr::summarize(H= vegan::diversity(table(quantity), 
-                 index = "shannon", MARGIN = 1, base = exp(1)))
+                 index = "shannon", MARGIN = 1, base = exp(1)))  %>% 
+    arrange(desc(H))
+print.data.frame(stw_H, digits = 10)
+
+ggplot(stw_H, aes(x = reorder(set_num, H), y = H)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(
+    x = "Set number",
+    y = "Shannon diversity H",
+    title = "Shannon diversity across 80 Star Wars sets"
+  ) +
+  theme_minimal()
+
 stw_Simp<- Starwars %>%
     group_by(set_name) %>%
     dplyr::summarize(simp= vegan::diversity(table(quantity), "simpson")) 
@@ -467,10 +510,10 @@ gg
 
 ### Analyses for part-related themes; subsetted
 
-Here I subsetted those themes that have actaul part-related sets., i.e., 
+Here I subsetted those themes that have actual part-related sets., i.e., 
 excluding themes like Books, Gear, etc.
 
-I'm usismg the whole part list in order to estimate diversity parameters on sets.
+I'm using the whole part list in order to estimate diversity parameters on sets.
 
 ```{r}
 # Select rows in lego_parts that match those sets listed in 'subset_themes_n10'.
