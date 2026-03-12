@@ -236,7 +236,8 @@ microfighter<- lego_parts %>%
 Starwars<- lego_parts %>%
          dplyr::select(set_num, set_name, year, theme_name, theme_id, inventory_id, 
                        part_num, part_name, quantity, num_parts)  %>% 
-         dplyr::filter(theme_name == "Star Wars")
+         dplyr::filter(theme_name == "Star Wars")%>% 
+         dplyr::filter(set_num != "SWMP-1") # Leaves out set #SWMP-1, Promo Mosaic
 
 Creator<- lego_parts %>%
         dplyr::select(set_num, set_name, year, theme_name, theme_id, inventory_id, 
@@ -392,7 +393,8 @@ ggplot(hill_long, aes(x = reorder(set_num, D), y = D, fill = q)) +
 starwars_hill_df <- lego_parts %>%  
     dplyr::filter(theme_name== "Star Wars")  %>% 
     dplyr::group_by(set_num) %>% 
-    dplyr::select(set_num, part_num, num_parts, quantity)
+    dplyr::select(set_num, part_num, num_parts, quantity)%>% 
+    dplyr::filter(set_num != "SWMP-1") # Filtering out set SWMP-1, Promo Mosaic
 
 # Build community matrix and compute Hill numbers
 # starwars_hill_df: set_num, part_num, num_parts, quantity
@@ -419,7 +421,8 @@ hill_by_set <- tibble(
   q0 = as.numeric(hill_q0),
   q1 = as.numeric(hill_q1),
   q2 = as.numeric(hill_q2) )  %>% 
-    dplyr::filter(q0 != 1)
+    dplyr::filter(q0 != 1)  %>% 
+    dplyr::filter(set_num != "SWMP-1")
     
 hill_by_set <- hill_by_set %>% 
     dplyr::left_join(lego_sets, hill_by_set, by="set_num") %>% 
@@ -474,7 +477,7 @@ subset_themes_n10<- lego_sets %>% # Subsetting main themes (those with ≥ 10 se
                                   # There are 51 themes with at least 10 parts,
                                   # and are not Minifigures, Value Packs, or
                                   # Audio and Visual Media.
-     dplyr::select(theme_name, theme_id, set_name, year, num_parts) %>% 
+     dplyr::select(theme_name, theme_id, set_num, set_name, year, num_parts) %>% 
      dplyr::group_by(theme_name) %>%
      dplyr::summarise(sum_parts = sum(num_parts), n = n()) %>% 
      dplyr::filter(sum_parts> 0) %>% 
@@ -499,7 +502,9 @@ subset_themes_n10<- lego_sets %>% # Subsetting main themes (those with ≥ 10 se
      dplyr::filter(!grepl('Books', theme_name)) %>% 
      dplyr::filter(!grepl('Books', theme_name)) %>% 
      dplyr::filter(!grepl('Value', theme_name)) %>% 
-     dplyr::filter(n > 9) %>% dplyr::arrange(desc(n))
+#    dplyr::filter(!grepl('SWMP-1', set_num))  %>% # StarWars Promo Mosaic set
+     dplyr::filter(n > 9) %>% dplyr::arrange(desc(n)) 
+
 print(subset_themes_n10, n=300)
 
 # Select rows in lego_parts that match those sets listed in 'subset_themes_n10'.
@@ -554,7 +559,8 @@ subset_parts_themes_n10<- lego_parts %>%
      dplyr::filter(!grepl('Powered Up', theme_name)) %>% 
      dplyr::filter(!grepl('Books', theme_name)) %>% 
      dplyr::filter(!grepl('Books', theme_name)) %>% 
-     dplyr::filter(!grepl('Value', theme_name)) #%>% 
+     dplyr::filter(!grepl('Value', theme_name))  %>% 
+     dplyr::filter(set_num != "SWMP-1") # StarWars Promo Mosaic set
      #dplyr::filter(n > 9) %>% dplyr::arrange(desc(n))
 
 #------------------------------------------------------------------------------
