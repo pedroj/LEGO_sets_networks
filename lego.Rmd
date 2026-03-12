@@ -261,68 +261,58 @@ tt<- Starwars %>% dplyr::filter(set_num == "66535-1")  %>%
 ```{r diversity_themes}
 # Groups of models
 stw_H<- Starwars %>%
-    group_by(set_num, set_name) %>%
+    dplyr::group_by(set_num, set_name) %>%
     dplyr::summarize(H= vegan::diversity(table(quantity), 
                  index = "shannon", MARGIN = 1, base = exp(1)))  %>% 
-    arrange(desc(H))
+    dplyr::arrange(desc(H))
 print.data.frame(stw_H, digits = 10)
 
-ggplot(stw_H, aes(x = reorder(set_num, H), y = H)) +
-  geom_col(fill = "steelblue") +
-  coord_flip() +
-  labs(
-    x = "Set number",
-    y = "Shannon diversity H",
-    title = "Shannon diversity across 80 Star Wars sets"
-  ) +
-  theme_minimal()
-
 stw_Simp<- Starwars %>%
-    group_by(set_name) %>%
+    dplyr::group_by(set_name) %>%
     dplyr::summarize(simp= vegan::diversity(table(quantity), "simpson")) 
+
 stw_invSimp<- Starwars %>%
-    group_by(set_name) %>%
+    dplyr::group_by(set_name) %>%
     dplyr::summarize(invSimp= vegan::diversity(table(quantity), 
                  index = "inv")) 
+
 stw_unbSimp<- Starwars %>%
-    group_by(set_name) %>%
+    dplyr::group_by(set_name) %>%
     dplyr::summarize(unbias.simp= vegan::rarefy(table(quantity), 
                      2) - 1) 
-# stw_alpha<- Starwars %>%
-#     group_by(set_name) %>%
-#     dplyr::summarize(alpha= vegan::fisher.alpha(table(quantity))) 
-stw_S<- Starwars %>%
-    group_by(set_name) %>%
-    dplyr::summarize(S= vegan::specnumber(table(quantity)))
-stw_J<- as.data.frame(cbind(set_name=stw_H$set_name, J= stw_H$H/log(stw_S$S)))
-#(J= H/log(S))
 
+# stw_alpha<- Starwars %>%
+#     dplyr::group_by(set_name) %>%
+#     dplyr::summarize(alpha= vegan::fisher.alpha(table(quantity))) 
+     
+stw_S<- Starwars %>%
+    dplyr::group_by(set_name) %>%
+    dplyr::summarize(S= vegan::specnumber(table(quantity)))
+
+stw_div_indexes <- stw_H %>%
+  dplyr::left_join(stw_Simp,   by = join_by(set_name)) %>%
+  dplyr::left_join(stw_invSimp,by = join_by(set_name)) %>%
+  dplyr::left_join(stw_unbSimp,by = join_by(set_name)) %>%
+  dplyr::left_join(stw_S,      by = join_by(set_name))  %>% 
+  dplyr::mutate(stw_J= H/log(S))  # Adding J index.
 
 #-----------------------------------
-Starwars_div<- as.data.frame(cbind(
-                            stw_H, 
-                            simp= stw_Simp$simp,
-                            invSimp= stw_invSimp$invSimp,
-                            unbias.simp= stw_unbSimp$unbias.simp,
-                            S= stw_S$S,
-                            J= stw_J$J
-                            ))
 
-tt<- as.data.frame(table(Starwars$set_name))
-tt <- rename(tt, "set_name"=Var1, "num_parts"=Freq)
-tt<- inner_join(tt, Starwars[,1:8], by = "set_name",multiple="first")
-Starwars_div<-  as.data.frame(cbind(tt,Starwars_div[,-1]))
-
-Starwars_div<- Starwars_div %>% # Filtering out H'=0 records.
-        dplyr::filter(H != 0)
+stw_div_indexes<- stw_div_indexes %>%
+                  dplyr::left_join(sets, by = join_by(set_num))
+stw_div_indexes<- stw_div_indexes %>%
+                  dplyr::select(set_num, set_name, H, simp, invSimp, 
+                                unbias.simp, S, stw_J, year, theme_id, 
+                                num_parts, img_url) %>% # Filtering out H'=0 records.
+        dplyr::filter(H != 1)
 
 # Plots of H' vs no. parts for sets.
 # 
-plot(Starwars_div$num_parts,Starwars_div$H)
-gg <- ggplot(Starwars_div, aes(x = num_parts+1, y = H+1)) +
-    geom_point() +
-    scale_x_log10() + scale_y_log10() +
-    theme_bw()
+plot(stw_div_indexes$num_parts,stw_div_indexes$H)
+gg <- ggplot(stw_div_indexes, aes(x = num_parts, y = H)) +
+        geom_point(size= 3, color= "blue", alpha=0.35)   +
+        scale_x_log10() + scale_y_log10() +
+        theme_bw()
 gg
 
 #------------------------------------------------------------------------
