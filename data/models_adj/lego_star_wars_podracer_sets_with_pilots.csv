@@ -1,11 +1,13 @@
 set_number,name,year,scale_type,total_pieces,distinct_parts,podracers_included
-7131,Anakin's Podracer,1999,"System, minifig",134,103,Anakin
-7171,Mos Espa Podrace,1999,"System, minifig",831,848 (inventory count),"Anakin, Sebulba, Gasgano"
-7159,Podracer Bucket,2000,"System, minifig",292,n/a,"Anakin (primary), alt builds"
-7186,Watto's Junkyard,2001,"System, minifig",443,480 (inventory count),"Aldar Beedo, Mawhonic"
-7962,Anakin Skywalker and Sebulba's Podracers,2011,"System, minifig",808,n/a,"Anakin, Sebulba"
-75258,Anakin's Podracer – 20th Anniversary Edition,2019,"System, minifig",279,n/a,Anakin
-4485,MINI Sebulba's Podracer & Anakin's Podracer,2003,Mini,72,64,"Anakin, Sebulba"
-30057,Anakin's Pod Racer (polybag),2012,Mini / polybag,38,34,Anakin
-9675,Sebulba's Podracer & Tatooine,2012,Micro / planet,80,68,Sebulba
-30461,Podracer (polybag),2019,Mini / polybag,61,52,Anakin-inspired
+7131,Anakin's Podracer,1999,"System, minifig",134,50,"Anakin"
+7171,Mos Espa Podrace,1999,"System, minifig",842,182 (inventory count),"Anakin, Sebulba, Gasgano"
+7159,Podracer Bucket,2000,"System, minifig",292,102,"Anakin (primary), alt builds"
+7186,Watto's Junkyard,2001,"System, minifig",443,130 (inventory count),"Aldar Beedo, Mawhonic"
+7962,Anakin Skywalker and Sebulba's Podracers,2011,"System, minifig",810,170,"Anakin, Sebulba"
+75258,Anakin's Podracer – 20th Anniversary Edition,2019,"System, minifig",279,99,"Anakin"
+4485,MINI Sebulba's Podracer & Anakin's Podracer,2003,Mini,72,28,"Anakin, Sebulba"
+30057,Anakin's Pod Racer (polybag),2012,Mini / polybag,38,19,"Anakin"
+9675,Sebulba's Podracer & Tatooine,2012,Micro / planet,80,68,"Sebulba"
+30461,Podracer (polybag),2019,Mini / polybag,61,52,"Anakin-inspired"
+75380,Mos Espa Podrace,2024,"System, minifig",719,178,"No minifigures"
+6556842,Gasgano's Podracer,2024,"System, minifig",150,48,NA,"No minifigures"
