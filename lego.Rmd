@@ -20,6 +20,8 @@ library(igraph)
 library(gt)
 library(stringr)
 library(vegan)
+library(tibble)
+library(hillR)
 library(here)
 library("png")                      # Load png package
 # install.packages("patchwork")       # Install patchwork package
@@ -324,6 +326,8 @@ gg
 ```{r hill, echo=TRUE}
 library(dplyr)
 library(purrr)
+# install.packages("hillR", repos = c('https://daijiang.r-universe.dev', 'https://cloud.r-project.org'))
+library(hillR)
 
 # helper: Hill numbers from a vector of abundances
 hill_numbers <- function(x) {
@@ -338,6 +342,8 @@ hill_numbers <- function(x) {
   D2 <- 1 / sum(p^2)
   c(D0 = D0, D1 = D1, D2 = D2)
 }
+
+div <- hill_taxa(comm, q = c(0, 1, 2))  # Richness, Shannon, Simpson
 
 hill_df <- Starwars %>%
 #  filter(set_num %in% tt$set_num) %>%        # To select subsets.
@@ -378,6 +384,57 @@ ggplot(hill_long, aes(x = reorder(set_num, D), y = D, fill = q)) +
   theme_minimal()
 # This shows how effective diversity declines from q=0 (richness) to q=2 (dominance‑weighted),
 # revealing which LEGO Star Wars sets have both high part richness and evenness.
+
+#----------------------------------------------------------------------------------------------
+# With package hillR.
+# same as: exp(vegan::diversity(x = dummy$abun, index = 'shannon'))
+#  filter(set_num %in% tt$set_num) %>%        # To select subsets.
+starwars_hill_df <- lego_parts %>%  
+    dplyr::filter(theme_name== "Star Wars")  %>% 
+    dplyr::group_by(set_num) %>% 
+    dplyr::select(set_num, part_num, num_parts, quantity)
+
+# Build community matrix and compute Hill numbers
+# starwars_hill_df: set_num, part_num, num_parts, quantity
+# 1. Ensure one row per set_num × part_num (sum if duplicated)
+lego_comm <- starwars_hill_df %>%
+  group_by(set_num, part_num) %>%
+  summarise(quantity = sum(quantity), .groups = "drop") %>%
+# 2. Wide format: rows = sets, columns = parts, values = quantities
+  pivot_wider(
+    names_from  = part_num,
+    values_from = quantity,
+    values_fill = 0
+  ) %>%
+  column_to_rownames("set_num") %>%
+  as.matrix()
+
+# 3. Hill numbers per set for q = 0, 1, 2
+hill_q0 <- hill_taxa(lego_comm, q = 0)  # richness
+hill_q1 <- hill_taxa(lego_comm, q = 1)  # exp(Shannon)
+hill_q2 <- hill_taxa(lego_comm, q = 2)  # inv Simpson
+
+hill_by_set <- tibble(
+  set_num = rownames(lego_comm),
+  q0 = as.numeric(hill_q0),
+  q1 = as.numeric(hill_q1),
+  q2 = as.numeric(hill_q2) )  %>% 
+    dplyr::filter(q0 != 1)
+    
+hill_by_set <- hill_by_set %>% 
+    dplyr::left_join(lego_sets, hill_by_set, by="set_num") %>% 
+    dplyr::select("set_num", "set_name", "year", "num_parts", 
+                  "q0", "q1", "q2", "set_img_url")  %>% 
+    dplyr::arrange(desc(num_parts))
+
+# Plots of H' vs no. parts for sets.
+# 
+plot(hill_by_set$num_parts,log(hill_by_set$q1))
+gg <- ggplot(hill_by_set, aes(x = num_parts, y = q1)) +
+    geom_point(size= 3, color= "blue", alpha = 0.35) +
+    scale_x_log10() + scale_y_log10() +
+    theme_bw()
+gg
 
 ```
 
