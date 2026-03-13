@@ -7,6 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 ```
 
 ### LEGO sets diversity and connectivity analysis
@@ -78,18 +79,32 @@ dwld <- function(url) {
 }
 #-----------------------------
 themes<- dwld(urlthemes)
+write_csv(themes, "data/rebrickable/themes.csv")
 colors <- dwld(urlcolors)
+write_csv(colors, "data/rebrickable/colors.csv")
 inventories <- dwld(urlinventories)
+write_csv(inventories, "data/rebrickable/inventories.csv")
 inventory_parts <- dwld(urlinventory_parts)
+write_csv(inventory_parts, "data/rebrickable/inventory_parts.csv")
 inventory_sets <- dwld(urlinventory_sets)
+write_csv(themes, "data/rebrickable/inventory_sets.csv")
 part_categories <- dwld(urlpart_categories)
+write_csv(themes, "data/rebrickable/part_categories.csv")
 parts <- dwld(urlparts)
+write_csv(themes, "data/rebrickable/parts.csv")
 sets <- dwld(urlsets)
+write_csv(themes, "data/rebrickable/sets.csv")
 themes <- dwld(urlthemes)
+write_csv(themes, "data/rebrickable/themes.csv")
 elements <- dwld(urlelements)
+write_csv(themes, "data/rebrickable/elements.csv")
 inventory_minifigs <- dwld(urlinventory_minifigs)
+write_csv(themes, "data/rebrickable/inventory_minifigs.csv")
 minifigs <- dwld(urlminifigs)
+write_csv(themes, "data/rebrickable/minifigs.csv")
 part_relationships <- dwld(urlpart_relationships)
+write_csv(themes, "data/rebrickable/part_relationships.csv")
+
 
 ```
 
@@ -343,8 +358,6 @@ hill_numbers <- function(x) {
   D2 <- 1 / sum(p^2)
   c(D0 = D0, D1 = D1, D2 = D2)
 }
-
-div <- hill_taxa(comm, q = c(0, 1, 2))  # Richness, Shannon, Simpson
 
 hill_df <- Starwars %>%
 #  filter(set_num %in% tt$set_num) %>%        # To select subsets.
