@@ -42,22 +42,19 @@ Parse an `.ldr` or and `.mpd` file to get the part list.
 
 ```{r parse, echo=TRUE}
 # 1) Read a .mpd file for the selected LEGO set.
-set_id<- "601-1" ###### <<<<<------- Input set code here.
+set_id<- "4489-1" ###### <<<<<------- Input set code here.
 set_num<- set_id
-mpd_lines <- readLines(here::here("data/models/601-2-Tow_Truck.mpd"))
+# mpd_lines <- readLines(here::here("data/models/601-2-Tow_Truck.mpd"))
 # For Star Wars models
 mpd_lines <- readLines(here::here(paste0("data/models/starwars/",set_id,".mpd")))
 
 # Helper: extract setname.
 source(here::here("functions/extract_mpd_set_name.R"))
-setname<- extract_mpd_set_name(here::here("data/models/601-2-Tow_Truck.mpd"))
-
+setname<- extract_mpd_set_name(here::here("data/models/starwars/4489-1.mpd"))
 # readPNG function to load an image of the set that we have stored on our computer:
 # For later use as inset in a network graph.
-my_image <- readPNG(here::here(paste0("images/",setname,".png"))) #, 
+my_image <- readPNG(here::here(paste0("images/starwars_sets_images/",setname,".png"))) #, 
                              #  native = TRUE))
-my_image <- readPNG(here::here(paste0("images/601-1-Tow_Truck.png"))) #, 
-
 set_image_row <- sets %>%
   dplyr::filter(set_num == set_id)
 
@@ -231,7 +228,7 @@ ggp <- ggraph(g, layout = "fr",
 
 # Use the inset_element function to add our picture to our ggplot2 graphic:
 
-my_image_array <- readPNG(here::here(paste0("images/", setname, ".png")))
+my_image_array <- readPNG(here::here(paste0("images/starwars_sets_images/",setname,".png")))
 
 p_logo <- ggplot() +
   annotation_custom(
@@ -250,6 +247,8 @@ ggp_image <- ggp +
     align_to = "full",
     clip     = TRUE
   )
+
+ggp_image
 
 ```
 
