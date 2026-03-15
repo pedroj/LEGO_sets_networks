@@ -1,18 +1,18 @@
-plot_bend_net <- function(g, coords) {
+plot_bend_net <- function(g, coords, my_image) {
     # 3. Plot with ggraph + ggimage using local files
     # 1) Layout
     
     # 2) Node data frame with coords + attributes
     nodes <- data.frame(
-        x        = diag_coords_OK[, 1],
-        y        = diag_coords_OK[, 2],
+        x        = coords[, 1],
+        y        = coords[, 2],
         name     = V(g)$part_id,  # or V(g)$name
         img_path = V(g)$loc.image,
         degree   = degree(g)
     )
     
     # 3) Plot: ggraph uses g + manual layout; geom_image uses nodes with its own aes
-    ggp<- ggraph(g, layout = "manual", x = diag_coords_OK[,1], y = diag_coords_OK[,2]) +
+    ggp<- ggraph(g, layout = "manual", x = coords[,1], y = coords[,2]) +
         geom_edge_bend0(width = 0.48, alpha = 0.6) +
         # geom_node_point(size = 0, alpha = 0) +
         geom_node_point(aes(size = degree(g)), color = "blue", alpha= 0.65) +
@@ -32,7 +32,7 @@ plot_bend_net <- function(g, coords) {
         labs(title = "LEGO Parts Network (4489-1 AT-AT-Mini)")
     
     # readPNG function to load an image that we have stored on our computer:
-    img_array <- readPNG("images/4489-1-AT-AT-Mini.png", native = TRUE)
+    img_array <- my_image
     my_image_grob <- rasterGrob(img_array, interpolate = TRUE)
     
     # If still see overlap, shrink further:
