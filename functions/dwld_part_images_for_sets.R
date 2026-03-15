@@ -16,7 +16,7 @@ auth_hdr <- function() add_headers(
 #
 # Location of downloaded images
 img_root <- here::here("images/rebrickable_set_images")
-dir_create(img_root)
+fs::dir_create(img_root)
 
 lego_get_paged <- function(url, query = list()) {
     auth <- paste("key", api_key)
