@@ -2,7 +2,9 @@
 title: "test_lego_model_network"
 author: "Pedro Jordano"
 date: "2026-03-04"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
@@ -27,6 +29,9 @@ library(colouR)
 library("png")                      # Load png package
 # install.packages("patchwork")       # Install patchwork package
 library("patchwork")                # Load patchwork
+library(tidygraph)
+
+theme_set(theme_minimal())
 
 ```
 
@@ -42,7 +47,7 @@ Parse an `.ldr` or and `.mpd` file to get the part list.
 
 ```{r parse, echo=TRUE}
 # 1) Read a .mpd file for the selected LEGO set.
-set_id<- "7131-2-PJ" ###### <<<<<------- Input set code here.
+set_id<- "4489-1" ###### <<<<<------- Input set code here.
 set_num<- set_id
 # mpd_lines <- readLines(here::here("data/models/601-2-Tow_Truck.mpd"))
 # For Star Wars models
@@ -50,15 +55,18 @@ mpd_lines <- readLines(here::here(paste0("data/models/starwars/",set_id,".mpd"))
 
 # Helper: extract setname.
 source(here::here("functions/extract_mpd_set_name.R"))
-setname<- extract_mpd_set_name(here::here("data/models/starwars/7131-2-PJ.mpd"))
+# setname<- extract_mpd_set_name(here::here("data/models/starwars/7131-2-PJ.mpd"))
+setname<- extract_mpd_set_name(here::here(paste0("data/models/starwars/",set_id,".mpd")))
+
 # readPNG function to load an image of the set that we have stored on our computer:
 # For later use as inset in a network graph.
 my_image <- readPNG(here::here(paste0("images/starwars_sets_images/",setname,".png"))) #, 
-                             #  native = TRUE))
-set_image_row <- sets %>%
-  dplyr::filter(set_num == set_id)
+#  native = TRUE))
 
-set_image_url <- set_image_row$img_url
+# set_image_row <- sets %>%
+#    dplyr::filter(set_num == set_id)
+# 
+# set_image_url <- set_image_row$img_url
 
 # Helper: identify FILE sections
 file_idx  <- grep("^0 FILE", mpd_lines)
@@ -83,48 +91,48 @@ files_df
 ```{r parse_1, echo=TRUE}
 # Function to parse "1 ..." lines inside a FILE block
 parse_file_parts <- function(lines, file_name) {
-  # LDraw "1" line: 1 col x y z a b c d e f g h i part.dat or subfile.ldr
-  part_lines_idx <- grep("^1\\s", lines)
-  if (length(part_lines_idx) == 0) return(NULL)
-
-  # Split by whitespace
-  tokens <- str_split(lines[part_lines_idx], "\\s+", simplify = FALSE)
-
-  # Map to data frame
-  parts <- lapply(tokens, function(tok) {
-    # minimum length check
-    if (length(tok) < 15) return(NULL)
-    tibble(
-      file      = file_name,
-      color     = tok[2],
-      x         = as.numeric(tok[3]),
-      y         = as.numeric(tok[4]),
-      z         = as.numeric(tok[5]),
-      a         = as.numeric(tok[6]),
-      b         = as.numeric(tok[7]),
-      c         = as.numeric(tok[8]),
-      d         = as.numeric(tok[9]),
-      e         = as.numeric(tok[10]),
-      f         = as.numeric(tok[11]),
-      g         = as.numeric(tok[12]),
-      h         = as.numeric(tok[13]),
-      i         = as.numeric(tok[14]),
-      part_raw  = paste(tok[15:length(tok)], collapse = " ")
-    )
-  })
-
-  bind_rows(parts)
+    # LDraw "1" line: 1 col x y z a b c d e f g h i part.dat or subfile.ldr
+    part_lines_idx <- grep("^1\\s", lines)
+    if (length(part_lines_idx) == 0) return(NULL)
+    
+    # Split by whitespace
+    tokens <- str_split(lines[part_lines_idx], "\\s+", simplify = FALSE)
+    
+    # Map to data frame
+    parts <- lapply(tokens, function(tok) {
+        # minimum length check
+        if (length(tok) < 15) return(NULL)
+        tibble(
+            file      = file_name,
+            color     = tok[2],
+            x         = as.numeric(tok[3]),
+            y         = as.numeric(tok[4]),
+            z         = as.numeric(tok[5]),
+            a         = as.numeric(tok[6]),
+            b         = as.numeric(tok[7]),
+            c         = as.numeric(tok[8]),
+            d         = as.numeric(tok[9]),
+            e         = as.numeric(tok[10]),
+            f         = as.numeric(tok[11]),
+            g         = as.numeric(tok[12]),
+            h         = as.numeric(tok[13]),
+            i         = as.numeric(tok[14]),
+            part_raw  = paste(tok[15:length(tok)], collapse = " ")
+        )
+    })
+    
+    bind_rows(parts)
 }
 
 # Apply to each FILE block
 parts_all <- purrr::map2_dfr(
-  files_df$file_start,
-  files_df$file_end,
-  ~{
-    block_lines <- mpd_lines[.x:.y]
-    fname <- files_df$file_name[files_df$file_start == .x]
-    parse_file_parts(block_lines, fname)
-  }
+    files_df$file_start,
+    files_df$file_end,
+    ~{
+        block_lines <- mpd_lines[.x:.y]
+        fname <- files_df$file_name[files_df$file_start == .x]
+        parse_file_parts(block_lines, fname)
+    }
 )
 
 parts_all
@@ -146,28 +154,40 @@ Below I create a co‑occurrence network at the level of **part_raw** (so `3004.
 are nodes). You can easily switch to unique instance IDs if you want a multigraph.
 
 ```{r parts_as_nodes, echo=TRUE}
-# 3) Clean part name (strip leading "106 - " from submodels, keep .dat etc.)
+# Clean part name
 parts_all <- parts_all %>%
-  mutate(
-    part = str_trim(part_raw)
-  )
+    mutate(
+        part = str_trim(part_raw)
+    )
 
-# 4) Build co-occurrence edges:
-# For each FILE, connect all distinct part types that co-occur
+# Identify file type
+parts_all <- parts_all %>%
+    mutate(
+        is_submodel  = str_detect(part, "\\.ldr$"),
+        is_primitive = str_detect(part, "\\.dat$")
+    )
+
+# Optional: drop minifig-related primitives by a simple pattern or list
+minifig_patterns <- c("minifig", "head", "torso", "hip", "leg", "arm", "hand")
+parts_all <- parts_all %>%
+    filter(is_primitive) %>%                                # keep only .dat
+    filter(!str_detect(str_to_lower(part), 
+                       paste(minifig_patterns, collapse = "|")))
+
+# Co‑occurrence edges among primitives only
 edges_df <- parts_all %>%
-  group_by(file) %>%
-  summarise(parts = list(unique(part)), .groups = "drop") %>%
-  mutate(
-    edges = purrr::map(parts, ~{
-      p <- .x
-      if (length(p) < 2) return(NULL)
-      # all unordered pairs
-      comb <- t(combn(p, 2))
-      tibble(from = comb[,1], to = comb[,2])
-    })
-  ) %>%
-  select(edges) %>%
-  unnest(edges)
+    group_by(file) %>%
+    summarise(parts = list(unique(part)), .groups = "drop") %>%
+    mutate(
+        edges = purrr::map(parts, ~{
+            p <- .x
+            if (length(p) < 2) return(NULL)
+            comb <- t(combn(p, 2))
+            tibble(from = comb[,1], to = comb[,2])
+        })
+    ) %>%
+    select(edges) %>%
+    unnest(edges)
 
 edges_df
 
@@ -175,207 +195,133 @@ edges_df
 
 ## **4. Build igraph object and analyze**
 
-```{r build_graph, echo=TRUE}
-# 5) Create graph
+```{r build_graph, echo=TRUE, warning=FALSE, fig.height= 12, fig.width=18}
+# Graph of primitive parts only
 g <- graph_from_data_frame(edges_df, directed = FALSE)
 
-# Basic stats
-print(g)
-degree(g)
+# Vertex ids for joining to Rebrickable. Vertex ids (strip .dat).
+V(g)$part_id <- sub("\\.dat$", "", V(g)$name)
 
-# # Example: plot
-# plot(
-#   g,
-#   vertex.size = 5,
-#   vertex.label.cex = 0.6,
-#   vertex.label.dist = 0.5,
-#   main = "LEGO parts co-occurrence network"
-# )
+# -------------------------------------------------------------------
+# 2. Download/cache part images and attach paths to vertices
+# -------------------------------------------------------------------
+target_set <- set_id
+api_key    <- "40c6692458e8b4c27074486ab114d6cc"
 
-# Using ggraph (Recommended)
-# ggraph extends ggplot2 for networks and works directly with igraph.
+source(here::here("functions/get_LEGO_set_parts.R"))
+target_set_parts <- get_LEGO_set_parts(target_set, api_key)
 
-ggp <- ggraph(g, layout = "fr",
-              niter= 300) +  # Fruchterman-Reingold layout
-# geom_edge_link(aes(width = 0.0005), alpha = 0.2) +
-#  geom_edge_link(aes(alpha= 0.3)) +
-#  geom_edge_link(width = 0.1, alpha = 0.7) +
-  geom_edge_bend0(width = 0.18, alpha = 0.7) +
-  geom_node_point(aes(size = degree(g)), color = "blue", alpha= 0.65) +
-  geom_node_text(aes(label = name), repel = TRUE) +
-  theme_graph() +
-  labs(title = print(setname))
+source(here::here("functions/get_LEGO_part_images_for_set.R"))
+target_set_parts <- get_LEGO_part_images_for_set(target_set)
 
-# Pre-compute bounds for compact area (adjust based on your g)
-# n_nodes <- vcount(g)
-# area_size <- sqrt(n_nodes) * 3  # Scales with graph size
-# minC <- rep(-area_size/2, 2)
-# maxC <- rep(area_size/2, 2)
+# One row per part_num
+target_set_parts <- target_set_parts %>%
+  dplyr::distinct(part_num, .keep_all = TRUE)
 
-# More ompact arrangement.
-# ggp <- ggraph(g, 
-#               layout = "fr", 
-#               niter = 300) +  # Fewer iterations = tighter/faster
-#   geom_edge_bend0(width = 0.18, alpha = 0.7) +
-#   geom_node_point(aessize = degree(g), #(size = pmin(degree(g), 8)), 
-#                   color = "blue", alpha = 0.7) +
-#   geom_node_text(aes(label = name), repel = TRUE) +
-# #  geom_node_text(aes(label = ifelse(degree(g) > 2, name, "")), 
-# #                 repel = TRUE, size = 2.5) +
-#   theme_graph() +
-#   labs(title = setname) +
-#   coord_fixed(0.6)
+# Attach local img path to vertices (by part_id)
+nodes_tbl <- tibble::tibble(part_id = V(g)$part_id) %>%
+  dplyr::left_join(
+    target_set_parts %>%
+      dplyr::select(part_num, img_local_path),
+    by = c("part_id" = "part_num")
+  )
 
-# Use the inset_element function to add our picture to our ggplot2 graphic:
+# Attach local img path to vertices (by part_id)
+nodes_tbl <- tibble::tibble(part_id = V(g)$part_id) %>%
+  dplyr::left_join(
+    target_set_parts %>%
+      dplyr::select(part_num, img_local_path),
+    by = c("part_id" = "part_num")
+  )
 
-my_image_array <- readPNG(here::here(paste0("images/starwars_sets_images/",setname,".png")))
+# Manually fix missing images for specific parts
+nodes_tbl <- nodes_tbl %>%
+  mutate(
+    img_local_path = dplyr::case_when(
+      part_id == "4592"  ~ "images/part_images/4592.png",
+      part_id == "4593"  ~ "images/part_images/4593.png",
+      part_id == "44567" ~ "images/part_images/44567a.png",
+      TRUE               ~ img_local_path
+    )
+  )
 
-p_logo <- ggplot() +
-  annotation_custom(
-    rasterGrob(my_image_array, interpolate = TRUE),
+stopifnot(nrow(nodes_tbl) == igraph::vcount(g))
+
+V(g)$img_path <- nodes_tbl$img_local_path
+
+# After: V(g)$img_path <- nodes_tbl$img_local_path
+
+missing_imgs <- tibble(
+  part_id = V(g)$part_id,
+  img_path = V(g)$img_path
+) %>%
+  filter(is.na(img_path))
+
+missing_imgs
+
+# To see just which part_ids are missing:
+unique(missing_imgs$part_id)
+
+# -------------------------------------------------------------------
+# 3. Plot g with small part images as nodes
+# -------------------------------------------------------------------
+tg <- tidygraph::as_tbl_graph(g)
+set.seed(123)
+layout_df <- ggraph::create_layout(tg, layout = "fr")
+
+gg_lego <- ggraph::ggraph(layout_df) +
+      ggraph::geom_edge_bend0(width = 0.38, alpha = 0.4) +
+      ggraph::geom_node_point(size = 0, alpha = 0) +
+      ggimage::geom_image(
+      ggplot2::aes(x = x, y = y, image = img_path),
+    size = 0.05,
+    inherit.aes = FALSE
+  ) +
+  ggraph::geom_node_text(
+    ggplot2::aes(label = part_id),
+#    nudge_y = -0.03,
+    vjust = 4.25,
+    size    = 5,
+    color   = "black",
+#    family  = "NULL"        # empty family = device default; safest for PDF
+  ) +
+  ggraph::theme_graph() +
+  ggplot2::labs(title = paste0("LEGO Parts Network ", setname))
+
+gg_lego
+
+```
+
+Inserting the set image.
+
+```{r set_image, echo=TRUE, warning=FALSE, fig.height= 12, fig.width=18}
+# Optional inset: keep fonts implicit (no family argument)
+my_image_array <- png::readPNG(
+  here::here(paste0("images/starwars_sets_images/", setname, ".png"))
+)
+
+p_logo <- ggplot2::ggplot() +
+  ggplot2::annotation_custom(
+    grid::rasterGrob(my_image_array, interpolate = TRUE),
     xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf
   ) +
-  theme_void()
+  ggplot2::theme_void()
 
-ggp_image <- ggp +
-  inset_element(
+gg_lego_inset <- gg_lego +
+  patchwork::inset_element(
     p_logo,
-    left   = 0.05,
-    bottom = 0.5,
+    left   = 0.95,
+    bottom = 0.6,
     right  = 0.19,
     top    = 0.8,
     align_to = "full",
     clip     = TRUE
   )
 
-ggp_image
+gg_lego_inset
 
 ```
 
-## **5. Optional: distinguish submodels vs primitive parts**
-
-We can tag nodes as “submodel” when they are `.ldr` vs `.dat`, which might help link to
-assembly hierarchy.
-
-```{r submodels, echo=TRUE}
-node_attr <- tibble(
-  part = V(g)$name
-) %>%
-  mutate(
-    is_submodel = str_detect(part, "\\.ldr$"),
-    is_primitive = str_detect(part, "\\.dat$")
-  )
-
-V(g)$is_submodel  <- node_attr$is_submodel[match(V(g)$name, node_attr$part)]
-V(g)$is_primitive <- node_attr$is_primitive[match(V(g)$name, node_attr$part)]
-
-```
-
-We may prefer the network at the level of **individual brick instances** (each physical
-brick a node) with edges defined by spatial proximity, or is this part‑type co‑occurrence
-representation what we want?
-
-### See file `LEGO_model_networks_ind-parts.Rmd`
-
-# Network visualization with part images
-
-Below is an end‑to‑end pattern tailored to a Rebrickable parts table and LEGO‑network workflow.
-
-## 1. Download and cache images locally
-Assume we already have a parts `data.frame` like `parts_4489` from function `get_set_parts()`:
-`parts_4489` columns: `part_num`, `part_name`, `color_id`, `color_name`, `img_url`, `quantity`
-
-```{r dowload_part_images, echo=TRUE}
-## 1. Download and cache images locally
-# Assume we already have a parts `data.frame` like `parts_4489` from function 
-# `get_set_parts()`:
-# `parts_4489` columns: `part_num`, `part_name`, `color_id`, `color_name`, 
-# `img_url`, `quantity`
-#######################################
-target_set<- c("7131-1")
-#######################################
-#
-# CSV download with function get_set_parts.R: 
-# https://cdn.rebrickable.com/media/downloads/sets.csv.zip?
-api_key <- "40c6692458e8b4c27074486ab114d6cc"
-# source(here::here("functions/get_set_parts.R"))
-source(here::here("functions/get_LEGO_set_parts.R"))
-# Dataframe with parts list for a set.
-target_set_parts <- get_set_parts(target_set, api_key)
-head(target_set_parts) # part_num contains the parts numbers.
-
-# Add local url for part images of dataset. 
-source(here::here("functions/get_LEGO_part_images_for_set.R"))
-target_set_parts <- get_LEGO_part_images_for_set(target_set)
-
-target_set_parts <- target_set_parts %>%
-    distinct(part_num, .keep_all = TRUE)
-
-```
-
-Basename(urls) keeps names simple; we can choose more informative filenames if we want 
-(e.g., paste `part_num` and `color_id`).
-
-After this step, `parts_4489_filtered$img_path` points to local PNG files.
-
-
-## 2. Compute layout and node data frame and plot with Rebrickable URLs, using ggraph + ggimage using local files
-
-Assume:
-    The igraph object is g.
-Each node name equals a part_num (e.g., "3001", "3024").
-Ensure node names are part_nums
-V(g)$name already something - like "3001", "3024", ...
-Assume V(g)$name are part_ids like "3001"; map 20 nodes
-
-Now let's each node having a `V(g)$img_path` pointing to a local file.
-
-### Key points:
-In `geom_image()`, we can pass the vector directly or construct a tibble with node attributes and map `aes(image = img_path)`.
-
-`size` is relative to the plot; adjust (e.g. 0.07–0.12) to fit ~20 nodes.
-
-Also, I use a safer filename scheme. To avoid clashes when two URLs share the same basename:
-
-```{r iamges_to_nodes,echo=TRUE}
-# This sets url of part images to the nodes identified by their part number.
-
-V(g)$part_id <- sub("\\.dat$", "", V(g)$name) #V(g)$name  # Or your mapping
-V(g)$color_id <- target_set_parts$color_id  
-                           # 7, Light_grey example; get from parts_json$results$color_id
-
-# 1) Build node table from graph vertices
-nodes <- tibble::tibble(part_id = V(g)$part_id)
-
-# 2) Left-join image URLs from filtered parts by part number
-nodes <- nodes %>%
-  left_join(
-    target_set_parts %>%
-    dplyr::select(part_num, img_local_path),
-    by = c("part_id" = "part_num")
-  )
-
-# 3) Check alignment
-nrow(nodes)          # should be 31
-vcount(g)            # should also be 31
-
-# download.file(V(g)$image, destdir = "part_imgs/")
-V(g)$loc.image <- paste0("images/part_images/", V(g)$part_id, "_", V(g)$color_id, ".png")
-
-##############
-# Plotting.
-##############
-source(here::here("functions/setup_graph_plot.R"))
-setup_graph_plot(target_set)
-
-coords <- layout_with_fr(g) * 1.5
-# diag_coords_OK<- coords
-
-# Actual plot.
-source(here::here("functions/plot_bend_net.R"))
-plot_bend_net(g, coords, my_image)
-
-```
 
 -----------------------------------------------------------------------------------------------
 ## Session Info
