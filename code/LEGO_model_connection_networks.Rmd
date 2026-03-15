@@ -42,7 +42,7 @@ Parse an `.ldr` or and `.mpd` file to get the part list.
 
 ```{r parse, echo=TRUE}
 # 1) Read a .mpd file for the selected LEGO set.
-set_id<- "4489-1" ###### <<<<<------- Input set code here.
+set_id<- "7131-2-PJ" ###### <<<<<------- Input set code here.
 set_num<- set_id
 # mpd_lines <- readLines(here::here("data/models/601-2-Tow_Truck.mpd"))
 # For Star Wars models
@@ -50,7 +50,7 @@ mpd_lines <- readLines(here::here(paste0("data/models/starwars/",set_id,".mpd"))
 
 # Helper: extract setname.
 source(here::here("functions/extract_mpd_set_name.R"))
-setname<- extract_mpd_set_name(here::here("data/models/starwars/4489-1.mpd"))
+setname<- extract_mpd_set_name(here::here("data/models/starwars/7131-2-PJ.mpd"))
 # readPNG function to load an image of the set that we have stored on our computer:
 # For later use as inset in a network graph.
 my_image <- readPNG(here::here(paste0("images/starwars_sets_images/",setname,".png"))) #, 
@@ -292,14 +292,14 @@ Assume we already have a parts `data.frame` like `parts_4489` from function `get
 # `parts_4489` columns: `part_num`, `part_name`, `color_id`, `color_name`, 
 # `img_url`, `quantity`
 #######################################
-target_set<- c("609-1")
+target_set<- c("7131-1")
 #######################################
 #
 # CSV download with function get_set_parts.R: 
 # https://cdn.rebrickable.com/media/downloads/sets.csv.zip?
 api_key <- "40c6692458e8b4c27074486ab114d6cc"
-source(here::here("./functions/get_set_parts.R"))
-
+# source(here::here("functions/get_set_parts.R"))
+source(here::here("functions/get_LEGO_set_parts.R"))
 # Dataframe with parts list for a set.
 target_set_parts <- get_set_parts(target_set, api_key)
 head(target_set_parts) # part_num contains the parts numbers.
@@ -341,8 +341,8 @@ Also, I use a safer filename scheme. To avoid clashes when two URLs share the sa
 # This sets url of part images to the nodes identified by their part number.
 
 V(g)$part_id <- sub("\\.dat$", "", V(g)$name) #V(g)$name  # Or your mapping
-V(g)$color_id <- 7         # parts_4489new$color_id  
-                           # Light_grey example; get from parts_json$results$color_id
+V(g)$color_id <- target_set_parts$color_id  
+                           # 7, Light_grey example; get from parts_json$results$color_id
 
 # 1) Build node table from graph vertices
 nodes <- tibble::tibble(part_id = V(g)$part_id)
@@ -360,7 +360,7 @@ nrow(nodes)          # should be 31
 vcount(g)            # should also be 31
 
 # download.file(V(g)$image, destdir = "part_imgs/")
-V(g)$loc.image <- paste0("images/part_images/", V(g)$part_id, ".png")
+V(g)$loc.image <- paste0("images/part_images/", V(g)$part_id, "_", V(g)$color_id, ".png")
 
 ##############
 # Plotting.
@@ -373,7 +373,7 @@ coords <- layout_with_fr(g) * 1.5
 
 # Actual plot.
 source(here::here("functions/plot_bend_net.R"))
-plot_bend_net(g, coords)
+plot_bend_net(g, coords, my_image)
 
 ```
 
