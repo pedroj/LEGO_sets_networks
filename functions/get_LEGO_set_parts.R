@@ -4,6 +4,7 @@ get_LEGO_set_parts <- function(set_num= "4489-1", api_key= "40c6692458e8b4c27074
         set_num,
         "/parts/?page=1&page_size=1000"
     )
+    
     resp <- GET(
         url,
         add_headers(Authorization = paste("key", api_key))
@@ -12,6 +13,7 @@ get_LEGO_set_parts <- function(set_num= "4489-1", api_key= "40c6692458e8b4c27074
     
     dat <- content(resp, as = "text", encoding = "UTF-8") |>
         fromJSON()
+    
     parts <- dat$results %>%
         unnest_wider(part,  names_sep = "_") %>%
         unnest_wider(color, names_sep = "_") %>%
@@ -26,5 +28,6 @@ get_LEGO_set_parts <- function(set_num= "4489-1", api_key= "40c6692458e8b4c27074
    # if (!is.null(color_id_filter)) {
    #     parts <- parts %>% filter(color_id %in% color_id_filter)
    #}
+    
     parts
 }
