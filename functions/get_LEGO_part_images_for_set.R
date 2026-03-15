@@ -1,4 +1,4 @@
-get_LEGO_part_images_for_set <- function(my_set="4489-1",
+get_LEGO_part_images_for_set <- function(my_set,
                                          api_key="40c6692458e8b4c27074486ab114d6cc") {
   # Use BrickLink/Rebrickable to download image files fpr LEGO parts. Then map the V(g)$name (assume Design IDs like "3001") to images, then integrate in ggraph.
   # Fetch Set 7131 Parts (R Code)
@@ -33,7 +33,7 @@ get_LEGO_part_images_for_set <- function(my_set="4489-1",
   source(here::here("functions/get_LEGO_set_parts.R"))
   
   # Dataframe with parts list for a set.
-  my_parts <- get_set_parts(my_set, api_key)
+  my_parts <- get_LEGO_set_parts(my_set, api_key)
   head(my_parts)
   # my_parts <- my_parts %>%
   #     dplyr::mutate(
