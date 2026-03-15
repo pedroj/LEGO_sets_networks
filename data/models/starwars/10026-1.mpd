@@ -1,0 +1,11 @@
+0 FILE 10026-1-Naboo Starfighter.io
+0 Untitled Model
+0 Name:  10026-1-Naboo Starfighter
+0 Author:  
+0 CustomBrick
+0 FlexibleBrickControlPointUnitLength -1
+0 FlexibleBrickLockedControlPoint 
+0 NumOfBricks:  185
+1 16 47.586060 0.000000 40.003660 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 base.ldr
+1 16 105.516400 -208.000000 33.587520 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 set.ldr
+0 NOFILE

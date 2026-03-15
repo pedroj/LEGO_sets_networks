@@ -1,10 +1,18 @@
-0 Untitled Model
-0 Name:  75344-Bobba Fett Starship Microfighter (Slave I)
-0 Author:  
+0 FILE 75344 - Bobba Fett Starship Microfighter (Slave I).mpd
+0 Name: 75344-Bobba Fett Starship Microfighter (Slave I).mpd
+0 Author: Pedro Jordano
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HISTORY 2018-12-07 [technicbasics] OMRize File
+0 !HISTORY 2026-03-15 [pedro_jordano] 
 0 CustomBrick
 0 FlexibleBrickControlPointUnitLength -1
 0 FlexibleBrickLockedControlPoint 
 0 NumOfBricks:  78
+0 FILE 75344 - Bobba Fett Starship Microfighter.mpd
+0 Bobba Fett Starship Microfighter
+0 Name: 75344 - Bobba Fett Starship Microfighter.mpd
 1 378 36.000000 -22.666660 38.000010 0.000000 0.000000 1.000000 0.000000 1.000000 0.000000 -1.000000 0.000000 0.000000 3020.dat
 1 72 -4.000000 -14.666660 38.000000 1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 3034.dat
 1 71 85.999980 -22.666660 38.000020 0.000000 0.000000 -1.000000 0.000000 1.000000 0.000000 1.000000 0.000000 0.000000 2419.dat
