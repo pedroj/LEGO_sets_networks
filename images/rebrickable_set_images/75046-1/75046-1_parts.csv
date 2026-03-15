@@ -3,11 +3,11 @@ part_num,color_id,quantity,is_spare,part_img_url
 99780,0,4,FALSE,https://cdn.rebrickable.com/media/parts/elements/6020193.jpg
 4733,0,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/473326.jpg
 4740,0,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/474026.jpg
-60849,0,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/4537551.jpg
+60849,0,1,TRUE,https://cdn.rebrickable.com/media/parts/elements/4537551.jpg
 44301b,0,4,FALSE,https://cdn.rebrickable.com/media/parts/elements/6266224.jpg
 14137,0,6,FALSE,https://cdn.rebrickable.com/media/parts/elements/6040336.jpg
 92582,0,4,FALSE,https://cdn.rebrickable.com/media/parts/elements/4613759.jpg
-3024,0,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/302426.jpg
+3024,0,1,TRUE,https://cdn.rebrickable.com/media/parts/elements/302426.jpg
 3023,0,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/302326.jpg
 3710,0,4,FALSE,https://cdn.rebrickable.com/media/parts/elements/371026.jpg
 3666,0,5,FALSE,https://cdn.rebrickable.com/media/parts/elements/366626.jpg
@@ -19,7 +19,7 @@ part_num,color_id,quantity,is_spare,part_img_url
 32064a,0,3,FALSE,https://cdn.rebrickable.com/media/parts/elements/4114294.jpg
 32530,0,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/4144024.jpg
 32054,0,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/4107742.jpg
-2780,0,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/4121715.jpg
+2780,0,1,TRUE,https://cdn.rebrickable.com/media/parts/elements/4121715.jpg
 2431,0,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/243126.jpg
 3068b,0,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/306826.jpg
 58247,0,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4498713.jpg
@@ -34,7 +34,7 @@ part_num,color_id,quantity,is_spare,part_img_url
 3005,272,6,FALSE,https://cdn.rebrickable.com/media/parts/elements/4255413.jpg
 3004,272,12,FALSE,https://cdn.rebrickable.com/media/parts/elements/4249891.jpg
 87544,272,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4667331.jpg
-3024,272,6,FALSE,https://cdn.rebrickable.com/media/parts/elements/4184108.jpg
+3024,272,1,TRUE,https://cdn.rebrickable.com/media/parts/elements/4184108.jpg
 3710,272,7,FALSE,https://cdn.rebrickable.com/media/parts/elements/4177739.jpg
 3666,272,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4177734.jpg
 3021,272,8,FALSE,https://cdn.rebrickable.com/media/parts/elements/4530028.jpg
@@ -117,7 +117,7 @@ part_num,color_id,quantity,is_spare,part_img_url
 6541,71,6,FALSE,https://cdn.rebrickable.com/media/parts/elements/4211535.jpg
 32000,71,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4211541.jpg
 4274,71,5,FALSE,https://cdn.rebrickable.com/media/parts/elements/4211483.jpg
-3673,71,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4211807.jpg
+3673,71,2,TRUE,https://cdn.rebrickable.com/media/parts/elements/4211807.jpg
 63864,71,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4558169.jpg
 3068b,71,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/4211413.jpg
 2462,71,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4211718.jpg
@@ -126,7 +126,7 @@ part_num,color_id,quantity,is_spare,part_img_url
 30503,71,4,FALSE,https://cdn.rebrickable.com/media/parts/elements/4160560.jpg
 50305,71,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4258275.jpg
 50304,71,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4258273.jpg
-64567,80,3,FALSE,https://cdn.rebrickable.com/media/parts/elements/6546103.jpg
+64567,80,1,TRUE,https://cdn.rebrickable.com/media/parts/elements/6546103.jpg
 16420,9999,1,FALSE,https://cdn.rebrickable.com/media/parts/photos/9999/16420-9999-ca4493bc-037c-49fd-a24e-b2c1b75e86e6.jpg
 96874,25,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/4654448.jpg
 3001,4,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/300121.jpg
@@ -141,7 +141,7 @@ part_num,color_id,quantity,is_spare,part_img_url
 3069b,33,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/4113854.jpg
 30374,41,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/4124073.jpg
 3065,36,8,FALSE,https://cdn.rebrickable.com/media/parts/elements/306541.jpg
-6141,36,1,FALSE,https://cdn.rebrickable.com/media/parts/elements/3005741.jpg
+6141,36,1,TRUE,https://cdn.rebrickable.com/media/parts/elements/3005741.jpg
 54200,36,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/4244363.jpg
 3039,36,4,FALSE,https://cdn.rebrickable.com/media/parts/elements/4118889.jpg
 3070b,36,2,FALSE,https://cdn.rebrickable.com/media/parts/elements/3003941.jpg

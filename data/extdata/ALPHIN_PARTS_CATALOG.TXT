@@ -1,0 +1,7648 @@
+Basic (110 parts)
+Brick
+A LEGO brick is a rectangular prism with one or more round 'studs' on the top.
+
+Brick › 1× Brick
+Bricks that are 1-stud wide.
+
+Brick › 2× Brick
+Bricks that are 2-studs wide.
+
+Brick › Tall Brick
+Bricks that are taller than a standard LEGO brick.
+
+Brick › Hollow Brick
+Bricks that are hollow because they do not have a bottom tube.
+
+Plate
+A LEGO Plate is 1/3 of the height of a LEGO brick.
+
+Plate › 1× Plate
+Plates that are 1-stud wide.
+
+Plate › 2× Plate
+Plates that are 2-studs wide.
+
+Plate › Large Plate
+Plates that are 3 or more studs wide.
+
+Plate › Other Plate
+Basic plates that are modified in a small way, such as a smooth section without studs.
+
+Blate
+At two plates thick, it isn't really a brick or a plate.
+
+Tile
+A tile is the same thickness as a plate, but has a smooth surface on one side.
+
+Tile › 1× Tile
+Tiles that are just 1-stud wide.
+
+Tile › 2× Tile
+Tiles that are 2-studs wide.
+
+Tile › Large Tile
+Tiles that are more than two studs wide.
+
+Tile › Inverted Tile
+Tiles that are smooth on the bottom and have studs on top.
+
+Baseplate
+Baseplates are thin and flexible — much thinner than a standard LEGO Plate.
+
+Other
+Other basic parts that don't fit well elsewhere.
+
+
+Brick Separator
+96874
+
+3×2×1⅓ Bracket
+73562
+
+5×1×1⅓ Bracket
+5712N
+
+5×2×1⅓ Bracket
+11215
+
+5×2×2⅓ Bracket
+76766
+
+2×2×⅔ Rubber Foot
+109373N
+
+2×6×2 Brick, Counter Weight
+73090
+
+2×4 Keychain
+49757
+
+Wall (124 parts)
+
+2×2 Window
+60592
+
+3×3×2 Window, Curved
+73878
+
+2×2 Window, Arched
+90195
+
+2×2 Glass
+60601
+
+2×2 Pane, Lattice
+38320
+
+3×2 Window
+6798N
+
+3×2 Glass
+7757N
+
+2×3 Window
+60593
+
+2×3 Glass
+60602
+
+3×3 Window
+51239
+
+3×3 Glass
+51266
+
+4×3 Window
+60594
+
+2×4×3 Window
+60598
+
+2×3 Pane, Lattice
+60607
+
+2×3 Pane
+60608
+
+2×3 Door
+60614
+
+2×3 Shutter
+60800
+
+4×3 Glass
+60603
+
+4×3 Grille
+62113
+
+4×4 Window
+6154
+
+4×4 Door, Lift
+6155
+
+3×5 Door
+2657N
+
+1×4×6 Frame
+60596
+
+1×4×6 3-Panes
+57894
+
+2×4×6 Frame
+60599
+
+2×16×6 3-Frames
+35103
+
+4×6 Glass
+57895
+
+4×6 Door
+60616
+
+4×6 Door, 3-Panes
+60797
+
+4×6 Door, 4-Panes
+60623
+
+4×6 Door, Pet Door
+79730
+
+4×6 Door, Wood
+5466N
+
+4×6 Door, Grille
+60621
+
+4×6 Grille
+92589
+
+4×6 Pane, Lattice
+5032N
+
+1×6×6 Frame
+42205
+
+2×8×6 Frame
+80400
+
+3×6 Door
+80683
+
+6×6 Glass
+42509
+
+2×2 Window, Plane
+60032
+
+4×2 Window, Plane
+61345
+
+1×2×3 Train
+4035
+
+1×2×2⅔ Frame, Arched
+30044
+
+2×2⅔ Shutter, Arched
+94161
+
+2×2⅔ Lattice, Arched
+30046
+
+4×3 Window, Arched
+5260N
+
+1×6×6⅓ Frame, Curved w/ 2-Clips
+5258N
+
+1×4×6 Door, Curved
+5257N
+
+1×4×6 Door, Arched
+64390
+
+4×7 Glass, Arched
+65066
+
+1×4×1⅔ Window, Arched
+20309
+
+1×4×5 Panel w/ Arched Window
+60808
+
+2×6×6 Gothic Arch
+35565
+
+4×4×6 Frame, Corner
+28327
+
+45° 4×4×3 Window, Sloped
+60806
+
+1×3 Door, L.
+3822
+
+1×3 Door, R.
+3821
+
+3×2 Door, L.
+92262
+
+3×2 Door, R.
+92263
+
+3×3 Door, L.
+60658
+
+3×3 Door, R.
+60657
+
+3×4 Door, L.
+58381
+
+3×4 Door, R.
+58380
+
+4×5 Train Door, L.
+4181
+
+4×5 Train Door, R.
+4182
+
+Glass, Train Door
+35157
+
+5×3 Door w/ 3-Studs
+93096
+Panel
+Panels are thin parts with just one wall.
+
+
+1×1 Panel, Corner
+6231
+
+1×2 Panel
+4865
+
+1×2 Panel w/ 2-Sides
+23969
+
+1×2 Panel w/ Divider
+93095
+
+1×3 Panel
+23950
+
+1×4 Panel
+15207
+
+2×2 Panel, Corner
+91501
+
+2×2 Panel, 4-Corners
+3131N
+
+1×2×2 Panel
+87552
+
+1×4×2 Panel
+14718
+
+1×2×3 Panel
+87544
+
+1×4×3 Panel
+60581
+
+1×6×5 Panel
+59349
+
+1×6×5 Panel, Corrugated
+23405
+
+1×6×3 Panel, Studs 2-Sides
+98280
+
+2×4×2 Windscreen
+4594
+
+1×6×3 Windscreen
+64453
+
+1×10×4 Windscreen
+65735
+
+2×4×6 Rock Panel
+47847
+
+4×6×10 Rock Panel (BURP)
+6082
+
+3×8×7 Rock Panel, Triangular (LURP)
+6083
+
+8×8×6 Rock Panel, Corner
+23996
+Decorative
+Parts with a textured exterior mimicking stone, brick, wood, or grilles.
+
+
+1×2 Tile, Grille
+2412
+
+1×2, Ribbed
+2877
+
+2×2×⅔, Ribbed
+71752
+
+2×2 Round, Ribbed
+92947
+
+1×2, Masonry
+98283
+
+1×4, Masonry
+15533
+
+1×2, Log (Palisade)
+30136
+
+1×4, Log (Palisade)
+30137
+
+1×1 w/ Scroll
+20310
+Fence
+A selection of fences (without studs on top) and railings (with studs on top).
+
+
+4×9 Gate, Arched
+42448
+
+1×2×1⅔ Diagonal Bar
+3224N
+
+1×4×1 Fence
+3633
+
+1×4×2 Fence
+3185
+
+1×4×2 Picket
+33303
+
+1×4×2 Spindled
+15332
+
+4×4×2 Spindled, Curved
+21229
+
+1×4×2 Ornamental
+19121
+
+3×3×2 Ornamental, Curved
+41823
+
+1×4×2 Asian, Circle
+5103N
+
+1×4×2 Asian, Square
+32932
+
+1×6 Train Wagon End
+6583
+Structural
+Structural support elements that do not fit well anywhere else.
+
+
+2×2×7 Lamp Post
+11062
+
+2×2×13 Technic Panel w/ 5-Pin Holes
+91176
+
+2×2×10 Girder
+95347
+
+1×6×5 Girder
+64448
+
+2×4×5 Inclined Stanchion
+4476
+
+2×4×13 Support, ½-Circle w/ Pin Holes
+1749
+
+1×6×10 Girder, Triangular
+64449
+Stairs
+Purpose-built pieces to add a staircase to your model.
+
+
+7×4×6 Stairs
+30134
+
+6×6×4 Stairs
+28466
+
+Stair, Spiral
+40243
+
+1×2 Ladder
+4175
+Container
+Pieces which are used to hold, store, display, or protect other parts.
+
+
+8×8×3 Cupcake Cup
+72024
+
+6×16 Book Spine
+65200
+
+16×12×2⅔ Book Cover
+65196
+
+SNOT (53 parts)
+These parts allow you to attach studs facing outwards (Studs Not On Top) or attach studs at an offset from the normal grid.
+
+SNOT bricks and brackets allow you to attach parts facing outwards. There are other techniques that allow you to attach studs facing outwards, but the parts in this category are designed specifically for this purpose.
+
+We also have jumpers which allow you to offset a part by ½ of the width of a LEGO plate. This is an unusual offset within the LEGO system that makes a lot of interesting techniques possible.
+
+Jump To:
+Brick (17)
+Bracket (26)
+Jumper (10)
+SNOT (53 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Brick
+A SNOT brick has one or more outward-facing studs on the side.
+
+
+1×1×⅔ Stud 1-Side, Ø1 Rounded
+3386N
+
+1×1 Headlight
+4070
+
+1×1 Stud 1-Side
+87087
+
+1×1 2-Studs, Opposite
+47905
+
+1×1 2-Studs, Adjacent
+26604
+
+1×1 Studs 4-Sides
+4733
+
+1×2 Studs 1-Side
+11211
+
+1×2 Studs 2-Sides
+52107
+
+1×4 Studs 1-Side
+30414
+
+1×1×1⅔ Studs 1-Side
+32952
+
+1×1×1⅔ Studs 3-Sides
+7729N
+
+1×2×1⅔ Studs 1-Side
+22885
+
+1×2×1⅔ Studs 2-Sides
+80796
+
+1×2×1⅔ Studs 3-Sides
+67329
+
+1×2×⅔ Studs 2-Sides
+4595
+
+1×2×⅔ Studs 5-Sides, Gun Handle
+15071
+
+3×3 Cube w/ Ring
+69182
+Bracket
+Brackets are SNOT parts that are thinner than a brick.
+
+
+1×1 Bracket
+36841
+
+1×1 Bracket, Inverted
+36840
+
+1×2 Bracket
+99781
+
+1×2 Bracket, Inverted
+99780
+
+1×4 Bracket w/ 2×4
+5175N
+
+1×6 Bracket w/ 2×6, Inv.
+64570
+
+1×4 Bracket w/ 1×2
+28802
+
+2×1 Bracket
+79389
+
+2×1 Bracket, Inverted
+73825
+
+2×2 Bracket
+44728
+
+2×2 Bracket, Inverted
+99207
+
+2×2 Bracket, Centered
+7674N
+
+2×4 Bracket
+93274
+
+2×4 Bracket, Inv.
+7452N
+
+2×6 Bracket
+6970N
+
+2×6 Bracket, Inverted
+5090N
+
+2×2 Bracket w/ Holes
+3956
+
+3×2×2 Bracket (Space)
+4598
+
+2×2×⅔ 2-Studs, Side
+4304
+
+2×6×⅔ 4-Studs, Side
+87609
+
+1×4×1⅔ Bumper w/ Arches
+14520
+
+2×2 Antistud Bracket
+41682
+
+2×1 Antistud Bracket
+4585N
+
+2×2 Bracket w/ 3×2 Plate, Curved
+69906
+
+Minifig Bracket w/ 1-Stud
+28974
+
+Minifig Bracket w/ 2-Studs
+18986
+Jumper
+Jumpers offer a 1/2 stud offset in one or both directions.
+
+
+1×2 Jumper
+15573
+
+1×2 Jumper w/ Tall Stud
+24445N
+
+2×2 Jumper
+87580
+
+1×3 Jumper, Dbl.
+34103
+
+2×4 Jumper, Dbl.
+65509
+
+2×6 Jumper w/ Ridges
+7665N
+
+1×2 Jumper, 1-Side
+86876
+
+1×1 Ring
+4081
+
+1×4 Offset w/ 2-Rings
+4590
+
+1×2 w/ 3L Space Wing
+4596
+
+Angle (173 parts)
+Slopes, wedges, and windscreens allow you to include angled sections in your model.
+
+Wedges have an angle relative to the horizontal plane, while slopes and windscreens have an angle relative to a vertical plane.
+
+Jump To:
+Slope (77)
+Wedge (62)
+Wedge Slope (34)
+Angle (173 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Slope
+Slopes have an angle along a vertical axis.
+
+Slope › 10-30° Slope
+There are only a few sloped parts with these very shallow angles.
+
+
+10° 6×1 Slope
+4569N
+
+10° 6×8 Slope
+4515
+
+13° 4×1 Slope
+5654N
+
+15° 5×8×⅔ Ramp w/ Rounded Corners
+75539
+
+18° 2×1×⅔ Slope
+5404N
+
+18° 2×1×⅔ Slope (Grater)
+61409
+
+18° 4×1 Slope
+60477
+
+18° 4×2 Slope
+30363
+
+25° 8×1×3 Slope
+49618
+
+30° 1×1×⅔ Slope (Cheese)
+54200
+
+30° 1×2×⅔ Slope
+85984
+
+4×6×⅔ Wedge Roof w/ Studs
+32739
+Slope › 33° Slope
+This angle is most commonly found in the popular 3× slope bricks.
+
+
+33° 3×1 Slope
+4286
+
+33° 3×2 Slope
+3298
+
+33° 3×3 Slope
+4161
+
+33° 3×4 Slope
+3297
+
+33° 3×3 Corner Slope
+3675
+
+33° 3×3 Inside Corner Slope
+99301
+
+33° 2×2 Dbl. Slope
+3300
+
+33° 2×4 Dbl. Slope
+3299
+Slope › 45° Slope
+The most common angle for sloped LEGO elements, as popularized by 2× slope bricks.
+
+
+45° 2×1 Slope
+3040
+
+45° 2×2 Slope
+3039
+
+45° 2×3 Slope
+3038
+
+45° 2×4 Slope
+3037
+
+45° 2×6 Slope
+23949
+
+45° 2×8 Slope
+4445
+
+45° 2×2 Corner Slope
+3045
+
+45° 2×2 Inside Corner Slope
+3046
+
+45° 2×1 w/ Cutout
+92946
+
+45° 2×2 w/ Cutout
+28192
+
+45° 2×4 w/ Cutout
+5540N
+
+45° 1×1×⅔ Pyramid
+22388
+
+45° 1×1 Dbl. Slope
+35464
+
+45° 2×1 Dbl. Slope
+3044
+
+45° 2×2 Dbl. Slope
+3043
+
+45° 2×4 Dbl. Slope
+3041
+
+45° 1×2 Dbl. Slope, Inv.
+3049
+
+45° 2×1 Triple Slope
+15571
+
+45° / 33° 6×4 Train Roof
+4365
+
+45° 6×4 Dbl. Slope
+32083
+
+45° 2×4×1⅓ Dbl. Slope
+80545
+
+45° 10×2×2 Dbl. Slope
+30180
+Slope › 55-75° Slope
+These are very steep sloped elements which are taller than a single brick.
+
+
+55° 6×1×5 Slope
+30249
+
+65° 2×1×2 Slope
+60481
+
+65° 2×2×2 Slope
+3678
+
+75° 2×1×3 Slope
+4460
+
+75° 2×2×3 Slope
+98560
+
+75° 2×2×3 Corner Slope
+3685
+
+75° 2×2×2 Square Cone w/ 1-Stud
+3688
+Slope › Inverted Slope
+A selection of inverted slopes are also available. Most are inverted versions of other sloped elements.
+
+
+-33° 3×1 Inv. Slope
+4287
+
+-33° 3×2 Inv. Slope
+2752
+
+-45° 2×1 Inv. Slope
+3665
+
+-45° 2×2 Inv. Slope
+3660
+
+-45° 2×2 Inv. Corner Slope
+3676
+
+-45 3×1 Inv. Dbl. Slope
+18759
+
+-45° 2×1 Inv. Slope w/ Cutout
+2310
+
+-45° 4×1 Inv. Dbl. Slope
+32802
+
+-45° 4×2 Inv. Dbl. Slope
+4871
+
+-45° 4×4 Inv. Dbl. Slope
+72454
+
+-45° 6×1 Inv. Dbl. Slope
+52501
+
+-45° 6×2 Inv. Dbl. Slope
+22889
+
+-45° 6×4 Inv. Dbl. Slope
+60219
+
+-45° 6×8 Inv. Dbl. Slope
+5117N
+
+-60° 4×1×3 Inv. Slope
+67440
+
+-75° 2×1×3 Inv. Slope
+2449
+
+Panel, Angled (Tipper)
+30022
+Slope › Windscreen
+A windscreen is a panel that is sloped on a vertical axis.
+
+
+33° 3×6 Slope
+58181
+
+3×4×1⅓ Windscreen
+57783
+
+3×4×1⅓ Windscreen
+2437
+
+45° 3×6×2 Windscreen
+92583
+
+65° 2×4×2 Windscreen
+3823
+
+65° 2×6×2 Windscreen
+4176
+
+65° 2×6×2 Windscreen Frame
+13760
+
+Glass for 2×6×2 Windscreen Frame
+13756
+
+5×2×1⅔ Windscreen
+6070
+
+8×4×2 Windscreen w/ Handle
+21849
+
+3×4×4 Windscreen, Inv.
+4872
+Wedge
+A brick or plate that is sloped on the horizontal axis.
+
+Wedge › 45° Wedge Plate
+Wedge Plates with a 45° angle
+
+
+45° 2×2 Corner
+26601
+
+45° 3×3 Corner
+2450
+
+45° 4×4 Corner
+30503
+
+45° 6×6 Corner
+6106
+
+45° 8×8 Corner
+30504
+
+45° 10×10 Corner w/ Edge Studs
+92584
+
+45° 3×6 Dbl. Corner
+2419
+
+45° 4×8 Dbl. Corner
+68297
+
+45° 10×10 Octagonal
+89523
+
+45° 10×10 Octagonal w/ Cutout
+6063
+Wedge › 63° Wedge Plate
+The 63° angle is the result of cutting off a section with a 1:2 ratio.
+
+
+63° 2×2 Wedge L.
+24299
+
+63° 2×2 Wedge R.
+24307
+
+63° 2×4 Wedge L.
+65429
+
+63° 2×4 Wedge R.
+65426
+
+63° 4×6 Wedge L.
+48208
+
+63° 4×6 Wedge R.
+48205
+
+63° 2×4 Dbl. Wedge
+51739
+
+63° 4×6 Dbl. Wedge
+32059
+
+63° 4×6 Dbl. Wedge w/ Cutout
+47407
+Wedge › 72° Wedge Plate
+The 72° angle is the result of cutting off a section with a 1:3 ratio.
+
+
+72° 3×2 Wedge L.
+43723
+
+72° 3×2 Wedge R.
+43722
+
+72° 6×3 Wedge L.
+54384
+
+72° 6×3 Wedge R.
+54383
+
+72° 8×3 Wedge L.
+50305
+
+72° 8×3 Wedge R.
+50304
+
+72° 12×6 Wedge L.
+30355
+
+72° 12×6 Wedge R.
+30356
+
+72° 3×4 Dbl. Wedge
+48183
+Wedge › 76° Wedge Plate
+The 76° angle is the result of cutting off a section with a 1:4 ratio.
+
+
+76° 4×2 Wedge L.
+41770
+
+76° 4×2 Wedge R.
+41769
+
+76° 8×3 Wedge L.
+3544N
+
+76° 8×3 Wedge R.
+3545N
+
+76° 4×4 Dbl. Wedge
+43719
+Wedge › 80° Wedge Plate
+The 80° angle is the result of cutting off a section with a 1:6 ratio.
+
+
+80° 6×2 Wedge L.
+78443
+
+80° 6×2 Wedge R.
+78444
+
+80° 12×3 Wedge L.
+47397
+
+80° 12×3 Wedge R.
+47398
+Wedge › Other Wedge Plates
+Wedge plates with compound angles and plates with studs positioned at multiple angles.
+
+
+85° 4×9 Dbl. Wedge
+14181
+
+7×6 Dbl. Wedge
+50303
+
+45° A-Shape, 8-Studs
+15706
+
+2×6×⅔ 135° Bent
+79846
+Wedge › Wedge Tile
+Smooth tiles with an angled or wedge shape.
+
+
+2×3 Tile, Pentagonal
+22385
+
+2×2 Tile, Corner w/ Cutout
+27263
+
+2×2 Wedge w/ Jumper
+27928
+
+2×2 Tile, Triangular
+35787
+
+1×2 Tile, Corner L.
+5091N
+
+1×2 Tile, Corner R.
+5092N
+
+2×2 Wedge Tile, L.
+7828N
+
+2×2 Wedge Tile, R.
+7829N
+Wedge › Wedge Brick
+Bricks with one or more angled corners.
+
+
+45° 2×2 Corner Facet
+87620
+
+45° 3×3 Corner
+2462
+
+45° 4×4 Corner
+14413
+
+45° 3×3 Corner
+30505
+
+72° 3×2 Wedge L.
+6565
+
+72° 3×2 Wedge R.
+6564
+
+72° 3½×4 Wedge w/ Cutout
+50373
+
+76° 4×2 Wedge L.
+41768
+
+76° 4×2 Wedge R.
+41767
+
+4×8×2⅓ Turret
+6066
+Wedge › Wedge Panel
+Panel elements with one or more wedge-shaped angles.
+
+
+2×2×5 Panel, Corner
+78594
+
+3×3×6 Panel, Corner
+87421
+
+3×4×6 Panel
+30246
+Wedge Slope
+Parts with compound angles that combine attributes of a wedge and a slope in a single piece.
+
+Wedge Slope › Upward
+Parts with compound angles that slope upward.
+
+
+6×8 Wedge, Pointed w/ Cutout
+22390
+
+2×2 Wedge Slope
+13548
+
+2×4 Dbl. Wedge Slope
+47759
+
+4×4 Wedge Slope
+43708
+
+3×4 Corner Slope
+4861
+
+4×2 Wedge Slope R.
+43711
+
+4×2 Wedge Slope L.
+43710
+
+4×4 Wedge Slope
+48933
+
+65° 2×2×2 Corner Wedge
+78886
+
+4×4 Wedge, Pointed
+22391
+
+4×4 Wedge w/ Cutout
+93348
+
+4×4 Wedge, 3-Ridges
+86148
+
+4×4 Wedge, Fractured
+64867
+
+6×4 Wedge Slope w/ Cutout
+6153
+
+3×3 Wedge Slope L.
+42862
+
+3×3 Wedge Slope R.
+48165
+
+33° 2×2 Double Wedge, Curved
+1762
+
+2×16 Wedge Slope, Dbl.
+30382
+
+5×2 Wedge Slope R.
+3505N
+
+5×2 Wedge Slope L.
+3504N
+
+1×5×1⅓ Wedge Slope L.
+3388N
+
+1×5×1⅓ Wedge Slope R.
+3389N
+Wedge Slope › Inverted
+Parts with a compound angle that slope downward.
+
+
+4×4 Wedge Slope, Inv.
+13349
+
+6×4 Wedge Slope, Inverted
+4856
+
+6×4 Wedge Curve, Inverted
+43713
+
+6×6 Wedge Slope, Inverted
+29115
+
+10×12 Boat Bow w/ Cutout
+47404
+
+4×10×1⅔ Wedge Curve, Dbl. Inv.
+65186
+Wedge Slope › Windscreen
+Windscreens and panels with a compound shape that combines a wedge and a slope.
+
+
+6×4×1 Windscreen, Hexagonal w/ Handle
+27262
+
+4×4×4⅔ Windscreen w/ Handle
+11289
+
+6×4×1⅓ Windscreen, Pointed
+22483
+
+3×4×3 Windscreen
+84954
+
+5×8×2 Windscreen
+62576
+
+6×6×2 Windscreen
+87606
+
+Curve (357 parts)
+Build streamlined or organic shapes using a rich palette of curved parts.
+
+Curved parts are organized into subcategories based on the direction of the curve.
+
+Parts curved on the horizontal plane are described as bricks, plates, or cylinders.
+
+Parts curved relative to a vertical plane are curved, arch, or mudguards.
+
+Parts curved in multiple dimensions are dishes, domes, and wedges.
+
+Jump To:
+Curved Brick (12)
+Curved Plate (32)
+Curved Blate (8)
+Curved Tile (17)
+Cylinder (15)
+Cone (20)
+Dish and Dome (45)
+Ball (3)
+Curved (79)
+Arch (22)
+Wedge (48)
+Windscreen (14)
+Mudguard (15)
+Heart and Star (5)
+Other Curved Parts (22)
+Curve (357 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Curved Brick
+Bricks which are curved along the horizontal plane.
+
+
+1×1 Round
+3062
+
+2×2 Round
+3941
+
+2×2, Ø4 Corner
+85080
+
+4×4 Round
+87081
+
+4×4 Round w/ Recess
+68325
+
+3×3, Ø6 Corner
+5152N
+
+4×4 Ø8 Corner
+48092
+
+4×4 Ø8 ¼-Circle
+2577
+
+5×5 Ø10 Corner w/ Recess
+5532N
+
+Minifigure Head
+3626
+
+1×1×6 Round
+43888
+
+2×2×11 Round
+75347
+Curved Plate
+Plates that are curved on a horizontal plane.
+
+
+1×1 Round
+6141
+
+1×1 Round w/ Hole
+85861
+
+1×2, Ø1 Ends
+35480
+
+1×3, Ø1 Ends
+77850N
+
+1×4, Ø1 Ends
+77845N
+
+Ø1⅖ w/ 1-Stud (Saucer)
+38799
+
+2×2 Round
+4032
+
+2×2 Round w/ Hole
+15535
+
+2×2 Round Jumper
+18674
+
+1×2, Ø2 ½-Circle Jumper
+1745
+
+3×2, Ø2 End w/ Hole
+3176
+
+4×4 Round
+60474
+
+4×4 Round w/ 2×2 Cutout
+11833
+
+2×2, Ø4 ¼-Circle
+7904N
+
+3×3, Ø4 Corner
+30357
+
+2×6, Ø4 2-Corners
+18980
+
+4×6, Ø4 Rounded Ends
+3766N
+
+8×8, Ø4 Corners
+65140
+
+6×6 Round
+11213
+
+3×6, Ø6 ½-Circle w/ Cutout
+18646
+
+8×8 Round
+74611
+
+8×8 Round w/ 2×2 Studs
+6177
+
+4×4, Ø8 ¼-Circle
+30565
+
+4×8, Ø8 ½-Circle
+22888
+
+6×6, Ø8 Corner
+6003
+
+8×8, Ø8 End
+41948
+
+10×10, Ø8 End
+80031
+
+2×2, Ø2 Corner w/ Cutout
+79491
+
+3×3, Ø4 Corner w/ Cutout
+68568
+
+5×5, Ø8 Corner w/ Cutout
+80015
+
+4×4, Ø6 Cutout
+35044
+
+2½×2, Ø1 Corners w/ Ext.
+5518N
+Curved Blate
+Blates which are curved along a horizontal plane.
+
+
+3×4×⅔, Ø2 2-Corners
+3263N
+
+4×4×⅔, Ø2 Corners
+66792
+
+4×4×⅔, Ø2 Corners w/ Cutout
+79387
+
+4×6×⅔, Ø4 2-Corners
+89681
+
+6×6×⅔, Ø4 Corners
+66789
+
+8×4×⅔, Ø4 2-Corners
+73832
+
+8×8×⅔, Ø4 Rounded Corners
+66790
+
+8×16×⅔, Ø8 2-Corners
+74166
+Curved Tile
+Tiles which are curved along a horizontal plane.
+
+
+1×1 Tile, Round
+98138
+
+1×1 Tile, Ø1 End
+24246
+
+1×2 Tile, Ø1 Ends
+1126
+
+2×2 Tile, Round
+14769
+
+2×2 Tile, Ø2 End
+5520N
+
+2×4 Tile, Ø2 Ends
+66857
+
+1×1 Tile w/ Ø2 ¼-Circle
+25269
+
+1×2 Tile w/ Ø2 ½-Circle
+1748
+
+2×2 Tile w/ 2-Cutouts
+3396N
+
+3×3 Tile, Round
+67095
+
+6×8 Tile, Ø6 Ends
+65474
+
+2×2 Tile, Inverted
+3567N
+
+3×4×⅔ Tile, Mickey
+74169
+
+2×2 Tile, Ø4 Corner
+27925
+
+3×3 Tile, Ø6 Corner
+79393
+
+4×4 Tile, Ø8 Corner
+27507
+
+4×4×⅔ Tile, Ø2 Corners
+68869
+Cylinder
+Cylinders have just one wall and are curved relative to a horizontal plane.
+
+
+1×5½ Cylinder w/ Handle
+87617
+
+1×2, Ø2 ½-Circle
+68013
+
+3×3×2 Round w/ Recess
+73111
+
+2×2×5, Ø4 ¼-Cylinder
+30987
+
+2×4×2, Ø4 ½-Cylinder
+24593
+
+2×4×4. Ø4 ½-Cylinder
+6259
+
+2×4×5, Ø4 ½-Cylinder
+85941
+
+3×3×5, Ø4 ¼-Cylinder w/ 2-Bows
+60373
+
+3×6×6, Ø6 ½-Cylinder
+87926
+
+3×3×2, Ø6 ¼-Cylinder
+3535N
+
+4×4×3, Ø8 ¼-Cylinder
+4041N
+
+4×4×6, Ø8 ¼-Cylinder
+30562
+
+6×6×3⅓ Warp Pipe
+66787
+
+4L Ø4 Tube, Straight
+49736
+
+Ø4 Tube, 45° Curved
+49737
+Cone
+Cones have a circular base and come to a point on the top.
+
+
+1×1×⅔ Cone (Fez)
+85975
+
+1×1 Cone
+59900
+
+1½×1½×⅔ Cone
+33492
+
+2×2 Cone, Truncated
+98100
+
+2×2×2 Cone
+3942
+
+3×3×2 Cone
+6233
+
+4×4×2 Cone
+3943
+
+3×3×2 Cone
+4742
+
+4×2×3 ½-Cone
+38317
+
+8×4×6 ½-Cone
+47543
+
+10×5×6 ½-Cone
+29096
+
+2×2×3 Cone, Jagged
+28598
+
+2×4×4 ½-Cone, Tiled
+35563
+
+4×8×6 ½-Cone, Tiled
+1746
+
+1×1 w/ Fins
+4588
+
+3×3×3 Cone, Paraboloid
+1744
+
+6×3×6 ½-Cone, Paraboloid
+18909
+
+3×3×6 ¼-Cylinder w/ Curved Top
+6059
+
+1×1 Cone, Inv. w/ Bar
+11610
+
+2×2×2 Cone, Inv.
+49309
+Dish and Dome
+Dishes and domes are curved elements that look like the top of a sphere.
+
+
+2×2 Dish
+4740
+
+3×3 Dish
+43898
+
+4×4 Dish
+35394
+
+4×4×⅔ Dish
+65138
+
+4×4×1 Dome w/ Recess
+79850
+
+6×6 Dish
+44375
+
+6×6 Dish, Radar
+4285
+
+8×8 Dish
+3961
+
+10×10 Dish
+50990
+
+2×2×⅔ Curved Corner
+5852N
+
+2×2×1⅔ Curved Corner
+5906N
+
+3×3 Curved Corner
+76797
+
+2×2 Round Corner
+5924N
+
+3×3 Round Corner
+65617
+
+4×4 Round Corner
+5651N
+
+5×5 Round Corner
+24599
+
+6×6 Corner, 33° Slope
+95188
+
+10×10 Corner, 33° Slope
+58846
+
+4×4 Corner, 45° Slope
+5649N
+
+5×5 Corner, 45° Slope
+76795
+
+6×6×2 Corner
+87559
+
+1½×1½×⅔ Dome
+20952
+
+Fishbowl Helmet
+51283
+
+2×2×2 Globe
+30106
+
+1×1×⅔ Dome
+6908N
+
+2×2 Dome
+3262
+
+2×2×1⅔ Dome
+30151
+
+2×2×2 Dome w/ Crystals
+5331N
+
+2×2 Sphere
+20953
+
+2×2 Hemisphere
+61287
+
+3×3×1⅓ Dome
+49308
+
+4×4 Hemisphere
+86500
+
+3×3×2 ¼-Dome
+88293
+
+6×3×2⅓ ½-Dome
+7202N
+
+4×4×2⅔ ¼-Dome
+49612
+
+5×5×3⅓ ¼-Dome
+76776N
+
+4×4×1⅔ Hemisphere w/ Bar
+18990
+
+6×6 Dish w/ Handle
+18675
+
+6×4×2⅓ Canopy
+87752
+
+Ø16 ¼-Dome Panel
+87375
+
+Hemisphere w/ Stud, 3-Ribs
+50018f
+
+2×2 Dome, Inv. w/out Studs
+15395
+
+2×2 Dome, Inv.
+24947
+
+6×6×3 Hemisphere w/ 2-Click Hinges
+52979
+
+7×7 Dome, Flat w/ 2-Pin Holes
+1974N
+Ball
+Balls are spheres made out of LEGO.
+
+
+Ball, Soccer
+72824
+
+Ball, Bionicle
+54821
+
+Egg
+24946
+Curved
+These parts are curved on a single vertical axis.
+
+Curved › 1×1 Curved
+Parts that have a curve that goes up the height of one brick in the distance of 1-stud.
+
+
+1×1×1 Curved, ¼ Dome
+5848N
+
+1×1×1⅓ Curved, ¼ Dome
+1871N
+
+1×2 Curved
+5841N
+
+1×2×1⅓ Curved
+6091
+
+2×2 Curved, Corner
+5846N
+
+2×2×1⅓ Curved, Corner
+67810
+
+1×1 Curved
+7126N
+
+2×1×1 Curved
+37352
+
+2×1×1 Curved w/out Stud Holder
+7134N
+
+1×4×1 Curved
+5849N
+
+1×4×1⅓ Curved
+10314
+
+4×2×1 Curved
+5842N
+
+4×2×1⅓ Curved
+6081
+
+2×3 Curved w/ 4-Studs
+6215
+
+4×1×1⅓ Curved w/ 2-Corners
+4045N
+
+2×2 Curved w/ 2-Studs
+30165
+
+2×4 Curved
+6192
+
+2×2 Curved, Inv.
+1750
+
+2×2 Curved, Inv.
+6826N
+
+2×4 Curved Dbl. Inv.
+5174N
+Curved › 2×2 Curved
+Parts that have a curve that goes up the height of 2-bricks in the distance of 2-studs.
+
+
+1×3×2 Curved w/ Cutout
+6005
+
+3×1×1⅔ Curved
+5843N
+
+1×6×2 Curved, Double w/ Cutout
+6183
+
+1×3×2 Curved
+33243
+Curved › 1× Curved, Dbl. (Ø1)
+A collection of (Double) Curves with a 1-stud diameter when viewed from the side.
+
+
+1×1×⅔ Double
+49307
+
+1×2×⅔ Double
+3563N
+
+1×4×⅔ Double
+79756
+
+2×2×⅔ Dbl. Corner
+79757
+Curved › 2×⅔ Curved (Ø7⅓)
+Parts that have a curve that goes up 2/3 of a brick in the distance of 2-studs.
+
+
+2×1×⅔ Curved
+11477
+
+2×2×⅔ Curved
+15068
+
+4×1×⅔ Double
+93273
+
+2×4×⅔ Curved
+88930
+
+4×3½×1 Dbl. w/ 3-Steps
+66955
+
+2×1×⅔ Curved, Inv.
+24201
+
+2×2×⅔ Curved, Inv.
+32803
+Curved › 3×1 Curve (Ø10)
+Parts that have a curve that goes up the height of one brick in the distance of 3-studs.
+
+
+3×1 Curved
+50950
+
+3×2 Curved
+24309
+
+4×6 Double
+78522
+
+4×1 Curved, Inv.
+13547
+Curved › 4×1 Curve (Ø16⅔)
+Parts that have a curve that goes up the height of one brick in the distance of 4-studs.
+
+
+4×1 Curved
+61678
+
+4×2 Curved
+93606
+
+6×1 Curved
+42022
+
+6×2 Curved
+44126
+
+6×1 Curved, Inv.
+42023
+Curved › 8×1 Curved (Ø64)
+Parts that have a curve that goes up the height of one brick in the distance of 8-studs.
+
+
+8×2 Curved
+42918
+
+10×1 Curved
+13731
+Curved › 3×2 Curved
+The Curved section is only 3-studs wide to allow for a row of studs on the top.
+
+
+8×8×2 Curved Dbl.
+54095
+
+2×8×2 Double
+11290
+
+4×4×2 Curved
+61487
+
+2×8×2 Dbl. Inv.
+54091
+
+2×8×2 Dbl. Inv.
+11301
+Curved › Other Curved
+Curved parts with a different radius, or other less common attributes.
+
+
+2×1×1⅔ Curved
+5907N
+
+3×1×⅔ Curved
+7302N
+
+5×8×⅔ Curved
+71771
+
+5×8×⅔ Curved w/ 4-Studs
+15625
+
+4×1×1⅔ Curved
+3573N
+
+4×4×1⅔ Curved w/ Cutout
+7249N
+
+1×4×2⅔ Curved
+65734
+
+1×5×3⅓ Curved
+5845N
+
+1×6×3⅓ Curved
+6060
+
+6×1 Curved
+6801N
+
+8×1×1⅔ Curved
+7217N
+
+1×3 Brick w/ Round Ends
+35477
+Curved › Inverted Curve
+Parts with a curve along the bottom edge.
+
+
+2×2 Inv. Corner
+4190N
+
+2×6 Inverted
+6806N
+
+3×3 Inv. Corner
+73682
+Curved › Curved Panel
+Panel elements that are curved.
+
+
+6×2×2 Curved w/ Bar
+92474
+
+8×4×2 Curved w/ 2 Click Hinges
+46413
+
+3×4×3 Curved Panel w/ Hinge
+18910
+
+3×4×6 Panel w/ Curved Top
+2571
+
+5×6×3⅓ Panel, Curved
+5065N
+
+5×8×3⅔ Curved w/ 2-Axle Holes
+76798
+
+10×4×13 Panel, Curved
+65783
+
+Ramp Loop 30° Section
+77823
+
+8×8×4 Ramp, Concave
+75538
+
+8×11 Ramp Base
+77822
+Curved › Hull
+Curved elements used for a ship's hull.
+
+
+16×10×3 Hull, Bow
+64645
+
+16×13×2 Boat Hull, Bow Base
+64651
+
+8×16×2⅓ Hull, Middle
+95227
+Arch
+An arch is a curve that spans an opening.
+
+
+1×3 Arch
+4490
+
+1×4 Arch
+3659
+
+4×2 Arch
+6182
+
+1×6 Arch
+92950
+
+6×2 Arch
+15254
+
+8×2 Arch
+16577
+
+12×3 Arch
+18838
+
+1×2 Dbl. ½-Arch
+38583
+
+1½×1½×1 Dbl. ½-Arch
+38585
+
+8×1 Curved w/ Arch
+50967
+
+3×2 ½-Arch
+5850N
+
+5×2 ½-Arch
+3572N
+
+4×3 ½-Arch
+80543
+
+5×4 ½-Arch
+14395
+
+3×2 ½-Arch, Pointed
+88292
+
+3×3 ½-Arch, Pointed
+13965
+
+1×2 ½-Arch, Inv.
+78666
+
+3×2 ½-Arch, Inv.
+18653
+
+5×4 ½-Arch, Inv.
+30099
+
+1×3 ½-Arch, Inv.
+70681
+
+4×6 Arch w/ Pillars
+40066
+
+3×6×5 Arch, Ornamented
+30613
+Wedge
+Curved wedges are curved on multiple axes at the same time.
+
+
+2×1 Wedge, Curved R.
+29119
+
+2×1 Wedge, Curved L.
+29120
+
+2×2 Wedge, Ø2 End
+7037N
+
+4×1 Wedge, Curved R.
+5414N
+
+4×1 Wedge, Curved L.
+5415N
+
+2×2 Wedge. Curved
+66956
+
+2×2 Wedge, Curved L.
+5095N
+
+2×2 Wedge, Curved R.
+5093N
+
+10×4×⅔ Wedge w/ Cutout (Mudguard)
+3166N
+
+3×2 Wedge, Curved R.
+80178
+
+3×2 Wedge, Curved L.
+80177
+
+3×4 Wedge, Curved
+64225
+
+4×2 Wedge, Curved R.
+6929N
+
+4×2 Wedge, Curved L.
+6930N
+
+4×4 Wedge, Curved
+47753
+
+6×2 Wedge, Curved R. w/ 2-Studs
+41747
+
+6×2 Wedge, Curved L. w/ 2-Studs
+41748
+
+6×4 Curved w/ 4-Studs
+43712
+
+10×3 Curved R. w/ 2-Studs
+50956
+
+10×3 Curved L. w/ 2-Studs
+50955
+
+16×4 Curved w/ 10-Studs
+45301
+
+8×3×2 Curved R. w/ 2-Studs
+41749
+
+8×3×2 Curved L. w/ 2-Studs
+41750
+
+8×6×2 Curved w/ 4-Studs, 3-Pin Holes
+41751
+
+10×2×2 Curved R. w/ 1-Stud
+77182
+
+10×2×2 Curved L. w/ 1-Stud
+77180
+
+10×6×2 Curved w/ 8-Studs, 3-Pin Holes
+45705
+
+4×2 Wedge, Twist L.
+43721
+
+4×2 Wedge, Twist R.
+43720
+
+4×3 Curve w/ Cutout
+47755
+
+6×2 Wedge Curve, Inv. L.
+41765
+
+6×2 Wedge Curve, Inv. R.
+41764
+
+10×6×2 Cockpit, Inv.
+47406
+
+6×10 Fuselage, Inv.
+87611
+
+6×8 Fuselage, Inv.
+11295
+
+6×8 Fuselage, Inv. w/ Pin Holes
+5123N
+
+6×10 Curved, Plane Top
+87615
+
+8×12×2 Curved, Plane Top
+67245
+
+4×5×1⅔ Domed Curve
+85834
+
+2×2 Lip
+30602
+
+2×2×⅔ Curved End
+47457
+
+1×2×⅔ Wing End
+47458
+
+2×3×⅔ Wing End, 2-Studs
+47456
+
+2×5 Slope, 4-Studs top, 2-Studs sides
+79897
+
+3×4×⅔ Curved Roof
+93604
+
+4×4×⅔ Wedge Roof
+45677
+
+4×6×⅔ Wedge Roof
+52031
+
+4×6×⅔ Quad Roof
+98281
+Windscreen
+Wedge-shaped curved parts that are 1-unit thick and typically produced using translucent plastic.
+
+
+2×4 Windscreen, Curved
+81911
+
+3×6 Windscreen, Curved
+35299
+
+2×4×1⅓ Curved Panel
+30841
+
+4×5×1⅔ Windscreen, Curved
+7613N
+
+4×6×1⅓ Windscreen, Curved
+3384N
+
+6×6×1⅓ Windscreen, Curved
+3383N
+
+5×4×1⅔ Windscreen, Curved
+18972
+
+6×6×1⅔ Windscreen, Curved
+65632
+
+6×4×1⅓ Windscreen, Curved
+18973
+
+5×6×2 Windscreen, Curved
+61484
+
+7×4×2 Windscreen, Round
+92279
+
+8×4×2 Windscreen, Curved
+23448
+
+8×4×2 Windscreen, Curved
+92579
+
+6×8×2 Windscreen, Curved
+5274N
+Mudguard
+Mudguards are curved on a vertical plane and often found around wheels on a vehicle.
+
+
+3×2½×1 Mudguard
+49097
+
+4×2½×2 Mudguard
+50745
+
+4×2½×1 Mudguard
+98282
+
+4×3×1⅔ Arch Mudguard
+1846N
+
+4×2½×2 Arch Mudguard
+3387N
+
+4×2½×2 Arch Mudguard, Curved
+35789
+
+4×2½×2⅓ Arch Mudguard
+18974
+
+1½×6×1 Arch Mudguard
+62361
+
+4×3×1 Mudguard
+28326
+
+3×4×1⅔ Curved
+98835
+
+2×4 Mudguard, Flared
+41854
+
+2×4 Mudguard, Overhanging
+44674
+
+3×4×⅔ Wedge w/ Cutout
+11291
+
+2×4 Mudguard
+60212
+
+Suspension w/ Fender
+6813N
+Heart and Star
+A selection of parts that are shaped like a ❤️ or a ⭐.
+
+
+1×1 Tile, Heart
+39739
+
+3×3 Heart
+39613
+
+6×6 Heart
+46342
+
+1×1 Star
+3498
+
+4×4×⅔ Star
+39611
+Other Curved Parts
+Other curved parts which do not fit well in any other category.
+
+
+Light Cover
+58176
+
+1×1 Ring
+11010
+
+1×1 Round w/ Twist (Poop)
+53119
+
+1×1 Round, Swirled Top
+15470
+
+2×2 Round, Inv. Tile
+2654
+
+2×2 Round w/ 4-Roots
+5256N
+
+2×2 Round w/ 8-Spikes
+27266
+
+2×2×2 Round Support
+3940
+
+2×2 Cake Frosting
+65700
+
+4×4 Cake Frosting
+65702
+
+2×2 Round w/ Rotation Stem
+40145
+
+2×2 Round w/ Ring
+74698
+
+2×2 Round, Splat
+80677
+
+3×5 Plate, Cloud w/ 3-Studs
+35470
+
+2×2 Socket, Hemisphere
+44358
+
+Basketball Net w/ Axle
+11641
+
+4×6×6 Slide
+27976
+
+6×6×6 Slide, Curved 90°
+28387
+
+7×12×8⅓ Slide, Curved 180°
+11267
+
+4×4×13, ⅛-Balloon Panel w/ Clip
+18969
+
+Shoulder Cover, Round w/ Bars
+1686
+
+Shoulder Cover, Round w/ 2-Bars
+21560
+
+Articulation (273 parts)
+Parts that bend or rotate, allowing for a wide range of interesting building techniques.
+
+Hinges allow parts to bend on one axis, turntables allow parts to spin in place, joints allow parts to rotate around multiple axes, and rails allow parts to slide on a plane.
+
+Jump To:
+Rotation (56)
+Clip (116)
+Ball & Socket (26)
+Rail and Groove (9)
+Flexible (62)
+Other (4)
+Articulation (273 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Rotation
+Hinges, turntables, click-hinges, and click-sockets allow you to connect LEGO parts at angles along a single axis.
+
+Rotation › Hinge
+Parts which can turn to any angle on a single axis.
+
+
+1×4 Hinge
+1927
+
+1×4 Hinge, Base
+2429
+
+1×4 Hinge, Top
+2430
+
+1×4 Hinge, Top
+3830
+
+1×4 Hinge, Base
+3831
+
+2×4 Hinge, A.
+3639
+
+2×4 Hinge, B.
+3640
+
+1×2 Hinge, Base
+3937
+
+1×2 Hinge, Top
+3938
+
+2×2 Hinge, Top
+6134
+Rotation › Turntable
+Turntables allow you to rotate parts on a horizontal plane.
+
+
+2×2 Turntable, Base
+3680
+
+2×2 Turntable, Top
+3679
+
+2×2 Turntable Base
+27448
+
+4×4 Turntable Base
+61485
+
+2×2 Gear, 6-Tooth
+35442
+
+4×4 Gear, 10-Tooth
+35443
+
+6×6 Gear w/ 14-Tooth
+35446
+Rotation › Click-Hinge › Plate
+Plates with one or more click-hinge connection.
+
+
+1×2, 1-Finger, End
+44301
+
+1×2, 1-Finger, Top
+30383
+
+1×2, 1-Finger, Side
+44567
+
+1×3, 1-Finger, Top
+44300
+
+2×2, 1-Finger, Top
+92582
+
+1×4 Dual 1-Finger, Side
+44568
+
+4×6 Dual 1-Finger, Side
+65133
+
+1×2, 2-Finger, End
+54657
+
+1×2, 2-Finger, Side
+50340
+
+3×4 Dual 2-Finger, Side
+50337
+
+2×4 Gate w/ Dual 2-Finger, Side
+92092
+Rotation › Click-Hinge › Brick
+Bricks with one or more click-hinge connection.
+
+
+1×2, 1-Finger, Vertical
+30364
+
+1×2, 2-Finger, Vertical
+54671
+
+1×2, 1-Finger, Horizontal
+30541
+
+1×2, 2-Finger, Horizontal
+54672
+
+1×2 Both Ends, Vertical
+39893
+
+1×4, Both Ends, Vertical
+54661
+
+1×6 Both Ends, Vertical
+53914
+
+2×2, 2-Finger, Vertical
+53029
+
+2×2, 1-Finger, Vertical
+30389
+Rotation › Click-Hinge › Click Other
+Other parts that use the click-hinge connection.
+
+
+1×2 Cylinder, Both Ends
+54662
+
+1×2 Cylinder 2-Finger, Axle Hole
+57360
+
+1×2 Cylinder 1-Finger, Axle Hole
+53923
+
+1×2 Cylinder 1-Finger, Pin
+57697
+
+2-Finger, Towball Socket
+51482
+
+1×8, 2-Finger, Angled Edge
+14137
+
+1×12, 2-Finger, Angled & Tapered
+57906
+
+2×3×2 Crane Basket, 2-Finger
+51858
+Rotation › Click-Socket
+The click-socket is a very strong angular connection.
+
+
+Click Joint, 2-Pins
+47455
+
+1×2 Brick w/ Click Pin
+4920N
+
+2×2×2 Round w/ Rotation Joint Socket
+1994N
+
+Ø3 Rotation Disk w/ 2-Rotation Joints
+79505
+
+1×2×1⅓ Rotation Joint
+80431
+
+2×2 Click Socket, Vertical
+48171
+
+2×2 Click Socket, Horizontal
+48170
+
+2×2 Click Socket, End
+48169
+
+2×2 Click Socket, 2-Ends
+48172
+
+Mech Leg, R.
+70943
+
+Mech Leg, L.
+70946
+Clip
+Clips can attach to other parts in this category such as a bar, handle, or lightsaber blade.
+
+Clip › Clip
+A c-shaped part which can firmly grasp a bar or handle.
+
+
+1×1 Clip, Horizontal
+61252
+
+1×1 Clip, Vertical
+4085
+
+1×2 Clip End, Vertical
+78256
+
+1×2 Clip End, Horizontal
+63868
+
+1×2 Clip Side, Horizontal
+11476
+
+1×2 Clip, Top
+44861
+
+1×2 2-Clips, Side
+60470
+
+1×1 Clip, Top
+15712
+
+1×3 2-Clips, Top
+79987
+
+1×1 Clip, Horizontal
+60476
+
+1×1 Clip, Vertical
+60475
+
+1×2 Clip, Vertical
+30237
+
+1×1×3, 2-Clips
+60583
+
+2×3 Tile, 2-Clips
+30350
+
+4×4, 2-Clips, Studs 3-Edges
+66252
+
+2L Bar w/ 3-Clips
+3628N
+
+Bar Holder w/ Clip
+11090
+
+1×1 Round w/ Clip
+5264N
+
+Bar Holder w/ Clip 90°
+72869
+
+Bar Holder w/ Handle
+23443
+
+Bar w/ Clip
+48729
+
+1×3 Bar w/ Clip (Robot Arm)
+4735
+
+Droid Arm, Straight
+59230
+
+Droid Arm, Bent
+30377
+
+Skeleton Arm, Horizontal
+93609
+
+Skeleton Arm, Vertical
+93061
+
+Mechanical Arm
+98313
+
+Skeleton Leg
+6266
+
+Skeleton Leg, Tall
+23769
+
+Droid Legs
+30376
+Clip › Bar
+A cylindrical part that can be grabbed with a clip or inserted into a hollow stud.
+
+
+1×4 Antenna
+3957
+
+1×8 Whip Antenna
+2569
+
+2L Bar w/ Stop
+78258
+
+3L Bar
+87994
+
+4L Bar
+30374
+
+5L Bar w/ Handle
+87618
+
+6L Bar w/ Stop
+63965
+
+8L Bar w/ Pin & Ring
+2714
+
+12L Bar w/ 1×2 Plate
+42445
+
+1×8 Bar w/ 1×2 Brick
+30359
+
+9L Bar w/ Handle (Lance)
+3849
+
+Candle
+37762
+
+Lightsaber Handle
+64567
+
+Bar 1L w/ Studs
+92690
+
+Bar 2L w/ 2-Studs
+66909
+
+Candelabra w/ 3-Arms
+73117
+
+Bar Stem w/ 1-Branch
+1566
+
+4L Bar, Double (Ladder)
+7307N
+
+Pantograph Shoe w/ 4-Bars
+37494
+
+Bar, Curved w/ Axle & 2-Studs
+4042N
+
+Ø7 Bar Ring w/ 2-Axle Holes
+79851
+
+1L Bar w/ Stud, Offset
+50018e
+
+1×1 w/ 3-Bars, 120°
+50018a
+
+1×1 w/ 2-Bars, 90°
+50018d
+
+1×1 Round w/ 3-Bars, 67°
+6331N
+
+2×3 Bar, U-Shape
+7052N
+Clip › Handle
+A handle is a bar element that is closed on one or both ends.
+
+
+1×1 Handle, Round
+26047
+
+1×1 Handle, Both Ends
+78257
+
+1×2 Handle, End
+60478
+
+1×2 Handle, Both Ends
+18649
+
+1×2 Handle, Side
+48336
+
+1×2 Handle (Free Ends)
+2540
+
+1×2 w/ Bar, Up
+88072
+
+1×4 w/ Bar, Down
+30043
+
+1×1 Handle, Vertical
+2921
+
+1×2 Handle (Free Ends)
+30236
+
+1×2 Handle, Vertical
+34816
+
+1×2 3-Handles, Angled
+92692
+
+1×1 Round w/ Handle
+79194
+
+1×2 Rounded w/ 2-Handles
+77808
+
+Palm Tree Top
+2566
+
+2×2 Round w/ 4-Handles
+98284
+
+1×2 w/ 2-Handles
+3839
+
+1×2 Handle, Top
+2432
+
+2×2×5 Bar w/ Stud
+98549
+
+Horse Hitching
+2397
+
+Paddle
+3900
+
+1×1 w/ 1L Handle
+32828
+
+1×1 w/ 45° Bar, Bottom
+65578
+
+Minifig Bracket w/ 4-Handles
+36452
+
+2×3 4-studs, Handle
+30166
+
+Clip w/ Bar, Angled
+3171N
+
+1×1 Round w/ Bar, Down
+3661N
+
+2.4×2.4 Bar Ring w/ Stud Holder
+3917N
+
+1×1 Round w/ Bar
+20482
+
+1×1 w/ 3-Handles, 3-Bar Holes
+1941
+
+2×2 Bar Frame, Round
+7068N
+
+2×2 Bar Frame, Octagonal
+75937
+
+4×4 Bar Frame, Square
+30094
+
+2×2 w/ 2-handles, Bottom
+5066N
+
+2×2 Tile w/ Ring
+6805N
+Clip › Flag
+Most flags attach to a bar or handle with one or more clip.
+
+
+2×2 Flag
+80326
+
+2×2 Flag, Trapezoid
+44676
+
+4×1 Flag, Wave
+4495
+
+6×4 Flag
+2525
+
+5×6 Flag, Hexagonal
+17979
+
+7×3 Flag w/ Bar
+30292
+
+2×2 Road Sign, Square
+15210
+
+2×2 Road Sign, Triangle
+65676
+
+Armor w/ 2-Bars
+28220
+
+1×2 Kite / Diamond w/ Bar
+35649
+
+2×2 Road Sign, Round
+30261
+
+2×4 Flag, Triangle
+5555N
+
+4×4 Spinner Ring w/ Hole, 4-Arrows
+98341
+Clip › Ladder & Railing
+Ladders and railings that have the right diameter for a clip to attach to them.
+
+
+7×3 Ladder
+6020
+
+7×3 Ladder, 4-Clips
+30095
+
+1×6 Railing w/ 4-Studs
+6140
+
+1×4×2 Railing w/ 2-Studs
+4083
+
+1×4×2 Railing
+6187
+
+1×8×2 Railing w/ 2-Studs
+2486
+
+1×6×3 Bar w/ 4-Studs
+23444
+
+1×4×1⅔ Grille Guard w/ Handle
+35654
+
+6×4×3⅓ Roll Cage
+64450
+Clip › Door
+A few doors use a bar and clip system.
+
+
+6×8 Trap Door Frame
+92107
+
+4×6 Trap Door
+92099
+
+10×16 Book Cover
+69934
+Ball & Socket
+The larger 'ball' and smaller 'towball' joints can be used to attach parts at any angle while also allowing them to rotate.
+
+Ball & Socket › Ball Joint
+A larger ball and socket that is significantly stronger than a towball Joint.
+
+
+2×2 Ball Joint, 1-Ball
+57909
+
+2×2 Ball Joint, 2-Balls
+17114
+
+2×2 Ball Joint Socket
+67696
+
+1×2 Liftarm, Ball, Straight
+67697
+
+1×2 Liftarm, Ball Joint, Angled
+50923
+
+2L Extender, 1B, 1S
+74261
+
+2×3 Socket, Axle Hole
+67695
+
+4×7 45° Limb w/ Ball, Axle Hole
+32476
+Ball & Socket › Towball Joint
+A small ball and matching socket that allows you to position parts at any angle.
+
+
+1×2 Towball, End
+22890
+
+1×2 Towball, Both Ends
+3170N
+
+1×2 Towball & Socket, Ends
+14419
+
+1×2 Towball, Side
+14417
+
+1×4 Towball, Side
+3184
+
+2×2 Towball, Side
+15456
+
+2×4 Wedge w/ Towball
+2508
+
+1×2 Socket, End
+14418
+
+1×2 Socket, Side
+14704
+
+1×4 Flat Socket, Side
+98263
+
+2×2 Socket
+63082
+
+Bar 1L, Towball
+22484
+
+12L Bar w/ Towball, Open Stud
+6076
+
+1×2 Beam w/ Towball
+5995N
+
+Axle, Towball
+2736
+
+Pin, Towball
+66906
+
+3L Towball, Bar w/ Pin
+80477
+
+Hook w/ Towball
+30395
+Rail and Groove
+These parts are often used to add visual texture to a model by adding horizontal or vertical lines, but they can also be used to allow parts to slide horizontally or vertically.
+
+
+1½×2 Door Rail
+32028
+
+1½×8 Door Rail
+4510
+
+2×8 Door Rail
+30586
+
+1×2 Brick w/ Groove, Vertical
+4216
+
+1×2×5 Brick w/ Groove, Vertical
+88393
+
+1×4 Brick w/ Groove, Horizontal
+2653
+
+1×14 Brick w/ Groove, Curved Horizontal
+4217
+
+Garage Door Section
+4218
+
+Garage Door Section w/ Handle
+4219
+Flexible
+Flexible plastic elements, cord or fabric
+
+Flexible › Chain
+Plastic chain comprising individual links
+
+
+2L Chain
+6981N
+
+6L Chain
+92338
+
+16L Chain
+60169
+Flexible › Flex Axles
+While the middle of this part has the x-shaped profile of a Technic Axle, the bar connection on either end is used to attach this to other LEGO parts.
+
+
+7L Flex Axle
+32580
+
+11L Flex Axle
+32199
+
+12L Flex Axle
+32200
+
+14L Flex Axle
+32201
+
+16L Flex Axle
+32202
+
+19L Flex Axle
+32235
+Flexible › Ribbed Hose
+Flexible hose with ribs
+
+
+2L Ribbed Hose
+78c02
+
+3L Ribbed Hose
+78c03
+
+5L Ribbed Hose
+78c05
+
+6L Ribbed Hose
+78c06
+
+9L Ribbed Hose
+78c09
+
+12L Ribbed Hose
+78c12
+
+14L Ribbed Hose
+78c14
+
+18L Ribbed Hose
+78c18
+
+26L Ribbed Hose
+78c26
+
+10L Ribbed Hose w/ Bar Ends
+27328
+
+12L Ribbed Hose w/ Bar Ends
+14301
+
+19L Ribbed Hose w/ Bar Ends
+57539
+Flexible › Flex Tube
+A fairly rigid but flexible tube
+
+
+5L Flex Tube
+75c05
+
+6L Flex Tube
+75c06
+
+7L Flex Tube
+75c07
+
+8L Flex Tube
+75c08
+
+9L Flex Tube
+75c09
+
+10L Flex Tube
+75c10
+
+11L Flex Tube
+75c11
+
+12L Flex Tube
+75c12
+
+13L Flex Tube
+75c13
+
+14L Flex Tube
+75c14
+
+16L Flex Tube
+75c16
+
+18L Flex Tube
+75c18
+
+20L Flex Tube
+75c20
+
+22L Flex Tube
+75c22
+
+23L Flex Tube
+75c23
+
+24L Flex Tube
+75c24
+
+26L Flex Tube
+75c26
+
+27L Flex Tube
+75c27
+
+29L Flex Tube
+75c29
+
+32L Flex Tube
+75c32
+
+33L Flex Tube
+75c33
+
+38L Flex Tube
+75c38
+
+43L Flex Tube
+75c43
+
+47L Flex Tube
+75c47
+Flexible › Flex Cable & Hose
+Other flexible LEGO elements
+
+
+8.5L Hose, Flexible
+73590
+
+8L Flex Cable, Wavy
+6955N
+
+22L Flex Cable
+27965
+
+21L Flex Cable w/ Bar Grips
+2630N
+Flexible › String
+Thin string and cord.
+
+
+21L String w/ Bar Grips
+63141
+
+11L String w/ 2-Studs
+14226
+
+31L String w/ 2-Studs
+14225
+
+41L String w/ 2-Studs
+14224
+
+2×2 Reel Holder
+2584
+
+2×2 Reel w/ Hole
+2585
+
+2×2 Reel w/ Stud
+78333
+Flexible › Band & Belt
+Flexible rubber bands and belts
+
+
+Ø15mm Rubber Belt
+85543
+
+Ø24mm Rubber Belt
+85544
+
+Ø33mm Rubber Belt
+85546
+Flexible › Other
+Other flexible parts such as bracelets and rings.
+
+
+4×4 Attachment Ring
+73767
+
+25L Bracelet, 2×14 Studs
+66821
+
+25L Bracelet, 1×14 Studs
+67196
+Other
+One-off parts that twist, rotate, or slide.
+
+
+1×1 w/ Mini Handle
+77813
+
+2×6 Plate w/ Hanger
+78168
+
+1×2×2 w/ Photo Clip
+37452
+
+2×2 w/ Photo Clip
+2229N
+
+Minifig (385 parts)
+The classic LEGO Minifigure and Friends Minidoll live in a rich world of clothing, accessories, weapons, and containers.
+
+Minifigures and Minidolls can hold accessories in their hands which are the same diameter as a standard LEGO handle, bar, or clip.
+
+Some Minifigures or Minidolls can even attach tiny accessories to their hair using a tiny bar element.
+
+Jump To:
+Minifigure (11)
+Minidoll (14)
+Other Figs (6)
+Hair (26)
+Clothing (55)
+Accessories (153)
+Container (24)
+Weapons (96)
+Clikits (0)
+Minifig (385 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Minifigure
+Head, torso, and legs to create a classic LEGO Minifigure.
+
+
+Minifig Head
+3626pb
+
+Minifig Head, Cube
+19729
+
+Minifig Torso
+973
+
+2×3 Brick Minifig Torso
+37191
+
+Legs, Normal
+73200
+
+Legs, Medium
+37364
+
+Legs, Short
+41879
+
+Minifig Dress
+36036
+
+Minifig Hand
+3820
+
+Arm, Long w/ Technic Pin
+66788
+
+Arm, Short w/ Technic Pin
+28660
+Minidoll
+Head, torso, and legs required to build a Minidoll. (Minidolls were introduced in 2012 with LEGO Friends.)
+
+
+Minidoll Head
+92198
+
+Minidoll Torso, Girl
+73141
+
+Minidoll Torso, Boy
+73161
+
+Minidoll Torso, Woman
+73152
+
+Minidoll Torso, Man
+73441
+
+Minidoll Skirt, Right
+20381
+
+Minidoll, Long Skirt
+92817
+
+Minidoll, Wrap Skirt
+11407
+
+Minidoll, Dress
+36187
+
+Minidoll, Ball Gown, Octagonal
+80336N
+
+Minidoll Pants
+16925
+
+Minidoll Pants, Cropped
+92819
+
+Minidoll, Shorts
+36198
+
+Minidoll Mermaid Tail
+16530
+Other Figs
+Figures which are larger or smaller than a Minifigure or Minidoll.
+
+
+Skeleton Torso
+60115
+
+Statuette (Nanofig)
+90398
+
+Giant Hand L.
+10127
+
+Giant Hand R.
+10126
+
+Torso, Battle Droid
+30375
+
+1×2×2 Droid Leg w/ Technic Pin
+30362
+Hair
+Hair for Minifigures and Minidolls.
+
+
+Hair, Tuft
+68212
+
+Hair, Short, Smooth
+3901
+
+Hair, Short Tousled w/ Side Part
+62810
+
+Hair, Combed Back
+92081
+
+Hair, Swept Back, Tousled (Anakin)
+61183
+
+Hair, Combed Sideways
+99930
+
+Hair, Coiled
+21778
+
+Hair, Messy
+44751
+
+Hair, Swept back w/ Sideburns
+21268
+
+Hair, Swept w/ Widow's Peak
+25972
+
+Hair, Short, Spiked
+98385
+
+Hair, Tousled w/ Side Part
+87991
+
+Hair, Short w/ Side Part
+37823
+
+Hair, Tousled, Swept Left
+23186
+
+Hair, Mid-length Tousled w/ Center Part
+88283
+
+Hair, Short Bob
+62711
+
+Hair, Swept Sideways
+20877
+
+Hair, Wavy w/ Side Part
+11256
+
+Hair, Short w/ Braid Sides
+64807
+
+Hair, Short Pigtails
+35701
+
+Hair, High Bun
+27186
+
+Hair, Ponytail w/ Swept Sideways Fringe
+87990
+
+Hair, Long w/ Braid Sides
+59363
+
+Hair, Part Over Right Shoulder
+85974
+
+Hair, Ponytail w/ Long Bangs
+62696
+
+Hair, Short Coiled
+79688
+Clothing
+Outfit your minifigures and minidolls with the right clothing.
+
+Clothing › Hat & Helmet
+
+Hat, Knitted
+41334
+
+Hat, Beanie
+90541
+
+Hat, Flat Cap
+2514N
+
+Hat, Curved
+11303
+
+Hat, Police
+3624
+
+Hat, Aviator
+30171
+
+Hat, Conical Asian
+93059
+
+Hat, Conical Asian, Curved
+26007
+
+Hat, Fedora
+61506
+
+Top Hat
+3878
+
+Hat, Baker
+3898
+
+Hat, Bicorne
+2528
+
+Hat, Wizard
+6131
+
+Hood
+30381
+
+Helmet, Sports
+46303
+
+Hat, Construction Helmet
+3833
+
+Helmet, Mining
+98289
+
+Helmet, Football
+93560
+
+Helmet, Fire
+3834
+
+Helmet, Dirt Bike
+35458
+
+Classic Helmet
+50665
+
+Helmet, Motorcycle
+2446
+
+Helmet, Pith
+30172
+Clothing › Hat & Hair Accessories
+Small accessories that connect to tiny holes on some hats and hair parts.
+
+
+Top Hat w/ Stem
+77108
+
+Heart Bow
+11618
+
+Flower, 5-Petal w/ Stem
+18853
+
+Sunglasses
+18854
+
+Propeller w/ Stem
+54568
+
+Clown Hat
+24131
+
+Tiara
+33322
+
+Plume
+79806
+
+Bow w/ Heart
+94725
+
+Bow
+94717
+
+Visor, Space
+89159
+
+Visor
+2447
+
+Snow Goggles
+46304
+
+Diver's Mask
+30090
+
+Visor
+61190c
+
+Rangefinder
+63586
+
+Goggles
+30170
+Clothing › Other Clothing
+It's a good idea to protect your plastic body.
+
+
+Crown w/ Bar
+25516
+
+Satchel
+61976
+
+Bandage, Arm
+30924
+
+Epaulette
+2526
+
+Bandana
+15619
+
+Scarf, Long Wrapped
+25376
+
+Fur Collar
+26066
+
+Minifig Cape
+50231
+
+Handbag
+93091
+
+Air Tanks
+3838
+
+Life Jacket
+38781
+
+Backpack
+2524
+
+Harness w/ 4-Studs
+41811
+
+Headphones
+66913
+
+Skirt
+65753
+Accessories
+Minifigures and Minidolls have a wide range of accessories to choose from.
+
+Accessories › Footwear
+Minifigs are on the move with these parts that attach to their feet.
+
+
+Flipper
+2599
+
+Roller Skate
+11253
+
+Ice Skate
+93555
+
+Snowshoe
+30284
+
+4L Ski
+99774
+
+6L Ski
+90509
+
+Snowboard
+18746
+
+2×2×⅔ w/ Feet, 4-Studs
+66858
+
+2×3×⅔ Feet w/ 6-Studs
+66859
+Accessories › Food & Drink
+A plethora of food prep and dining options for Minifigures and Minidolls.
+
+
+Mug
+3899
+
+Teacup
+38014
+
+Sundae Glass
+68504
+
+Goblet (Glass)
+2343
+
+Cup, Takeaway
+15496
+
+Baby Bottle
+18855
+
+Bottle
+95228
+
+1×2 Faucet
+13770
+
+Rice Bowl
+34172
+
+3×3 Dish
+6256
+
+Frying Pan
+4528
+
+Saucepan
+4529
+
+Cauldron
+98374
+
+3×3×1¾ Cauldron
+4341
+
+Teapot
+23986
+
+Oil Lamp
+98383
+
+Whisk
+29636
+
+Cleaver
+98369
+
+Fork
+79741
+
+Spoon
+80179
+
+Chopsticks
+79735
+
+Ice Cream Scoops
+6254
+
+Popsicle
+30222
+
+Cupcake
+79743
+
+Pretzel
+10170
+
+Croissant
+67338
+
+Bread (Baguette)
+4342
+
+Sausage
+33078
+
+Turkey Leg
+42876
+
+Hotdog Bun
+25386
+Accessories › Tools
+A selection of tools and equipment that LEGO Minifigs and Minidolls need to take care of their respective realms.
+
+
+Toolbox
+98368
+
+Scissors
+18920
+
+Wrench
+4006
+
+Hammer
+4522
+
+Hammer, Small
+604547
+
+Screwdriver
+604550
+
+Wrench, 3-Ribs
+604551
+
+Box Wrench, 3-Ribs
+604552
+
+Adjustable Wrench
+604614
+
+Socket Wrench, Short
+50018c
+
+4-Way Lug Wrench
+604553
+
+Socket Wrench, Long
+604615
+
+Paint Roller Handle
+12885
+
+Oil Can, Ribbed
+604548
+
+Drill, Cordless
+604549
+
+Circular Saw
+30194
+
+Circular Saw w/ Bar
+50018g
+
+Chainsaw Body
+2516
+
+Jackhammer
+30228
+
+Welding Torch
+13793
+
+Dynamite
+64728
+
+Crowbar
+92585
+
+Shovel
+3837
+
+Shovel (Minecraft)
+18791
+
+Axe
+3835
+
+Hoe (Minecraft)
+3129N
+
+Pickaxe
+3841
+
+Pickaxe (Minecraft)
+18789
+
+Pitchfork
+95345
+
+Shepherd's Crook
+49492
+
+Net
+24086
+
+Telescope
+64644
+
+Binoculars
+30162
+
+1×1×⅔ w/ Binoculars
+52494
+
+Space Binoculars
+30304
+
+Lever
+73587
+
+1×1 Tap
+4599
+
+Lantern
+37776
+
+Handcuffs
+61482
+
+Whip
+88704
+
+Syringe
+53020
+
+1×2 Gold Bar
+99563
+
+Winder Key
+98375
+
+Boomerang
+25892
+
+Suitcase (Briefcase)
+4449
+
+Suitcase, Long Handle
+37178
+
+Broom
+4332
+
+Push Broom
+3836
+
+Mop Head
+24085
+
+Broom Bristles
+90826
+
+Grappling Hook
+30192
+
+Grappling Hook w/ Handle
+15534
+
+Camera
+30089
+
+Camera w/ Sight (Space Gun)
+4360
+
+Metal Detector
+93106
+
+Sextant
+30154
+
+Radio
+19220
+
+Megaphone
+4349
+
+Phone
+6190
+Accessories › Sports
+Accessories and vehicles for sports and leisure.
+
+
+Trophy
+10172
+
+Ice Axe
+18738
+
+Hockey Stick
+64000
+
+Zipline Handle
+30229
+
+Ski Pole
+90540
+
+Skateboard
+42511
+
+Surfboard
+90397
+
+Stroller
+5491N
+
+Wheelchair Wheel
+24314
+
+Wheelchair
+24312
+
+Bicycle Wheel
+92851
+
+Bicycle
+65574
+
+Mountain Bike
+36934
+
+Tricycle
+50015
+
+Kick Scooter
+36273
+
+Scooter
+15396
+
+Motorcycle Chassis
+18896
+
+Motorcycle Fairing, Racing
+18895
+
+Wheelbarrow
+98288
+
+Life Ring
+30340
+
+Oar/Paddle Head
+31990
+
+Oar/Paddle
+87585
+
+Kayak
+29110
+
+Canoe
+6021
+
+14×5×2 Rowing Boat
+21301
+
+6×2×5⅓ Swing w/ 4-Studs
+67075
+Accessories › Hobbies & Music
+
+Book Cover
+24093
+
+Book Binding w/ 2-Studs
+24324
+
+Balloon Dog
+35692
+
+Watering Can
+79736
+
+Fishing Rod
+2614
+
+Laptop
+62698
+
+Game Controller
+53118
+
+Paint Brush
+93552
+
+Yarn Ball
+6900N
+
+Microphone
+90370
+
+Guitar, Electric
+11640
+
+Saxophone
+13808
+Accessories › Other
+Other accessories.
+
+
+Tassel
+25375
+
+Hairbrush
+3852
+
+Heart Jewel
+15745
+
+Magic Wand (Star)
+6124
+
+Key
+62808
+
+Umbrella, Closed
+27150
+
+Whip, Coiled
+61975
+
+Lipstick
+93094
+
+2L Bone
+93160
+
+5L Bone
+92691
+
+1×2 w/ 3-Loudspeakers
+3963
+
+2×2 Seat, Minifig
+4079
+
+Ø3 Sweeper Brush
+2498
+
+Umbrella, Open
+4094
+
+2×6 Stretcher
+93140
+
+14×2½ Ladder
+4207
+
+6×2 Ladder Holder
+87913
+Container
+Small Minifig-scale containers that are often used to store food or other accessories.
+
+
+1×1×1 Bucket
+95343
+
+Bucket Handle
+95344
+
+1×3 Box
+69066
+
+2×2×1 Box
+35700
+
+2×2×2 Box
+61780
+
+3×4×1⅔ Crate
+30150
+
+2×2×1⅔ Barrel
+2489
+
+½ Barrel, Large (Tub)
+64951
+
+2×4 Treasure Chest
+4738
+
+2×4 Lid, Curved
+4739
+
+2×4 Lid, Flat
+80835
+
+2×3×2 Cupboard
+92410
+
+2×3×5 Cupboard
+2656N
+
+2×3 Drawer
+4536
+
+2×3 Cupboard Door
+4533
+
+2×2×1⅓ Box, Hinge
+7711N
+
+2×2 Box Door
+4346
+
+2×2×2 Box, Hinge
+4345
+
+Trash Can
+92926
+
+Basket
+93092
+
+Sack
+10169
+
+Minifig Basket
+4523
+
+Backpack, Open
+92590
+
+2×2 Box Lid
+7712N
+Weapons
+When conflict arises in the LEGO universe, you might need one of these.
+
+Weapons › Armor
+Protective clothing for minifigures.
+
+
+Knights Helmet
+3844
+
+Visor, Pointed
+2594
+
+Helmet w/ Eye Slit
+89520
+
+Armor, Breastplate
+2587
+
+Shield (Classic)
+3846
+
+Shield, Ovoid
+2586
+
+Shield, Bowed
+75902
+
+Shield, Round w/ Stud
+91884
+
+4×3×2 Ridged Cover w/ Handle
+79896
+
+4×3×3 Chest Plate w/ Handle
+27167
+
+4×2×3 Cockpit w/ Clips
+98876N
+Weapons › Swords & Blades
+
+Sword, Cutlass (Pirate)
+2530
+
+Shortsword
+76764
+
+Machete
+29109
+
+Greatsword, Curved Crossguard
+66964
+
+Sword, Elven Warrior
+11156
+
+Sword w/ Square Crossguard
+37341c
+
+Sword, Khopesh
+93247
+
+Sword, Scimitar
+60752
+
+Greatsword, Straight Crossguard
+18031
+
+Sword, Saber / Dao
+25111
+
+Sword, Roman Gladius
+18034
+
+Sword, Uruk-hai
+10050
+
+Sai
+98139
+
+Dagger
+37341b
+
+Knife
+44658
+
+Sword, Curved Blade w/ Bar
+37341a
+
+Sword, Katana
+21459
+
+Sword, Katana, Short
+5644N
+
+Sword, Katana w/ Dragon Guard
+93055
+
+Sword, Foil / Rapier
+93550
+
+Sword, Large
+98137
+
+Sword (Minecraft)
+18787
+
+Spear
+93789
+
+Trident (Minecraft)
+78801
+
+Trident
+92290
+
+Harpoon
+18041
+
+Sword, Darksaber
+3885N
+
+3L Blade w/ Bar
+64727
+
+Blade, Crystallized
+79985
+
+3⅘L Blade w/ Bar
+23860
+
+Hilt, Dragon Head
+36017
+
+Scythe
+37341d
+
+Serrated Blade w/ Bar
+98141
+
+Scythe, Double
+37341e
+
+Axe Blade
+53454
+
+Axe (Minecraft)
+18788
+
+3-Finger Claw
+10187
+
+Sledgehammer
+75904
+
+Throwing Star
+93058
+
+Batarang
+98721
+
+Chakram / Ring
+35485
+
+Gorilla Fist / Hand
+11092
+
+Hand Armor
+15407
+
+Wand
+36752a
+
+Chainsaw Blade
+6117
+
+6L Jagged Blade
+76919
+
+14L Jagged Blade
+98856
+
+15L Blade w/ Swirls
+2601N
+Weapons › Bows
+Minifig Bows and Crossbows.
+
+
+Bow w/ Arrow
+4499
+
+Crossbow
+2570
+
+Quiver
+4498
+
+Bow (Minecraft)
+18792
+
+Crossbow (Minecraft)
+65510
+Weapons › Guns
+
+Nozzle
+60849
+
+Flintlock Pistol
+2562
+
+Revolver
+30132
+
+Pistol, Med. Barrel
+62885
+
+Space Gun
+86208
+
+Blaster, Small
+92738
+
+Blaster, Short
+58247
+
+Blaster, Long
+57899
+
+Blaster w/ Clip
+15445
+
+Gun / Impact Driver
+50018b
+
+Pistol, 2-Barrel
+95199
+
+Blaster, Small
+17010
+
+Ray Gun
+13608
+
+Blaster w/ Studs, 4-Sides
+44709
+
+Musket
+2561
+
+Spear Gun
+13591
+Weapons › Shooter
+LEGO parts that can launch a projectile a short distance.
+
+
+Blaster Trigger
+15392
+
+1×2 Plate w/ Stud Shooter
+15403
+
+Stud Shooter w/ Bar (Blaster Gun)
+15391
+
+Launcher Trigger
+69755
+
+Launcher, Square
+69767
+
+1×2 plate w/ Tile Shooter
+69754
+
+Tile Shooter w/ Axle
+41812
+
+6-Stud Shooter Trigger
+18587
+
+Launcher, 6-Barrel
+18588
+
+8L Bar Dart, Rounded End
+15303
+
+1×4 Spring Shooter
+15400
+
+Arrow w/ Shaft
+70694
+
+Arrow w/ Rubber End
+46537
+
+2×6×1⅓ Spring Shooter
+49743
+
+1×4 Brick w/ 2×2 Round Tile Shooter
+16968
+
+4L Catapult
+88289
+
+Nature (208 parts)
+Plants, animals, teeth, tails, and elemental forces bring the LEGO world to life.
+
+Some of the parts in this category are both difficult to sort and difficult to name. For example, parts that you might describe as a tail, horn, or vine are difficult to name — you might assume it is a vine when it's green or a horn when it's white.
+
+Nonetheless, this is one of the most fun categories because it includes a lot of organically-shaped parts that can give LEGO models a nicely finished aesthetic.
+
+Jump To:
+Plants (28)
+Flowers (14)
+Produce (9)
+Animal (81)
+Tooth (4)
+Barb, Horn, Tail & Feather (33)
+Web (7)
+Elemental (32)
+Nature (208 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Plants
+Leaves, vines, ferns and small trees bring the LEGO universe to life.
+
+
+3-Leaves w/ Pin
+37695
+
+1×1 Plate w/ 3-Leaves
+32607
+
+1×2 Plate w/ Leaves, Layered
+5058N
+
+3×3 Bamboo
+30176
+
+1×3 Leaf, Smooth
+7905N
+
+3×3 w/ 3-Leaves
+7264N
+
+2×6 Leaf, Smooth
+3565N
+
+4×6 Leaf, Pointed
+7096N
+
+6×8 Leaf, Lobed
+7571N
+
+Finger Leaf w/ Clip
+10884
+
+Palm Leaf, Small
+6148
+
+Round 1×1 w/ Leaf (Fern)
+2682N
+
+1×2 w/ Leaf (Large Fern)
+5151N
+
+Leaf, Willow
+7741N
+
+Plant w/ 3 Large Leaves
+6255
+
+4×3 Leaves
+2423
+
+6×5 Leaves
+2417
+
+Stem w/ Bar, 2 Leaves
+1747
+
+Curled Vine w/ Bar
+1997N
+
+Conical Tree, Small
+2435
+
+Bush
+6064
+
+Grass
+15279
+
+Sea Grass
+30093
+
+Seaweed
+49577
+
+Spiky Vine
+55236
+
+Curved Vine w/ Bar
+28870
+
+Whip / Vine
+2488
+
+Vine w/ Bar Holder
+1578
+Flowers
+There is a lot blooming in LEGO City thanks to this selection of flower elements and stems which hold them.
+
+
+1×1 Flower, 5-Petals
+24866
+
+2×2 Flower
+98262
+
+2×2 Flower Leaves
+4727
+
+2×2 Round w/ 4-Petals
+15469
+
+4×4 Flower, 4-Petals
+35473
+
+Crown, 5-Points
+39262
+
+Flower w/ Bar
+32606
+
+Flower, Peony
+5904N
+
+Flower, Tulip
+5903N
+
+Sunflower
+6901N
+
+Flower, Bell
+6017N
+
+Bar 1L w/ 3-Stems
+68211
+
+3-Stem w/ Bar
+24855
+
+6-Stem w/ Bar
+19119
+Produce
+Fruits and Vegetables.
+
+
+Apple w/ Leaf
+33051
+
+Banana
+33085
+
+Banana Peel
+5215N
+
+Carrot
+33172
+
+Peach
+5234N
+
+Pumpkin
+51270
+
+Carrot Top
+33183
+
+Cherries
+22667
+
+Beehive
+35574
+Animal
+A wide range of animals are available to liven up your creations.
+
+Animal › Insects & Arachnids
+
+Butterfly
+80674
+
+Scorpion
+30169
+
+Spider
+29111
+Animal › Sea Creatures
+
+Clam Shell, Small
+49595d
+
+Clam Shell, Medium
+49595f
+
+Clam
+18866
+
+Snail
+49595b
+
+Starfish
+49595e
+
+Hermit Crab
+69945N
+
+Crab
+33121
+
+Lobster
+27152
+
+Octopus, Small
+49595g
+
+Seahorse
+49595a
+
+Fish w/ Bar
+49595c
+
+Fish
+64648
+
+Stingray
+67337N
+
+Shark Head
+2548
+
+Shark Body w/ Gills
+14518
+
+Seal, Baby
+3399
+
+Dolphin (Minidoll)
+13392
+Animal › Reptiles & Amphibians
+
+Snake
+30115
+
+Snake, Raised Head
+38801
+
+Snake w/ Bar
+28588
+
+Crocodile, Baby
+78532N
+
+Turtle, Small
+67040
+
+Sea Turtle, Large w/ Stud
+102285
+
+Turtle, Small (Minidoll)
+11603
+
+Chameleon (Minidoll)
+15678
+
+Frog
+33320
+Animal › Birds & Dinosaurs
+
+Bird
+41835
+
+Duckling
+49661
+
+Parrot
+27063
+
+Chicken
+95342
+
+Owl
+92084
+
+Owl, Open Wings
+67632
+
+Chick (Minidoll)
+3918
+
+Bird (Minidoll)
+98388
+
+Jaw, Raptor
+37407
+Animal › Mammals
+
+Bat
+30103
+
+Rat
+36756
+
+Squirrel
+80679
+
+Squirrel (Minidoll)
+11568
+
+Bunny, Small
+29685
+
+Bunny (Minidoll)
+34050
+
+Rabbit (Stuffed)
+66965
+
+Lamb
+1569N
+
+Sheep
+74188
+
+Lamb (Minidoll)
+15695
+
+Goat
+95341
+
+Piglet
+1410N
+
+Pig
+87621
+
+Reindeer
+69060
+
+Fawn (Minidoll)
+13393
+
+Cow
+64452
+
+Monkey (Minidoll)
+14736
+
+Otter
+67631
+
+Bear Cub (Minidoll)
+14732
+
+Teddy Bear
+98382
+
+Hedgehog (Minidoll)
+98389
+
+Dog, French Bulldog
+29602
+
+Dog, Terrier
+26078
+
+Dog, Dachshund
+53075
+
+Dog, Retriever
+69962
+
+Dog, Shepherd Puppy
+2889
+
+Dog, Shepherd
+92586
+
+Wolf
+6649N
+
+Dog, Chihuahua (Minidoll)
+12888
+
+Dog, Small (Minidoll)
+93088
+
+Poodle (Minidoll)
+11575
+
+Kitten
+80686N
+
+Cat
+13786
+
+Cat, Standing (Minidoll)
+93089
+
+Cat, Sitting (Minidoll)
+11602
+
+Feline, Cub (Minidoll)
+14734
+
+Feline, Large (Minidoll)
+80672
+
+Foal
+82445
+
+Horse
+10509
+
+Saddle
+4491
+
+Foal (Minidoll)
+11241
+
+Horse (Minidoll)
+93085
+
+Saddle, Friends
+93086
+Tooth
+A selection of teeth to give your models some bite.
+
+
+1×1 Tooth, Horizontal
+49668
+
+1×1 Tooth, Vertical
+15070
+
+1×2 2-Teeth, Vertical
+15209
+
+1×2 3-Teeth, Horizontal
+15208
+Barb, Horn, Tail & Feather
+Other natural elements including horns, tails, webs, shells and wings.
+
+
+Spear Tip w/ Bar
+27257
+
+Spear Tip w/ 4-Fins
+24482
+
+Horn, Unicorn
+89522
+
+Barb, Small
+53451
+
+Barb, Medium
+87747
+
+Cattle Horn, Short
+64847
+
+Cattle Horn, Long
+13564
+
+4L Wave / Flame
+69858
+
+4L Claw, Flexible
+11089
+
+6.4L Claw w/ Axle
+15362
+
+1×2 w/ 3-Claws (Rock)
+27261
+
+Tail, End
+40379
+
+2×2 Round Tail
+67361
+
+Tail, 45° Stepped
+2142N
+
+Tail, Middle
+5717N
+
+Tail, Middle w/ Pin
+40378
+
+Tail, Bladed w/ Bar
+24204
+
+Elephant Trunk
+80497
+
+Segmented Leg
+15064
+
+Barb/Claw w/ Clip
+16770
+
+Lg. Claw w/ Clip
+92220
+
+Cat Tail
+15429
+
+4L Fin
+7511N
+
+2×2 Plate w/ Clam Shell
+18970
+
+Antlers
+1613N
+
+Antlers w/ Bar
+11437
+
+Feathers
+30126
+
+Ball, Winged (Snitch)
+37704
+
+Wing, Rounded w/ Bar
+67928
+
+Wing, Feathered w/ Bar
+11100
+
+Wing, Dragon
+5984N
+
+Wing w/ Bar
+15082
+
+8×10 Wing
+55706
+Web
+Spider Webs and Strands
+
+
+Spider Web w/ Bar
+90981
+
+4L Web, 2-Branches
+36083f
+
+5L Web, Narrow
+36083a
+
+Web, Small w/ Bar
+36083d
+
+Web, Medium w/ Bar
+36083c
+
+Web, Large w/ Bar, 2-Handles
+36083e
+
+Handcuffs, Web
+36083b
+Elemental
+Fire, Water, Wind, Ice, and Stone.
+
+
+Gem (Infinity Stone)
+36451a
+
+1×1 Jewel, Octagonal
+65092
+
+Diamond w/ Bar
+30153
+
+Crystal, 4-Points, 1-Stud
+11127
+
+Crystal, 5-Points
+30385
+
+5×2½×3⅓ Crystal
+7591N
+
+Rock, Nugget
+35646
+
+Rock Boulder, Top
+30293
+
+Rock Boulder, Bottom
+30294
+
+4×4 Rock, Bottom
+80337
+
+Flame, Candle
+37775
+
+Mini Flame, Plume
+64647
+
+Flame
+6126
+
+Flame w/ Clip
+80519
+
+5L Flame w/ Bar
+18395
+
+1×4 Flame w/ 2-studs
+70880
+
+10L Smoke
+7105N
+
+Cloud Swirl w/ Bar 1L
+68547
+
+7L Cloud
+6958N
+
+Lightning Bolt
+27256
+
+Lighting Bolt, Double
+59233
+
+Lightning Bolt w/ Axle Hole
+2149N
+
+Power Burst, Small Shield
+35032f
+
+4L Power Burst, Bolt
+35032c
+
+5L Power Burst, Bolt
+35032b
+
+5L Power Burst, Spiral
+35032d
+
+Power Burst, Blaster w/ Bar
+35032a
+
+Power Blast w/ Handle
+27393
+
+Power Burst, Curved
+5500N
+
+Power Burst, Large Shield
+35032e
+
+Power Burst, Stand
+73304
+
+Ø4 Star / Snowflake
+42409
+
+Vehicle (166 parts)
+Tires and Wheels allow your model to move on the ground, you can keep everything on track using train or rollercoaster parts, and fins and propellers help you soar through the skies and explore underwater worlds.
+
+Wheels in this category are sorted by the outer diameter of the hub, rather than the diameter of the tires which vary a good deal.
+
+Everything else is sorted by the type of vehicle parts, such as train track and wheels, rollercoaster track and cars, and a selection of fins and propellers for air and underwater exploration.
+
+Jump To:
+Wheel (76)
+Wheel Pin (13)
+Vehicle Base (11)
+Nose & Roof (0)
+Train (18)
+Coaster (11)
+Stuntz (0)
+Steering (6)
+Propeller, Engine (18)
+Fin, Wing (13)
+Vehicle (166 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Wheel
+You can get wheels with matching tires, as well as wheels with integrated tires. They are organized by the diameter of the Wheel.
+
+Wheel › 8mm
+Wheels with an 8mm outer diameter (D.) and the tires that work with them.
+
+
+8mm D. × 6mm, Wheel Pin
+34337
+
+8mm ID. Smooth (14×4mm)
+59895
+
+8mm ID. Offset (15×6mm)
+87414
+
+8mm D. × 9mm, Wheel Pin
+74967
+
+8mm ID. Smooth (14×9mm)
+30028
+Wheel › 11mm
+Wheels with an 11mm outer diameter (D.) and tires that work with them.
+
+
+11mm D. × 6mm, Wheel Pin
+93593
+
+11m D. × 8mm, Pin
+42610
+
+11m ID. Smooth (14×6mm)
+50951
+
+11mm ID. Staggered (17.5×6mm)
+92409
+
+11m D. × 12mm, Wheel Pin
+6014
+
+11mm ID. Offset (21×12mm)
+87697
+
+11mm ID. Balloon (24×12mm)
+56890
+Wheel › 14mm & 15mm
+Wheels with a 14-15mm outer diameter (D.) and tires that work with them.
+
+
+14mm D. × 9.9mm, Wheel Pin
+11208
+
+14mm D. × 9.9mm, Pin
+5807N
+
+14mm ID. Tire (21×9.9mm)
+11209
+
+15 mm D. × 6mm, Motorcycle
+50862
+
+15mm ID. Offset (21×6mm)
+50861
+Wheel › 18mm
+Wheels with an 18mm outer diameter (D.) and tires that work with them.
+
+
+18mm D. × 8mm, Pin
+13971
+
+18mm D. × 8mm, Axle
+56903
+
+18mm ID. Offset (23×7mm)
+61254
+
+18mm D. × 12mm, Axle
+18976
+
+18mm ID. Low Profile (24×12mm)
+18977
+
+18mm D. × 14mm, Pin
+55981
+
+18mm D. × 14mm, Axle
+55982
+
+18mm ID. Shallow (24×14mm)
+89201
+
+18mm ID. Offset (30.4×14mm)
+92402
+
+18mm ID. VR (30.4×14mm)
+58090
+
+18mm ID. Offset (37×14mm)
+35578
+
+18mm ID. Balloon (37×18mm)
+56891
+Wheel › 30mm
+Wheels with an 30mm outer diameter (D.) and the tires that work with them.
+
+
+30mm D. × 14mm, Axle
+56904
+
+30mm ID. Offset (43.2×14mm)
+56898
+
+30mm ID. Tire (43.2×14mm)
+30699
+
+30mm ID. Tire (49.5×14mm)
+70490
+
+30mm D. × 20mm, Axle, 5-Spokes
+42716
+
+30mm D. × 20mm, Axle
+66155
+
+30mm D. × 20mm, Axle
+56145
+
+30mm ID. ZR (37×22mm)
+55978
+
+30mm ID. ZR (43.2×22mm)
+44309
+
+30mm ID. ZR (49.5×20mm)
+15413
+
+30mm ID. Balloon (56×26mm)
+55976
+
+30mm ID. Tractor (56×26mm)
+70695
+Wheel › 43.2mm
+Wheels with a 43.2mm outer diameter (D.) and tires that work with them.
+
+
+43.2 D. × 18mm, Axle
+86652
+
+43.2mm ID. Tire (62.4×20mm)
+32019
+
+43.2mm D. × 26mm, Axle
+56908
+
+43.2 ID. ZR (56×28mm)
+41897
+
+43.2mm ID. Balloon (68.7×34mm)
+61480
+
+43.2mm ID. R (81.6×44mm)
+18450
+Wheel › 56mm
+Wheels with a 56mm outer diameter (D.) and tires that work with them.
+
+
+56mm D. × 34mm, Axle
+15038
+
+56mm ID. ZR (68.8×36mm)
+44771
+Wheel › Motorcycle
+Motorcycle wheels are fairly large but narrow.
+
+
+75mm D. × 17mm, Axle
+88517
+
+75mm ID. Motorcycle (94.2×22mm)
+88516
+Wheel › Integrated Tire
+A selection of wheels with an integrated tire.
+
+
+18mm D. × 14mm Spherical, Pin
+55889
+
+24mm D. × 11mm Wheel w/ Tire, Pin
+72206
+
+24mm D. × 7mm Wheel w/ Tire, Pin
+74214
+
+24mm D. × 13.4mm Wheel w/ Tire, Pin
+105162N
+
+35mm D. × 14mm Wheel w/ Tire, Axle
+65834
+
+56mm D. × 14mm Wheel w/ Tire, Axle
+39367
+
+87mm D. × 14mm Wheel w/ Tire, Axle
+49295
+
+33.8 D. Wheel, Wagon
+4489
+
+43.2 D. Wheel, Ornamental
+15744
+
+36mm D. × 16mm Wheel w/ Tire
+3486N
+
+54mm D. × 30mm Wheel w/ Tire
+2515
+
+37mm D. × 22mm Wheel
+22410
+
+41mm D. × 15mm Wheel
+68327
+
+55mm D. × 22mm Wheel, Viking
+55817
+
+62mm D. × 32 Wheel, Conical
+64712
+Wheel › Other Wheels
+Wheels with uncommon shapes, sizes and connection types.
+
+
+8mm D. Small Pulley
+3464
+
+Trolley Wheel (Skateboard)
+2496
+
+14.4 D. Wheel w/ Tire
+65630
+
+2×2 Round w/ Wheel Holder, Bottom
+2655
+
+2×2 Plane Wheel Holder, Bottom
+2415
+Wheel › Wheel Cover
+
+15mm D. Wheel Cover, 5 Spokes
+18978a
+
+15mm D. Wheel Cover, 10 Spokes
+18978b
+
+18mm D. Wheel Cover, 5-Spoke
+72210a
+
+18mm D. Wheel Cover, 9-Spoke
+72210b
+
+24mm D. Wheel Cover w/ 9-Spokes
+62701
+Wheel Pin
+A much smaller 'Pin' connector that is used exclusively with small LEGO wheels. (Larger wheels use Technic Pins and Axles.)
+
+
+1×2 Plate w/ 1 Wheel Pin
+21445
+
+2×2 Plate w/ 2 Wheel Pins
+4600
+
+2×2×⅔ Plate w/ 1 Wheel Pin
+67688
+
+2×2 Wide Plate w/ 2 Wheel Pins
+6157
+
+1×4 Plate w/ 2 Wheel Pins
+2926
+
+2×2 Plane Holder w/ 2 Wheel Pins, Bottom
+4870
+
+Technic Pin w/ 2-Wheel Pins
+61483
+
+Tilt Steering Axle w/ 2 Wheel Pins
+69964
+
+2×4 Tilt Steering Holder
+69963
+
+2×4 Brick w/ 2 Wheel Pins, Cutout
+18892
+
+4×7×⅔ w/ 4 Wheel Pins
+2441
+
+6×10×1 Vehicle Base
+65202
+
+4×10×2½ Vehicle Base
+12622
+Vehicle Base
+Build strong vehicles more quickly using pre-built bases.
+
+
+3×9×1⅓ Vehicle Base (F1)
+6667N
+
+2×6 Vehicle Base w/ 4-Axle Holes
+6920N
+
+4×10×⅔ Vehicle Base
+30029
+
+4×12×⅚ Vehicle Base
+52036
+
+4×10×1 Vehicle Base
+30076
+
+4×14 Vehicle Base
+7035N
+
+6×12×⅚ Vehicle Base
+28324
+
+6×12 Vehicle Base
+65634
+
+6×12 Vehicle Base, Notched Ends
+3385N
+
+6×16×2⅔ Trailer Base
+64954
+
+8×16×2⅓ Vehicle Base
+18937
+Train
+Wheels, trucks, and train track.
+
+
+Track, Straight
+53401
+
+Track, Curved
+53400
+
+Track, Flexible
+64022
+
+8×12 Train Ramp
+53834
+
+Track, Switch Right
+53403
+
+Track, Switch Left
+53406
+
+16L Train Track
+3228
+
+Train Wheel w/ Metal Axle Hole
+57878
+
+5L Train Axle, Metal
+57051
+
+Train Wheel w/ Wheel Pin Hole
+50254
+
+Train Wheel w/ Pin
+38340
+
+RC Train Wheel w/ Axle Hole
+57999
+
+RC Train Wheel, Spoked, Axle & Pin
+85489b
+
+3×6 Train Wheel Holder
+38339
+
+4×6 Train Bogey Plate
+4025
+
+Train Motor Decorative Side
+2871
+
+Train Buffer w/ Plow, Magnet
+64415
+
+Train Buffer Beam, Magnet
+29084
+Coaster
+Rollercoaster tracks and cars.
+
+
+4×5 Coaster Car
+26021
+
+Roller Coaster Wheels
+24869
+
+4L Track, Straight
+80562
+
+8L Track, Straight
+26022
+
+16L Track, Straight
+25059
+
+Track, Curved 90°
+25061
+
+Track, Curved 90° Ramp
+80566
+
+Track, Small Ramp
+34738
+
+Track, Ramp Bottom
+26559
+
+Track, Slope
+26561
+
+Track, Ramp Top
+26560
+Steering
+Handlebars and steering wheels.
+
+
+1×2 w/ Steering Wheel
+3829
+
+2×2 Steering Wheel
+30663
+
+5×5 Steering Wheel
+67811
+
+Handlebar w/ Handle
+30031
+
+Bent Handlebar w/ Handle
+98397
+
+Boat Wheel
+4790
+Propeller, Engine
+Mechanical features of many different kinds of vehicles.
+
+
+Ø4 Propeller, 3-Blades, Wheel Pin
+2421
+
+Ø3½ Propeller, 3-Blades, Pin
+65768
+
+Ø5 Propeller, 3-Blades, Pin
+92842
+
+Ø5 Propeller, 8-Blades, Axle
+41530
+
+Ø5 Propeller, 4-Blades w/ Studs
+67737
+
+Ø6 Propeller, 7-Blades, Pin
+87751
+
+Ø9 Propeller, 3-Blades, Pin
+15790
+
+1×4 w/ Angled Tube
+61072
+
+Air Scoop
+50943
+
+2×2 w/ Raised Grille
+41862
+
+Exhaust w/ Pin
+65571
+
+1×2 Plate w/ Engine
+98302
+
+Engine w/ Strakes, 2×2 Thin Plate
+4229
+
+Jet Engine
+4868
+
+Jet Engine Center
+4869
+
+4×4×1⅔ Cylinder w/ Bar, 3-Pin Holes
+41531
+
+Propeller, 10-Blades w/ Pin
+46667
+
+Anchor
+95354
+Fin, Wing
+
+Front Wing (F1)
+6682N
+
+Spoiler w/ Handle
+98834
+
+1×4 Spoiler
+30925
+
+1×2 w/ Racer Grille
+50949
+
+2×16 Rotor Blade w/ Studs
+62743
+
+2×3×2 Fin
+44661
+
+2×6×4 Fin
+6239
+
+1×4×3 Tail
+2340
+
+1×8×2⅓ Stepped Fin
+23930
+
+4×1 Batman Tail / Rudder
+28779
+
+2×2×3 Mast w/ 3-Studs
+4289
+
+3×2×20 Boat Mast
+48002
+
+12×6 Helicopter Skids
+30248
+
+Technic (418 parts)
+Technic is a system unto itself, with a focus on connecting parts using pins and axles, but you will find plenty of Technic parts with studs as well.
+
+Modern Technic sets include very few Classic (or 'System') parts containing studs, because they have moved towards an engineering-focused building system that abandons the awkward 5:6 ratio of classic bricks in favor of a 3-dimensional grid based on the width of a plate (5 units).
+
+A large selection of Technic parts with studs remain in production for a completely different reason... Classic 'System-based' LEGO sets have adopted Technic as the primary way to add interactive play features and a critical tool in making models stronger.
+
+It is interesting to see how far Technic has evolved away from the classic Technic brick. In recent years, there has been a push to make Technic sets more realistic, which has resulted in a huge number of Technic 'panel' elements which can give the exterior of the model exactly the right shape. This is especially true in the high-end Technic supercars which need to match the appearance of a complex curved vehicle.
+
+Jump To:
+Brick (38)
+Plate (23)
+Beam (40)
+Thin Beam (14)
+Panel (53)
+Connector (97)
+Gears (40)
+Link & Chain (21)
+Steering (26)
+Engine (17)
+Mechanical & Pneumatic (33)
+Other Technic (16)
+Technic (418 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Brick
+Technic bricks have studs, allowing them to integrate with brick-built 'LEGO System' models.
+
+
+1×1 Technic Brick
+6541
+
+1×2 Technic Brick
+3700
+
+1×4 Technic Brick
+3701
+
+1×6 Technic Brick
+3894
+
+1×8 Technic Brick
+3702
+
+1×10 Technic Brick
+2730
+
+1×12 Technic Brick
+3895
+
+1×14 Technic Brick
+32018
+
+1×16 Technic Brick
+3703
+
+1×2 Technic Brick, 2-Pin Holes
+32000
+
+1×3 Technic Brick, 3-Pin Holes
+5565N
+
+2×2 Technic Brick w/ Cutaways
+73109
+
+1×1 Technic Brick w/ Axle Hole
+73230
+
+1×2 Technic Brick w/ Axle Hole
+32064
+
+2×2 Brick w/ Grooves, Vertical Axle Hole
+90258
+
+2×4 Technic Brick w/ Vertical Axle Holes
+39789
+
+4×4 Technic Frame, Open Center
+32324
+
+4×6 Technic Frame, Open Center
+32531
+
+6×8 Technic Frame, Open Center
+32532
+
+16×16×1⅓ Technic Plate (Art)
+65803
+
+5×5 Technic Brick, Corner
+32555
+
+1×2 Brick, Pin 1-Side
+44865
+
+1×2 Brick, 2-Pins, 1-Side
+30526
+
+2×2 Brick, Pin 1-Side
+6232
+
+2×2 Brick, 2-Pins, 2-Sides
+30000
+
+2×4 Brick, 2-Pins, 2-Sides
+6249
+
+2×4 Dbl. Inv w/ 2-Pins, Sides
+30390
+
+2×4 Brick, Pin Top, Cutouts
+30592
+
+2×4×1⅓ 2-Axle Holes, Cutout
+67446
+
+2×6×1⅓ 2-Axle Holes, Cutout
+3668
+
+1×2 w/ 2-Liftarms
+85943
+
+1×6×1⅔ Slope w/ 3-Pin Holes
+2744
+
+2×2 Round w/ 2-Pin Holes
+17485
+
+2×2×2 Robot Body w/ 2-Pin Holes
+30361
+
+4×4 Round w/ 4-Pin Holes
+6222
+
+6×6 Round w/ 5-Pin Holes
+18897
+
+1×6×4⅓ Angled Brick w/ Cutout, 4-Pin Holes
+49699
+
+1×5×3 Connector Block
+32333
+Plate
+Studded LEGO plates with Technic pin or axle connections.
+
+
+2×4 Plate w/ 3-Holes
+3709
+
+2×6 Plate w/ 5-Holes
+32001
+
+2×8 Plate w/ 7-Holes
+3738
+
+4×4 Plate w/ Rounded Corners, Holes
+7864N
+
+1×5 Plate w/ Rounded Corners, Axle Hole
+32124
+
+Technic 3-Blade Rotor w/ Axle Hole
+32125
+
+Technic 6-Blade w/ 6-Clips (Waterwheel)
+69984
+
+1×2 Plate, 1-Pin Hole, Bottom
+18677
+
+1×2 Plate, 1-Pin Hole, Top
+11458
+
+1×3 w/ 2 studs, Hole Bottom
+3172N
+
+2×2 Plate, 1-Pin Hole, Bottom
+10247
+
+2×2 Plate, 2-Pin Holes, Bottom
+2817
+
+2×4 Plate, 2-Pin Holes, Bottom
+26599
+
+1×2 Plate, 1-Pin Hole, Bottom
+32529
+
+1×2 Plate, 2-Pin Holes, Top
+32530
+
+2×4 Pin Hole Hinge, Top
+43045
+
+2×4 Pin Hole Hinge, Bottom
+43056
+
+2×2 Plate, 1-Pin, Bottom
+2476
+
+2×2 Plate, 2-Pins, Bottom
+15092
+
+2×2 Plate, 1-Pin, Top
+2460
+
+2×4 Plate, 2-Pins, Ends
+40687
+
+2×2×⅔ Wheel Fork
+77598
+
+2×2 Plate, 2-Pins, Wide
+47720
+Beam
+Studless beams that can be connected using Technic pins and axles.
+
+
+1×1 Beam (Spacer)
+18654
+
+1×2 Beam
+43857
+
+1×2 Beam w/ 1-Axle Hole
+60483
+
+1×3 Beam
+32523
+
+1×3 Beam w/ 1-Axle Hole
+7229N
+
+1×5 Beam
+32316
+
+1×7 Beam
+32524
+
+1×9 Beam
+40490
+
+1×11 Beam
+32525
+
+1×13 Beam
+41239
+
+1×15 Beam
+32278
+
+1×7 Beam w/ Alternating Holes
+2391N
+
+1×9 Beam w/ Alternating Holes
+6612N
+
+1×11 Beam w/ Alternating Holes
+73507
+
+1×15 Beam w/ Alternating Holes
+71710
+
+1×7 Beam, Bent (4-4)
+32348
+
+1×9 Beam, Bent (6-4)
+6629
+
+1×9 Beam, Bent (7-3)
+32271
+
+1×11½ Beam, Double Bent
+32009
+
+2×4 Beam, L-Shape
+32140
+
+3×5 Beam, L-Shape
+32526
+
+3×5 Liftarm, L-shape w/ Alternating Holes
+2477N
+
+3×3 Beam, T-Shape
+60484
+
+2×3 Beam, ¼-Ellipse
+71708
+
+2×5 Beam, ¼-Ellipse
+80286
+
+3×9 Beam, ¼-Ellipse
+3916N
+
+3×13 Frame
+4526N
+
+3×19 Frame
+67491
+
+5×7 Frame
+64179
+
+7×11 Frame
+39794
+
+11×15 Frame
+39790
+
+11×19 Technic Frame (Baseplate)
+39369
+
+3×5 Beam, H-Shape
+14720
+
+5×11 Frame, H-Shape
+64178
+
+3×3 Pin Connector Block
+39793
+
+7×16 Frame, A-Shape w/ Bars
+79768N
+
+Ø11 Frame, Round
+77107
+
+Ø15 Frame, Round
+3250N
+
+4×2 Beam, L-Shape w/ 90° Offset
+11455
+
+2×3 Liftarm, U-shape
+3167N
+Thin Beam
+A small selection of 'thin' beams which are ½ of the thickness of a standard LEGO Beam.
+
+
+1×2 Beam, Thin
+41677
+
+1×3 Beam, Thin
+6632
+
+1×4 Beam, Thin
+32449
+
+1×5 Beam, Thin
+32017
+
+1×5 Beam, Thin w/ 2-Axle Holes
+11478
+
+1×6 Beam, Thin
+32063
+
+1×7 Beam, Thin
+32065
+
+1×9 Beam, Thin w/ 3-Holes
+4586N
+
+3×3 Liftarm, Thin w/ L-Shape
+32056
+
+3×3 Beam, Thin w/ D-Shape
+32249
+
+3×5 Beam, Thin w/ D-Shape
+32250
+
+3×5 Triangle Beam, Thin
+99773
+
+1×3 Beam, Thin w/ 1-Pin & 1-Axle Hole
+61408
+
+1×4 Beam, Thin w/ 1-Stud Holder
+2825
+Panel
+A selection of smooth elements to give Technic models and nicely finished appearance.
+
+Panel › Flat Panel
+Flat panels cover a large area when building Technic models.
+
+
+3×7 Panel
+71709
+
+3×11 Panel
+15458
+
+5×11 Panel
+64782
+
+3×5 Panel w/ Cutout
+67139
+
+3×3 Panel, Triangle
+6613N
+
+5×11 Panel, Tapered
+18945
+Panel › Curved Panel
+Technic panels that are curved or bent on a single axis.
+
+
+2×1 Panel, Curved
+89679
+
+2×3 Panel, Curved
+71682
+
+2×5 Panel, Curved
+7101N
+
+3×7×2 Panel, Curved
+24119
+
+3×7×2 Panel, Curved Inv.
+4500N
+
+3×11×2 Panel, Curved
+62531
+
+3×11×2 Panel, Curved w/ 10-Pin Holes
+11954
+
+3×5×2 Panel, Curved
+80285
+
+3×9 Panel, Curved
+5427N
+
+3×13×2 Panel, Curved
+18944
+
+#52 3×13 Panel, Curved, L.
+4527N
+
+#53 3×13 Panel, Curved, R.
+5426N
+
+#50 5×13 Panel, Curved, L.
+67142
+
+#51 5×13 Panel, Curved, R.
+68196
+
+Ø3 Ball Turret Hemisphere
+44359
+
+5×5 Hemisphere w/ 2-Pin Holes
+7343N
+
+3×5×3 Panel, Bent
+24116
+
+5×4×3 Bent Panel, R.
+80271
+
+5×4×3 Bent Panel, L.
+80272
+Panel › Fairing
+Technic panels with complex shapes that are curved on multiple axes.
+
+
+#7 2×3 Fairing, Tapered, A.
+2387N
+
+#8 2×3 Fairing, Tapered, B.
+2389N
+
+#3 3×2 Fairing, Angled 22.5°
+2457N
+
+#21 2×5 Fairing, B.
+11946
+
+#22 2×5 Fairing, A.
+11947
+
+#10 3×3 Fairing, Tapered, Rt.
+2403N
+
+#9 3×3 Fairing, Tapered, Lt.
+2395N
+
+#2 3×5 Fairing, B
+87086
+
+#1 3×5 Fairing, A
+87080
+
+#4 3×7 Fairing, B
+64391
+
+#3 3×7 Fairing, A
+64683
+
+#6 3×11 Fairing, B
+64393
+
+#5 3×11 Fairing, A
+64681
+
+#14 5×7 Fairing, B
+64680
+
+#13 5×7 Fairing, A
+64394
+
+#18 5×11 Fairing, B
+64682
+
+#17 5×11 Fairing, A
+64392
+
+#60 5×7 Fairing, Tapered, Rt.
+80268
+
+#61 5×7 Fairing, Tapered, Lt.
+80267
+
+#63 5×4 Fairing, Tapered, Lt.
+80278
+
+#62 5×4 Fairing, Tapered, Rt.
+80274
+
+5×3×2 Fairing, Rounded, R.
+2442N
+
+5×3×2 Fairing, Rounded, L.
+2438N
+Panel › Mudguard
+Mudguards are curved openings that typically surround the wheel well of a car or truck.
+
+
+#30 9×2×3 Mudguard, Arched
+42531
+
+#42 9×2×3 Mudguard, Arched
+2459N
+
+#41 13×2×5 Mudguard, Arched
+69911
+
+13×2×5 Mudguard Extension
+71689
+
+15×2×7 Mudguard, Trapezoid
+46882
+Connector
+A wide range of parts with pin and axle connectors that can be used to connect Technic parts together.
+
+Connector › Axle
+Standard axles and straight connectors with an axle connector on one end.
+
+
+2L Axle
+32062
+
+3L Axle
+4519
+
+4L Axle
+3705
+
+5L Axle
+32073
+
+6L Axle
+3706
+
+7L Axle
+44294
+
+8L Axle
+3707
+
+9L Axle
+60485
+
+10L Axle
+3737
+
+11L Axle
+23948
+
+12L Axle
+3708
+
+16L Axle
+50451
+
+32L Axle
+50450
+
+3L Axle w/ Stop
+24316
+
+4L Axle w/ Stop
+87083
+
+5L Axle w/ Stop
+15462
+
+8L Axle w/ Stop
+55013
+
+3L Axle w/ Stud
+6587
+
+4L Axle w/ Center Stop
+99008
+
+5½L Axle w/ Stop
+32209
+
+Smooth Pin & Axle
+3749
+
+Friction Pin & Axle
+43093
+
+1L Smooth Pin & 2L Axle
+65249
+
+1L Friction Pin & 2L Axle
+18651
+
+2L Friction Pin & 1L Axle
+11214
+Connector › Pin
+Straight connectors with a pin connector.
+
+
+½-Pin, Smooth
+4274
+
+½-Pin, Friction
+89678
+
+¾-Pin, Smooth
+32002
+
+Pin, Smooth
+3673
+
+Pin, Friction
+2780
+
+3L Pin, Smooth
+32556
+
+3L Pin, Friction
+6558
+
+3L Pin w/ Bush
+65304
+
+½ Pin w/ Stud Holder
+65826
+
+3L Pin w/ Stop
+77765
+
+½-Pin w/ Bar (Flick Missile)
+61184
+Connector › Hub
+Connectors that attach parts at an angle.
+
+
+Pin Hub, Axle
+22961
+
+Pin Hub, 3L Axle
+5713N
+
+Pin Hub, 2-Axle
+27940
+
+Pin Hub, 2-Axle 90°
+10197
+
+Pin Hub, 3-Axle 120°
+57585
+
+Angled Connector #1
+32013
+
+Angled Connector #2, 180°
+32034
+
+Angled Connector #3, 157½°
+32016
+
+Angled Connector #4, 135°
+32192
+
+Angled Connector #5, 112½°
+32015
+
+Angled Connector #6, 90°
+32014
+
+Angled Connector #7, 168¾°
+4450N
+
+Angled Connector, 60° / 120°
+7329N
+
+Angled Connector, Quadruple 60°
+6611N
+
+Angled Connector, Triple 120°
+10288
+
+Pin Hub, 1-Pin
+65487
+
+Pin Connector, 2-Pins
+44874
+
+Axle Hub, 4-Bars 90°
+68888
+
+Axle Hub, 2-Bar Holders
+24122
+
+Pin Hub, 4-Clips 90°
+90202
+Connector › Other Connector
+Other connectors with a more complex shape.
+
+
+Bush
+3713
+
+½ Bush
+32123
+
+2L Axle Connector
+59443
+
+3L Axle Connector
+42195
+
+2L Pin Connector
+62462
+
+5⅓ Spiral Staircase Connector
+40244
+
+Axle & Pin w/ Extension
+53586
+
+2L Axle & Pin, Perpendicular
+6536
+
+3L Axle & 2-Pin Hole
+42003
+
+3L 2-Axle & Center Pin
+32184
+
+1×2 Beam w/ Bar, 45°
+85940
+
+1×2 Beam w/ Axle
+7244N
+
+1-Axle & Double Pin
+32291
+
+1-Axle & 3-Pin
+63869
+
+4L Axle & Double Pin
+98989
+
+3-Pin, L-Shape
+44809
+
+2×4 2-Axle & 2-Pin
+80910
+
+Split Axle & 2-Pin
+69819
+
+2×2×2 Axle & Pin, Split
+92907
+
+2L Axle w/ Axle Hole (Pole Reverser Handle)
+6553
+
+2×3 4-Axle Connector
+11272
+
+Axle & Axle Connector
+42135
+
+2-Axle Connector, Rubber
+45590
+
+Toggle Dbl. w/ 2-Pins
+48496
+
+Toggle Db. w/ Axles & Pins
+87408
+
+Toggle Joint Connector
+32126
+
+3L Double Pin
+65098
+
+3L Pin, 2-Pins & 1-Pin Hole
+15461
+
+1×3 Cross Block w/ 2-Pins, 3-Pin Holes
+2393N
+
+3L H-Shaped Connector w/ 4-Pins
+65489
+
+1×3 Double Pin w/ 2-Clips
+19159
+
+3×3 L-Shaped Connector w/ 4-Pins
+55615
+
+2×2 Liftarm w/ Cutout, Axle Holes
+72008
+
+3L w/ 2-Pin Holes
+32557
+
+3×3 Round Connector
+98585
+
+31mm D. × 15mm w/ 7-Pin Holes
+60208
+Connector › Curved
+Curved Technic connectors.
+
+
+1×1 90° Elbow, Axle Holes
+25214
+
+1×1 45° Elbow, Axle Holes
+7324N
+
+2×2 45° Elbow, Axle Holes, Short
+65473
+
+2×2 45° Elbow, Axle Holes, Long
+5489N
+
+3×3 45° Elbow, Axle Holes
+5057N
+Gears
+Bring models to life using gears and racks to create movement.
+
+
+8 Tooth
+10928
+
+8 Tooth w/out Friction
+11955
+
+12 Tooth
+69778
+
+12 Tooth, Bevel
+6589
+
+12 Tooth, Dbl. Bevel
+32270
+
+14 Tooth, Thick Bevel
+69762
+
+16 Tooth
+94925
+
+16 Tooth, Dbl. Clutch
+18946
+
+20 Tooth
+69779
+
+20 Tooth, Dbl. Clutch
+81346
+
+20 Tooth, Bevel
+32198
+
+20 Tooth, Dbl. Bevel
+32269
+
+20 Tooth Bevel w/ Pin Hole
+87407
+
+20 Tooth, Dbl. Clutch, Dbl. Bevel
+35185
+
+22 Tooth, Thick Bevel
+69761
+
+24 Tooth
+24505
+
+28 Tooth, Dbl. Bevel
+46372
+
+28 Tooth, Dbl. Bevel w/ Pin Hole
+65413
+
+Differential Housing
+65414
+
+28 Tooth, Differential
+62821
+
+28-Tooth Turntable, Top
+99010
+
+28-Tooth Turntable Base
+99009
+
+60 Tooth Turntable, Top
+18938
+
+60 Tooth Turntable, Base
+18939
+
+36-Tooth, Dbl. Bevel
+32498
+
+40 Tooth
+3649
+
+1L Worm Gear
+27938
+
+2L Worm Gear
+32905
+
+6L Worm Gear
+73763N
+
+2×2×1⅔ w/ Worm Gear Hole
+73764N
+
+6×6 15-Tooth ¼ Gear Ring
+78442
+
+11×11 35-Tooth ¼ Gear Ring
+24121
+
+4×4×1⅔ Gearbox
+6585
+
+2×4×3⅓ Gearbox
+6588
+
+8 Tooth Gear w/ 1½L Axle
+24014
+
+1×4 Rack
+3743
+
+1×7 Rack
+87761
+
+1×13 Rack
+64781
+
+1×14×2 Rack Housing
+18940
+
+1×14×2 Rack
+18942
+Link & Chain
+A selection of parts to transfer power to a different area of the model.
+
+
+4L Link
+6610N
+
+6L Link
+32005
+
+8L Link
+5996N
+
+16L Link
+2637
+
+1×9 Link
+32293
+
+1×9 Link, Bent (6-4)
+64451
+
+1×9 Wishbone Arm
+32294
+
+7×8×2 Wishbone Arm, Dbl.
+5780N
+
+1L Link, Chain
+3711
+
+Link, Tread
+15379
+
+5L Wide Track
+88323
+
+7L Wide Track
+69910
+
+Rubber Tread Pin
+24375
+
+6 Tooth Small Sprocket
+57520
+
+10 Tooth Large Sprocket
+57519
+
+14 Tooth XL Sprocket
+42529
+
+4 Knob Wheel
+32072
+
+4 Knob Wheel, 45°
+5405N
+
+Belt Wheel (Pulley)
+4185
+
+Technic Belt Wheel Tire
+2815
+
+2L Escalator Chain Link
+69900
+Steering
+Parts to assist with steering functionality.
+
+
+3×1 Steering Arm
+5997N
+
+5×1 Steering Arm
+31794
+
+6×2 Steering Arm w/ Towball Socket
+57515
+
+2×2 Steering Arm w/ 2-Pins
+32069
+
+Steering Wheel Hub, 3-Pins
+92909
+
+Steering Hub Holder w/ 2-Pin Holes
+11950
+
+Steering Hub Holder w/ Pin & Axle Holes
+65766
+
+Steering Portal Frame
+92908
+
+Steering Hub w/ Shock Socket
+69636
+
+Rotation Socket w/ 2-Pins
+80563
+
+Ø3 Steering Wheel
+2819
+
+Ø4 Steering Wheel
+2741
+
+Steering Yoke
+40001
+
+3L Universal Joint
+61903
+
+Ø3 Rotation Disk w/ 3L Beam, Socket
+44225
+
+Ø3 Rotation Disk w/ 3L Beam, Plug
+44224
+
+Steering Arm w/ 3-Balls
+15460
+
+CV Joint, Ball
+32494
+
+CV Joint, Socket
+92906
+
+3L CV Joint, Ball
+52731
+
+5L Sliding CV Joint, Ball
+77590
+
+2L CV Joint, Socket
+4192N
+
+4L CV Joint, Socket
+52730
+
+Disc Brake Hub w/ 3-Pin Holes
+35189
+
+Ø6 Brake Disk
+65416
+
+Dbl. Ø3 Rotation Disk w/ 3L Beam, Plug
+5652N
+Engine
+Parts to create an engine or implement a shifting system.
+
+
+3L Driving Ring Conn.
+18948
+
+3L Driving Ring
+18947
+
+Driving Ring Extension, 4-Tooth
+32187
+
+Driving Ring Extension, 8-Tooth
+35186
+
+Changeover Catch
+6641
+
+Rotary (Wave) Shifter
+35188
+
+Clutch w/ Axle Hole, Outside
+46834
+
+Clutch w/ Axle Hole, Inside
+46835
+
+Cam
+6575
+
+Engine Cylinder, Smooth
+6608N
+
+Engine Cylinder w/ Studs
+2850
+
+Engine Piston
+2851
+
+Connecting Rod
+2852
+
+Crankshaft
+2853
+
+Center Crankshaft
+2854
+
+Crank Disk
+4368N
+
+Piston w/ Stud
+4369N
+Mechanical & Pneumatic
+Linear motion driven by gears or pneumatics.
+
+
+7-9L Linear Actuator
+92693
+
+Linear Actuator Holder
+61904
+
+Pneumatic Switch
+19474
+
+1×6 Pneumatic Pump
+26674
+
+1×5 Pneumatic Cylinder
+19475
+
+Bush w/ Pneumatic Hose Connector
+99021
+
+Pneumatic T-Piece
+4697
+
+2×3×11 Pneumatic Pump
+26288
+
+6½L Shock Absorber
+76537
+
+9L Shock Absorber
+79717
+
+18L Shock Absorber
+69633
+
+6×3×5 Pullback Motor
+12799
+
+16L Crane Arm Outside
+57779
+Mechanical & Pneumatic › Pneumatic Hose
+A very flexible tube to attach pneumatic components
+
+
+2L Pneumatic Hose
+5102c02
+
+3L Pneumatic Hose
+5102c03
+
+4L Pneumatic Hose
+5102c04
+
+5L Pneumatic Hose
+5102c05
+
+6L Pneumatic Hose
+5102c06
+
+7L Pneumatic Hose
+5102c07
+
+8L Pneumatic Hose
+5102c08
+
+9L Pneumatic Hose
+5102c09
+
+11L Pneumatic Hose
+5102c11N
+
+13L Pneumatic Hose
+5102c13
+
+16L Pneumatic Hose
+5102c16
+
+20L Pneumatic Hose
+5102c20
+
+23L Pneumatic Hose
+5102c23
+
+24L Pneumatic Hose
+5102c24
+
+25L Pneumatic Hose
+5102c25
+
+27L Pneumatic Hose
+5102c27
+
+28L Pneumatic Hose
+5102c28
+
+32L Pneumatic Hose
+5102c32
+
+37L Pneumatic Hose
+5102c37
+
+40L Pneumatic Hose
+5102c40
+Other Technic
+Balls, propellers, and other hard-to-categorize parts.
+
+
+5×3 Socket w/ H-Shape
+39370
+
+19mm D. Ball
+52629
+
+Ball Joint w/ Axle Hole, 1-Side
+32474
+
+Ball Joint w/ Axle Hole, Through
+53585
+
+1×3 Tooth w/ Axle Hole
+48267
+
+3×3 Disc
+2723
+
+Ø2×2 Reel w/ Axle Hole
+61510
+
+Ø2×3 Reel w/ Axle Hole
+32012
+
+1×6 Ski w/ Pin Hole
+15540
+
+Small Wing w/ Axle Hole
+61800
+
+8L Rotor Blade
+99012
+
+19L Rotor Blade w/ 3-Pin Holes
+65422
+
+11L Blade w/ Axle
+35633
+
+14L Jagged Blade
+2144N
+
+16L Blade w/ Axle
+98135
+
+Ninja Star (Saw) w/ 6-Blades
+41125
+
+
+Electronics (28 parts)
+Add light and motion to your creations using LEGO hubs, motors, lights, and sensors.
+
+The current system for connecting electronics to a battery pack or hub is called 'Powered Up'. While there is a basic battery pack that can work with up to two motors, the majority of battery packs are bluetooth-connected hubs which allow you to create programs to control your model.
+
+Jump To:
+Hubs (6)
+Motors (7)
+Sensor & Accessories (9)
+Bluetooth (4)
+Dimensions (0)
+Standalone Electronics (2)
+Electronics (28 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Hubs
+Electronics require a hub or battery pack, which connect to the hub using wires.
+
+
+4×8×4 Small Hub
+28738
+
+9×9×5 Battery Box
+85825
+
+9×9×5 Medium Hub
+85824
+
+16×9×6 Hub w/ 3-Motors, 6-Lights
+103479N
+
+7×5×4 Sm. Intelligent Hub
+67351
+
+7×11×4 Lg. Intelligent Hub
+45601
+Motors
+LEGO models come alive using motors with a range of sizes and capabilities that connect to a hub with wires.
+
+
+3×3×6 Simple Med. Motor
+21980
+
+3×4×8 Technic Lg. Motor (w/ Pos.)
+22169
+
+5×5×8 Technic XL Motor (w/ Pos.)
+22172
+
+3×4×5 Sm. Angular Motor (w/Pos.)
+68488
+
+3×4×9 Med. Angular Motor (w/ Pos.)
+54696
+
+5×4×9 Lg. Angular Motor (w/ Pos.)
+54675
+
+4×2½×10 Motor, Simple Train
+28740
+Sensor & Accessories
+A selection of sensors and accessories that connect via wires to a hub, allowing you to build more advanced robots and machines which can respond to their environment.
+
+
+2×4 Motion Sensor
+20844
+
+2×4×2 Color & Distance Sensor
+26912
+
+3×3×3 Color Sensor
+37308
+
+3×7×4 Distance Sensor
+37316
+
+3×3×5 Force Sensor
+37312
+
+3×3×3 9-Pixel Color Matrix
+47592
+
+Powered Up Light
+22168
+
+Bluetooth Speed Remote
+28739
+
+Axle & Wire Connector
+49283
+Bluetooth
+Motors and sensors which connect via Bluetooth.
+
+
+6×3×7 Bluetooth Motor
+118084N
+
+8×3×10 Bluetooth, 2-Motors
+118091N
+
+6×2×4 Bluetooth Color Sensor
+118092N
+
+4×8×2⅓ Bluetooth Remote
+115901N
+Standalone Electronics
+Other electronic parts that do not require a separate power source to function.
+
+
+4×4×1⅔ Sound Brick
+3677N
+
+2×3×1⅓ Light Brick
+62930
+
+DUPLO (86 parts)
+The larger bricks for younger kids are twice as big in each direction and compatible with regular LEGO bricks.
+
+You can attach a standard LEGO 2×2 or 2×4 brick on top of a DUPLO brick. This allows you to create large models using DUPLO bricks for the core, with standard LEGO bricks covering them up.
+
+Remember, twice as big in each dimension results in a brick that is 8-times as large by volume.
+
+If that's not big enough, there's also the discontinued QUATRO line, which is 4-times the width of a LEGO brick (or 64-times the volume).
+
+Jump To:
+Brick (8)
+Plate (10)
+Wall (10)
+Angle (6)
+Curved (18)
+Ball Tube (1)
+Accessories and Nature (17)
+Other (16)
+QUATRO (0)
+PRIMO (0)
+DUPLO (86 parts)
+Show:
+Current Parts
+All
+View:
+Scale
+Label
+Table
+Brick
+DUPLO bricks are twice as large in all three dimensions than a comparable LEGO brick.
+
+
+DUPLO 2×2 Brick
+3437
+
+DUPLO 2×3 Brick
+87084
+
+DUPLO 2×4 Brick
+3011
+
+DUPLO 2×6 Brick
+2300
+
+DUPLO 2×8 Brick
+4199
+
+DUPLO 2×10 Brick
+2291
+
+DUPLO 1×2×2 Brick
+76371
+
+DUPLO 2×2×2 Brick
+31110
+Plate
+A DUPLO plate is just ½ the height of a DUPLO brick, which makes it the same height as a LEGO Brick.
+
+
+DUPLO 2×4 Plate
+40666
+
+DUPLO 2×6 Plate
+98233
+
+DUPLO 2×8 Plate
+44524
+
+DUPLO 4×4 Plate
+14721
+
+DUPLO 4×6 Plate
+25549
+
+DUPLO 4×8 Plate
+4672
+
+DUPLO 6×12 Plate
+4196
+
+DUPLO 8×8 Plate
+51262
+
+DUPLO 8×16 Plate
+6490
+
+DUPLO 24×24 Baseplate
+4268
+Wall
+DUPLO wall, door, and decorative parts.
+
+
+DUPLO 2×2 Hay Bale
+69716
+
+DUPLO 1×2×2 Panel, Masonry
+25550
+
+DUPLO 1×2×2 Panel, Log
+18783
+
+DUPLO 1×2×2 Brick w/ Cutouts
+42234
+
+DUPLO 2×2×2 Brick w/ Indented Sides
+31061
+
+DUPLO 2×4×3 Window Frame
+61649
+
+DUPLO 4×3 Door w/ 4-panes
+90265
+
+DUPLO Door, Wooden
+98459
+
+DUPLO 2×4×5 Door Frame
+92094
+
+DUPLO 4×5 Door, 2-Panes
+65111
+Angle
+DUPLO parts come in a couple of different angles.
+
+
+DUPLO 33° 3×2 Slope
+35114
+
+DUPLO 42° 3×2×2 Slope
+63871
+
+DUPLO 45° 2×2×1½ Slope
+6474
+
+DUPLO 54° 2×2×2 Slope
+70676
+
+DUPLO 45° 4×2×3 Slope
+49570
+
+DUPLO 45° 4×2 Slope, Double
+29303
+Curved
+DUPLO includes a small selection of curved elements to build more interesting models.
+
+
+DUPLO 4×4 Plate, Round
+98222
+
+DUPLO 4×4 Plate, ¼-Round
+98218
+
+DUPLO 4×8 Plate, ½-Round
+29304
+
+DUPLO 2×2×2 Round
+98225
+
+DUPLO 2×3 Curved
+2302
+
+DUPLO 2×4 Curved, Dbl.
+98223
+
+DUPLO 2×2×2 Curved Dbl.
+3664
+
+DUPLO 2×4×2 Rounded Ends
+4198
+
+DUPLO 2×2×1½ Curved
+11170
+
+DUPLO 2×3×2 Curved
+11344
+
+DUPLO 2×6×2 Curved w/ Cutout
+11197
+
+DUPLO 2×4×2 Curved
+31213
+
+DUPLO 2×3 Curved, Inv.
+98252
+
+DUPLO 2×4 Curved, Inv. Dbl.
+98224
+
+DUPLO 2×2×1½ Concave
+11169
+
+DUPLO 2×3×2 Concave
+2301
+
+DUPLO 2×4×2 Arch
+11198
+
+DUPLO 2×10×2 Arch
+51704
+Ball Tube
+These parts are typically found in DUPLO Education sets such as #45026 Tubes.
+
+
+DUPLO 51mm D. Ball
+41250
+Accessories and Nature
+
+DUPLO Camera
+24806
+
+DUPLO Suitcase
+20302
+
+DUPLO 4×3 Flag, Wavy
+31925
+
+DUPLO Pot
+31042
+
+DUPLO 2×2 Stool
+65273
+
+DUPLO 2×2×2 Chair
+12651
+
+DUPLO Brush
+24807
+
+DUPLO 2×4 Sink
+65112
+
+DUPLO Toilet Seat
+4912
+
+DUPLO Toilet
+4911
+
+DUPLO Bed
+4886
+
+DUPLO Flower
+6510
+
+DUPLO 3×3 Flower
+84195
+
+DUPLO 4×4 Flower
+15515
+
+DUPLO 4×4×1½ Bush
+84194
+
+DUPLO Frond
+3118N
+
+DUPLO Flame
+51703
+Other
+Other DUPLO parts that do not fit well anywhere else.
+
+
+DUPLO 2×2 Hinge Base
+13358
+
+DUPLO 2×3 Hinge Plate
+65084
+
+DUPLO 2×2×1½ Cabinet
+4890
+
+DUPLO 2×2×1½ Drawer
+4891
+
+DUPLO 2×4×5 Cabinet
+27395
+
+DUPLO 2×2×4 Support
+93353
+
+DUPLO 1×6 Fence
+12602
+
+DUPLO 2×2×2 Cone
+47408
+
+DUPLO 4×8 Vehicle Base
+24911
+
+DUPLO Train Track, Straight
+6377
+
+DUPLO Train Track, Curved
+6378
+
+DUPLO Straight Track w/ 4×8 Plate
+35965
+
+DUPLO 2×4 Tile, Wood
+65109
+
+DUPLO 2×2 w/ Rotation Snap
+22881
+
+DUPLO 4×4 Turntable
+92005
+
+DUPLO 2×4 Tile, Cushion
+65110
+
