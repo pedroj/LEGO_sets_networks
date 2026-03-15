@@ -1,4 +1,4 @@
-get_LEGO_set_parts <- function(set_num= "4489-1", api_key= "40c6692458e8b4c27074486ab114d6cc") {
+get_LEGO_set_parts <- function(set_num, api_key= "40c6692458e8b4c27074486ab114d6cc") {
     url <- paste0(
         "https://rebrickable.com/api/v3/lego/sets/",
         set_num,
