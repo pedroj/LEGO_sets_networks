@@ -1,74 +1,89 @@
-# LEGO shiny app
-# 
-# install.packages("remotes")
-# remotes::install_github("rpodcast/shinylego")
-# library(shinylego)
-# shinylego::run_app()
-library(shiny)
-library(DT)
-library(dplyr)
-library(here)
-library(shiny)
-library(DT)
-library(dplyr)
-library(readr)
-
 library(shiny)
 library(DT)
 library(dplyr)
 library(readr)
 library(here)
 
-
-# Fresh load EVERY time
+# Make sure lego_sets exists before this line
 sets <- lego_sets
+
 ui <- fluidPage(
     titlePanel("LEGO Explorer for individual parts"),
     sidebarLayout(
         sidebarPanel(
-            selectInput("part_num", "Part number:", choices = c("All", unique(sets$part_num))),
-            # Filter: filter(theme_name %in% input$theme)
-                                    selected = c("Star Wars", "Ideas"), multiple = TRUE),
-            sliderInput("year", "Year:", min = 1950, max = 2025, 
-                        value = c(2010, 2025), sep = "")
+            selectInput(
+                "part_num", "Part number:",
+                choices = c("All", sort(unique(sets$part_num))),
+                selected = "All"
+            ),
+            selectInput(
+                "theme", "Theme:",
+                choices = sort(unique(sets$theme_name)),
+#                selected = intersect(c("Star Wars", "Ideas"), unique(sets$theme_name)),
+                multiple = TRUE
+            ),
+            sliderInput(
+                "year", "Year:",
+                min = 1950, max = 2025,
+                value = c(2010, 2025), sep = ""
+            )
         ),
-        mainPanel(DTOutput("table"))
+        mainPanel(
+            DTOutput("table")
+        )
     )
+)
 
-server <- function(input, output) {
-    filtered_data <- shiny::reactive({
+server <- function(input, output, session) {
+    
+    filtered_data <- reactive({
         data <- sets
         
-        # Safe year filter
-        if ("year_numeric" %in% colnames(data)) {
-            data <- data %>% dplyr::filter(year_numeric >= input$year[1], 
-                                    year_numeric <= input$year[2])
+        if ("year_numeric" %in% names(data)) {
+            data <- data %>%
+                filter(year_numeric >= input$year[1],
+                       year_numeric <= input$year[2])
         }
         
-        # Safe theme filter
-        if ("theme_name" %in% colnames(data) && !"All" %in% input$theme) {
-            data <- data %>% dplyr::filter(theme_name %in% input$theme)
+        if ("theme_name" %in% names(data) &&
+            !is.null(input$theme) &&
+            length(input$theme) > 0) {
+            data <- data %>%
+                filter(theme_name %in% input$theme)
         }
         
-        # Always safe image mutate/select
-        data %>%
-            dplyr::mutate(
-                image = paste0(
-                    "<img src='", img_url, 
-                    "' height='120' width='120' ",
-                    "onerror=\"this.src='https://via.placeholder.com/120?text=No+Image'\">"
+        if ("part_num" %in% names(data) &&
+            !is.null(input$part_num) &&
+            input$part_num != "All") {
+            data <- data %>%
+                filter(part_num == input$part_num)
+        }
+        
+        if ("img_url" %in% names(data)) {
+            data <- data %>%
+                mutate(
+                    image = paste0(
+                        "<img src='", img_url,
+                        "' height='120' width='120' ",
+                        "onerror=\"this.src='https://via.placeholder.com/120?text=No+Image'\">"
+                    )
                 )
-            )  %>% 
-            # dplyr::mutate(image = paste0("<img src='https://images.rebrickable.com/sets/", 
-            #                       set_num, "/", year_numeric, "/", 
-            #                       set_num, ".jpg' height='100'></img>")) %>%
-            dplyr::select(any_of(c("image", "part_name", "set_num")), everything())
+        } else {
+            data <- data %>%
+                mutate(image = NA_character_)
+        }
+        
+        data %>%
+            select(any_of(c("image", "part_name", "set_num")), everything())
     })
     
     output$table <- renderDT({
-        datatable(filtered_data(), escape = FALSE, 
-                  options = list(pageLength = 20, scrollX = TRUE))
+        datatable(
+            filtered_data(),
+            escape = FALSE,
+            options = list(pageLength = 20, scrollX = TRUE)
+        )
     })
 }
-shinyApp(ui, server)
 
+shinyApp(ui, server)
