@@ -1,5 +1,6 @@
 # global.R
 library(dplyr)
+library(here)
 
 # Direct download from Rebrickable.
 urlthemes <- "https://cdn.rebrickable.com/media/downloads/themes.csv.gz"
@@ -24,7 +25,7 @@ lego_sets <- dwld(urlsets)
 themes <- dwld(urlthemes)
 
 
-lego_sets <- readRDS("lego_sets.rds")
+lego_sets <- readRDS(here::here("code/LEGO_parts_explorer/set_parts.rds"))
 set_parts <- readRDS("set_parts.rds")
 
 # ✔ Successfully deployed to <https://z2leso-pedro-jordano.shinyapps.io/lego-set-explorer/>
