@@ -1,0 +1,233 @@
+
+<style>
+  :root { --cell: 36px; }
+  body { margin: 0; }
+  #wrap { padding: 1rem 0.5rem; font-family: var(--font-sans, sans-serif); }
+  h2.sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+  #title-row { display:flex; align-items:center; gap:12px; margin-bottom:1rem; }
+  #title-row span { font-size:14px; color:var(--color-text-secondary); }
+  .badge { background:var(--color-background-info); color:var(--color-text-info); font-size:11px; padding:3px 8px; border-radius:var(--border-radius-md); font-weight:500; }
+  #legend { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:1rem; font-size:12px; color:var(--color-text-secondary); align-items:center; }
+  .leg-dot { width:12px; height:12px; border-radius:2px; display:inline-block; margin-right:4px; vertical-align:middle; }
+  #matrix-container { overflow-x:auto; }
+  table { border-collapse:collapse; }
+  td, th { width:var(--cell); height:var(--cell); text-align:center; vertical-align:middle; }
+  th { font-size:10px; font-weight:500; color:var(--color-text-secondary); padding:2px; }
+  .col-header { writing-mode:vertical-rl; transform:rotate(180deg); white-space:nowrap; font-size:10px; font-weight:500; color:var(--color-text-secondary); cursor:pointer; transition:color .15s; }
+  .col-header:hover { color:var(--color-text-primary); }
+  .row-label { text-align:right !important; white-space:nowrap; padding-right:8px !important; font-size:11px; color:var(--color-text-secondary); cursor:pointer; width:auto !important; min-width:110px; transition:color .15s; }
+  .row-label:hover { color:var(--color-text-primary); }
+  .cell { cursor:pointer; border-radius:3px; transition:transform .1s; position:relative; }
+  .cell:hover { transform:scale(1.25); z-index:10; }
+  .cell-self { background:var(--color-border-tertiary); }
+  .cell-on { }
+  .cell-off { background:transparent; }
+  #tooltip { position:fixed; background:var(--color-background-primary); border:0.5px solid var(--color-border-secondary); border-radius:var(--border-radius-md); padding:8px 12px; font-size:12px; color:var(--color-text-primary); pointer-events:none; display:none; z-index:100; max-width:220px; box-shadow:none; }
+  #tooltip strong { font-weight:500; display:block; margin-bottom:2px; }
+  .highlight-row td, .highlight-col { background:var(--color-background-secondary) !important; }
+  .highlight-row td.cell-on, td.cell-on.highlight-col { filter:brightness(1.1); }
+  #info-panel { margin-top:1rem; padding:0.75rem 1rem; border:0.5px solid var(--color-border-tertiary); border-radius:var(--border-radius-lg); font-size:13px; color:var(--color-text-secondary); background:var(--color-background-secondary); min-height:44px; }
+  #info-panel strong { color:var(--color-text-primary); font-weight:500; }
+  .conn-count { font-size:11px; margin-left:4px; color:var(--color-text-tertiary); }
+  #filter-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:0.75rem; align-items:center; }
+  .filter-btn { font-size:11px; padding:4px 10px; border-radius:var(--border-radius-md); border:0.5px solid var(--color-border-secondary); background:transparent; color:var(--color-text-secondary); cursor:pointer; transition:background .15s, color .15s; }
+  .filter-btn.active, .filter-btn:hover { background:var(--color-background-info); color:var(--color-text-info); border-color:transparent; }
+  #degree-bar { display:flex; gap:4px; align-items:flex-end; margin-top:0.75rem; height:48px; }
+  .d-bar { width:28px; background:var(--color-background-info); border-radius:2px 2px 0 0; position:relative; cursor:pointer; transition:opacity .15s; }
+  .d-bar:hover { opacity:0.8; }
+  .d-label { font-size:9px; text-align:center; color:var(--color-text-tertiary); margin-top:2px; }
+</style>
+<div id="wrap">
+  <h2 class="sr-only">LEGO 75192 Millennium Falcon — part adjacency matrix showing which part types connect to each other in the build</h2>
+  <div id="title-row">
+    <span><strong style="color:var(--color-text-primary);font-weight:500">LEGO 75192</strong> — Millennium Falcon (UCS)</span>
+    <span class="badge">7,541 pieces</span>
+    <span class="badge" style="background:var(--color-background-success);color:var(--color-text-success)">Star Wars</span>
+  </div>
+
+  <div id="filter-row">
+    <span style="font-size:11px;color:var(--color-text-tertiary)">Filter by category:</span>
+  </div>
+
+  <div id="legend">
+    <span><span class="leg-dot" style="background:#3B8BD4"></span>Structural</span>
+    <span><span class="leg-dot" style="background:#1D9E75"></span>Technic</span>
+    <span><span class="leg-dot" style="background:#E8593C"></span>Greebling</span>
+    <span><span class="leg-dot" style="background:#BA7517"></span>Panel / tile</span>
+    <span><span class="leg-dot" style="background:#7F77DD"></span>Special</span>
+    <span><span class="leg-dot" style="background:#888780"></span>SNOT / clip</span>
+  </div>
+
+  <div id="matrix-container"></div>
+  <div id="info-panel">Click a cell to see the connection, or hover a part name to highlight its row.</div>
+  <div style="margin-top:0.75rem">
+    <div style="font-size:11px;color:var(--color-text-tertiary);margin-bottom:4px">Connection degree (how many part types each connects to)</div>
+    <div id="degree-bar"></div>
+  </div>
+</div>
+<div id="tooltip"></div>
+
+<script>
+const PARTS = [
+  { id:'2x4 brick',       cat:'structural', color:'#3B8BD4', desc:'Core building block of the Falcon\'s frame and hull layers.' },
+  { id:'2x2 brick',       cat:'structural', color:'#3B8BD4', desc:'Used extensively for interior wall detailing and stud stacking.' },
+  { id:'1x2 brick',       cat:'structural', color:'#3B8BD4', desc:'Fills gaps and creates micro-detail in hull sections.' },
+  { id:'2x4 plate',       cat:'structural', color:'#378ADD', desc:'Horizontal layering for decks and floor plating.' },
+  { id:'1x2 plate',       cat:'structural', color:'#378ADD', desc:'Thin spacer plates connecting sub-assemblies.' },
+  { id:'Technic beam',    cat:'technic',    color:'#1D9E75', desc:'Forms the rigid internal skeleton. Connects via pins.' },
+  { id:'Technic pin',     cat:'technic',    color:'#0F6E56', desc:'Joins technic beams and allows controlled rotation.' },
+  { id:'Technic axle',    cat:'technic',    color:'#0F6E56', desc:'Transfers rotational force; used in gun turrets.' },
+  { id:'1x1 stud / tile', cat:'greebling',  color:'#E8593C', desc:'Single-stud tiles for surface greebling detail.' },
+  { id:'Round 1x1 plate', cat:'greebling',  color:'#D85A30', desc:'Circular detail pieces simulating hull rivets.' },
+  { id:'Sloped tile',     cat:'panel',      color:'#BA7517', desc:'Angled surfaces creating the Falcon\'s tapered hull shape.' },
+  { id:'Flat 2x4 tile',   cat:'panel',      color:'#EF9F27', desc:'Smooth flush panels on the top hull.' },
+  { id:'Radar dish',      cat:'special',    color:'#7F77DD', desc:'Iconic round dish. Attaches via a single Technic axle.' },
+  { id:'Minifig stand',   cat:'special',    color:'#534AB7', desc:'Planar stand for figures in the cockpit.' },
+  { id:'SNOT brick',      cat:'snot',       color:'#888780', desc:'Studs-Not-On-Top brick — allows sideways builds.' },
+  { id:'Clip / bar',      cat:'snot',       color:'#5F5E5A', desc:'Clip connections for canopy hinges and greebling arms.' },
+];
+
+const n = PARTS.length;
+
+const CONNECTIONS = {
+  '2x4 brick':       ['2x2 brick','1x2 brick','2x4 plate','1x2 plate','SNOT brick','1x1 stud / tile','Flat 2x4 tile'],
+  '2x2 brick':       ['2x4 brick','1x2 brick','2x4 plate','1x2 plate','SNOT brick','Round 1x1 plate'],
+  '1x2 brick':       ['2x4 brick','2x2 brick','2x4 plate','1x2 plate','SNOT brick','1x1 stud / tile'],
+  '2x4 plate':       ['2x4 brick','2x2 brick','1x2 brick','1x2 plate','Sloped tile','Flat 2x4 tile','SNOT brick'],
+  '1x2 plate':       ['2x4 brick','2x2 brick','1x2 brick','2x4 plate','SNOT brick','1x1 stud / tile','Round 1x1 plate'],
+  'Technic beam':    ['Technic pin','Technic axle','2x4 brick','2x2 brick','Radar dish'],
+  'Technic pin':     ['Technic beam','Technic axle','SNOT brick','Clip / bar'],
+  'Technic axle':    ['Technic beam','Technic pin','Radar dish'],
+  '1x1 stud / tile': ['2x4 brick','1x2 brick','1x2 plate','SNOT brick'],
+  'Round 1x1 plate': ['2x2 brick','1x2 plate','SNOT brick'],
+  'Sloped tile':     ['2x4 plate','1x2 plate','SNOT brick','Flat 2x4 tile'],
+  'Flat 2x4 tile':   ['2x4 brick','2x4 plate','Sloped tile','SNOT brick'],
+  'Radar dish':      ['Technic beam','Technic axle'],
+  'Minifig stand':   ['2x4 plate','1x2 plate','SNOT brick'],
+  'SNOT brick':      ['2x4 brick','2x2 brick','1x2 brick','2x4 plate','1x2 plate','Technic pin','1x1 stud / tile','Round 1x1 plate','Sloped tile','Flat 2x4 tile','Minifig stand','Clip / bar'],
+  'Clip / bar':      ['Technic pin','SNOT brick'],
+};
+
+function isConnected(a,b) {
+  if (a===b) return null;
+  return (CONNECTIONS[a] && CONNECTIONS[a].includes(b)) ||
+         (CONNECTIONS[b] && CONNECTIONS[b].includes(a));
+}
+
+function hexToRgb(hex) {
+  const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
+  return [r,g,b];
+}
+
+function blendColor(ca,cb) {
+  const ra=hexToRgb(ca),rb=hexToRgb(cb);
+  return `rgb(${Math.round((ra[0]+rb[0])/2)},${Math.round((ra[1]+rb[1])/2)},${Math.round((ra[2]+rb[2])/2)})`;
+}
+
+const cats = [...new Set(PARTS.map(p=>p.cat))];
+let activeFilter = null;
+let highlightRow = null;
+let highlightCol = null;
+
+const filterRow = document.getElementById('filter-row');
+cats.forEach(cat => {
+  const btn = document.createElement('button');
+  btn.className = 'filter-btn';
+  btn.textContent = cat;
+  btn.dataset.cat = cat;
+  btn.onclick = () => {
+    if (activeFilter === cat) { activeFilter = null; btn.classList.remove('active'); }
+    else {
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      activeFilter = cat; btn.classList.add('active');
+    }
+    renderMatrix();
+  };
+  filterRow.appendChild(btn);
+});
+
+function renderMatrix() {
+  const visible = activeFilter ? PARTS.filter(p=>p.cat===activeFilter || highlightRow===p.id) : PARTS;
+  const ids = visible.map(p=>p.id);
+  const mc = document.getElementById('matrix-container');
+
+  let html = '<table>';
+  html += '<thead><tr><th></th>';
+  ids.forEach(id => {
+    const p = PARTS.find(x=>x.id===id);
+    html += `<th><div class="col-header" style="color:${p.color}" data-part="${id}">${id}</div></th>`;
+  });
+  html += '</tr></thead><tbody>';
+
+  ids.forEach(rowId => {
+    const rp = PARTS.find(x=>x.id===rowId);
+    const rHL = highlightRow===rowId ? ' highlight-row':'';
+    html += `<tr class="matrix-row${rHL}" data-row="${rowId}"><td class="row-label" style="color:${rp.color}" data-part="${rowId}">${rowId}</td>`;
+    ids.forEach(colId => {
+      const cp = PARTS.find(x=>x.id===colId);
+      const conn = isConnected(rowId,colId);
+      if (conn === null) {
+        html += `<td><div class="cell cell-self" style="width:var(--cell);height:var(--cell);box-sizing:border-box"></div></td>`;
+      } else if (conn) {
+        const bg = blendColor(rp.color,cp.color);
+        html += `<td class="${highlightCol===colId?'highlight-col':''}"><div class="cell cell-on" style="width:var(--cell);height:var(--cell);background:${bg};border-radius:3px;box-sizing:border-box" data-row="${rowId}" data-col="${colId}"></div></td>`;
+      } else {
+        html += `<td class="${highlightCol===colId?'highlight-col':''}"><div class="cell cell-off" style="width:var(--cell);height:var(--cell);box-sizing:border-box" data-row="${rowId}" data-col="${colId}"></div></td>`;
+      }
+    });
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  mc.innerHTML = html;
+
+  mc.querySelectorAll('.cell-on,.cell-off').forEach(cell => {
+    cell.addEventListener('click', e => onCellClick(cell.dataset.row, cell.dataset.col, e));
+    cell.addEventListener('mousemove', e => onCellHover(cell.dataset.row, cell.dataset.col, cell.classList.contains('cell-on'), e));
+    cell.addEventListener('mouseleave', hideTooltip);
+  });
+  mc.querySelectorAll('[data-part]').forEach(el => {
+    el.addEventListener('mouseenter', () => { highlightRow = el.dataset.part; highlightCol = el.dataset.part; renderMatrix(); });
+    el.addEventListener('mouseleave', () => { highlightRow=null; highlightCol=null; renderMatrix(); });
+  });
+
+  renderDegreeBar(ids);
+}
+
+function onCellClick(row,col,e) {
+  const conn = isConnected(row,col);
+  const rp = PARTS.find(x=>x.id===row);
+  const cp = PARTS.find(x=>x.id===col);
+  const panel = document.getElementById('info-panel');
+  if (conn) {
+    panel.innerHTML = `<strong style="color:${blendColor(rp.color,cp.color)}">${row} ↔ ${col}</strong> These parts connect directly in the build. ${rp.desc} ${cp.desc}`;
+  } else {
+    panel.innerHTML = `<strong>${row}</strong> and <strong>${col}</strong> do not share a direct connection in this set.`;
+  }
+}
+
+function onCellHover(row,col,connected,e) {
+  const tt = document.getElementById('tooltip');
+  tt.style.display = 'block';
+  tt.style.left = (e.clientX+14)+'px';
+  tt.style.top = (e.clientY-10)+'px';
+  const state = connected ? '✓ Connected' : '✗ Not connected';
+  const color = connected ? 'var(--color-text-success)' : 'var(--color-text-secondary)';
+  tt.innerHTML = `<strong>${row}</strong><span style="font-size:11px;color:${color}">${state}</span><span style="font-size:11px;color:var(--color-text-tertiary)">${col}</span>`;
+}
+
+function hideTooltip() { document.getElementById('tooltip').style.display='none'; }
+
+function renderDegreeBar(ids) {
+  const bar = document.getElementById('degree-bar');
+  const degrees = ids.map(id => {
+    return { id, deg: ids.filter(other => isConnected(id,other)).length, color: PARTS.find(p=>p.id===id).color };
+  });
+  const maxDeg = Math.max(...degrees.map(d=>d.deg));
+  bar.innerHTML = degrees.map(d => {
+    const h = Math.max(4, Math.round(44*(d.deg/maxDeg)));
+    return `<div style="display:flex;flex-direction:column;align-items:center"><div class="d-bar" style="height:${h}px;background:${d.color};opacity:0.8" title="${d.id}: ${d.deg} connections"></div><div class="d-label">${d.deg}</div></div>`;
+  }).join('');
+}
+
+renderMatrix();
+</script>
