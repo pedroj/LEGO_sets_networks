@@ -1,0 +1,172 @@
+
+<style>
+#w{padding:0.75rem 0.5rem;font-family:var(--font-sans,sans-serif)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+#hdr{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:0.8rem}
+.bx{font-size:11px;padding:2px 9px;border-radius:var(--border-radius-md);font-weight:500}
+.bi{background:#E6F1FB;color:#0C447C}
+.bg{background:#EAF3DE;color:#27500A}
+.ba{background:#FAEEDA;color:#633806}
+#legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--color-text-secondary);margin-bottom:0.65rem;align-items:center}
+.ld{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:4px;vertical-align:middle}
+#frow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.7rem;align-items:center}
+.fb{font-size:11px;padding:3px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);cursor:pointer;transition:background .12s}
+.fb:hover,.fb.on{background:#E6F1FB;color:#0C447C;border-color:transparent}
+#mc{overflow:auto}
+table{border-collapse:collapse}
+td,th{padding:0}
+.rl{font-size:9.5px;white-space:nowrap;padding-right:6px;text-align:right;cursor:pointer;min-width:118px;vertical-align:middle;transition:color .1s}
+.cl{writing-mode:vertical-rl;transform:rotate(180deg);font-size:9.5px;white-space:nowrap;cursor:pointer;padding-bottom:4px;transition:color .1s}
+.cell{width:16px;height:16px;border-radius:3px;cursor:pointer;box-sizing:border-box;transition:transform .1s}
+.cell:hover{transform:scale(1.35);z-index:10;position:relative}
+.self{background:var(--color-border-tertiary)}
+#tip{position:fixed;background:var(--color-background-primary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-lg);padding:8px 12px;font-size:11px;pointer-events:none;display:none;z-index:200;max-width:210px;line-height:1.5}
+#tip b{font-weight:500;display:block;margin-bottom:2px}
+#info{margin-top:0.75rem;padding:0.65rem 1rem;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);font-size:12px;color:var(--color-text-secondary);background:var(--color-background-secondary);min-height:44px;line-height:1.6}
+#info strong{color:var(--color-text-primary);font-weight:500}
+#stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:0.8rem}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.6rem 0.75rem;text-align:center}
+.stat-n{font-size:20px;font-weight:500;color:var(--color-text-primary)}
+.stat-l{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+#degbar{display:flex;gap:3px;align-items:flex-end;height:52px;margin-top:0.7rem;overflow:hidden}
+.db{border-radius:2px 2px 0 0;min-width:10px;flex:1;opacity:.85;transition:opacity .12s;cursor:pointer}
+.db:hover{opacity:1}
+.dlb{font-size:8.5px;text-align:center;color:var(--color-text-tertiary)}
+</style>
+<h2 class="sr-only">LEGO 4489-1 AT-AT Mini adjacency matrix: 30 part types, 39 connections, parsed from the MPD file</h2>
+<div id="w">
+
+<div id="hdr">
+  <span style="font-size:13px;font-weight:500;color:var(--color-text-primary)">LEGO 4489 — AT-AT Mini</span>
+  <span class="bx bi">30 part types</span>
+  <span class="bx bi">39 connections</span>
+  <span class="bx bg">Star Wars · 2003</span>
+  <span class="bx ba">MPD parsed</span>
+</div>
+
+<div id="stats">
+  <div class="stat"><div class="stat-n">30</div><div class="stat-l">unique parts</div></div>
+  <div class="stat"><div class="stat-n">39</div><div class="stat-l">connections</div></div>
+  <div class="stat"><div class="stat-n">3</div><div class="stat-l">subfiles</div></div>
+  <div class="stat"><div class="stat-n" id="iso-n">—</div><div class="stat-l">isolated parts</div></div>
+</div>
+
+<div id="legend">
+  <span><span class="ld" style="background:#378ADD"></span>Plate</span>
+  <span><span class="ld" style="background:#1D9E75"></span>Technic</span>
+  <span><span class="ld" style="background:#BA7517"></span>Bar / Clip</span>
+  <span><span class="ld" style="background:#D85A30"></span>Special</span>
+  <span><span class="ld" style="background:#7F77DD"></span>Slope</span>
+  <span><span class="ld" style="background:#2AACB8"></span>SNOT</span>
+  <span><span class="ld" style="background:#888780"></span>Tile</span>
+  <span><span class="ld" style="background:#5B9BD5"></span>Brick</span>
+</div>
+
+<div id="frow"><span style="font-size:11px;color:var(--color-text-tertiary)">Filter:</span></div>
+<div id="mc"></div>
+<div id="info">Click any colored cell to inspect the connection, or hover a part label to highlight its row and column.</div>
+<div style="font-size:10px;color:var(--color-text-tertiary);margin-top:0.65rem">Degree — number of connections per part</div>
+<div id="degbar"></div>
+</div>
+<div id="tip"></div>
+
+<script>
+const D={
+parts:["2335.dat","2412b.dat","2540.dat","30000.dat","3003.dat","3020.dat","3023.dat","3031.dat","30365.dat","30552.dat","30553.dat","30554a.dat","30602.dat","32062.dat","32198.dat","3678a.dat","3700.dat","3795.dat","4032a.dat","4070.dat","4081b.dat","43093.dat","44567.dat","4592.dat","4593.dat","4740.dat","6141.dat","6564.dat","6565.dat","75535.dat"],
+names:["Flag 2x2 (angled)","Radiator Grille 1x2","Bar 1x4","Head Radar Dish","2x2 Brick","2x4 Plate","1x2 Plate","4x4 Plate","2x4 Plate (thick)","Technic Axle Conn.","Hinge Cylinder 1x2","Technic Elbow","Modified 1x1 Round","Technic Axle ×2","Technic Angle Beam","2x2 Turntable Base","Technic Brick 1x2","2x6 Plate","2x2 Round Plate","SNOT Brick 1x1","Plate w/Clip (tall)","Technic Axle Pin","Modified Plate (pin)","Bar w/Light Cover","Bar Holder w/Clip","Dish 2x2","1x1 Round Plate","Wedge Plate (right)","Wedge Plate (left)","Hinge 1x2 Locking"],
+cats:["tile","snot","bar","special","brick","plate","plate","plate","plate","technic","special","technic","special","technic","technic","special","technic","plate","plate","snot","bar","technic","special","bar","bar","special","tile","slope","slope","special"],
+descs:["Antenna flag on the AT-AT body.","Grille tile on head surface detail.","Bar piece linking body to leg mechanism.","Radar dish on top of the head submodel.","Core 2x2 brick forming the body blocks.","2x4 plate layering the upper body deck.","1x2 plate connecting body and head sections.","4x4 base plate forming the bottom of the body.","Thick plate forming the upper leg sections.","Axle connector joining the four leg assemblies.","Hinge cylinder giving hip rotation to each leg.","Technic elbow — the angled leg joint piece, ×8 (most used part).","Round modified plate for panel or sensor detail.","Notched axle connecting mid-leg segments.","Technic angle beam forming the upper leg strut.","Turntable base enabling neck/head rotation.","Technic 1×2 brick in the head for axle pin seating.","2×6 plate spanning the full body width.","2×2 round plate at the leg knee joints.","SNOT brick allowing sideways detailing on the head.","Plate with tall clip used as a sensor arm.","Technic axle pin connecting the knee joint.","Modified plate with pin for body-to-leg joint.","Bar with light cover — chin gun barrel (×4).","Bar holder with clip — chin gun mount (×4).","Dish 2×2 — head side sensor dish (×2).","1×1 round plate as eye or sensor rivet detail.","2×2 wedge plate right — lower leg foot flare.","2×2 wedge plate left — lower leg foot flare.","Locking hinge giving the ankle flex joint."],
+matrix:[[0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0],[1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,1,1,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],[0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,1,0,0,0],[0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],[0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+};
+
+const CC={plate:'#378ADD',technic:'#1D9E75',bar:'#BA7517',special:'#D85A30',slope:'#7F77DD',snot:'#2AACB8',tile:'#888780',brick:'#5B9BD5',other:'#999'};
+const n=D.parts.length;
+let af=null,hl=null;
+
+function blend(a,b){
+  const hr=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+  const ra=hr(a),rb=hr(b);
+  return`rgb(${Math.round((ra[0]+rb[0])/2)},${Math.round((ra[1]+rb[1])/2)},${Math.round((ra[2]+rb[2])/2)})`;
+}
+function deg(i){return D.matrix[i].reduce((s,v)=>s+v,0);}
+
+const isolated=D.parts.filter((_,i)=>deg(i)===0).length;
+document.getElementById('iso-n').textContent=isolated;
+
+const cats=[...new Set(D.cats)];
+const fr=document.getElementById('frow');
+const ab=document.createElement('button');ab.className='fb on';ab.textContent='All';
+ab.onclick=()=>{af=null;document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));ab.classList.add('on');render();};
+fr.appendChild(ab);
+cats.sort().forEach(c=>{
+  const b=document.createElement('button');b.className='fb';b.textContent=c;
+  b.style.borderLeft=`3px solid ${CC[c]||'#888'}`;
+  b.onclick=()=>{af=(af===c?null:c);document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on'));(af?b:ab).classList.add('on');render();};
+  fr.appendChild(b);
+});
+
+function render(){
+  const vis=af?D.parts.map((_,i)=>D.cats[i]===af?i:null).filter(i=>i!==null):D.parts.map((_,i)=>i);
+  const mc=document.getElementById('mc');
+  let h='<table><thead><tr><th style="min-width:118px"></th>';
+  vis.forEach(i=>{
+    h+=`<th><div class="cl" style="color:${CC[D.cats[i]]||'#888'}" data-i="${i}">${D.names[i]}</div></th>`;
+  });
+  h+='</tr></thead><tbody>';
+  vis.forEach(ri=>{
+    const rc=CC[D.cats[ri]]||'#888';
+    const hlbg=hl===ri?'style="background:var(--color-background-secondary)"':'';
+    h+=`<tr ${hlbg}><td class="rl" style="color:${rc}" data-i="${ri}">${D.names[ri]}</td>`;
+    vis.forEach(ci=>{
+      if(ri===ci){h+=`<td><div class="cell self"></div></td>`;return;}
+      const v=D.matrix[ri][ci];
+      const cc=CC[D.cats[ci]]||'#888';
+      const bg=v?`background:${blend(rc,cc)}`:'background:transparent';
+      const hlout=(hl===ci&&v)?'outline:1px solid var(--color-border-secondary);':'';
+      h+=`<td><div class="cell" style="${bg};${hlout}" data-r="${ri}" data-c="${ci}"></div></td>`;
+    });
+    h+='</tr>';
+  });
+  h+='</tbody></table>';
+  mc.innerHTML=h;
+  mc.querySelectorAll('[data-r]').forEach(el=>{
+    el.addEventListener('click',()=>onCell(+el.dataset.r,+el.dataset.c));
+    el.addEventListener('mousemove',e=>onHov(+el.dataset.r,+el.dataset.c,!!D.matrix[+el.dataset.r][+el.dataset.c],e));
+    el.addEventListener('mouseleave',()=>document.getElementById('tip').style.display='none');
+  });
+  mc.querySelectorAll('[data-i]').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{hl=+el.dataset.i;render();});
+    el.addEventListener('mouseleave',()=>{hl=null;render();});
+  });
+  renderDeg(vis);
+}
+
+function onCell(r,c){
+  const v=D.matrix[r][c];
+  const panel=document.getElementById('info');
+  const rn=D.names[r],cn=D.names[c];
+  const rc=CC[D.cats[r]],cc=CC[D.cats[c]];
+  if(v) panel.innerHTML=`<strong style="color:${blend(rc,cc)}">${rn} ↔ ${cn}</strong><br>${D.descs[r]}<br><span style="color:var(--color-text-tertiary)">↑ ${D.cats[r]} · ${D.cats[c]} ↓</span><br>${D.descs[c]}`;
+  else panel.innerHTML=`<strong>${rn}</strong> and <strong>${cn}</strong> — no direct connection detected in this set's build steps.`;
+}
+
+function onHov(r,c,conn,e){
+  const t=document.getElementById('tip');
+  const rn=D.names[r],cn=D.names[c];
+  const st=conn?`<span style="color:var(--color-text-success)">✓ connected</span>`:`<span style="color:var(--color-text-tertiary)">✗ not connected</span>`;
+  t.innerHTML=`<b>${rn}</b>${cn}<br>${st}`;
+  t.style.display='block';t.style.left=(e.clientX+14)+'px';t.style.top=(e.clientY-10)+'px';
+}
+
+function renderDeg(vis){
+  const bar=document.getElementById('degbar');
+  const ds=vis.map(i=>({i,d:deg(i),c:CC[D.cats[i]]||'#888',n:D.names[i]}));
+  const mx=Math.max(...ds.map(d=>d.d),1);
+  bar.innerHTML=ds.map(d=>{
+    const h=Math.max(3,Math.round(52*(d.d/mx)));
+    return`<div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:8px"><div class="db" style="height:${h}px;background:${d.c}" title="${d.n}: ${d.d} connections" onclick="document.getElementById('info').innerHTML='<strong>${d.n}</strong> — degree ${d.d}. ${D.descs[d.i]}'"></div><div class="dlb">${d.d}</div></div>`;
+  }).join('');
+}
+
+render();
+</script>

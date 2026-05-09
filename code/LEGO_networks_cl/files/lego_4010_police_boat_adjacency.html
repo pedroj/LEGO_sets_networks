@@ -1,0 +1,159 @@
+
+<style>
+#wrap{padding:0.75rem 0.5rem;font-family:var(--font-sans,sans-serif)}
+h2.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+#hdr{display:flex;align-items:center;gap:10px;margin-bottom:0.75rem;flex-wrap:wrap}
+.badge{background:var(--color-background-info);color:var(--color-text-info);font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500}
+.badge-g{background:var(--color-background-success);color:var(--color-text-success)}
+#legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--color-text-secondary);margin-bottom:0.6rem;align-items:center}
+.ld{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:3px;vertical-align:middle}
+#filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.7rem;align-items:center}
+.fb{font-size:11px;padding:3px 9px;border-radius:6px;border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);cursor:pointer;transition:background .15s,color .15s}
+.fb.on{background:var(--color-background-info);color:var(--color-text-info);border-color:transparent}
+#mc{overflow:auto;max-height:540px}
+table{border-collapse:collapse}
+td,th{padding:0}
+.rlab{font-size:9.5px;white-space:nowrap;padding-right:5px;text-align:right;cursor:pointer;transition:color .12s;min-width:90px;vertical-align:middle}
+.clab{writing-mode:vertical-rl;transform:rotate(180deg);font-size:9.5px;white-space:nowrap;cursor:pointer;transition:color .12s;padding-bottom:3px}
+.cell{width:13px;height:13px;border-radius:2px;transition:transform .12s;cursor:pointer;box-sizing:border-box}
+.cell:hover{transform:scale(1.4);z-index:10;position:relative}
+.self{background:var(--color-border-tertiary)}
+.empty{background:transparent}
+#tip{position:fixed;background:var(--color-background-primary);border:0.5px solid var(--color-border-secondary);border-radius:8px;padding:7px 11px;font-size:11px;pointer-events:none;display:none;z-index:200;max-width:200px}
+#tip b{font-weight:500;display:block;margin-bottom:1px}
+#info{margin-top:0.75rem;padding:0.65rem 0.9rem;border:0.5px solid var(--color-border-tertiary);border-radius:10px;font-size:12px;color:var(--color-text-secondary);background:var(--color-background-secondary);min-height:40px}
+#info strong{color:var(--color-text-primary);font-weight:500}
+#degbar{display:flex;gap:2px;align-items:flex-end;height:48px;margin-top:0.7rem;flex-wrap:nowrap;overflow:hidden}
+.db{border-radius:2px 2px 0 0;min-width:9px;flex:1;cursor:pointer;transition:opacity .15s}
+.db:hover{opacity:.75}
+.dlb{font-size:8px;text-align:center;color:var(--color-text-tertiary);overflow:hidden}
+</style>
+<div id="wrap">
+<h2 class="sr-only">LEGO 4010 Police Rescue Boat — adjacency matrix of 46 part types parsed from the MPD file</h2>
+<div id="hdr">
+  <span style="font-size:13px;font-weight:500;color:var(--color-text-primary)">LEGO 4010 — Police Rescue Boat</span>
+  <span class="badge">46 part types</span>
+  <span class="badge">175 connections</span>
+  <span class="badge badge-g">MPD parsed</span>
+</div>
+<div id="legend">
+  <span><span class="ld" style="background:#378ADD"></span>Brick</span>
+  <span><span class="ld" style="background:#1D9E75"></span>Plate</span>
+  <span><span class="ld" style="background:#BA7517"></span>Slope</span>
+  <span><span class="ld" style="background:#7F77DD"></span>Minifig</span>
+  <span><span class="ld" style="background:#D85A30"></span>Special</span>
+  <span><span class="ld" style="background:#888780"></span>Tile / Round</span>
+</div>
+<div id="filters"><span style="font-size:11px;color:var(--color-text-tertiary)">Show:</span></div>
+<div id="mc"></div>
+<div id="info">Click a cell to inspect the connection, or hover a part label to highlight its row.</div>
+<div style="font-size:10px;color:var(--color-text-tertiary);margin-top:0.6rem">Degree (connections per part)</div>
+<div id="degbar"></div>
+</div>
+<div id="tip"></div>
+
+<script>
+const D={
+ parts:["2348a.dat","2349a.dat","3002.dat","3003.dat","3004.dat","3005.dat","3021.dat","3023.dat","3024.dat","3040b.dat","3070b.dat","3297.dat","3460.dat","3624.dat","3626bp01.dat","3665.dat","3794a.dat","3795.dat","3815.dat","3816.dat","3817.dat","3818.dat","3819.dat","3820.dat","3829c01.dat","3838.dat","3842a.dat","3939.dat","3958.dat","3962a.dat","4073.dat","4079.dat","4286.dat","4289.dat","4349.dat","4599a.dat","4623.dat","4625.dat","4740.dat","4862.dat","4863.dat","4873.dat","6141.dat","73090b.dat","973p1f.dat","973p1g.dat"],
+ names:["2x2 Slope Corner","1x4 Slope Corner","2x3 Brick","2x2 Brick","1x2 Brick","1x1 Brick","2x3 Plate","1x2 Plate","1x1 Plate","1x2 Slope 45°","1x1 Tile","3x4 Slope","1x8 Plate","Minifig Hand","Minifig Head","1x2 Inv. Slope","1x2 Jumper Plate","2x6 Plate","Minifig Leg R","Minifig Leg L","Minifig Hip","Minifig Arm R","Minifig Arm L","Minifig Hand B","Steering Wheel","Flippers","Life Preserver","2x4 Arch","4x4 Plate","Torch","1x1 Round Plate","Seat 2x2","1x3 Slope","1x1 Brick Stud","Boat Bow Stud","Tap 1x1","1x2 Rail Plate","4x4 Hinge Plate","Dish 2x2","1x2 Brick Knob","1x2 Slope Curved","Lattice Fence","1x1 Round Plate B","Boat Hull","Torso Police","Torso Civilian"],
+ cats:["slope","slope","brick","brick","brick","brick","plate","plate","plate","slope","tile","slope","plate","minifig","minifig","slope","plate","plate","minifig","minifig","minifig","minifig","minifig","minifig","special","special","special","brick","plate","special","tile","special","slope","tile","plate","special","plate","plate","special","brick","slope","special","tile","special","minifig","minifig"],
+ matrix:[[0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,1,0,0,1,0,1,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,1,0,0,1,0,0,0,1,1,0,0,0,0,1,1,0,0,0],[0,0,0,0,1,0,0,0,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,1,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0],[0,0,0,0,1,1,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,1,1,0,0,1,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0,1,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,0,1,1,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,0,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,0,1,1,0,0,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,1,1,0,0,0],[0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,1,1,0,0,0],[0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0],[0,0,0,0,1,1,0,0,1,1,0,1,1,0,0,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0,1,0,0,1,1,1,0,0,1,0,0,0,1,0,0,0],[0,0,0,0,1,1,0,0,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+};
+
+const CAT_COLORS={brick:'#378ADD',plate:'#1D9E75',slope:'#BA7517',minifig:'#7F77DD',special:'#D85A30',tile:'#888780',other:'#888780'};
+const n=D.parts.length;
+let activeFilter=null, hlIdx=null;
+
+function blend(a,b){
+ const h2r=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+ const ra=h2r(a),rb=h2r(b);
+ return `rgb(${Math.round((ra[0]+rb[0])/2)},${Math.round((ra[1]+rb[1])/2)},${Math.round((ra[2]+rb[2])/2)})`;
+}
+
+function degree(i){return D.matrix[i].reduce((s,v)=>s+v,0);}
+
+const cats=[...new Set(D.cats)];
+const frow=document.getElementById('filters');
+const allBtn=document.createElement('button');
+allBtn.className='fb on'; allBtn.textContent='All';
+allBtn.onclick=()=>{activeFilter=null; document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on')); allBtn.classList.add('on'); render();};
+frow.appendChild(allBtn);
+cats.forEach(c=>{
+ const b=document.createElement('button');
+ b.className='fb'; b.textContent=c;
+ b.style.borderLeft=`3px solid ${CAT_COLORS[c]||'#888'}`;
+ b.onclick=()=>{
+  activeFilter=(activeFilter===c?null:c);
+  document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on'));
+  if(activeFilter){b.classList.add('on');}else{allBtn.classList.add('on');}
+  render();
+ };
+ frow.appendChild(b);
+});
+
+function render(){
+ const vis=activeFilter?D.parts.map((_,i)=>D.cats[i]===activeFilter?i:null).filter(i=>i!==null):D.parts.map((_,i)=>i);
+ const mc=document.getElementById('mc');
+ let h='<table><thead><tr><th style="min-width:90px"></th>';
+ vis.forEach(i=>{
+  const c=CAT_COLORS[D.cats[i]]||'#888';
+  h+=`<th><div class="clab" style="color:${c}" data-i="${i}">${D.names[i]}</div></th>`;
+ });
+ h+='</tr></thead><tbody>';
+ vis.forEach(ri=>{
+  const rc=CAT_COLORS[D.cats[ri]]||'#888';
+  const hl=hlIdx===ri?' style="background:var(--color-background-secondary)"':'';
+  h+=`<tr${hl}><td class="rlab" style="color:${rc}" data-i="${ri}">${D.names[ri]}</td>`;
+  vis.forEach(ci=>{
+   if(ri===ci){h+=`<td><div class="cell self"></div></td>`;return;}
+   const v=D.matrix[ri][ci];
+   const cci=CAT_COLORS[D.cats[ci]]||'#888';
+   const bg=v?blend(rc,cci):'transparent';
+   const cls=v?'cell':'cell empty';
+   const hlcol=(hlIdx===ci&&v)?'outline:1px solid var(--color-border-secondary);':'';
+   h+=`<td><div class="${cls}" style="background:${bg};${hlcol}" data-r="${ri}" data-c="${ci}"></div></td>`;
+  });
+  h+='</tr>';
+ });
+ h+='</tbody></table>';
+ mc.innerHTML=h;
+ mc.querySelectorAll('.cell,.empty').forEach(el=>{
+  el.addEventListener('click',()=>onCell(+el.dataset.r,+el.dataset.c));
+  el.addEventListener('mousemove',e=>onHover(+el.dataset.r,+el.dataset.c,!!D.matrix[+el.dataset.r][+el.dataset.c],e));
+  el.addEventListener('mouseleave',()=>{document.getElementById('tip').style.display='none';});
+ });
+ mc.querySelectorAll('[data-i]').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{hlIdx=+el.dataset.i;render();});
+  el.addEventListener('mouseleave',()=>{hlIdx=null;render();});
+ });
+ renderDeg(vis);
+}
+
+function onCell(r,c){
+ const v=D.matrix[r][c];
+ const panel=document.getElementById('info');
+ const rn=D.names[r],cn=D.names[c];
+ if(v) panel.innerHTML=`<strong style="color:${blend(CAT_COLORS[D.cats[r]],CAT_COLORS[D.cats[c]])}">${rn} ↔ ${cn}</strong> Direct connection detected — these parts appear in the same build step or within 80 LDU of each other in the MPD file. Category: ${D.cats[r]} meets ${D.cats[c]}.`;
+ else panel.innerHTML=`<strong>${rn}</strong> and <strong>${cn}</strong> have no detected connection in this set's build sequence.`;
+}
+
+function onHover(r,c,conn,e){
+ const t=document.getElementById('tip');
+ const rn=D.names[r],cn=D.names[c];
+ const st=conn?`<span style="color:var(--color-text-success)">✓ connected</span>`:`<span style="color:var(--color-text-tertiary)">✗ not connected</span>`;
+ t.innerHTML=`<b>${rn}</b>${cn}<br>${st}`;
+ t.style.display='block';t.style.left=(e.clientX+14)+'px';t.style.top=(e.clientY-10)+'px';
+}
+
+function renderDeg(vis){
+ const bar=document.getElementById('degbar');
+ const degs=vis.map(i=>({i,d:degree(i),c:CAT_COLORS[D.cats[i]]||'#888',n:D.names[i]}));
+ const mx=Math.max(...degs.map(d=>d.d),1);
+ bar.innerHTML=degs.map(d=>{
+  const h=Math.max(3,Math.round(44*(d.d/mx)));
+  return `<div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:8px"><div class="db" style="height:${h}px;background:${d.c}" title="${d.n}: ${d.d}" onclick="document.getElementById('info').innerHTML='<strong>${d.n}</strong> — degree ${d.d}: connects to '+D.matrix[${d.i}].map((v,j)=>v?'<em>'+D.names[j]+'</em>':'').filter(Boolean).join(', ')+'.'"></div><div class="dlb">${d.d}</div></div>`;
+ }).join('');
+}
+
+render();
+</script>
