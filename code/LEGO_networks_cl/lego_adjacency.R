@@ -16,7 +16,7 @@ library(ggplot2)
 library(reshape2)
 library(dplyr)
 library(scales)   # for label_comma() in the degree chart
-
+library(here)
 
 # ============================================================
 # 1. PARSE THE MPD / LDR FILE
@@ -288,7 +288,8 @@ build_adjacency <- function(all_steps,
 # 5. RUN THE PIPELINE
 # ============================================================
 
-mpd_path  <- "75144_-_Snowspeeder.mpd"   # ← update path as needed
+mpd_path  <- here::here("data/models/75144_-_Snowspeeder.mpd")
+# ← update path as needed
 all_steps <- parse_mpd(mpd_path)
 
 # High-level parse diagnostics
@@ -385,8 +386,8 @@ p_matrix <- ggplot(adj_long,
   )
 
 print(p_matrix)
-# ggsave("75144_adjacency_matrix.png", p_matrix,
-#         width = 14, height = 13, dpi = 180)
+ggsave("75144_adjacency_matrix.png", p_matrix,
+        width = 14, height = 13, dpi = 180)
 
 
 # ============================================================
@@ -427,8 +428,8 @@ p_degree <- ggplot(deg_df, aes(x = Part, y = Degree, fill = Cat)) +
   )
 
 print(p_degree)
-# ggsave("75144_degree_distribution.png", p_degree,
-#         width = 14, height = 6, dpi = 180)
+ggsave("75144_degree_distribution.png", p_degree,
+         width = 14, height = 6, dpi = 180)
 
 
 # ============================================================
@@ -596,9 +597,9 @@ adj_long_full <- melt(adj_sorted,
                        value.name = "Connected")
 
 edges_df <- adj_long_full %>%
-  filter(Connected == 1,
+  dplyr::filter(Connected == 1,
          as.integer(Part_A) < as.integer(Part_B)) %>%
-  transmute(
+  dplyr::transmute(
     Part_A = as.character(Part_A),
     Part_B = as.character(Part_B),
     Cat_A  = PART_CATS[sorted_parts[match(Part_A, sorted_labs)]],
@@ -617,3 +618,4 @@ write.csv(as.data.frame(adj_sorted),
 cat(sprintf("\nExported %d edges  \u2192  75144_edges.csv\n",
             nrow(edges_df)))
 cat("Full matrix        \u2192  75144_adjacency_matrix.csv\n")
+
