@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LEGO 4010 – Police Rescue Boat · Part Network</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0b1020;color:#e8eefc;display:grid;grid-template-columns:300px 1fr;height:100vh;overflow:hidden}
+#side{background:#11172b;border-right:1px solid #1e2a47;padding:18px 16px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}
+h1{font-size:15px;font-weight:700;line-height:1.3}
+.sub{font-size:11px;color:#7a8db3}
+label{font-size:11px;color:#9fb0d1;margin-bottom:2px;display:block}
+select,input[type=text]{width:100%;padding:7px 10px;border-radius:8px;border:1px solid #1e2a47;background:#0b1020;color:#e8eefc;font-size:12px}
+input[type=range]{width:100%;accent-color:#4f7ef7}
+.legend{display:flex;flex-wrap:wrap;gap:6px 10px}
+.litem{display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer;opacity:.9}
+.litem:hover{opacity:1}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+#stats{font-size:11px;color:#7a8db3;line-height:1.7}
+#main{position:relative;overflow:hidden}
+svg{width:100%;height:100%}
+.link{stroke:#4f6a9a;stroke-opacity:.22;pointer-events:none}
+.link.hi{stroke:#f97316;stroke-opacity:.85;stroke-width:2.5px}
+.node{cursor:pointer}
+.node:hover{filter:brightness(1.35)}
+.label{fill:#c8d4f0;font-size:10.5px;pointer-events:none;dominant-baseline:middle}
+#tip{position:absolute;pointer-events:none;background:rgba(11,16,32,.96);border:1px solid #1e2a47;color:#e8eefc;padding:9px 12px;border-radius:10px;font-size:12px;display:none;max-width:220px;line-height:1.6;box-shadow:0 4px 20px rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+<div id="side">
+  <div>
+    <h1>LEGO 4010<br>Police Rescue Boat</h1>
+    <div class="sub">Part co-occurrence network</div>
+  </div>
+  <div>
+    <label>Filter category</label>
+    <select id="cat"><option value="all">All categories</option></select>
+  </div>
+  <div>
+    <label>Search part name</label>
+    <input id="search" type="text" placeholder="e.g. Boat Hull, Minifig…" />
+  </div>
+  <div>
+    <label>Repulsion force</label>
+    <input id="charge" type="range" min="30" max="300" value="130" />
+  </div>
+  <div>
+    <label>Legend <span style="color:#4a5a7a">(click to toggle)</span></label>
+    <div class="legend" id="legend"></div>
+  </div>
+  <div id="stats"></div>
+</div>
+<div id="main">
+  <svg id="svg"></svg>
+  <div id="tip"></div>
+</div>
+<script>
+const data = {"parts": ["2348a.dat", "2349a.dat", "3002.dat", "3003.dat", "3004.dat", "3005.dat", "3021.dat", "3023.dat", "3024.dat", "3040b.dat", "3070b.dat", "3297.dat", "3460.dat", "3624.dat", "3626bp01.dat", "3665.dat", "3794a.dat", "3795.dat", "3815.dat", "3816.dat", "3817.dat", "3818.dat", "3819.dat", "3820.dat", "3829c01.dat", "3838.dat", "3842a.dat", "3939.dat", "3958.dat", "3962a.dat", "4073.dat", "4079.dat", "4286.dat", "4289.dat", "4349.dat", "4599a.dat", "4623.dat", "4625.dat", "4740.dat", "4862.dat", "4863.dat", "4873.dat", "6141.dat", "73090b.dat", "973p1f.dat", "973p1g.dat"], "names": ["2x2 Slope Corner", "1x4 Slope Corner", "2x3 Brick", "2x2 Brick", "1x2 Brick", "1x1 Brick", "2x3 Plate", "1x2 Plate", "1x1 Plate", "1x2 Slope 45°", "1x1 Tile", "3x4 Slope", "1x8 Plate", "Minifig Hand", "Minifig Head", "1x2 Inv. Slope", "1x2 Jumper Plate", "2x6 Plate", "Minifig Leg R", "Minifig Leg L", "Minifig Hip", "Minifig Arm R", "Minifig Arm L", "Minifig Hand", "Steering Wheel", "Flippers", "Life Preserver", "2x4 Arch", "4x4 Plate", "Torch", "1x1 Round Plate", "Seat 2x2", "1x3 Slope", "1x1 Brick Stud", "Boat Bow Stud", "Tap 1x1", "1x2 Rail Plate", "4x4 Hinge Plate", "Dish 2x2", "1x2 Brick Knob", "1x2 Slope Curved", "Lattice Fence", "1x1 Round Plate B", "Boat Hull", "Torso Police", "Torso Civilian"], "cats": ["slope", "slope", "brick", "brick", "brick", "brick", "plate", "plate", "plate", "slope", "tile", "slope", "plate", "minifig", "minifig", "slope", "plate", "plate", "minifig", "minifig", "minifig", "minifig", "minifig", "minifig", "special", "special", "special", "brick", "plate", "special", "tile", "special", "slope", "tile", "plate", "special", "plate", "plate", "special", "brick", "slope", "special", "tile", "special", "minifig", "minifig"], "matrix": [[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], [0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0], [0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]};
+
+const CAT_COLORS = {
+  brick:'#f97316', plate:'#22c55e', slope:'#a855f7',
+  minifig:'#eab308', tile:'#38bdf8', special:'#ef4444', other:'#94a3b8'
+};
+
+const nodes = data.parts.map((p,i)=>({id:i, part:p, name:data.names[i], cat:data.cats[i]}));
+const allLinks = [];
+for(let i=0;i<data.matrix.length;i++) for(let j=i+1;j<data.matrix.length;j++) if(data.matrix[i][j]) allLinks.push({s:i,t:j});
+
+const degree = new Array(nodes.length).fill(0);
+allLinks.forEach(l=>{degree[l.s]++;degree[l.t]++;});
+
+const catSel=document.getElementById('cat');
+const cats=['all',...Array.from(new Set(nodes.map(d=>d.cat))).sort()];
+cats.slice(1).forEach(c=>{
+  const o=document.createElement('option'); o.value=c;
+  o.textContent=c.charAt(0).toUpperCase()+c.slice(1); catSel.appendChild(o);
+});
+
+const legend=document.getElementById('legend');
+const hidden=new Set();
+Object.entries(CAT_COLORS).forEach(([cat,col])=>{
+  if(!cats.includes(cat)) return;
+  const d=document.createElement('div'); d.className='litem'; d.dataset.cat=cat;
+  d.innerHTML='<span class="dot" style="background:'+col+'"></span>'+cat.charAt(0).toUpperCase()+cat.slice(1);
+  d.onclick=()=>{
+    if(hidden.has(cat)) hidden.delete(cat); else hidden.add(cat);
+    d.style.opacity=hidden.has(cat)?'0.35':'0.9'; draw();
+  };
+  legend.appendChild(d);
+});
+
+function forceLayout(ns, ls, repel) {
+  const svgEl=document.getElementById('svg');
+  const w=svgEl.clientWidth, h=svgEl.clientHeight;
+  if(!w||!h) return;
+  ns.forEach((n,k)=>{
+    if(n.x===undefined){
+      n.x=w/2+160*Math.cos(2*Math.PI*k/ns.length);
+      n.y=h/2+160*Math.sin(2*Math.PI*k/ns.length);
+      n.vx=0; n.vy=0;
+    }
+  });
+  for(let iter=0;iter<260;iter++){
+    const alpha=iter<210?1:(260-iter)/50;
+    for(let i=0;i<ns.length;i++) for(let j=i+1;j<ns.length;j++){
+      let a=ns[i],b=ns[j],dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy+1,f=repel/d2;
+      a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f;
+    }
+    ls.forEach(l=>{
+      const a=l.an, b=l.bn;
+      let dx=b.x-a.x, dy=b.y-a.y, d=Math.sqrt(dx*dx+dy*dy)+0.001, k=(d-85)*0.005;
+      a.vx+=dx*k; a.vy+=dy*k; b.vx-=dx*k; b.vy-=dy*k;
+    });
+    ns.forEach(n=>{
+      n.vx+=(w/2-n.x)*0.002; n.vy+=(h/2-n.y)*0.002;
+      n.vx*=0.82; n.vy*=0.82;
+      n.x=Math.max(14,Math.min(w-14,n.x+n.vx*alpha));
+      n.y=Math.max(14,Math.min(h-14,n.y+n.vy*alpha));
+    });
+  }
+}
+
+let lastFilter='';
+
+function draw(){
+  const svgEl=document.getElementById('svg');
+  const tip=document.getElementById('tip');
+  const q=document.getElementById('search').value.toLowerCase().trim();
+  const cat=document.getElementById('cat').value;
+  const repel=+document.getElementById('charge').value;
+
+  const ns=nodes.filter(n=>!hidden.has(n.cat)&&(cat==='all'||n.cat===cat)&&(!q||n.name.toLowerCase().includes(q)||n.part.toLowerCase().includes(q)));
+  const keep=new Set(ns.map(n=>n.id));
+  const ls=allLinks.filter(l=>keep.has(l.s)&&keep.has(l.t)).map(l=>{
+    return {s:l.s, t:l.t, an:ns.find(n=>n.id===l.s), bn:ns.find(n=>n.id===l.t)};
+  });
+
+  const cacheKey=cat+'|'+q+'|'+Array.from(hidden).sort().join(',');
+  if(cacheKey!==lastFilter){ ns.forEach(n=>{n.x=undefined;}); lastFilter=cacheKey; }
+  forceLayout(ns,ls,repel);
+
+  document.getElementById('stats').innerHTML=
+    'Showing <b>'+ns.length+'</b> parts &middot; <b>'+ls.length+'</b> co-occurrences<br>Total: 46 parts &middot; 175 links';
+
+  svgEl.innerHTML='';
+  const gL=document.createElementNS('http://www.w3.org/2000/svg','g'); svgEl.appendChild(gL);
+  const gN=document.createElementNS('http://www.w3.org/2000/svg','g'); svgEl.appendChild(gN);
+
+  ls.forEach(l=>{
+    const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+    ln.setAttribute('x1',l.an.x); ln.setAttribute('y1',l.an.y);
+    ln.setAttribute('x2',l.bn.x); ln.setAttribute('y2',l.bn.y);
+    ln.setAttribute('class','link');
+    ln.dataset.s=l.s; ln.dataset.t=l.t;
+    gL.appendChild(ln);
+  });
+
+  ns.forEach(n=>{
+    const r=5+Math.sqrt(degree[n.id])*1.9;
+    const grp=document.createElementNS('http://www.w3.org/2000/svg','g');
+    const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+    c.setAttribute('cx',n.x); c.setAttribute('cy',n.y); c.setAttribute('r',r);
+    c.setAttribute('fill',CAT_COLORS[n.cat]||CAT_COLORS.other);
+    c.setAttribute('class','node'); c.setAttribute('fill-opacity','0.92');
+    const t=document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.setAttribute('x',n.x+r+3); t.setAttribute('y',n.y);
+    t.setAttribute('class','label'); t.textContent=n.name;
+    grp.appendChild(c); grp.appendChild(t);
+
+    grp.onmousemove=function(e){
+      tip.style.display='block';
+      const rect=svgEl.parentElement.getBoundingClientRect();
+      let tx=e.clientX-rect.left+14, ty=e.clientY-rect.top+14;
+      if(tx+230>rect.width) tx=e.clientX-rect.left-240;
+      tip.style.left=tx+'px'; tip.style.top=ty+'px';
+      const neighbors=ls.filter(l=>l.s===n.id||l.t===n.id).map(l=>{
+        const nb=l.s===n.id?l.t:l.s;
+        return ns.find(x=>x.id===nb);
+      }).filter(Boolean);
+      tip.innerHTML='<b>'+n.name+'</b><br><span style="color:#7a8db3">'+n.part+'</span><br>Category: <b style="color:'+CAT_COLORS[n.cat]+'">'+n.cat+'</b><br>Degree: <b>'+neighbors.length+'</b><br>'+neighbors.slice(0,6).map(x=>x.name).join(', ')+(neighbors.length>6?' …':'');
+      document.querySelectorAll('.link').forEach(el=>el.classList.remove('hi'));
+      document.querySelectorAll('.link[data-s="'+n.id+'"], .link[data-t="'+n.id+'"]').forEach(el=>el.classList.add('hi'));
+    };
+    grp.onmouseleave=function(){
+      tip.style.display='none';
+      document.querySelectorAll('.link').forEach(el=>el.classList.remove('hi'));
+    };
+    grp.onclick=function(){ document.getElementById('search').value=n.name; draw(); };
+    gN.appendChild(grp);
+  });
+}
+
+document.getElementById('cat').onchange=draw;
+document.getElementById('search').oninput=draw;
+document.getElementById('charge').oninput=draw;
+window.onresize=function(){ nodes.forEach(n=>{ n.x=undefined; }); draw(); };
+draw();
+</script>
+</body>
+</html>

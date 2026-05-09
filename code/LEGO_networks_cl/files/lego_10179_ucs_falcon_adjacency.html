@@ -1,0 +1,181 @@
+
+<style>
+#w{padding:0.75rem 0.5rem;font-family:var(--font-sans,sans-serif)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+#hdr{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:0.75rem}
+.bx{font-size:11px;padding:2px 9px;border-radius:var(--border-radius-md);font-weight:500}
+.bi{background:#E6F1FB;color:#0C447C}
+.bg{background:#EAF3DE;color:#27500A}
+.ba{background:#FAEEDA;color:#633806}
+.bp{background:#EEEDFE;color:#3C3489}
+#legend{display:flex;gap:11px;flex-wrap:wrap;font-size:11px;color:var(--color-text-secondary);margin-bottom:0.6rem;align-items:center}
+.ld{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:3px;vertical-align:middle}
+#frow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.6rem;align-items:center}
+.fb{font-size:11px;padding:3px 9px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);cursor:pointer;transition:background .12s}
+.fb:hover,.fb.on{background:#E6F1FB;color:#0C447C;border-color:transparent}
+#mc{overflow-x:auto}
+table{border-collapse:collapse}
+td,th{padding:0}
+.rl{font-size:8.5px;white-space:nowrap;padding-right:5px;text-align:right;cursor:pointer;min-width:110px;vertical-align:middle;transition:color .1s}
+.cl{writing-mode:vertical-rl;transform:rotate(180deg);font-size:8.5px;white-space:nowrap;cursor:pointer;padding-bottom:3px;transition:color .1s}
+.cell{width:12px;height:12px;border-radius:2px;cursor:pointer;box-sizing:border-box;transition:transform .1s}
+.cell:hover{transform:scale(1.5);z-index:10;position:relative}
+.self{background:var(--color-border-tertiary)}
+#ttip{background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:5px 9px;font-size:11px;line-height:1.5;min-height:24px;margin-bottom:5px}
+#ttip b{font-weight:500;display:block}
+#info{padding:0.6rem 0.9rem;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);font-size:11.5px;color:var(--color-text-secondary);background:var(--color-background-secondary);min-height:42px;line-height:1.6;margin-top:0.55rem}
+#info strong{color:var(--color-text-primary);font-weight:500}
+#stats{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:0.75rem}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.5rem 0.6rem;text-align:center}
+.stat-n{font-size:17px;font-weight:500;color:var(--color-text-primary)}
+.stat-l{font-size:10px;color:var(--color-text-secondary);margin-top:1px}
+#deg-section{margin-top:0.9rem;padding-top:0.6rem;border-top:0.5px solid var(--color-border-tertiary)}
+#deg-label{font-size:11px;color:var(--color-text-tertiary);margin-bottom:5px}
+#degbar{display:flex;gap:2px;align-items:flex-end;height:60px}
+.db-wrap{display:flex;flex-direction:column;align-items:center;flex:1;min-width:7px;cursor:pointer}
+.db{border-radius:2px 2px 0 0;width:100%;opacity:.82;transition:opacity .12s}
+.db:hover{opacity:1}
+.dlb{font-size:7px;text-align:center;color:var(--color-text-tertiary);margin-top:1px}
+</style>
+
+<h2 class="sr-only">LEGO 10179 UCS Millennium Falcon — adjacency matrix of 55 most-used part types and 467 connections, parsed from 213 subfiles across 944 build steps</h2>
+<div id="w">
+
+<div id="hdr">
+  <span style="font-size:13px;font-weight:500;color:var(--color-text-primary)">LEGO 10179 — UCS Millennium Falcon</span>
+  <span class="bx bi">55 part types</span>
+  <span class="bx bi">467 connections</span>
+  <span class="bx bg">Star Wars · 2007</span>
+  <span class="bx ba">5,197 pieces</span>
+  <span class="bx bp">213 subfiles parsed</span>
+</div>
+
+<div id="stats">
+  <div class="stat"><div class="stat-n">55</div><div class="stat-l">top part types</div></div>
+  <div class="stat"><div class="stat-n">467</div><div class="stat-l">connections</div></div>
+  <div class="stat"><div class="stat-n">213</div><div class="stat-l">subfiles</div></div>
+  <div class="stat"><div class="stat-n">944</div><div class="stat-l">build steps</div></div>
+  <div class="stat"><div class="stat-n">0</div><div class="stat-l">isolated parts</div></div>
+</div>
+
+<div id="legend">
+  <span><span class="ld" style="background:#378ADD"></span>Plate</span>
+  <span><span class="ld" style="background:#888780"></span>Tile</span>
+  <span><span class="ld" style="background:#BA7517"></span>Slope</span>
+  <span><span class="ld" style="background:#1D9E75"></span>Technic</span>
+  <span><span class="ld" style="background:#D85A30"></span>Special</span>
+  <span><span class="ld" style="background:#5B9BD5"></span>Brick</span>
+  <span><span class="ld" style="background:#AA7744"></span>Bar / Clip</span>
+</div>
+
+<div id="frow"><span style="font-size:11px;color:var(--color-text-tertiary)">Filter by category:</span></div>
+<div id="ttip">Hover a part label to highlight its row — click a cell to inspect the connection.</div>
+<div id="mc"></div>
+<div id="info">Click any coloured cell to see connection details here.</div>
+<div id="deg-section">
+  <div id="deg-label">Connection degree per part (ranked left→right) — click a bar for details</div>
+  <div id="degbar"></div>
+</div>
+
+</div>
+
+<script>
+const D={
+parts:["3021.dat","3710.dat","3068b.dat","3023.dat","3794b.dat","2780.dat","3460.dat","30244.dat","2431.dat","6558.dat","3666.dat","2555.dat","6141.dat","3020.dat","4589.dat","32054.dat","54383.dat","2654.dat","4162.dat","4592.dat","4593.dat","54384.dat","3795.dat","6636.dat","3703.dat","4477.dat","4599a.dat","44302.dat","61252.dat","3022.dat","6179.dat","6106.dat","44301.dat","3069b.dat","2476b.dat","4282.dat","3004.dat","41770.dat","2450.dat","2445.dat","3623.dat","4095.dat","30357.dat","48092.dat","3032.dat","41769.dat","54200.dat","3034.dat","43093.dat","6564.dat","6565.dat","3622.dat","4032a.dat","32018.dat","32523.dat"],
+names:["2x3 Plate","1x4 Plate","2x2 Tile","1x2 Plate","1x2 Jumper Plate","Technic Pin (friction)","1x8 Plate","Technic Liftarm 1x2","Tile 1x4","Technic Pin 3L","1x6 Plate","Tile 1x1 w/Clip","1x1 Round Plate","2x4 Plate","Cone 1x1","Technic Pin Long","Wedge Plate 4x4","Dish 2x2 Round","Tile 1x8","Bar w/Light Cover","Bar Holder w/Clip","Wedge Plate 4x4 (inv)","2x6 Plate","Tile 1x6","Technic Brick 1x16","1x10 Plate","Tap 1x1","Hinge Plate 1x2 (top)","Plate 1x1 w/Clip","2x2 Plate","Tile 4x4 w/Studs","2x4 Brick","Hinge Plate 1x2 (bot)","Tile 1x2","Brick 2x2 w/Pinholes","2x16 Plate","1x2 Brick","Wing End 2x4 R","1x1 Inv Slope","2x12 Plate","1x3 Plate","Hinge Plate 1x4 (bot)","2x2 Round Brick","Technic Beam 1x11","4x6 Plate","Wing End 2x4 L","1x1 Slope 31°","2x8 Plate","Technic Axle Pin","Wedge Plate 2x2 R","Wedge Plate 2x2 L","1x3 Brick","2x2 Round Plate","Technic Beam 1x15","Technic Beam 1x3"],
+cats:["plate","plate","tile","plate","plate","technic","plate","technic","tile","technic","plate","bar","tile","plate","special","technic","slope","special","tile","bar","bar","slope","plate","tile","technic","plate","bar","special","plate","plate","tile","brick","special","tile","brick","plate","brick","slope","slope","plate","plate","special","brick","technic","plate","slope","slope","plate","technic","slope","slope","brick","plate","technic","technic"],
+counts:[192,128,110,102,99,97,88,82,81,76,76,76,72,71,65,62,60,59,57,56,56,54,48,48,47,44,43,37,35,33,33,32,32,31,30,29,25,25,25,24,24,24,24,24,23,23,22,21,21,21,21,21,21,20,20],
+descs:["2×3 Plate — the single most-used part (×192). Forms the horizontal hull skin across the entire upper surface.","1×4 Plate — structural layering plate (×128) used throughout the frame and deck.","2×2 Tile — smooth surface tile (×110) covering the hull and interior floors.","1×2 Plate — thin connector plate (×102) linking frame sections everywhere.","1×2 Jumper Plate — off-centre stud plate (×99) enabling the half-stud offset greebling.","Technic Pin w/Friction — (×97) the main pin connecting all Technic beams in the structural backbone.","1×8 Plate — long structural plate (×88) spanning the disc-shaped hull sections.","Technic Liftarm 1×2 — short beam (×82) in the structural undercarriage grid.","Tile 1×4 — long smooth tile (×81) on flat hull and corridor surfaces.","Technic Pin 3L — long pin (×76) joining the deep Technic beam layers.","1×6 Plate — mid-span plate (×76) across hull ribs.","Tile 1×1 w/Clip — (×76) clip-mount tile used as greebling attachment point.","1×1 Round Plate — (×72) rivet and button detail all across the hull surface.","2×4 Plate — wide plate (×71) for deck layering.","Cone 1×1 — (×65) exhaust nozzle and detail cones on the engine pods.","Technic Long Pin — (×62) connects the longer-span Technic beams in the skeleton.","Wedge Plate 4×4 — (×60) tapered hull panel forming the octagonal disc shape.","Dish 2×2 Round — (×59) sensor dish and surface detail dome.","Tile 1×8 — (×57) long smooth tile for corridors and flat hull spans.","Bar w/Light Cover — (×56) detail bar piece on guns and antenna mounts.","Bar Holder w/Clip — (×56) holds bar pieces on the gun emplacements.","Wedge Plate 4×4 Inv — (×54) mirror of the 4×4 wedge, opposite hull taper panels.","2×6 Plate — broad plate (×48) on the wider upper hull zones.","Tile 1×6 — long smooth tile (×48) on upper hull flat areas.","Technic Brick 1×16 — the longest Technic beam (×47) in the structural spine.","1×10 Plate — very long plate (×44) for wide hull spans.","Tap 1×1 — (×43) small tap piece used as gun/antenna detail.","Hinge Plate 1×2 Top — (×37) top half of articulated hinges for moveable panels.","Plate 1×1 w/Clip — (×35) single-stud clip plate for fine greebling bars.","2×2 Plate — square plate (×33) filling deck sections.","Tile 4×4 w/Studs on Edge — (×33) large smooth tile with partial stud ring.","2×4 Brick — solid structural brick (×32) in thicker frame zones.","Hinge Plate 1×2 Bot — (×32) bottom half of the hinge pairs.","Tile 1×2 — (×31) smooth tile filling narrow hull seams.","Brick 2×2 w/Pin Holes — (×30) corner brick with Technic pin holes.","2×16 Plate — the longest plate (×29) spanning the full disc halves.","1×2 Brick — basic structural brick (×25) in interior walls.","Wing End 2×4 Right — (×25) tapered wing-tip plate for the right mandible.","1×1 Inv Slope — (×25) inverted single-stud slope for chamfered hull edges.","2×12 Plate — long plate (×24) spanning the mandible arms.","1×3 Plate — short three-stud plate (×24) for fine structural connections.","Hinge Plate 1×4 Bot — (×24) base of four-stud hinges for large panels.","2×2 Round Brick — (×24) cylindrical brick for the sensor housings.","Technic Beam 1×11 — (×24) long beam in the interior Technic grid.","4×6 Plate — large plate (×23) for wide hull base sections.","Wing End 2×4 Left — (×23) mirror of 41770, left mandible tips.","1×1 Slope 31° — (×22) shallow-angle slope for smooth hull transitions.","2×8 Plate — (×21) medium plate filling mid-span hull gaps.","Technic Axle Pin — (×21) hybrid axle/pin for rotation joints in the gun turrets.","Wedge Plate 2×2 R — (×21) small right-hand tapered plate.","Wedge Plate 2×2 L — (×21) small left-hand tapered plate.","1×3 Brick — (×21) interior structural brick.","2×2 Round Plate — (×21) round plate under sensor dishes.","Technic Beam 1×15 — (×20) second-longest Technic beam for the main skeleton ribs.","Technic Beam 1×3 — (×20) short beam in the interior Technic grid."],
+matrix:[[1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,1,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,1,0,1,0,1,1,1,1,0,1,0,1,1,1,1,0,0,0,1,1,0,0],[1,1,1,1,1,0,1,1,1,0,1,1,1,1,0,0,1,1,1,1,1,0,1,1,1,1,0,0,1,0,1,0,1,1,0,1,1,1,0,1,1,0,0,0,1,1,1,1,0,1,1,0,0,1,0],[1,1,1,1,1,0,0,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,0,1,0,1,1,0,0,1,0,0,0,1,0,0,0,1,0,0,1,1,1,0,1,0,1,0,0,0,0,1,1,0,0],[1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,1,0,0,1,0,1,0,1,0,1,1,1,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,1,0,0,0,0,1,1,0],[1,1,1,1,1,0,0,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,1,1,0,1,1,0,0,1,1,0,0,1,0,1,1,0,0,0,1,0,0,0,1,0,0,1,0,0,0,1,1,0,0],[0,0,0,1,0,1,0,0,0,1,1,0,0,0,0,1,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1],[1,1,0,1,0,0,1,1,0,0,1,0,0,1,1,0,0,0,1,0,0,1,1,0,1,1,0,0,0,0,0,1,1,1,0,1,1,1,1,1,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0],[1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,0,1,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,1,0,1,1,0,0,0,1,1,0,0],[1,1,1,1,1,0,0,1,1,1,1,1,0,1,1,0,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0],[1,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[1,1,1,1,1,1,1,1,1,0,1,0,1,1,0,0,1,1,0,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0],[1,1,1,1,1,0,0,1,1,0,0,1,1,0,1,0,1,0,1,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,1,1,0,0,0,1,1,0,0],[1,1,1,1,1,0,0,1,0,0,1,1,1,1,1,0,1,0,1,1,1,1,0,1,0,1,1,0,0,1,1,1,0,0,0,1,1,0,0,0,1,0,1,0,1,0,1,1,0,0,0,0,1,0,0],[1,1,1,1,1,0,1,1,1,0,1,0,1,1,0,0,1,0,1,1,1,1,1,1,0,0,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,0,0,0,1,1,0,1,0,0,0,0,0,0,0],[0,0,1,1,1,0,1,1,1,0,0,1,1,0,1,0,1,0,1,1,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,1,0,0,0],[0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,1,1,1,0,0,1,1,0,1,1,1,1,1,0,1,1,1,0,0,1,1,1,0,1,0,0,0,1,0,1,0,1,1,1,0,1,0,0,1,0,1,0,1,1,1,1,0,0,0,0,0,0,0],[0,1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,0,0,1,0,0,0,0,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0],[1,1,1,0,1,0,0,1,1,0,1,0,1,1,1,0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0],[1,1,1,0,1,0,0,1,1,0,1,0,1,1,1,0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0],[1,0,1,1,1,0,1,1,1,0,1,0,1,1,0,0,1,1,0,0,0,1,1,1,0,1,0,0,0,1,0,1,0,1,1,1,0,1,0,0,1,0,1,0,1,1,0,1,0,0,0,0,0,0,0],[1,1,0,0,1,1,1,0,1,0,1,0,0,1,0,0,1,0,0,0,0,1,0,0,0,1,0,1,0,1,0,1,0,0,0,1,1,1,0,1,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0],[1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,1,0,0],[1,1,0,0,0,1,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,1,0],[1,1,1,1,1,0,1,1,0,0,1,0,1,0,0,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,1],[1,0,1,0,1,0,0,1,0,0,0,1,1,0,1,0,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,0,1,1,0,0],[0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],[1,0,1,1,1,0,0,0,0,0,1,1,1,1,0,0,1,0,1,0,0,1,1,1,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0],[1,1,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,1,1,1,0,1,0,1,1,0,0,1,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0],[0,1,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,1,0,1,0,1,1,1,0,1,0,0,1,0,0,1,0,0,1,1,1,0,0,0,1,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,0,0,1,0,1,0,0,0,1,0,1,1,0,0,1,0,1,0,0,1,1,0,0,1,0,1,0,0,1,1,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,1,0,1,1,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,1,0],[1,1,1,0,0,0,1,0,1,0,1,1,0,1,0,0,1,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,0,0,0,0,1,0,1,0,1,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,0,1,1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0],[1,1,1,1,1,0,0,1,0,0,0,0,1,1,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0],[1,0,1,1,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0],[1,1,1,0,1,0,1,1,1,0,1,0,1,1,0,0,1,0,0,1,1,1,1,0,0,1,0,0,0,0,1,1,0,1,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],[1,1,0,0,0,0,0,0,1,0,1,1,0,1,0,0,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0],[1,1,1,1,0,0,0,1,0,0,0,1,1,0,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],[1,1,1,1,1,0,1,1,0,0,1,1,1,1,0,0,1,0,0,0,0,1,1,0,0,1,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],[0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0],[0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0],[1,0,1,0,1,0,1,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0],[1,0,1,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],[0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0],[0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]]
+};
+
+const CC={plate:'#378ADD',tile:'#888780',slope:'#BA7517',technic:'#1D9E75',special:'#D85A30',brick:'#5B9BD5',bar:'#AA7744',other:'#aaa'};
+const n=D.parts.length;
+let af=null,hl=null;
+
+function blend(a,b){
+  const hr=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+  const [ra,rb]=[hr(a),hr(b)];
+  return`rgb(${Math.round((ra[0]+rb[0])/2)},${Math.round((ra[1]+rb[1])/2)},${Math.round((ra[2]+rb[2])/2)})`;
+}
+function deg(i){return D.matrix[i].reduce((s,v)=>s+v,0);}
+
+// Sort parts by degree descending for the degree bar
+const sortedByDeg = D.parts.map((_,i)=>i).sort((a,b)=>deg(b)-deg(a));
+
+const cats=[...new Set(D.cats)].sort();
+const fr=document.getElementById('frow');
+const ab=document.createElement('button');
+ab.className='fb on'; ab.textContent='All';
+ab.onclick=()=>{af=null; document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on')); ab.classList.add('on'); render();};
+fr.appendChild(ab);
+cats.forEach(c=>{
+  const b=document.createElement('button'); b.className='fb'; b.textContent=c;
+  b.style.borderLeft=`3px solid ${CC[c]||'#888'}`;
+  b.onclick=()=>{af=(af===c?null:c); document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on')); (af?b:ab).classList.add('on'); render();};
+  fr.appendChild(b);
+});
+
+function render(){
+  const vis=af ? D.parts.map((_,i)=>D.cats[i]===af?i:null).filter(i=>i!==null) : D.parts.map((_,i)=>i);
+  let h='<table><thead><tr><th style="min-width:110px"></th>';
+  vis.forEach(i=>{h+=`<th><div class="cl" style="color:${CC[D.cats[i]]||'#888'}" data-i="${i}">${D.names[i]}</div></th>`;});
+  h+='</tr></thead><tbody>';
+  vis.forEach(ri=>{
+    const rc=CC[D.cats[ri]]||'#888';
+    const hlbg=hl===ri?`style="background:var(--color-background-secondary)"`:'';
+    h+=`<tr ${hlbg}><td class="rl" style="color:${rc}" data-i="${ri}">${D.names[ri]}<span style="color:var(--color-text-tertiary);font-size:8px;margin-left:3px">×${D.counts[ri]}</span></td>`;
+    vis.forEach(ci=>{
+      if(ri===ci){h+=`<td><div class="cell self"></div></td>`;return;}
+      const v=D.matrix[ri][ci];
+      const bg=v?`background:${blend(rc,CC[D.cats[ci]]||'#888')}`:'background:transparent';
+      h+=`<td><div class="cell" style="${bg}" data-r="${ri}" data-c="${ci}"></div></td>`;
+    });
+    h+='</tr>';
+  });
+  h+='</tbody></table>';
+  document.getElementById('mc').innerHTML=h;
+  document.querySelectorAll('[data-r]').forEach(el=>{
+    el.addEventListener('click',()=>onCell(+el.dataset.r,+el.dataset.c));
+    el.addEventListener('mouseenter',()=>onHov(+el.dataset.r,+el.dataset.c,!!D.matrix[+el.dataset.r][+el.dataset.c]));
+    el.addEventListener('mouseleave',clearTip);
+  });
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{hl=+el.dataset.i; render();});
+    el.addEventListener('mouseleave',()=>{hl=null; render();});
+  });
+  renderDeg(vis);
+}
+
+function onCell(r,c){
+  const v=D.matrix[r][c];
+  const col=blend(CC[D.cats[r]]||'#888',CC[D.cats[c]]||'#888');
+  document.getElementById('info').innerHTML = v
+    ? `<strong style="color:${col}">${D.names[r]} ↔ ${D.names[c]}</strong><br>${D.descs[r]}<br><span style="font-size:10px;color:var(--color-text-tertiary)">${D.cats[r]} · ${D.cats[c]}</span><br>${D.descs[c]}`
+    : `<strong>${D.names[r]}</strong> and <strong>${D.names[c]}</strong> — no direct connection found in this build.`;
+}
+function onHov(r,c,conn){
+  document.getElementById('ttip').innerHTML=
+    `<b>${D.names[r]} ↔ ${D.names[c]}</b>`+
+    (conn?`<span style="color:var(--color-text-success)">✓ connected</span>`
+         :`<span style="color:var(--color-text-tertiary)">✗ not connected</span>`);
+}
+function clearTip(){
+  document.getElementById('ttip').innerHTML='Hover a part label to highlight its row — click a cell to inspect the connection.';
+}
+function renderDeg(vis){
+  // Render degree bar sorted descending
+  const visSorted = [...vis].sort((a,b)=>deg(b)-deg(a));
+  const ds=visSorted.map(i=>({i,d:deg(i),c:CC[D.cats[i]]||'#888',n:D.names[i]}));
+  const mx=Math.max(...ds.map(d=>d.d),1);
+  document.getElementById('degbar').innerHTML=ds.map(({i,d,c,n})=>{
+    const h=Math.max(3,Math.round(56*(d/mx)));
+    return`<div class="db-wrap" onclick="document.getElementById('info').innerHTML='<strong>${n} (×${D.counts[i]})</strong> — degree ${d}. ${D.descs[i]}'">
+      <div class="db" style="height:${h}px;background:${c}" title="${n}: degree ${d}, used ×${D.counts[i]}"></div>
+      <div class="dlb">${d}</div>
+    </div>`;
+  }).join('');
+}
+
+render();
+</script>

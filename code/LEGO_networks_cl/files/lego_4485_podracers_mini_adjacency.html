@@ -1,0 +1,179 @@
+
+<style>
+#w{padding:0.75rem 0.5rem;font-family:var(--font-sans,sans-serif)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+#hdr{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:0.8rem}
+.bx{font-size:11px;padding:2px 9px;border-radius:var(--border-radius-md);font-weight:500}
+.bi{background:#E6F1FB;color:#0C447C}
+.bg{background:#EAF3DE;color:#27500A}
+.ba{background:#FAEEDA;color:#633806}
+.bp{background:#EEEDFE;color:#3C3489}
+#legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--color-text-secondary);margin-bottom:0.65rem;align-items:center}
+.ld{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:4px;vertical-align:middle}
+#frow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.65rem;align-items:center}
+.fb{font-size:11px;padding:3px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);cursor:pointer;transition:background .12s}
+.fb:hover,.fb.on{background:#E6F1FB;color:#0C447C;border-color:transparent}
+#mc{overflow-x:auto}
+table{border-collapse:collapse}
+td,th{padding:0}
+.rl{font-size:9px;white-space:nowrap;padding-right:5px;text-align:right;cursor:pointer;min-width:110px;vertical-align:middle;transition:color .1s}
+.cl{writing-mode:vertical-rl;transform:rotate(180deg);font-size:9px;white-space:nowrap;cursor:pointer;padding-bottom:3px;transition:color .1s}
+.cell{width:14px;height:14px;border-radius:2px;cursor:pointer;box-sizing:border-box;transition:transform .1s}
+.cell:hover{transform:scale(1.4);z-index:10;position:relative}
+.self{background:var(--color-border-tertiary)}
+#ttip{background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:6px 10px;font-size:11px;line-height:1.5;min-height:26px;margin-bottom:6px}
+#ttip b{font-weight:500;display:block}
+#info{padding:0.65rem 1rem;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);font-size:12px;color:var(--color-text-secondary);background:var(--color-background-secondary);min-height:44px;line-height:1.6;margin-top:0.6rem}
+#info strong{color:var(--color-text-primary);font-weight:500}
+#stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:0.8rem}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.6rem 0.75rem;text-align:center}
+.stat-n{font-size:20px;font-weight:500;color:var(--color-text-primary)}
+.stat-l{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+#deg-section{margin-top:1rem;padding-top:0.65rem;border-top:0.5px solid var(--color-border-tertiary)}
+#deg-label{font-size:11px;color:var(--color-text-tertiary);margin-bottom:6px}
+#degbar{display:flex;gap:2px;align-items:flex-end;height:64px}
+.db-wrap{display:flex;flex-direction:column;align-items:center;flex:1;min-width:8px;cursor:pointer}
+.db{border-radius:2px 2px 0 0;width:100%;opacity:.85;transition:opacity .12s}
+.db:hover{opacity:1}
+.dlb{font-size:8px;text-align:center;color:var(--color-text-tertiary);margin-top:2px}
+</style>
+
+<h2 class="sr-only">LEGO 4485 Sebulba's and Anakin's Podracer Mini — adjacency matrix of 31 part types and 158 connections parsed from the MPD file</h2>
+<div id="w">
+
+  <div id="hdr">
+    <span style="font-size:13px;font-weight:500;color:var(--color-text-primary)">LEGO 4485 — Sebulba's &amp; Anakin's Podracer Mini</span>
+    <span class="bx bi">31 part types</span>
+    <span class="bx bi">158 connections</span>
+    <span class="bx bg">Star Wars · 2003</span>
+    <span class="bx ba">MPD parsed</span>
+  </div>
+
+  <div id="stats">
+    <div class="stat"><div class="stat-n">31</div><div class="stat-l">unique parts</div></div>
+    <div class="stat"><div class="stat-n">158</div><div class="stat-l">connections</div></div>
+    <div class="stat"><div class="stat-n">2</div><div class="stat-l">submodels</div></div>
+    <div class="stat"><div class="stat-n">0</div><div class="stat-l">isolated parts</div></div>
+  </div>
+
+  <div id="legend">
+    <span><span class="ld" style="background:#378ADD"></span>Plate</span>
+    <span><span class="ld" style="background:#1D9E75"></span>Bar / Clip</span>
+    <span><span class="ld" style="background:#D85A30"></span>Special</span>
+    <span><span class="ld" style="background:#7F77DD"></span>Minifig</span>
+    <span><span class="ld" style="background:#2AACB8"></span>SNOT</span>
+    <span><span class="ld" style="background:#888780"></span>Tile / Flag</span>
+    <span><span class="ld" style="background:#5B9BD5"></span>Brick</span>
+  </div>
+
+  <div id="frow"><span style="font-size:11px;color:var(--color-text-tertiary)">Filter by category:</span></div>
+
+  <div id="ttip">Hover a part label to highlight its row — click a cell to inspect the connection.</div>
+  <div id="mc"></div>
+  <div id="info">Click any coloured cell to see connection details here.</div>
+
+  <div id="deg-section">
+    <div id="deg-label">Connection degree per part (click a bar for details)</div>
+    <div id="degbar"></div>
+  </div>
+
+</div>
+
+<script>
+const D={
+parts:["11253.dat","16000p04.dat","19201.dat","2420.dat","2531.dat","2540.dat","2555.dat","2566.dat","3023.dat","3024.dat","30359b.dat","30374.dat","3062b.dat","3626b.dat","3626cpq0.dat","3815bp63.dat","3816bpbb.dat","3817.dat","3819.dat","3820.dat","4070.dat","4589.dat","4592.dat","4593.dat","4599a.dat","4733.dat","4740.dat","60750.dat","6141.dat","96490.dat","973p27.dat"],
+names:["Minifig Accessory","Minifig Arm L (prt)","Minifig Torso (prt)","2x2 Corner Plate","Minifig Hand (bar)","Bar 1x4","Tile 1x1 w/Clip","Minifig Paddle","1x2 Plate","1x1 Plate","Flag 2x2 Waving","Bar 4L w/Stop","1x1 Round Brick","Minifig Head","Minifig Head (Anakin)","Minifig Legs","Minifig Legs (prt)","Minifig Hip","Minifig Arm R","Minifig Hand","SNOT Brick 1x1","Cone 1x1","Bar w/Light Cover","Bar Holder w/Clip","Tap 1x1","1x1 Brick (side studs)","Dish 2x2","Minifig Helmet","1x1 Round Plate","Minifig Visor","Minifig Torso"],
+cats:["minifig","minifig","minifig","plate","minifig","bar","bar","special","plate","plate","tile","bar","brick","minifig","minifig","minifig","minifig","minifig","minifig","minifig","snot","special","bar","bar","special","special","special","minifig","tile","minifig","minifig"],
+descs:["Anakin minifig accessory piece (hair/helmet part).","Printed left arm — part of Anakin's minifig body.","Printed torso — Anakin minifig upper body.","2×2 corner plate — Sebulba's engine pod wing joint.","Minifig hand holding a bar, part of the arm assembly.","Bar 1×4 — strut connecting Sebulba's engine pods.","Tile 1×1 with clip — pod body detail piece (both racers).","Minifig paddle — Anakin's control vane accessory.","1×2 plate — Sebulba's engine pod structural layering.","1×1 plate — fine detail piece on Sebulba's engine pods.","Waving 2×2 flag — Anakin's podracer cockpit decoration.","Bar 4L with stop ring — Anakin's engine thrust bar (×2).","1×1 round brick — cockpit forward sensor (Anakin's racer).","Minifig head — appears twice as engine pod 'eye' detail.","Minifig head (Anakin) — printed face on Anakin's cockpit.","Minifig legs (printed) — Anakin figure lower body.","Minifig legs (printed variant) — Sebulba figure lower body.","Minifig hip — waist connector for Anakin figure.","Minifig right arm — part of Anakin's minifig assembly.","Minifig hand — gripping the control bar.","SNOT brick 1×1 — sideways attachment hub on Anakin's pod.","Cone 1×1 — engine exhaust tip (both podracers).","Bar with light cover — chin detail piece (Anakin's pod).","Bar holder with clip — mounts the bar detail on cockpit.","Tap 1×1 — fuel intake nozzle (Sebulba's pod).","1×1 brick with side studs — central engine hub (most connected, deg 18).","Dish 2×2 — engine intake cone (both podracers, most used part).","Minifig helmet — Anakin's racing helmet.","1×1 round plate — rivets and detail across both builds.","Minifig visor — clips onto Anakin's helmet.","Minifig torso — Sebulba's racing body."],
+matrix:[[0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,1,0,0,1],[1,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,1],[0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,1],[0,0,0,1,0,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0],[1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,1],[0,0,0,1,0,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0],[0,0,0,1,0,1,1,1,1,1,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,1,1,0,1,0,0],[0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0],[0,0,0,1,0,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0],[0,0,0,1,0,1,1,0,1,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1,0,0],[0,0,0,1,0,1,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,1,0,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,1,1,1,0,1,0,0],[0,0,0,0,0,0,1,0,0,1,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,1],[1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,0,0,0,0,0,0,0,1,0,1,1],[1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,0,0,0,0,0,0,0,1,0,0,1],[1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,0,1,0,0,1],[1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,0,0,0,0,0,0,0,1,0,1,1],[1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0,1,1],[0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0,1,0,0],[0,0,0,0,0,0,1,0,0,0,1,1,1,1,0,0,0,0,0,0,1,1,0,0,1,1,1,0,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,1,0,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,1,0,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,1,0,0],[0,0,0,1,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1,0,0],[0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1,0,0],[1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1],[0,0,0,0,0,0,1,1,0,0,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,1],[1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,0]]
+};
+
+const CC={plate:'#378ADD',bar:'#1D9E75',special:'#D85A30',minifig:'#7F77DD',snot:'#2AACB8',tile:'#888780',brick:'#5B9BD5',other:'#aaa'};
+const n=D.parts.length;
+let af=null,hl=null;
+
+function blend(a,b){
+  const hr=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+  const [ra,rb]=[hr(a),hr(b)];
+  return`rgb(${Math.round((ra[0]+rb[0])/2)},${Math.round((ra[1]+rb[1])/2)},${Math.round((ra[2]+rb[2])/2)})`;
+}
+function deg(i){return D.matrix[i].reduce((s,v)=>s+v,0);}
+
+const cats=[...new Set(D.cats)].sort();
+const fr=document.getElementById('frow');
+const ab=document.createElement('button');
+ab.className='fb on'; ab.textContent='All';
+ab.onclick=()=>{af=null; document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on')); ab.classList.add('on'); render();};
+fr.appendChild(ab);
+cats.forEach(c=>{
+  const b=document.createElement('button'); b.className='fb'; b.textContent=c;
+  b.style.borderLeft=`3px solid ${CC[c]||'#888'}`;
+  b.onclick=()=>{af=(af===c?null:c); document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on')); (af?b:ab).classList.add('on'); render();};
+  fr.appendChild(b);
+});
+
+function render(){
+  const vis=af ? D.parts.map((_,i)=>D.cats[i]===af?i:null).filter(i=>i!==null) : D.parts.map((_,i)=>i);
+  let h='<table><thead><tr><th style="min-width:110px"></th>';
+  vis.forEach(i=>{h+=`<th><div class="cl" style="color:${CC[D.cats[i]]||'#888'}" data-i="${i}">${D.names[i]}</div></th>`;});
+  h+='</tr></thead><tbody>';
+  vis.forEach(ri=>{
+    const rc=CC[D.cats[ri]]||'#888';
+    const hlbg=hl===ri?`style="background:var(--color-background-secondary)"`:'';
+    h+=`<tr ${hlbg}><td class="rl" style="color:${rc}" data-i="${ri}">${D.names[ri]}</td>`;
+    vis.forEach(ci=>{
+      if(ri===ci){h+=`<td><div class="cell self"></div></td>`;return;}
+      const v=D.matrix[ri][ci];
+      const bg=v?`background:${blend(rc,CC[D.cats[ci]]||'#888')}`:'background:transparent';
+      h+=`<td><div class="cell" style="${bg}" data-r="${ri}" data-c="${ci}"></div></td>`;
+    });
+    h+='</tr>';
+  });
+  h+='</tbody></table>';
+  document.getElementById('mc').innerHTML=h;
+  document.querySelectorAll('[data-r]').forEach(el=>{
+    el.addEventListener('click',()=>onCell(+el.dataset.r,+el.dataset.c));
+    el.addEventListener('mouseenter',()=>onHov(+el.dataset.r,+el.dataset.c,!!D.matrix[+el.dataset.r][+el.dataset.c]));
+    el.addEventListener('mouseleave',clearTip);
+  });
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{hl=+el.dataset.i; render();});
+    el.addEventListener('mouseleave',()=>{hl=null; render();});
+  });
+  renderDeg(vis);
+}
+
+function onCell(r,c){
+  const v=D.matrix[r][c];
+  const rn=D.names[r], cn=D.names[c];
+  const col=blend(CC[D.cats[r]]||'#888', CC[D.cats[c]]||'#888');
+  document.getElementById('info').innerHTML = v
+    ? `<strong style="color:${col}">${rn} ↔ ${cn}</strong><br>${D.descs[r]}<br><span style="font-size:11px;color:var(--color-text-tertiary)">${D.cats[r]} · ${D.cats[c]}</span><br>${D.descs[c]}`
+    : `<strong>${rn}</strong> and <strong>${cn}</strong> — no direct spatial connection detected.`;
+}
+
+function onHov(r,c,conn){
+  document.getElementById('ttip').innerHTML=
+    `<b>${D.names[r]} ↔ ${D.names[c]}</b>`+
+    (conn?`<span style="color:var(--color-text-success)">✓ connected</span>`
+         :`<span style="color:var(--color-text-tertiary)">✗ not connected</span>`);
+}
+
+function clearTip(){
+  document.getElementById('ttip').innerHTML='Hover a part label to highlight its row — click a cell to inspect the connection.';
+}
+
+function renderDeg(vis){
+  const ds=vis.map(i=>({i,d:deg(i),c:CC[D.cats[i]]||'#888',n:D.names[i]}));
+  const mx=Math.max(...ds.map(d=>d.d),1);
+  document.getElementById('degbar').innerHTML=ds.map(({i,d,c,n})=>{
+    const h=Math.max(4,Math.round(56*(d/mx)));
+    return `<div class="db-wrap" onclick="document.getElementById('info').innerHTML='<strong>${n}</strong> — degree ${d}. ${D.descs[i]}'">
+      <div class="db" style="height:${h}px;background:${c}" title="${n}: ${d}"></div>
+      <div class="dlb">${d}</div>
+    </div>`;
+  }).join('');
+}
+
+render();
+</script>
