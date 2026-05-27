@@ -9,6 +9,7 @@
 # User-specific files
 .Ruserdata
 /data/extdata/*.csv  
+/images/alphin
 *.png
 *.jpg
 /images/*.*
