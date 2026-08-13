@@ -1,0 +1,3 @@
+"network","nodes","edges","density","mean_degree","max_degree","components","giant_frac","clustering","mean_path_gc","diameter_gc","assortativity"
+"7131 Anakin's Podracer",260,1807,0.0537,13.9,54,11,0.473,0.7049,4.572,10,0.2234
+"10026",185,827,0.0486,8.941,35,17,0.616,0.5569,4.002,12,0.2575

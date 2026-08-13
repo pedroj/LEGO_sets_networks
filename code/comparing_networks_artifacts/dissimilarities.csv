@@ -1,0 +1,4 @@
+"metric","value","range","interpretation"
+"Portrait Divergence (JSD)",0.54724,"0 (identical) - 1 (maximally different)","Global multiscale connectivity (shortest-path structure)"
+"Laplacian spectral-density JSD",0.04354,"0 (identical) - 1 (maximally different)","Whole-spectrum: communities, bipartiteness, diffusion"
+"Degree-distribution JSD",0.20437,"0 (identical) - 1 (maximally different)","Local: node connection-count distribution"

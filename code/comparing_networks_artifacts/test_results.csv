@@ -1,0 +1,12 @@
+"quantity","value"
+"PERMANOVA pseudo-F",1295.9634
+"PERMANOVA R2",0.7216
+"PERMANOVA p",0.001
+"betadisper F",3.6124
+"betadisper p",0.02
+"mean within-A",0.2394
+"mean within-B",0.2292
+"mean between",0.5972
+"between/within ratio (effect size)",2.5489
+"observed A-B divergence",0.5472
+"z(obs A-B vs between-null)",-1.9372

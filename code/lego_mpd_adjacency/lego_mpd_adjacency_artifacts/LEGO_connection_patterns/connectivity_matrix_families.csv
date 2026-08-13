@@ -1,0 +1,13 @@
+,Stud,Technic_Pin,Technic_Axle,Technic_Beam,Clip,Hinge,Ball_Socket,Tube,Gear,Rail,Magnetic,Sticker
+Stud,legal,,,,,,,legal,,,,
+Technic_Pin,,legal,,,,,,,,,,
+Technic_Axle,,,legal,,,,,,,,,
+Technic_Beam,,,,legal,,,,,,,,
+Clip,,,,,legal,,,,,,,
+Hinge,,,,,,legal,,,,,,
+Ball_Socket,,,,,,,legal,,,,,
+Tube,legal,,,,,,,,,,,
+Gear,,,,,,,,,legal,,,
+Rail,,,,,,,,,,legal,,
+Magnetic,,,,,,,,,,,legal,
+Sticker,,,,,,,,,,,,cosmetic

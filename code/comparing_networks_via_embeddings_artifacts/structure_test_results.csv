@@ -1,0 +1,10 @@
+"test","value"
+"Observed NetLSD L2 distance (d_obs)",0.2732
+"Within-family null distance (median)",0.022
+"Between-family null distance (median)",0.1335
+"d_obs vs within-family (p)",0.0205
+"Energy E-statistic (2-sample)",109.043
+"Energy test p-value",0.001
+"PERMANOVA pseudo-F",2333.15
+"PERMANOVA R2",0.5387
+"PERMANOVA p-value",0.001

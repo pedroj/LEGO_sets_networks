@@ -1,0 +1,21 @@
+Connection_Family,Connection_Type,Connector_Role_A,Connector_Role_B,Part_A,Name_A,Part_B,Name_B,Legal_Status
+Stud,Stud_to_AntistudTube,stud,antistud_tube,3001,Brick 2 x 4,3001,Brick 2 x 4,legal
+Stud,Stud_to_OpenStud,stud,open_stud,2780,Technic Pin with Friction Ridges Lengthwise and Center Slots,32523,Technic Beam 1 x 3 Thick,legal
+Stud,Stud_to_SocketPlate,stud,socket_plate,3001,Brick 2 x 4,3020,Plate 2 x 4,legal
+Technic_Pin,Pin_to_Hole_Friction,pin_friction,technic_hole,2780,Technic Pin with Friction Ridges Lengthwise and Center Slots,3701,Technic Brick 1 x 4 [3 Pin Holes],legal
+Technic_Pin,Pin_to_Hole_Free,pin_free,technic_hole,32556,Technic Pin Long without Friction Ridges,3701,Technic Brick 1 x 4 [3 Pin Holes],legal
+Technic_Pin,Pin_to_Axle_Combo,combo_pin,axle_hole_or_technic_hole,3749,Technic Axle Pin without Friction Ridges Lengthwise,3701,Technic Brick 1 x 4 [3 Pin Holes],legal
+Technic_Axle,Axle_to_Axle_Hole,axle,axle_hole,3705,Technic Axle 4,32064,—,legal
+Technic_Axle,Axle_to_Axle_Connector,axle,axle_connector,3705,Technic Axle 4,6538,—,legal
+Technic_Beam,Beam_to_Beam_Stud,beam_hole,beam_hole,32523,Technic Beam 1 x 3 Thick,32524,Technic Beam 1 x 7 Thick,legal
+Clip,Clip_to_Bar,clip,bar,48729,—,63868,Plate Special 1 x 2 with Clip Horizontal on End,legal
+Clip,Axle_to_Bar,axle_tip,bar_holder,3706,Technic Axle 6,48729,—,legal
+Hinge,Hinge_Plate_to_Hinge_Plate,hinge_female,hinge_male,2429,Hinge Plate 1 x 4 Swivel Base,2430,Hinge Plate 1 x 4 Swivel Top [Solid Pin],legal
+Hinge,Hinge_Brick_to_Hinge_Brick,hinge_female,hinge_male,3830,Hinge Brick 1 x 4 [Upper],3831,Hinge Brick 1 x 4 [Lower],legal
+Ball_Socket,Ball_to_Socket,ball,socket,14419,Plate Special 1 x 2 with 5.9mm Towball Socket and Towball,2736,Technic Axle Towball,legal
+Tube,Tube_to_Stud,tube_female,stud,32557,Technic Pin Connector Perpendicular Long,3010,Brick 1 x 4,legal
+Gear,Gear_to_Gear,gear,gear,3648,—,3743,Technic Gear Rack 1 x 4,legal
+Gear,Gear_to_Rack,gear,rack,3742,"Plant, Flower - Small",3743,Technic Gear Rack 1 x 4,legal
+Rail,Rail_to_Wheel,rail,wheel_flange,2878,"Wheel Holder, Train Wheel RC Train",2877,Brick Special 1 x 2 with Grille,legal
+Magnetic,Magnet_to_Magnet,magnet_north,magnet_south,2607,Magnet Holder 2 x 3,2607,Magnet Holder 2 x 3,legal
+Sticker,Sticker_to_Tile,sticker,tile_surface,various,—,3068,—,cosmetic

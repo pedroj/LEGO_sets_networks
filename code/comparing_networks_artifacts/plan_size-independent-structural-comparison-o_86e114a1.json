@@ -1,0 +1,50 @@
+{
+  "version": 3,
+  "created_at": "2026-08-12T19:58:38.255Z",
+  "task_summary": "Size-independent structural comparison of two LEGO part-connectivity networks",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Plan",
+      "delegations": [
+        {
+          "steps": [
+            {
+              "title": "Load, validate & characterize both networks",
+              "description": "Read both adjacency CSVs into igraph undirected graphs. Confirm symmetry, binary entries, zero diagonal. Compute a compact descriptor table (nodes, edges, density, mean degree, number of connected components, size of giant component, global clustering, mean path length) as a grounding reference — NOT as the comparison test. Save descriptors.csv."
+            },
+            {
+              "title": "Degree-distribution comparison figure",
+              "description": "Render a publication-quality figure comparing the two degree distributions (overlaid normalized histograms / CDFs) and a small-multiples panel of the two networks' basic structure. Use figure-style. Save degree_comparison.png. This visually motivates why a size-robust metric is needed."
+            },
+            {
+              "title": "Compute size-independent structural dissimilarities",
+              "description": "Implement/compute the primary metric: Portrait Divergence (Bagrow & Bollt 2019) — a Jensen-Shannon divergence between network 'portraits' (distribution of nodes reachable at each shortest-path distance), which is defined for unlabeled networks of different sizes and handles disconnected components. Add two complementary size-robust lenses: (a) Laplacian spectral-density distance (compare smoothed eigenvalue spectra), and (b) Jensen-Shannon divergence of degree distributions. Report all three scalar dissimilarities. Save dissimilarities.csv."
+            },
+            {
+              "title": "Build degree-preserving null ensembles",
+              "description": "Generate N=499 degree-preserving randomizations (edge-rewiring, keeping each network's exact degree sequence) for each network, giving two 'clouds' of structurally-perturbed replicates plus the two originals. These provide the replication needed to test structural difference despite having only one observed network per set."
+            },
+            {
+              "title": "Direct statistical test of structural difference",
+              "description": "Compute the full Portrait-Divergence dissimilarity matrix among all replicates+originals. Run PERMANOVA (vegan::adonis2, 999 perms) on this dissimilarity matrix with group = {network A, network B} to test H0: the two networks are structurally indistinguishable. Report pseudo-F, R^2 and p-value. Complement with within-cloud vs between-cloud divergence distributions and an effect size (between/within ratio) and a z-score of the observed A–B divergence against the between-cloud null. Save test_results.csv."
+            },
+            {
+              "title": "Ordination figure of the structural comparison",
+              "description": "PCoA (classical MDS) of the Portrait-Divergence dissimilarity matrix, plotting the two null clouds and the two observed networks, with 95% ellipses per group. Use figure-style. This is the money figure: visual separation of the two structures. Save pcoa_ordination.png."
+            },
+            {
+              "title": "Package reusable pipeline script + summary report",
+              "description": "Save a self-contained, commented R function `compare_networks(A, B, n_null=499)` that takes any two adjacency matrices of arbitrary (possibly different) sizes and returns the dissimilarities + PERMANOVA test + ordination — the reusable pipeline the user asked for. Write a concise markdown report interpreting the result in structural terms (what Portrait Divergence measures, what the test concludes, caveats). Save compare_networks.R and comparison_report.md."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    }
+  ],
+  "feasibility": {
+    "rationale": "Both matrices load cleanly as undirected binary one-mode networks of different sizes (260 vs 185 nodes). Size-independent graph-dissimilarity measures (Portrait Divergence, spectral/Laplacian distance) plus degree-preserving null models give a direct, defensible test of structural difference without requiring node alignment. All tooling (igraph, vegan) is standard R.",
+    "confidence": "high"
+  }
+}

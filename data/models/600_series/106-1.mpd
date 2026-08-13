@@ -2,25 +2,17 @@
 0 main
 0 Name: 106 - main.ldr
 0 Author: Michael Heidemann [mikeheide]
-0 !LDRAW_ORG Unofficial_Model
+0 !LDRAW_ORG Model
 0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
 1 16 0 0 0 0 0 -1 0 1 0 1 0 0 106 - car.ldr
 1 16 90 -24 50 0.927184 0 -0.374607 0 1 0 0.374607 0 0.927184 106 - Minifig.ldr
 
-
-0
 0 FILE 106 - car.ldr
 0 car
 0 Name: 106 - car.ldr
 0 Author: Michael Heidemann [mikeheide]
-0 !LDRAW_ORG Unofficial_Model
+0 !LDRAW_ORG Model
 0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
-
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
 1 0 0 0 0 1 0 0 0 1 0 0 0 1 3832.dat
 1 0 -60 8 0 1 0 0 0 1 0 0 0 1 3022.dat
 1 0 80 8 0 1 0 0 0 1 0 0 0 1 3022.dat
@@ -81,39 +73,37 @@
 1 7 80 21 -30 1 0 0 0 1 0 0 0 1 106 - wheel assembly.ldr
 1 7 -60 21 -30 1 0 0 0 1 0 0 0 1 106 - wheel assembly.ldr
 
-0
+
+
+
 0 FILE 106 - wheel assembly.ldr
 0 wheel assembly
 0 Name: 106 - wheel assembly.ldr
 0 Author: Michael Heidemann [mikeheide]
-0 !LDRAW_ORG Unofficial_Model
+0 !LDRAW_ORG Model
 0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
 1 7 0 0 0 1 0 0 0 1 0 0 0 1 4624.dat
 1 256 0 0 0 1 0 0 0 1 0 0 0 1 4084.dat
 
 
 
-0
+
 0 FILE 106 - Minifig.ldr
 0 Minifig
 0 Name: 106 - Minifig.ldr
 0 Author: Michael Heidemann [mikeheide]
-0 !LDRAW_ORG Unofficial_Model
+0 !LDRAW_ORG Model
 0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
 1 6 0 -24 0 1 0 0 0 1 0 0 0 1 3901.dat
 1 14 0 -24 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
 1 1 0 0 0 1 0 0 0 1 0 0 0 1 973p26.dat
 1 1 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
-1 1 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
-1 1 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
-1 14 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
-1 14 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+1 1 -15.552 9 0 1 -0.17 0 0.17 1 0 0 0 1 3818.dat
+1 1 15.552 9 0 1 0.17 0 -0.17 1 0 0 0 1 3819.dat
+1 14 -23.8634 26.5956 -10.321 1 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+1 14 23.8634 26.5956 -10.321 1 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
 1 1 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
 1 1 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
 
-0
-0
+
+

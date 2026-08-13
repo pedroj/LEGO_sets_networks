@@ -1,0 +1,43 @@
+part_A,name_A,part_B,name_B,criterion
+3030#1,Plate 4 x 10,3001#1,Brick 2 x 4,stack
+3030#1,Plate 4 x 10,3021#1,Plate 2 x 3,touch
+3030#1,Plate 4 x 10,3021#2,Plate 2 x 3,touch
+3030#1,Plate 4 x 10,3137c01#1,Brick Special 2 x 2 [Red Wheels for Single Tyre],touch
+3030#1,Plate 4 x 10,3135c01#1,Slope Brick 45° 2 x 3 x 1 & 1/3 Double with Arm and Black Hook,stack
+3030#1,Plate 4 x 10,3137c02#1,Brick Special 2 x 2 [Red Wheels for Dually Tire],touch
+3010p0d#1,Brick 1 x 4,3001#1,Brick 2 x 4,touch
+3010p0d#1,Brick 1 x 4,3001#2,Brick 2 x 4,touch
+3010p0d#1,Brick 1 x 4,3023#1,Plate 1 x 2,stack
+3010p0d#1,Brick 1 x 4,3023#2,Plate 1 x 2,stack
+3010p0d#1,Brick 1 x 4,3020#1,Plate 2 x 4,stack
+3010p0d#1,Brick 1 x 4,3137c01#1,Brick Special 2 x 2 [Red Wheels for Single Tyre],stack
+3001#1,Brick 2 x 4,3001#2,Brick 2 x 4,touch
+3001#1,Brick 2 x 4,3023#1,Plate 1 x 2,stack
+3001#1,Brick 2 x 4,3023#2,Plate 1 x 2,stack
+3001#1,Brick 2 x 4,3021#1,Plate 2 x 3,stack
+3001#1,Brick 2 x 4,3021#2,Plate 2 x 3,stack
+3001#1,Brick 2 x 4,3020#1,Plate 2 x 4,stack
+3001#1,Brick 2 x 4,3024#1,Plate 1 x 1,stack
+3001#1,Brick 2 x 4,3024#2,Plate 1 x 1,stack
+3001#1,Brick 2 x 4,3137c01#1,Brick Special 2 x 2 [Red Wheels for Single Tyre],stack
+3001#2,Brick 2 x 4,3020#1,Plate 2 x 4,touch
+3001#2,Brick 2 x 4,3024#1,Plate 1 x 1,touch
+3001#2,Brick 2 x 4,3024#2,Plate 1 x 1,touch
+3023#1,Plate 1 x 2,3137c01#1,Brick Special 2 x 2 [Red Wheels for Single Tyre],touch
+3023#2,Plate 1 x 2,3137c01#1,Brick Special 2 x 2 [Red Wheels for Single Tyre],touch
+3021#1,Plate 2 x 3,3021#2,Plate 2 x 3,touch
+3020#1,Plate 2 x 4,3024#1,Plate 1 x 1,touch
+3020#1,Plate 2 x 4,3024#2,Plate 1 x 1,touch
+3137c01#1,Brick Special 2 x 2 [Red Wheels for Single Tyre],3139#1,Tyre 14 x 4 Smooth Small Single,tyre-hub
+3137c01#1,Brick Special 2 x 2 [Red Wheels for Single Tyre],3139#2,Tyre 14 x 4 Smooth Small Single,tyre-hub
+451#1,—,3137c02#1,Brick Special 2 x 2 [Red Wheels for Dually Tire],tyre-hub
+451#1,—,3137c02#2,Brick Special 2 x 2 [Red Wheels for Dually Tire],tyre-hub
+451#2,—,3137c02#1,Brick Special 2 x 2 [Red Wheels for Dually Tire],tyre-hub
+451#2,—,3137c02#2,Brick Special 2 x 2 [Red Wheels for Dually Tire],tyre-hub
+451#3,—,3137c02#1,Brick Special 2 x 2 [Red Wheels for Dually Tire],tyre-hub
+451#3,—,3137c02#2,Brick Special 2 x 2 [Red Wheels for Dually Tire],tyre-hub
+451#4,—,3137c02#1,Brick Special 2 x 2 [Red Wheels for Dually Tire],tyre-hub
+451#4,—,3137c02#2,Brick Special 2 x 2 [Red Wheels for Dually Tire],tyre-hub
+3135c01#1,Slope Brick 45° 2 x 3 x 1 & 1/3 Double with Arm and Black Hook,3137c02#1,Brick Special 2 x 2 [Red Wheels for Dually Tire],stack
+3135c01#1,Slope Brick 45° 2 x 3 x 1 & 1/3 Double with Arm and Black Hook,3137c02#2,Brick Special 2 x 2 [Red Wheels for Dually Tire],stack
+3137c02#1,Brick Special 2 x 2 [Red Wheels for Dually Tire],3137c02#2,Brick Special 2 x 2 [Red Wheels for Dually Tire],touch
