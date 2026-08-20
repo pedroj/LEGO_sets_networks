@@ -250,7 +250,7 @@ build_adjacency <- function(all_steps, known_parts, prox_threshold = 80) {
 # 4.  RUN THE PIPELINE
 # ============================================================
 
-mpd_path  <- "7131_-_Anakin_s_Podracer.mpd"   # update path as needed
+mpd_path  <- "data/models/starwars/7131-1-Anakin-Podracer_only-pod.mpd"   # update path as needed
 all_steps <- parse_mpd(mpd_path)
 
 cat(sprintf("Subfiles parsed : %d\n",
