@@ -1,0 +1,17 @@
+0 FILE 601-1.ldr
+0 601-1
+0 Name: 601-1.ldr
+0 Author: LPub3D
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // ROTSTEP REL 0 0 0
+1 0 -45 0 -245 1 0 0 0 1 0 0 0 1 75775.dat
+1 7 45 0 -175 1 0 0 0 1 0 0 0 1 3030.dat
+1 16 -45 0 -105 1 0 0 0 1 0 0 0 1 4655stk.dat
+1 4 -35 0 -65 1 0 0 0 1 0 0 0 1 28653.dat
+1 47 -25 0 -15 1 0 0 0 1 0 0 0 1 3002.dat
+1 15 -30 0 40 1 0 0 0 1 0 0 0 1 3831.dat
+1 15 -25 0 95 1 0 0 0 1 0 0 0 1 3021.dat
+1 15 -35 0 175 1 0 0 0 1 0 0 0 1 u454p01.dat
+1 14 -35 0 245 1 0 0 0 1 0 0 0 1 3317.dat
+0 NOFILE

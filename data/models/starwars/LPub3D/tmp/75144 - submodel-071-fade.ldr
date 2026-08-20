@@ -1,0 +1,7 @@
+0
+0 // LPub3D step custom colours
+0 !COLOUR LPub3D_Fade_Dark_Bluish_Grey CODE 10072 VALUE #646464 EDGE #33333380 ALPHA 128
+0
+0 !FADE 50
+1 10072 0 0 0 1 0 0 0 1 0 0 0 1 2340.dat
+0 !FADE

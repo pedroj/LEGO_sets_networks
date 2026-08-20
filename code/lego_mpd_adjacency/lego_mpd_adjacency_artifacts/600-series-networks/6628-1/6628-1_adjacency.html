@@ -1,0 +1,175 @@
+<style>
+#w{padding:0.75rem 0.5rem;font-family:var(--font-sans,sans-serif)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+#hdr{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:0.75rem}
+.bx{font-size:11px;padding:2px 9px;border-radius:var(--border-radius-md);font-weight:500}
+.bi{background:#E6F1FB;color:#0C447C}
+.bg{background:#EAF3DE;color:#27500A}
+.ba{background:#FAEEDA;color:#633806}
+#legend{display:flex;gap:11px;flex-wrap:wrap;font-size:11px;color:var(--color-text-secondary);margin-bottom:0.6rem;align-items:center}
+.ld{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:3px;vertical-align:middle}
+#frow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.6rem;align-items:center}
+.fb{font-size:11px;padding:3px 9px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);cursor:pointer;transition:background .12s}
+.fb:hover,.fb.on{background:#E6F1FB;color:#0C447C;border-color:transparent}
+#mc{overflow-x:auto}
+table{border-collapse:collapse}
+td,th{padding:0}
+.rl{font-size:8.5px;white-space:nowrap;padding-right:5px;text-align:right;cursor:pointer;min-width:105px;vertical-align:middle;transition:color .1s}
+.cl{writing-mode:vertical-rl;transform:rotate(180deg);font-size:8.5px;white-space:nowrap;cursor:pointer;padding-bottom:3px;transition:color .1s}
+.cell{width:12px;height:12px;border-radius:2px;cursor:pointer;box-sizing:border-box;transition:transform .1s}
+.cell:hover{transform:scale(1.5);z-index:10;position:relative}
+.self{background:var(--color-border-tertiary)}
+#ttip{background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:5px 9px;font-size:11px;line-height:1.5;min-height:24px;margin-bottom:5px}
+#ttip b{font-weight:500;display:block}
+#info{padding:0.6rem 0.9rem;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);font-size:11.5px;color:var(--color-text-secondary);background:var(--color-background-secondary);min-height:42px;line-height:1.6;margin-top:0.55rem}
+#info strong{color:var(--color-text-primary);font-weight:500}
+#stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:0.75rem}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.55rem 0.7rem;text-align:center}
+.stat-n{font-size:19px;font-weight:500;color:var(--color-text-primary)}
+.stat-l{font-size:11px;color:var(--color-text-secondary);margin-top:1px}
+#deg-section{margin-top:0.9rem;padding-top:0.6rem;border-top:0.5px solid var(--color-border-tertiary)}
+#deg-label{font-size:11px;color:var(--color-text-tertiary);margin-bottom:5px}
+#degbar{display:flex;gap:2px;align-items:flex-end;height:60px}
+.db-wrap{display:flex;flex-direction:column;align-items:center;flex:1;min-width:7px;cursor:pointer}
+.db{border-radius:2px 2px 0 0;width:100%;opacity:.82;transition:opacity .12s}
+.db:hover{opacity:1}
+.dlb{font-size:7.5px;text-align:center;color:var(--color-text-tertiary);margin-top:2px}
+</style>
+
+<h2 class="sr-only">6628-1 &mdash; adjacency matrix of 23 part types and 78 connections</h2>
+<div id="w">
+
+<div id="hdr">
+  <span style="font-size:13px;font-weight:500;color:var(--color-text-primary)">6628-1</span>
+  <span class="bx bi">23 part types</span>
+  <span class="bx bi">78 connections</span>
+  <span class="bx bg">23 part types</span>
+  <span class="bx ba">MPD/LDR parsed</span>
+</div>
+
+<div id="stats">
+  <div class="stat"><div class="stat-n">23</div><div class="stat-l">unique parts</div></div>
+  <div class="stat"><div class="stat-n">78</div><div class="stat-l">connections</div></div>
+  <div class="stat"><div class="stat-n">40</div><div class="stat-l">part instances</div></div>
+  <div class="stat"><div class="stat-n">1</div><div class="stat-l">isolated parts</div></div>
+</div>
+
+<div id="legend">
+  <span><span class="ld" style="background:#4E79A7"></span>brick</span>
+  <span><span class="ld" style="background:#59A14F"></span>plate</span>
+  <span><span class="ld" style="background:#B07AA1"></span>slope</span>
+  <span><span class="ld" style="background:#F1CE63"></span>panel</span>
+  <span><span class="ld" style="background:#79706E"></span>wheel</span>
+  <span><span class="ld" style="background:#D37295"></span>wheel_holder</span>
+  <span><span class="ld" style="background:#4B4B4B"></span>tyre</span>
+  <span><span class="ld" style="background:#FF9D9A"></span>minifig</span>
+  <span><span class="ld" style="background:#BAB0AC"></span>other</span>
+</div>
+
+<div id="frow"><span style="font-size:11px;color:var(--color-text-tertiary)">Filter by category:</span></div>
+<div id="ttip">Hover a part label to highlight its row &mdash; click a cell to inspect the connection.</div>
+<div id="mc"></div>
+<div id="info">Click any coloured cell to see connection details here.</div>
+<div id="deg-section">
+  <div id="deg-label">Connection degree per part &mdash; click a bar for details</div>
+  <div id="degbar"></div>
+</div>
+
+</div>
+
+<script>
+const D={
+parts:["3010.dat","3021.dat","3023.dat","3024.dat","3034.dat","3623.dat","3710.dat","3794b.dat","4175.dat","3135.dat","3821p60.dat","3822p60.dat","3823.dat","3788.dat","4211.dat","122c01.dat","4084.dat","4070.dat","4213.dat","4214.dat","3136.dat","3828.dat","3829a.dat"],
+names:["Brick 1 x 4","Plate 2 x 3","Plate 1 x 2","Plate 1 x 1","Plate 2 x 8","Plate 1 x 3","Plate 1 x 4","Plate Special 1 x 2 with 1 Stud with Groove (Jumper)","Plate Special 1 x 2 with Ladder","Slope Brick 45 2 x 3 x 1 & 1/3 Double Crane","Door 1 x 3 x 1 Right","Door 1 x 3 x 1 Left","Windscreen 2 x 4 x 2","Wheel Arch, Mudguard 2 x 4 Studded","Vehicle Base 4 x 5 with Wheel Arches, 2 x 2 Opening","Plate Special 2 x 2 with Wheels Red","Tyre 21 x 8 Offset Tread Medium","Brick Special 1 x 1 with Headlight","Hinge Vehicle Roof 4 x 4","Hinge Vehicle Roof Holder 1 x 4 x 2","Hook, Tow Hook with 2 Studs on Both Sides","3828","Sticker Sheet for Set 163-1"],
+cats:["brick","plate","plate","plate","plate","plate","plate","plate","plate","slope","panel","panel","panel","wheel","wheel","wheel_holder","tyre","minifig","minifig","minifig","other","other","other"],
+descs:["Brick 1 x 4 &middot; family brick &middot; used &times;1 &middot; a highly connected hub of the build.","Plate 2 x 3 &middot; family plate &middot; used &times;2 &middot; connects to adjacent parts in the assembly.","Plate 1 x 2 &middot; family plate &middot; used &times;4 &middot; a highly connected hub of the build.","Plate 1 x 1 &middot; family plate &middot; used &times;4 &middot; connects to adjacent parts in the assembly.","Plate 2 x 8 &middot; family plate &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Plate 1 x 3 &middot; family plate &middot; used &times;2 &middot; connects to adjacent parts in the assembly.","Plate 1 x 4 &middot; family plate &middot; used &times;4 &middot; a highly connected hub of the build.","Plate Special 1 x 2 with 1 Stud with Groove (Jumper) &middot; family plate &middot; used &times;2 &middot; connects to adjacent parts in the assembly.","Plate Special 1 x 2 with Ladder &middot; family plate &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Slope Brick 45 2 x 3 x 1 & 1/3 Double Crane &middot; family slope &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Door 1 x 3 x 1 Right &middot; family panel &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Door 1 x 3 x 1 Left &middot; family panel &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Windscreen 2 x 4 x 2 &middot; family panel &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Wheel Arch, Mudguard 2 x 4 Studded &middot; family wheel &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Vehicle Base 4 x 5 with Wheel Arches, 2 x 2 Opening &middot; family wheel &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Plate Special 2 x 2 with Wheels Red &middot; family wheel_holder &middot; used &times;2 &middot; connects to adjacent parts in the assembly.","Tyre 21 x 8 Offset Tread Medium &middot; family tyre &middot; used &times;4 &middot; connects to adjacent parts in the assembly.","Brick Special 1 x 1 with Headlight &middot; family minifig &middot; used &times;2 &middot; a highly connected hub of the build.","Hinge Vehicle Roof 4 x 4 &middot; family minifig &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Hinge Vehicle Roof Holder 1 x 4 x 2 &middot; family minifig &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Hook, Tow Hook with 2 Studs on Both Sides &middot; family other &middot; used &times;1 &middot; isolated (no in-build connection detected).","3828 &middot; family other &middot; used &times;1 &middot; connects to adjacent parts in the assembly.","Sticker Sheet for Set 163-1 &middot; family other &middot; used &times;1 &middot; a highly connected hub of the build."],
+matrix:[[0,0,1,0,0,1,1,0,0,1,1,1,1,0,0,0,0,0,0,1,0,0,1],[0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1],[1,1,0,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,0,0,0,1,1],[0,0,1,0,0,0,1,0,1,0,1,1,1,0,0,0,0,1,1,0,0,0,0],[0,1,1,0,0,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],[1,0,1,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,1,1,1,1,0,1,1,1,1,1,0,0,0,1,0,1,0,0,0,1,1],[0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,1,0,0,0,1,1],[1,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],[1,0,1,1,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1],[1,0,1,1,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1],[1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,1],[0,1,1,0,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,1],[0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1],[0,0,1,1,0,0,1,0,1,0,1,1,0,0,1,0,0,0,0,0,0,1,1],[0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0],[1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,1,0,0,0,1,0,1,0,1,1,0,0,1,0,0,1,0,0,0,0,1],[1,1,1,0,0,0,1,0,1,0,1,1,0,0,1,1,1,1,0,0,0,1,0]]
+};
+
+const CC={brick:'#4E79A7',plate:'#59A14F',slope:'#B07AA1',panel:'#F1CE63',wheel:'#79706E',wheel_holder:'#D37295',tyre:'#4B4B4B',minifig:'#FF9D9A',other:'#BAB0AC',other:'#BAB0AC'};
+const n=D.parts.length;
+let af=null,hl=null;
+
+function blend(a,b){
+  const hr=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+  const [ra,rb]=[hr(a),hr(b)];
+  return`rgb(${Math.round((ra[0]+rb[0])/2)},${Math.round((ra[1]+rb[1])/2)},${Math.round((ra[2]+rb[2])/2)})`;
+}
+function deg(i){return D.matrix[i].reduce((s,v)=>s+v,0);}
+
+const cats=[...new Set(D.cats)].sort();
+const fr=document.getElementById('frow');
+const ab=document.createElement('button');
+ab.className='fb on'; ab.textContent='All';
+ab.onclick=()=>{af=null; document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on')); ab.classList.add('on'); render();};
+fr.appendChild(ab);
+cats.forEach(c=>{
+  const b=document.createElement('button'); b.className='fb'; b.textContent=c;
+  b.style.borderLeft=`3px solid ${CC[c]||'#888'}`;
+  b.onclick=()=>{af=(af===c?null:c); document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on')); (af?b:ab).classList.add('on'); render();};
+  fr.appendChild(b);
+});
+
+function render(){
+  const vis=af ? D.parts.map((_,i)=>D.cats[i]===af?i:null).filter(i=>i!==null) : D.parts.map((_,i)=>i);
+  let h='<table><thead><tr><th style="min-width:105px"></th>';
+  vis.forEach(i=>{h+=`<th><div class="cl" style="color:${CC[D.cats[i]]||'#888'}" data-i="${i}">${D.names[i]}</div></th>`;});
+  h+='</tr></thead><tbody>';
+  vis.forEach(ri=>{
+    const rc=CC[D.cats[ri]]||'#888';
+    const hlbg=hl===ri?`style="background:var(--color-background-secondary)"`:'';
+    h+=`<tr ${hlbg}><td class="rl" style="color:${rc}" data-i="${ri}">${D.names[ri]}</td>`;
+    vis.forEach(ci=>{
+      if(ri===ci){h+=`<td><div class="cell self"></div></td>`;return;}
+      const v=D.matrix[ri][ci];
+      const bg=v?`background:${blend(rc,CC[D.cats[ci]]||'#888')}`:'background:transparent';
+      h+=`<td><div class="cell" style="${bg}" data-r="${ri}" data-c="${ci}"></div></td>`;
+    });
+    h+='</tr>';
+  });
+  h+='</tbody></table>';
+  document.getElementById('mc').innerHTML=h;
+  document.querySelectorAll('[data-r]').forEach(el=>{
+    el.addEventListener('click',()=>onCell(+el.dataset.r,+el.dataset.c));
+    el.addEventListener('mouseenter',()=>onHov(+el.dataset.r,+el.dataset.c,!!D.matrix[+el.dataset.r][+el.dataset.c]));
+    el.addEventListener('mouseleave',clearTip);
+  });
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{hl=+el.dataset.i; render();});
+    el.addEventListener('mouseleave',()=>{hl=null; render();});
+  });
+  renderDeg(vis);
+}
+
+function onCell(r,c){
+  const v=D.matrix[r][c];
+  const rn=D.names[r], cn=D.names[c];
+  const col=blend(CC[D.cats[r]]||'#888', CC[D.cats[c]]||'#888');
+  document.getElementById('info').innerHTML = v
+    ? `<strong style="color:${col}">${rn} &harr; ${cn}</strong><br>${D.descs[r]}<br><span style="font-size:10.5px;color:var(--color-text-tertiary)">${D.cats[r]} &middot; ${D.cats[c]}</span><br>${D.descs[c]}`
+    : `<strong>${rn}</strong> and <strong>${cn}</strong> &mdash; no direct connection in this build.`;
+}
+function onHov(r,c,conn){
+  document.getElementById('ttip').innerHTML=
+    `<b>${D.names[r]} &harr; ${D.names[c]}</b>`+
+    (conn?`<span style="color:var(--color-text-success)">&#10003; connected</span>`
+         :`<span style="color:var(--color-text-tertiary)">&#10007; not connected</span>`);
+}
+function clearTip(){
+  document.getElementById('ttip').innerHTML='Hover a part label to highlight its row &mdash; click a cell to inspect the connection.';
+}
+function renderDeg(vis){
+  const ds=vis.map(i=>({i,d:deg(i),c:CC[D.cats[i]]||'#888',n:D.names[i]}));
+  const mx=Math.max(...ds.map(d=>d.d),1);
+  document.getElementById('degbar').innerHTML=ds.map(({i,d,c,n})=>{
+    const h=Math.max(3,Math.round(54*(d/mx)));
+    return`<div class="db-wrap" onclick="document.getElementById('info').innerHTML='<strong>${n}</strong> &mdash; degree ${d}. ${D.descs[i]}'">
+      <div class="db" style="height:${h}px;background:${c}" title="${n}: ${d}"></div>
+      <div class="dlb">${d}</div>
+    </div>`;
+  }).join('');
+}
+
+render();
+</script>
+
