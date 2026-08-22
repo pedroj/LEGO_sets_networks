@@ -1,54 +1,102 @@
-# History files
-.Rhistory
-.Rapp.history
+# =============================================================================
+# R / RStudio project .gitignore
+# Tailored for ecological analysis / R package work
+# =============================================================================
 
-# Session Data files
+# --- R workspace & history ----------------------------------------------------
+# Prevent large .RData files and session history from entering Git
 .RData
-.DS_Store
-
-# User-specific files
-.Ruserdata
-/data/extdata/*.csv  
-/images/alphin
-*.png
-*.jpg
-/images/*.*
-/data/rebrickable/*.csv
-/images/rebrickable/*.*
-/code/LEGO_set_explorer/*.csv
-/code/LEGO_set_explorer/*.rds
-lego_sets.csv
-lego_sets.rds
-set_parts.csv
-set_parts.rds
-
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
-.Rproj.user/
-
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
-
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-# R Environment Variables
+.RData.*
+.Rhistory
+.Rprofile
 .Renviron
-.positai
+
+# RStudio project/user-specific files
+.Rproj.user
+.Rbuildignore
+*.Rproj.user
+
+# --- R package development ----------------------------------------------------
+# Build artifacts
+*.tar.gz
+*.Rcheck
+*.Rinst
+*.o
+*.so
+*.dll
+*.dylib
+
+# Documentation / manual builds
+man/*.Rd
+vignettes/*.pdf
+README.Rmd
+NEWS.Rmd
+
+# Test & coverage
+tests/testthat/_snaps
+tests/testthat.Rout.fail
+*.gcno
+*.gcda
+*.gcov
+
+# --- Data & output -----------------------------------------------------------
+# Large data / intermediate objects (adjust patterns to your project)
+data-raw/*.csv
+data-raw/*.rds
+data-raw/*.RData
+output/*.csv
+output/*.rds
+output/*.RData
+output/*.pdf
+output/*.png
+output/*.Rmd
+
+# Temporary R objects
+*.rds
+*.RDataTmp*
+*.RData.bak
+*.RData.old
+
+# --- System / editor ---------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# --- Logs & misc -------------------------------------------------------------
+# R session logs
+*.Rout
+*.log
+
+# renv / packrat (if used, uncomment as needed)
+# renv/
+# packrat/
+
+# Quarto / R Markdown renders (keep source, ignore rendered)
+*.html
+*.docx
+*.pptx
+!README.md
+!README.html
+
+# --- Keep these (examples) ---------------------------------------------------
+# Typically you DO want to track:
+#   - R/             (package code)
+#   - man/           (hand-edited .Rd if any)
+#   - vignettes/*.Rmd
+#   - tests/
+#   - data/*.rda (small, curated datasets)
+#   - DESCRIPTION, NAMESPACE, LICENSE, etc.
