@@ -2,3 +2,5 @@
 An analysis of LEGO pieces linkage patterns and model complexity.
 
 ![Isogawa model #158](./images/isogawa_158.png)
+
+![Adjacency matrix model #485](./images/4485-matrix.png)
