@@ -1,0 +1,18 @@
+REPS = {
+"Brick basic":"3001","Brick modified SNOT":"87087","Brick with pin or axle":"2458","Brick round":"3062b","Brick arch":"3659","Cone":"4589",
+"Plate basic":"3020","Plate jumper":"3794","Plate round":"4073","Plate wedge":"41769",
+"Tile basic":"3069b","Tile round":"98138","Tile modified (grille; slope tile)":"2412b",
+"Slope standard":"3040b","Slope inverted":"3665","Slope curved":"11477","Baseplate":"3811",
+"Panel":"4865a","Window frame":"60592","Window or door leaf":"60601","Windscreen":"2437",
+"Technic pin":"2780","Technic pin with axle":"6562","Technic pin with ball":"6628","Technic axle":"3705",
+"Technic beam (liftarm)":"32524","Technic brick (studded beam)":"3700","Technic plate (with holes)":"3709b",
+"Technic connector (cross block; angle)":"6536","Technic bush":"3713","Technic gear":"3647",
+"Technic panel or fairing":"32527","Technic chain or tread link":"3711",
+"Click hinge (plate or brick)":"44301","Clip plate or tile":"4085","Bar holder or handle plate":"2540",
+"Ball-joint plate (ball)":"14417","Ball-joint plate (socket)":"14418","Turntable":"3680c01","Bracket (SNOT)":"99780",
+"Dish or radar":"4740","Bar or antenna":"30374","Flag":"2335","Hose or flex bar":"73590","Plant or foliage":"2423",
+"Wheel holder":"4600","Wheel rim":"4624","Tyre":"3641",
+"Minifig head":"3626b","Minifig torso (with arms)":"973","Minifig hand":"983","Minifig hips and legs":"970c00",
+"Minifig headgear or hair":"3624","Minifig accessory (tool; weapon)":"4499","Minifig neckwear":"3838",
+"Minifig seat or chair":"4079","Minifig arm":"3818",
+}
