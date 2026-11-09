@@ -1,0 +1,6 @@
+e <- read.csv("4010_edges.csv", stringsAsFactors=FALSE)
+t <- unique(rbind(data.frame(num=e$num_A,name=e$name_A,fam=e$fam_A), data.frame(num=e$num_B,name=e$name_B,fam=e$fam_B)))
+iso <- setdiff(sub("#.*","",colnames(read.csv("4010_adjacency_matrix.csv",row.names=1,check.names=FALSE))), t$num)
+cat("types:",nrow(t)," isolated types:",iso,"\n")
+im <- data.frame(subtype=t$num, ldraw=sapply(t$num,function(x) paste(unique(c(x, sub("c[0-9]+$","",x), sub("p.*$","",x), sub("[a-z]+$","",x), sub("[a-z][0-9]*$","",x))),collapse="|")), colour="white", icon=t$num)
+write.csv(im,"icon_map.csv",row.names=FALSE); print(t, row.names=FALSE)
