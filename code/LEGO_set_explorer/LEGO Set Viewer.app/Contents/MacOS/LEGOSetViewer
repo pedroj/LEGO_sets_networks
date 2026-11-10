@@ -1,0 +1,41 @@
+#!/bin/bash
+# LEGO Set Viewer launcher: starts the Shiny app on a fixed port and opens it.
+# The R server stops by itself a few seconds after the last browser
+# window/tab showing the app is closed (see LEGO_DESKTOP in server.R).
+
+APP_DIR="/Users/pedro/Documents/Working/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_set_explorer"
+PORT=8765
+URL="http://127.0.0.1:${PORT}"
+LOG="$HOME/Library/Logs/LEGOSetViewer.log"
+
+# Already running? Just open it.
+if curl -s -o /dev/null "$URL"; then open "$URL"; exit 0; fi
+
+# Find Rscript (CRAN installer, Homebrew Intel, Homebrew Apple Silicon)
+for R in /Library/Frameworks/R.framework/Resources/bin/Rscript \
+         /usr/local/bin/Rscript /opt/homebrew/bin/Rscript; do
+    [ -x "$R" ] && RSCRIPT="$R" && break
+done
+if [ -z "$RSCRIPT" ]; then
+    osascript -e 'display alert "LEGO Set Viewer" message "Rscript was not found. Install R from CRAN or edit the path in the app."'
+    exit 1
+fi
+
+osascript -e 'display notification "Starting R and loading LEGO data…" with title "LEGO Set Viewer"'
+
+cd "$APP_DIR" || exit 1
+LEGO_DESKTOP=1 "$RSCRIPT" -e "shiny::runApp('.', port = ${PORT}, launch.browser = FALSE)" > "$LOG" 2>&1 &
+RPID=$!
+trap 'kill $RPID 2>/dev/null' TERM INT EXIT
+
+# Wait for the server (global.R downloads data, so allow up to 3 minutes)
+for i in $(seq 1 180); do
+    if curl -s -o /dev/null "$URL"; then open "$URL"; break; fi
+    if ! kill -0 $RPID 2>/dev/null; then
+        osascript -e "display alert \"LEGO Set Viewer\" message \"The app failed to start. See the log: $LOG\""
+        exit 1
+    fi
+    sleep 1
+done
+
+wait $RPID
