@@ -29,6 +29,8 @@ classify_part <- function(name, category = "") {
   # Seats and chairs are minifig accessories (studded seat, S|A)
   if (has("\\bseat\\b|\\bchair\\b")) return(out("Minifig", "Minifig seat or chair"))
   if (has("^arm, (left|right)")) return(out("Minifig", "Minifig arm"))
+  # Boat hulls are large studded bases (the hull 2372c01 carries the build on its deck)
+  if (has("boat hull|^boat \\d")) return(out("Baseplate", "Baseplate"))
   if (has("steering (stand|wheel)")) return(out("Special", "Bracket (SNOT)"))
   if (has("\\bty(re|res)\\b|\\btire")) return(out("Special", "Tyre"))
   if (has("(brick|plate).*wheel|wheels? holder") && !has("^bar\\b"))

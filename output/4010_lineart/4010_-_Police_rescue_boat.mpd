@@ -7,7 +7,7 @@
 
 0 !THEME Boats
 
-1 0 0 0 0 1 0 0 0 1 0 0 0 1 4010 - 2372c01d01.dat
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4010 - 2372c01.dat
 0 STEP
 1 1 -50 56 -120 0 0 -1 0 1 0 1 0 0 3004.dat
 1 1 50 56 -120 0 0 -1 0 1 0 1 0 0 3004.dat
@@ -140,9 +140,9 @@
 1 14 0 -56 0 0.9856 0 -0.1689 0 1 0 0.1689 0 0.9856 3626bp01.dat
 1 15 0 -56 0 0.9856 0 -0.1689 0 1 0 0.1689 0 0.9856 3624.dat
 
-0 FILE 4010 - 2372c01d01.dat
+0 FILE 4010 - 2372c01.dat
 0 Boat Hull Floating 25 x 10 with White Deck, "Police" and "4010" Stickers
-0 Name: 4010 - 2372c01d01.dat
+0 Name: 4010 - 2372c01.dat
 0 Author: Philippe Hurbain [Philo]
 0 !LDRAW_ORG Unofficial_Shortcut
 0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
@@ -356,7 +356,7 @@
 0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
 
 0 !HELP For use with 2372c01 Boat Hull
-0 !HELP See stickered hull 2372c01d01
+0 !HELP See stickered hull 2372c01
 
 0 BFC CERTIFY CCW
 
