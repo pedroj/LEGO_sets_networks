@@ -1,0 +1,93 @@
+id,desc,x,y,z,n_studs
+2372c01#1,Boat Hull Floating 25 x 10 with White Deck,0.0,0.0,0.0,210
+3004#1,Brick  1 x  2,-50.0,56.0,-120.0,2
+3004#2,Brick  1 x  2,50.0,56.0,-120.0,2
+3004#3,Brick  1 x  2,0.0,40.0,130.0,2
+3002#1,Brick  2 x  3,40.0,56.0,10.0,6
+3023#1,~Moved To 3023b,0.0,32.0,130.0,2
+4079#1,Minifig Seat  2 x  2,0.0,72.0,-80.0,2
+3795#1,Plate  2 x  6,0.0,48.0,-120.0,12
+73090b#1,Brick  2 x  6 x  2 Weight with Plate Bottom,0.0,32.0,100.0,12
+3003#1,Brick  2 x  2,40.0,32.0,20.0,4
+3958#1,Plate  6 x  6,0.0,24.0,80.0,36
+3004#4,Brick  1 x  2,-40.0,0.0,30.0,2
+4623#1,Plate  1 x  2 with Vertical Bar on Long Side and Long Arm,0.0,16.0,30.0,2
+3842a#1,Minifig Helmet Classic with Thin Chin Guard and Visor Dimples,-42.0,53.0,19.0,0
+3040b#1,Slope Brick 45  2 x  1,-70.0,-24.0,30.0,1
+3040b#2,Slope Brick 45  2 x  1,70.0,-24.0,30.0,1
+3665#1,~Moved to 3665a,-70.0,-24.0,-130.0,3
+3665#2,~Moved to 3665a,70.0,-24.0,-130.0,3
+3829c01#1,Car Steering Stand and Wheel (Complete),-40.0,-8.0,30.0,0
+3005#1,Brick  1 x  1,-70.0,-24.0,10.0,1
+3005#2,Brick  1 x  1,70.0,-24.0,10.0,1
+3004#5,Brick  1 x  2,-70.0,-24.0,-100.0,2
+3004#6,Brick  1 x  2,70.0,-24.0,-100.0,2
+3024#1,Plate  1 x  1,-70.0,-32.0,-90.0,1
+3024#2,Plate  1 x  1,70.0,-32.0,-90.0,1
+4873#1,Bar  1 x  6 with Studs Open,0.0,-24.0,150.0,4
+3838#1,Minifig Airtanks,0.0,16.0,9.0,0
+3297#1,Slope Brick 33  3 x  4,-40.0,-24.0,-150.0,4
+3297#2,Slope Brick 33  3 x  4,40.0,-24.0,-150.0,4
+4599a#1,Tap  1 x  1 with Hole in Spout,10.0,-38.0,146.0,1
+3040b#3,Slope Brick 45  2 x  1,-70.0,-48.0,10.0,1
+3040b#4,Slope Brick 45  2 x  1,70.0,-48.0,10.0,1
+6141#1,Plate  1 x  1 Round,10.0,-38.0,170.0,1
+3460#1,Plate  1 x  8,0.0,-40.0,-90.0,8
+4863#1,Window  1 x  4 x  2 Plane,70.0,-48.0,-40.0,4
+4863#2,Window  1 x  4 x  2 Plane,-70.0,-48.0,-40.0,4
+4286#1,Slope Brick 33  3 x  1,-70.0,-48.0,-110.0,1
+4286#2,Slope Brick 33  3 x  1,70.0,-48.0,-110.0,1
+3023#2,~Moved To 3023b,60.0,-48.0,-90.0,2
+3023#3,~Moved To 3023b,-60.0,-48.0,-90.0,2
+4862#1,Glass for Window  1 x  2 x  2 Plane,70.0,-48.0,-20.0,0
+4862#2,Glass for Window  1 x  2 x  2 Plane,70.0,-48.0,-60.0,0
+4862#3,Glass for Window  1 x  2 x  2 Plane,-70.0,-48.0,-20.0,0
+4862#4,Glass for Window  1 x  2 x  2 Plane,-70.0,-48.0,-60.0,0
+3939#1,Slope Brick 33  3 x  6,0.0,-48.0,-110.0,2
+3023#4,~Moved To 3023b,-70.0,-56.0,0.0,2
+3023#5,~Moved To 3023b,70.0,-56.0,0.0,2
+3021#1,Plate  2 x  3,60.0,-56.0,-70.0,6
+3021#2,Plate  2 x  3,-60.0,-56.0,-70.0,6
+3070b#1,Tile  1 x  1 with Groove,70.0,-56.0,-30.0,0
+3070b#2,Tile  1 x  1 with Groove,-70.0,-56.0,-30.0,0
+2348a#1,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,0.0,-52.0,-43.0,0
+2349a#1,Hinge Car Roof  4 x  4 Sunroof without Ledges,0.0,-56.0,-60.0,4
+4625#1,Hinge Tile  1 x  4,0.0,-48.0,-90.0,0
+3024#3,Plate  1 x  1,50.0,-56.0,-30.0,1
+3024#4,Plate  1 x  1,-50.0,-56.0,-30.0,1
+4866#1,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,40.0,-88.0,-10.0,6
+4866#2,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,-40.0,-88.0,-10.0,6
+3034#1,Plate  2 x  8,0.0,-96.0,0.0,16
+4873#2,Bar  1 x  6 with Studs Open,-40.0,-24.0,-250.0,4
+4289#1,Boat Mast  2 x  2,0.0,-104.0,0.0,3
+3794a#1,Plate  1 x  2 without Groove with 1 Centre Stud,0.0,-64.0,-110.0,1
+3460#2,Plate  1 x  8,0.0,-56.0,-110.0,8
+4349#1,Minifig Loudhailer,46.0,-40.0,-242.0,1
+4349#2,Minifig Loudhailer,-46.0,-40.0,-242.0,1
+6141#2,Plate  1 x  1 Round,0.0,-176.0,10.0,1
+4599a#2,Tap  1 x  1 with Hole in Spout,0.0,-88.0,-110.0,1
+4073#1,~Moved to 6141,46.0,-40.0,-264.0,1
+4073#2,~Moved to 6141,-46.0,-40.0,-264.0,1
+4740#1,Dish  2 x  2 Inverted,0.0,-84.0,-124.0,1
+4873#3,Bar  1 x  6 with Studs Open,40.0,-24.0,-250.0,4
+3815#1,~Minifig Hips (Obsolete),49.0,-16.0,120.0,0
+3816#1,~Minifig Leg Right (Obsolete),49.0,-4.0,120.0,0
+3817#1,~Minifig Leg Left (Obsolete),49.0,-4.0,120.0,0
+973p1f#1,Minifig Torso with Buttons and Police Badge Plain Pattern,49.0,-48.0,120.0,0
+3819#1,Minifig Arm Left,49.0,-39.0,135.6,0
+3818#1,Minifig Arm Right,49.0,-39.0,104.4,0
+3820#1,Minifig Hand,70.1,-37.2,99.1,0
+3820#2,Minifig Hand,58.9,-21.2,143.7,0
+3626bp01#1,Minifig Head with Standard Grin Pattern (Blocked Hollow Stud),49.0,-72.0,120.0,1
+3624#1,Minifig Police Hat,49.0,-72.0,120.0,0
+3962a#1,Minifig Radio with Short Handle,79.8,-40.2,99.4,2
+3815#2,~Minifig Hips (Obsolete),-40.0,-16.0,71.0,0
+3816#2,~Minifig Leg Right (Obsolete),-40.0,-4.0,71.0,0
+3817#2,~Minifig Leg Left (Obsolete),-40.0,-4.0,71.0,0
+973p1g#1,Minifig Torso with Zipper and Police Badge Plain Pattern,-40.0,-48.0,71.0,0
+3819#2,Minifig Arm Left,-24.4,-39.0,71.0,0
+3818#2,Minifig Arm Right,-55.6,-39.0,71.0,0
+3820#3,Minifig Hand,-64.1,-18.9,71.5,0
+3820#4,Minifig Hand,-17.6,-28.9,52.8,0
+3626bp01#2,Minifig Head with Standard Grin Pattern (Blocked Hollow Stud),-40.0,-72.0,71.0,1
+3624#2,Minifig Police Hat,-40.0,-72.0,71.0,0

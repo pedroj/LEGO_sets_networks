@@ -1,0 +1,192 @@
+part_a,part_b,submodel,decision,reason,evidence,in_kernel_matrix
+2420#1,2540#1,Sebulba's Podracer,keep,orange corner plate on the black plate (PDF pp.11-12 inset step 1),geometry + PDF,1
+2420#1,3023#1,Sebulba's Podracer,keep,orange corner plate on the 1x2 plate (PDF pp.11-12 inset step 1),geometry + PDF,1
+2420#2,2540#2,Sebulba's Podracer,keep,orange corner plate on the black plate (PDF pp.11-12 inset step 1),geometry + PDF,1
+2420#2,3023#2,Sebulba's Podracer,keep,orange corner plate on the 1x2 plate (PDF pp.11-12 inset step 1),geometry + PDF,1
+2420#3,2540#3,Sebulba's Podracer,keep,orange corner plate on the black plate (PDF pp.11-12 inset step 1),geometry + PDF,1
+2420#3,3023#3,Sebulba's Podracer,keep,orange corner plate on the 1x2 plate (PDF pp.11-12 inset step 1),geometry + PDF,1
+2420#4,2540#4,Sebulba's Podracer,keep,orange corner plate on the black plate (PDF pp.11-12 inset step 1),geometry + PDF,1
+2420#4,3023#4,Sebulba's Podracer,keep,orange corner plate on the 1x2 plate (PDF pp.11-12 inset step 1),geometry + PDF,1
+2540#1,2555#4,Sebulba's Podracer,keep,handle of the black plate clipped in the clip tile (PDF pp.11-12 step 7-8),geometry + PDF,1
+2540#1,3024#1,Sebulba's Podracer,keep,black 1x1 plate on the stud of the black plate (PDF pp.11-12 inset step 2),geometry + PDF,1
+2540#2,2555#3,Sebulba's Podracer,keep,handle of the black plate clipped in the clip tile (PDF pp.11-12 step 7-8),geometry + PDF,1
+2540#2,3024#2,Sebulba's Podracer,keep,black 1x1 plate on the stud of the black plate (PDF pp.11-12 inset step 2),geometry + PDF,1
+2540#3,2555#5,Sebulba's Podracer,keep,handle of the black plate clipped in the clip tile (PDF pp.11-12 step 7-8),geometry + PDF,1
+2540#3,3024#3,Sebulba's Podracer,keep,black 1x1 plate on the stud of the black plate (PDF pp.11-12 inset step 2),geometry + PDF,1
+2540#4,2555#6,Sebulba's Podracer,keep,handle of the black plate clipped in the clip tile (PDF pp.11-12 step 7-8),geometry + PDF,1
+2540#4,3024#4,Sebulba's Podracer,keep,black 1x1 plate on the stud of the black plate (PDF pp.11-12 inset step 2),geometry + PDF,1
+2555#1,30359b#1,Anakin's Podracer,keep,clip tile on the rear stud of the bar (PDF p.3 step 2),geometry + PDF,1
+2555#1,30374#1,Anakin's Podracer,keep,energy bar held in the clip (PDF p.3 step 3),geometry + PDF,1
+2555#2,30359b#2,Sebulba's Podracer,keep,clip tile on the rear stud of the bar (PDF p.6 step 2),geometry + PDF,1
+2555#2,30374#2,Sebulba's Podracer,keep,energy bar held in the clip (PDF p.7 step 3),geometry + PDF,1
+2555#3,4733#7,Sebulba's Podracer,keep,clip tile on a side stud of the clip brick (PDF p.10 step 6 inset),geometry + PDF,1
+2555#4,4733#7,Sebulba's Podracer,keep,clip tile on a side stud of the clip brick (PDF p.10 step 6 inset),geometry + PDF,1
+2555#5,4733#8,Sebulba's Podracer,keep,clip tile on a side stud of the clip brick (PDF p.10 step 6 inset),geometry + PDF,1
+2555#6,4733#8,Sebulba's Podracer,keep,clip tile on a side stud of the clip brick (PDF p.10 step 6 inset),geometry + PDF,1
+2566#1,4733#3,Anakin's Podracer,keep,yellow palm-tree top on the side stud of the pod brick (PDF p.4 pod step 3),geometry + PDF,1
+2566#2,4733#2,Anakin's Podracer,keep,yellow palm-tree top on the side stud of the pod brick (PDF p.4 pod step 3),geometry + PDF,1
+30359b#1,4733#1,Anakin's Podracer,keep,stud brick 1x1 on the front stud of the bar (PDF p.3 step 2),geometry + PDF,1
+30359b#1,4740#1,Anakin's Podracer,keep,"transparent dish stud into the bar's underside, front end (PDF p.3 step 1)",geometry + PDF,1
+30359b#1,4740#2,Anakin's Podracer,keep,"transparent dish stud into the bar's underside, rear end (PDF p.3 step 1)",geometry + PDF,1
+30359b#2,4733#4,Sebulba's Podracer,keep,stud brick 1x1 on the front stud of the bar (PDF p.6 step 2),geometry + PDF,1
+30359b#2,4740#3,Sebulba's Podracer,keep,"transparent dish stud into the bar's underside, front end (PDF p.6 step 1)",geometry + PDF,1
+30359b#2,4740#4,Sebulba's Podracer,keep,"transparent dish stud into the bar's underside, rear end (PDF p.6 step 1)",geometry + PDF,1
+30374#1,4733#2,Anakin's Podracer,keep,energy bar pushed on the side stud of the pod brick (PDF p.5 step 4),geometry + PDF,1
+30374#1,4733#3,Anakin's Podracer,keep,energy bar pushed on the side stud of the pod brick (PDF p.5 step 4),geometry + PDF,1
+30374#2,4733#5,Sebulba's Podracer,keep,energy bar pushed on the side stud of the pod brick (PDF p.7 step 4 / p.9 step 5),geometry + PDF,1
+30374#2,4733#6,Sebulba's Podracer,keep,energy bar pushed on the side stud of the pod brick (PDF p.7 step 4 / p.9 step 5),geometry + PDF,1
+3062b#1,4589#3,Sebulba's Podracer,keep,cone on the round brick (PDF p.7 step 4 inset),geometry + PDF,1
+3062b#1,4733#4,Sebulba's Podracer,keep,black round brick on a side stud of 4733 (PDF p.7 step 4),geometry + PDF,1
+3626b#1,4589#5,Sebulba's Podracer,keep,grey cone on the head stud (PDF p.8 pod step 3),geometry + PDF,1
+3626b#1,4740#8,Sebulba's Podracer,keep,orange head on the dish stud (PDF p.8 pod step 2),geometry + PDF,1
+3626b#2,4589#4,Sebulba's Podracer,keep,grey cone on the head stud (PDF p.8 pod step 3),geometry + PDF,1
+3626b#2,4740#7,Sebulba's Podracer,keep,orange head on the dish stud (PDF p.8 pod step 2),geometry + PDF,1
+4070#1,4733#1,Anakin's Podracer,keep,headlight brick on the side stud of 4733 (PDF p.3 step 2 inset),geometry + PDF,1
+4589#1,6141#6,Anakin's Podracer,keep,cone on the grey round plate (PDF p.4 pod step 3),geometry + PDF,1
+4589#2,6141#5,Anakin's Podracer,keep,cone on the grey round plate (PDF p.4 pod step 3),geometry + PDF,1
+4592#1,4593#2,Anakin's Podracer,keep,lever in its base (PDF p.3 step 3),geometry + PDF,1
+4592#1,4733#1,Anakin's Podracer,keep,lever base on a side stud of 4733 (PDF p.3 step 3),geometry + PDF,1
+4592#2,4593#1,Anakin's Podracer,keep,lever in its base (PDF p.3 step 3),geometry + PDF,1
+4592#2,4733#1,Anakin's Podracer,keep,lever base on a side stud of 4733 (PDF p.3 step 3),geometry + PDF,1
+4599a#1,4733#4,Sebulba's Podracer,keep,tap on a side stud of 4733 (PDF p.7 step 3),geometry + PDF,1
+4599a#2,4733#4,Sebulba's Podracer,keep,tap on a side stud of 4733 (PDF p.7 step 3),geometry + PDF,1
+4733#1,6141#7,Anakin's Podracer,keep,round plate on the top stud of 4733 (PDF p.5 step 4),geometry + PDF,1
+4733#2,6141#1,Anakin's Podracer,keep,yellow round plate on the side stud of the pod brick (PDF p.4 pod step 1),geometry + PDF,1
+4733#2,6141#4,Anakin's Podracer,keep,blue round plate on the side stud of the pod brick (PDF p.4 pod step 2),geometry + PDF,1
+4733#3,6141#2,Anakin's Podracer,keep,yellow round plate on the side stud of the pod brick (PDF p.4 pod step 1),geometry + PDF,1
+4733#3,6141#3,Anakin's Podracer,keep,blue round plate on the side stud of the pod brick (PDF p.4 pod step 2),geometry + PDF,1
+4733#4,6141#8,Sebulba's Podracer,keep,round plate on the top stud of 4733 (PDF p.6 step 2),geometry + PDF,1
+4733#5,4733#7,Sebulba's Podracer,keep,clip brick on the side stud of the pod brick (PDF p.10 step 6),geometry + PDF,1
+4733#5,4740#6,Sebulba's Podracer,keep,dish on the top stud of the pod brick (PDF p.8 pod step 1),geometry + PDF,1
+4733#6,4733#8,Sebulba's Podracer,keep,clip brick on the side stud of the pod brick (PDF p.10 step 6),geometry + PDF,1
+4733#6,4740#5,Sebulba's Podracer,keep,dish on the top stud of the pod brick (PDF p.8 pod step 1),geometry + PDF,1
+4740#5,4740#8,Sebulba's Podracer,keep,second (orange) dish on the first one (PDF p.8 pod step 2),geometry + PDF,1
+4740#6,4740#7,Sebulba's Podracer,keep,second (orange) dish on the first one (PDF p.8 pod step 2),geometry + PDF,1
+6141#3,6141#6,Anakin's Podracer,keep,grey round plate on the blue one (PDF p.4 pod step 2),geometry + PDF,1
+6141#4,6141#5,Anakin's Podracer,keep,grey round plate on the blue one (PDF p.4 pod step 2),geometry + PDF,1
+2420#1,2540#2,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+2420#1,2555#3,Sebulba's Podracer,remove,"touching only, not engaged (not a stud/tube joint in the instructions)",geometry + PDF,1
+2420#1,2555#4,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2420#1,3023#2,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+2420#1,3024#1,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2420#1,4733#5,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2420#1,4733#7,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2420#2,2555#3,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2420#2,3024#2,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2420#2,4733#5,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2420#2,4733#7,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2420#3,2540#4,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+2420#3,2555#5,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2420#3,2555#6,Sebulba's Podracer,remove,"touching only, not engaged (not a stud/tube joint in the instructions)",geometry + PDF,1
+2420#3,3023#4,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+2420#3,3024#3,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2420#3,4733#6,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2420#3,4733#8,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2420#4,2555#6,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2420#4,3024#4,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2420#4,4733#6,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2420#4,4733#8,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2540#1,2555#3,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+2540#1,3023#1,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2540#1,4733#5,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2540#1,4733#7,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2540#2,2555#4,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+2540#2,3023#2,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2540#2,4733#5,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2540#2,4733#7,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2540#3,2555#6,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+2540#3,3023#3,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2540#3,30374#2,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2540#3,4733#6,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2540#3,4733#8,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2540#4,2555#5,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+2540#4,3023#4,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2540#4,30374#2,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2540#4,4733#6,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2540#4,4733#8,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2555#2,4740#5,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#2,4740#8,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#3,2555#4,Sebulba's Podracer,remove,"touching only, not engaged (not a stud/tube joint in the instructions)",geometry + PDF,1
+2555#3,3023#1,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#3,3023#2,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#3,3024#2,Sebulba's Podracer,remove,"touching only, not engaged (not a stud/tube joint in the instructions)",geometry + PDF,1
+2555#3,30374#2,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#3,4733#5,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2555#4,3023#1,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#4,3023#2,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#4,3024#1,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2555#4,30374#2,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#4,4733#5,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2555#5,2555#6,Sebulba's Podracer,remove,"touching only, not engaged (not a stud/tube joint in the instructions)",geometry + PDF,1
+2555#5,3023#3,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#5,3023#4,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#5,3024#3,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2555#5,30374#2,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#5,4733#6,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2555#6,3023#3,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#6,3023#4,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#6,3024#4,Sebulba's Podracer,remove,"touching only, not engaged (not a stud/tube joint in the instructions)",geometry + PDF,1
+2555#6,30374#2,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2555#6,4733#6,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+2566#1,30374#1,Anakin's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2566#1,6141#2,Anakin's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2566#1,6141#3,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+2566#2,30374#1,Anakin's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2566#2,6141#1,Anakin's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+2566#2,6141#4,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3023#1,4733#7,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3023#2,4733#7,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3023#3,4733#8,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3023#4,4733#8,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3024#1,4733#7,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3024#2,4733#7,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+3024#3,4733#8,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3024#4,4733#8,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+30359b#1,30374#1,Anakin's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+30359b#1,4070#1,Anakin's Podracer,remove,"touching only, not engaged (not a stud/tube joint in the instructions)",geometry + PDF,1
+30359b#1,4592#1,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30359b#1,4592#2,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30359b#1,4593#1,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30359b#1,4593#2,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30359b#2,30374#2,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+30359b#2,3062b#1,Sebulba's Podracer,remove,"touching only, not engaged (not a stud/tube joint in the instructions)",geometry + PDF,1
+30359b#2,4589#3,Sebulba's Podracer,remove,"touching only, not engaged (not a stud/tube joint in the instructions)",geometry + PDF,1
+30359b#2,4599a#1,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+30359b#2,4599a#2,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+30359b#2,4740#5,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30359b#2,4740#8,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30374#1,6141#3,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30374#1,6141#4,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30374#2,4733#7,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30374#2,4733#8,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30374#2,4740#5,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+30374#2,4740#6,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3062b#1,4599a#1,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+3062b#1,4599a#2,Sebulba's Podracer,remove,boxes of a rotated/sideways part overlap but the build sequence shows no joint between these two,geometry + PDF,1
+3062b#1,6141#8,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3626b#1,4740#5,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+3626b#2,4740#6,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4070#1,4592#1,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4070#1,4592#2,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4070#1,4593#1,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4070#1,4593#2,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4070#1,6141#7,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4589#1,6141#3,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4589#2,6141#4,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4592#1,6141#7,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4592#2,6141#7,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4593#1,4733#1,Anakin's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+4593#1,6141#7,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4593#2,4733#1,Anakin's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+4593#2,6141#7,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4599a#1,4599a#2,Sebulba's Podracer,remove,parts only touch sideways (no stud/tube/clip engagement),geometry + PDF,1
+4599a#1,6141#8,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+4599a#2,6141#8,Sebulba's Podracer,remove,vertical gap: parts do not touch,geometry + PDF,1
+4733#2,6141#5,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4733#3,6141#6,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4733#5,4740#7,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+4733#6,4740#8,Sebulba's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+6141#1,6141#4,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+6141#1,6141#5,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+6141#2,6141#3,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1
+6141#2,6141#6,Anakin's Podracer,remove,boxes do not touch in the real geometry (kernel tolerance too generous),geometry + PDF,1

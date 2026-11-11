@@ -1,0 +1,338 @@
+part_a,part_b,decision,reason,evidence,in_kernel_matrix
+2372c01#1,3842a#1,add,loose diving helmet standing on a cockpit-floor stud next to the airtanks (PDF step 6),PDF + geometry,no
+2372c01#1,4863#1,add,window frame rests on hull deck (PDF step 7),PDF + geometry,no
+2372c01#1,4863#2,add,window frame rests on hull deck (PDF step 7),PDF + geometry,no
+2372c01#1,4873#2,add,bar 1x6 at bow rests on hull deck (PDF step 11),PDF + geometry,no
+3004#4,3829c01#1,add,steering stand 1x2 stands on brick 1x2 (PDF steps 4-6),PDF + geometry,no
+3023#2,3460#1,add,1x2 plate on 1x8 plate (PDF step 5-6),PDF + geometry,no
+3023#3,3460#1,add,1x2 plate on 1x8 plate (PDF step 5-6),PDF + geometry,no
+3023#4,4863#2,add,plate on window frame (PDF steps 6-7),PDF + geometry,no
+3023#5,4863#1,add,plate on window frame (PDF steps 6-7),PDF + geometry,no
+3024#1,3460#1,add,plate 1x8 on the 1x1 plates (PDF step 5-6),PDF + geometry,no
+3024#2,3460#1,add,plate 1x8 on the 1x1 plates (PDF step 5-6),PDF + geometry,no
+3460#2,4286#1,add,1x8 plate on 3x1 slopes (PDF step 8),PDF + geometry,no
+3460#2,4286#2,add,1x8 plate on 3x1 slopes (PDF step 8),PDF + geometry,no
+3665#1,3939#1,add,slope 3x6 rests on the inverted slopes (PDF step 6),PDF + geometry,no
+3665#2,3939#1,add,slope 3x6 rests on the inverted slopes (PDF step 6),PDF + geometry,no
+4073#1,4349#1,add,round plate 4073 at loudhailer end (PDF step 11 inset),PDF + geometry,no
+4073#2,4349#2,add,round plate 4073 at loudhailer end (PDF step 11 inset),PDF + geometry,no
+4289#1,6141#2,add,round plate on mast top (PDF step 11 inset),PDF + geometry,no
+4599a#1,6141#1,add,round plate on tap (PDF step 6 inset),PDF + geometry,no
+2348a#1,2349a#1,keep,sunroof glass held in the hinged roof frame (PDF inset 9.1),PDF,yes
+2349a#1,4625#1,keep,hinge tile 1x4 hinged to roof frame (PDF inset 9.2),PDF,yes
+2349a#1,4866#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+2349a#1,4866#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+2372c01#1,3002#1,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3004#1,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3004#2,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3004#3,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3004#5,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3004#6,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3005#1,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3005#2,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3040b#1,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3040b#2,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3297#1,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3297#2,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3665#1,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,3665#2,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,4079#1,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,4873#1,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,4873#3,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+2372c01#1,73090b#1,keep,rests on hull deck/cockpit floor studs (PDF steps 1-5),PDF 1-5 + hull surface test,yes
+298c04#1,4289#1,keep,lever 298c04 clipped on mast 4289 (user-confirmed; lever absent from the MPD),user,yes
+298c04#2,4289#1,keep,lever 298c04 clipped on mast 4289 (user-confirmed; lever absent from the MPD),user,yes
+3002#1,3003#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3003#1,3958#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3004#1,3795#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3004#2,3795#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3004#3,3023#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3004#4,3958#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3004#5,3024#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3004#5,4286#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3004#6,3024#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3004#6,4286#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3005#1,3040b#3,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3005#2,3040b#4,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3021#1,3023#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3021#1,4863#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3021#2,3023#3,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3021#2,4863#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3023#1,3958#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3023#4,3040b#3,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3023#4,4866#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3023#5,3040b#4,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3023#5,4866#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3024#3,4866#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3024#4,4866#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3034#1,4289#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3034#1,4866#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3034#1,4866#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3040b#1,3040b#3,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3040b#2,3040b#4,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3070b#1,4863#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3070b#1,4866#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3070b#2,4863#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3070b#2,4866#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3297#1,3939#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3297#1,4286#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3297#2,3939#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3297#2,4286#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3460#1,4625#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3460#2,3794a#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3460#2,3939#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3624#1,3626bp01#1,keep,police cap on head,PDF,yes
+3624#2,3626bp01#2,keep,police cap on head,PDF,yes
+3626bp01#1,973p1f#1,keep,head on torso,PDF,yes
+3626bp01#2,973p1g#1,keep,head on torso,PDF,yes
+3665#1,4286#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3665#2,4286#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3794a#1,4599a#2,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3815#1,3816#1,keep,hips-leg,PDF,yes
+3815#1,3817#1,keep,hips-leg,PDF,yes
+3815#1,973p1f#1,keep,torso on hips,PDF,yes
+3815#2,3816#2,keep,hips-leg,PDF,yes
+3815#2,3817#2,keep,hips-leg,PDF,yes
+3815#2,973p1g#1,keep,torso on hips,PDF,yes
+3816#1,3958#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3816#2,3958#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3817#1,3958#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3817#2,3958#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3818#1,3820#1,keep,hand on arm,PDF,yes
+3818#1,973p1f#1,keep,arm on torso,PDF,yes
+3818#2,3820#3,keep,hand on arm,PDF,yes
+3818#2,973p1g#1,keep,arm on torso,PDF,yes
+3819#1,3820#2,keep,hand on arm,PDF,yes
+3819#1,973p1f#1,keep,arm on torso,PDF,yes
+3819#2,3820#4,keep,hand on arm,PDF,yes
+3819#2,973p1g#1,keep,arm on torso,PDF,yes
+3820#1,3962a#1,keep,radio held in the hand (PDF step 11),PDF,yes
+3838#1,4623#1,keep,airtanks clip onto the bar of plate 4623 (PDF steps 5-6),PDF,yes
+3958#1,4623#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+3958#1,73090b#1,keep,"stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)",geometry + PDF,yes
+4349#1,4873#3,keep,loudhailer seated on the open stud of the 1x6 bar (PDF step 11 inset),PDF,yes
+4349#2,4873#2,keep,loudhailer seated on the open stud of the 1x6 bar (PDF step 11 inset),PDF,yes
+4599a#1,4873#1,keep,tap seated on the bar stud (PDF step 6 inset),PDF,yes
+4599a#2,4740#1,keep,radar dish mounted on the tap (PDF step 11 inset),PDF,yes
+4862#1,4863#1,keep,glass pane clipped into window frame (PDF step 7 inset),PDF,yes
+4862#2,4863#1,keep,glass pane clipped into window frame (PDF step 7 inset),PDF,yes
+4862#3,4863#2,keep,glass pane clipped into window frame (PDF step 7 inset),PDF,yes
+4862#4,4863#2,keep,glass pane clipped into window frame (PDF step 7 inset),PDF,yes
+2348a#1,3004#5,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3004#6,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3021#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3021#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3023#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3023#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3023#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3023#5,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3024#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3024#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3034#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3040b#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3040b#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3460#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3460#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3794a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,3939#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,4625#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+2348a#1,4862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,4862#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,4862#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,4862#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,4863#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,4863#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,4866#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2348a#1,4866#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3004#5,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3004#6,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3021#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+2349a#1,3021#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+2349a#1,3023#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3023#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3023#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3023#5,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3024#3,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+2349a#1,3024#4,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+2349a#1,3034#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3297#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3297#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3460#1,remove,vertical gap: parts do not touch,geometry,yes
+2349a#1,3460#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+2349a#1,3794a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,3939#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4286#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4286#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4289#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4599a#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4862#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4862#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4862#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4863#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+2349a#1,4863#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3002#1,3838#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3002#1,3958#1,remove,vertical gap: parts do not touch,geometry,yes
+3002#1,4623#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3002#1,73090b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3003#1,3838#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3003#1,4623#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3003#1,73090b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3004#3,3958#1,remove,vertical gap: parts do not touch,geometry,yes
+3004#3,73090b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3004#4,3005#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3004#4,3040b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3004#4,3040b#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3004#4,3820#4,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3004#4,73090b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3004#5,3021#2,remove,vertical gap: parts do not touch,geometry,yes
+3004#5,3023#3,remove,vertical gap: parts do not touch,geometry,yes
+3004#5,3297#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3004#5,3665#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3004#6,3021#1,remove,vertical gap: parts do not touch,geometry,yes
+3004#6,3023#2,remove,vertical gap: parts do not touch,geometry,yes
+3004#6,3297#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3004#6,3665#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3005#1,3023#4,remove,vertical gap: parts do not touch,geometry,yes
+3005#1,3040b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3005#1,4862#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3005#2,3023#5,remove,vertical gap: parts do not touch,geometry,yes
+3005#2,3040b#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3005#2,4862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3021#1,3024#2,remove,vertical gap: parts do not touch,geometry,yes
+3021#1,3024#3,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3021#1,3070b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3021#1,3939#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3021#1,4286#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3021#1,4862#2,remove,vertical gap: parts do not touch,geometry,yes
+3021#1,4866#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3021#2,3024#1,remove,vertical gap: parts do not touch,geometry,yes
+3021#2,3024#4,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3021#2,3070b#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3021#2,3939#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3021#2,4286#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3021#2,4862#4,remove,vertical gap: parts do not touch,geometry,yes
+3021#2,4866#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#1,73090b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3023#2,3024#2,remove,vertical gap: parts do not touch,geometry,yes
+3023#2,3297#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#2,3665#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#2,4286#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3023#2,4862#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#3,3024#1,remove,vertical gap: parts do not touch,geometry,yes
+3023#3,3297#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#3,3665#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#3,4286#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3023#3,4862#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#4,3024#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#4,3040b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#4,3070b#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3023#4,4862#3,remove,vertical gap: parts do not touch,geometry,yes
+3023#5,3024#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#5,3040b#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3023#5,3070b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3023#5,4862#1,remove,vertical gap: parts do not touch,geometry,yes
+3024#1,3297#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#1,3665#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#1,4286#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3024#1,4862#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#2,3297#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#2,3665#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#2,4286#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3024#2,4862#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#3,3070b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3024#3,3939#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#3,4862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#3,4862#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#3,4863#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#4,3070b#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3024#4,3939#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#4,4862#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#4,4862#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3024#4,4863#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3034#1,3624#2,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3034#1,3626bp01#2,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3034#1,3794a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3034#1,3939#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3040b#1,3829c01#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3040b#3,3829c01#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3040b#3,4862#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3040b#3,4866#2,remove,vertical gap: parts do not touch,geometry,yes
+3040b#4,4862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3040b#4,4866#1,remove,vertical gap: parts do not touch,geometry,yes
+3070b#1,4862#1,remove,vertical gap: parts do not touch,geometry,yes
+3070b#1,4862#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3070b#2,4862#3,remove,vertical gap: parts do not touch,geometry,yes
+3070b#2,4862#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3297#1,3460#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3297#1,3460#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3297#1,3665#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3297#1,3794a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3297#1,4625#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3297#2,3460#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3297#2,3460#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3297#2,3665#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3297#2,3794a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3297#2,4625#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3460#1,3460#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3460#1,3794a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3460#1,3939#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3460#2,4599a#2,remove,vertical gap: parts do not touch,geometry,yes
+3460#2,4625#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3460#2,4740#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3460#2,4866#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3460#2,4866#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3624#1,3962a#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3624#1,973p1f#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3624#2,973p1g#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3626bp01#1,3962a#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3794a#1,3939#1,remove,vertical gap: parts do not touch,geometry,yes
+3794a#1,4625#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3794a#1,4740#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3795#1,4079#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3815#1,3818#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3815#1,3819#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3815#1,3820#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3815#1,3820#2,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3815#1,3962a#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3815#2,3818#2,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3815#2,3819#2,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3815#2,3820#3,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3815#2,3820#4,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3815#2,73090b#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3816#1,3817#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3816#1,3820#2,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3816#2,3817#2,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3816#2,3820#3,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3816#2,3820#4,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3816#2,73090b#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3817#1,3820#2,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3817#2,3820#3,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3817#2,3820#4,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3817#2,73090b#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3818#2,3819#2,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+3820#1,973p1f#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3820#2,973p1f#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3820#3,973p1g#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3820#4,3829c01#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3820#4,973p1g#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry/PDF,yes
+3838#1,3958#1,remove,volumes overlap but no real joint between these parts,geometry/PDF,yes
+3842a#1,3958#1,remove,vertical gap: parts do not touch,geometry,yes
+3842a#1,73090b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3939#1,4286#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3939#1,4286#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3939#1,4599a#2,remove,vertical gap: parts do not touch,geometry,yes
+3939#1,4625#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,yes
+3939#1,4740#1,remove,vertical gap: parts do not touch,geometry,yes
+3939#1,4863#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3939#1,4863#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3939#1,4866#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3939#1,4866#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+3962a#1,973p1f#1,remove,"minifig parts touch but are not joined (only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)",geometry,yes
+4073#1,4873#3,remove,vertical gap: parts do not touch,geometry,yes
+4073#2,4873#2,remove,vertical gap: parts do not touch,geometry,yes
+4289#1,4866#1,remove,vertical gap: parts do not touch,geometry,yes
+4289#1,4866#2,remove,vertical gap: parts do not touch,geometry,yes
+4623#1,73090b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+4873#1,6141#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,yes
+4873#2,4873#3,remove,volumes overlap but no real joint between these parts,geometry/PDF,yes

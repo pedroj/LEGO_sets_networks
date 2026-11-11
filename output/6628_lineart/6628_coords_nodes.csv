@@ -1,0 +1,41 @@
+"node","part","desc","category","subtype","x0","y0","x","y","moved","degree"
+"4070#1","4070","Brick Special 1 x 1 with Headlight","Brick","Brick modified SNOT",30,183,29.073729453932,184.667404850623,FALSE,4
+"4070#2","4070","Brick Special 1 x 1 with Headlight","Brick","Brick modified SNOT",-30,183,-37.3072740911621,184.772946708328,TRUE,4
+"3010#1","3010","Brick 1 x 4","Brick","Brick basic",0,103,-12.8363376401524,95.7973987458632,TRUE,5
+"4211#1","4211","Vehicle Base 4 x 5 with Wheel Arches, 2 x 2 Opening","Brick","Brick basic",0,153,7.52259310629346,141.554709240095,TRUE,9
+"3788#1","3788","Wheel Arch, Mudguard 2 x 4 Studded","Brick","Brick basic",0,53,-7.57550151405943,55.7072333672125,TRUE,1
+"3822p60#1","3822p60","Door 1 x 3 x 1 Left with Shell Logo 1971 Pattern","Panel","Window or door leaf",30,163,33.513363495584,167.006280600248,TRUE,2
+"3821p60#1","3821p60","Door 1 x 3 x 1 Right with Shell Logo 1971 Pattern","Panel","Window or door leaf",-30,163,-32.3166366196281,167.143710360649,TRUE,2
+"4213#1","4213","Hinge Vehicle Roof 4 x 4","Special","Click hinge (plate or brick)",0,133,-5.21936294428993,128.623328607576,TRUE,4
+"4214#1","4214","Hinge Vehicle Roof Holder 1 x 4 x 2","Special","Click hinge (plate or brick)",0,103,14.5909711255547,106.007547679288,TRUE,2
+"3024#1","3024","Plate 1 x 1","Plate","Plate basic",-30,197,-27.9008643411846,200.516565095928,FALSE,1
+"3024#2","3024","Plate 1 x 1","Plate","Plate basic",-30,143,-26.2423877162191,137.336473539658,TRUE,1
+"3024#3","3024","Plate 1 x 1","Plate","Plate basic",30,143,25.4092407450905,136.769307002606,TRUE,1
+"3024#4","3024","Plate 1 x 1","Plate","Plate basic",30,197,30.4079821262009,202.88056192142,TRUE,1
+"3023#1","3023","Plate 1 x 2","Plate","Plate basic",0,103,-2.79603823065136,110.599261946594,TRUE,1
+"3023#2","3023","Plate 1 x 2","Plate","Plate basic",0,183,6.038697915764,205.831983974761,TRUE,3
+"3023#3","3023","Plate 1 x 2","Plate","Plate basic",0,183,-14.3943234007582,163.741107172749,TRUE,3
+"3023#4","3023","Plate 1 x 2","Plate","Plate basic",0,183,15.7137845259975,171.914281186998,TRUE,2
+"4175#1","4175","Plate Special 1 x 2 with Ladder","Plate","Plate basic",0,183,-7.14630997886621,193.684835239033,TRUE,4
+"3623#1","3623","Plate 1 x 3","Plate","Plate basic",-30,103,-31.2685335019536,94.0247404828556,TRUE,3
+"3623#2","3623","Plate 1 x 3","Plate","Plate basic",30,103,32.1872648149942,111.710635626829,TRUE,3
+"3710#1","3710","Plate 1 x 4","Plate","Plate basic",0,83,-8.35497848852163,78.0052397311295,TRUE,6
+"3710#2","3710","Plate 1 x 4","Plate","Plate basic",0,23,8.95085788858371,24.7640816640535,TRUE,2
+"3710#3","3710","Plate 1 x 4","Plate","Plate basic",0,183,-1.84503933698004,176.543556632477,TRUE,3
+"3710#4","3710","Plate 1 x 4","Plate","Plate basic",0,23,-8.4506202501098,19.6251629327499,TRUE,3
+"122c01#1","122c01","Plate Special 2 x 2 with Wheels Red","Special","Wheel holder",0,153,-10.0610962846883,146.217221924009,TRUE,3
+"122c01#2","122c01","Plate Special 2 x 2 with Wheels Red","Special","Wheel holder",0,53,9.63620170936749,49.4381127909735,TRUE,3
+"3021#1","3021","Plate 2 x 3","Plate","Plate basic",0,163,20.133218027712,154.459262898298,TRUE,4
+"3021#2","3021","Plate 2 x 3","Plate","Plate basic",0,43,-4.30570144181993,37.6303605569349,TRUE,2
+"3034#1","3034","Plate 2 x 8","Plate","Plate basic",0,93,4.77682537232789,90.6573816388322,TRUE,6
+"4084#1","4084","Tyre 21 x 8 Offset Tread Medium","Special","Tyre",-31,53,-31,53,FALSE,1
+"4084#2","4084","Tyre 21 x 8 Offset Tread Medium","Special","Tyre",31,153,38.3939517565076,149.537780859023,TRUE,1
+"4084#3","4084","Tyre 21 x 8 Offset Tread Medium","Special","Tyre",-31,153,-39.0503443269636,150.282733053376,TRUE,1
+"4084#4","4084","Tyre 21 x 8 Offset Tread Medium","Special","Tyre",31,53,31.0000018377939,53.0000003491903,FALSE,1
+"3823#1","3823","Windscreen 2 x 4 x 2","Panel","Windscreen",0,163,-19.4824569296258,180.456854764029,TRUE,6
+"3794b#1","3794b","Plate Special 1 x 2 with 1 Stud with Groove (Jumper)","Plate","Plate jumper",30,103,28.595284570311,93.9345489672365,TRUE,2
+"3794b#2","3794b","Plate Special 1 x 2 with 1 Stud with Groove (Jumper)","Plate","Plate jumper",-30,103,-28.7537826407313,111.973234955752,TRUE,2
+"3829a#1","3829a","~Car Steering Wheel Stand","Special","Bracket (SNOT)",0,163,2.80949140013763,159.104309655174,TRUE,2
+"3828#1","3828","~Car Steering Wheel","Special","Bracket (SNOT)",0,163,11.0046913966388,188.633953540175,TRUE,3
+"3135#1","3135","Slope Brick 45 2 x 3 x 1 & 1/3 Double Crane","Slope","Slope standard",0,63,6.54943840957401,67.4458897372744,TRUE,4
+"3136#1","3136","Hook, Tow Hook with 2 Studs on Both Sides","Plate","Plate jumper",0,0,0,0,FALSE,1

@@ -1,0 +1,317 @@
+a,b,class,ox,oz,oy,stepA,stepB,nameA,nameB
+2372c01#1,3004#1,inside,40,20,24,0,1,Boat 25 x 10 x 4 1/3 [Complete Assembly],Brick 1 x 2
+2372c01#1,3004#2,inside,40,20,24,0,1,Boat 25 x 10 x 4 1/3 [Complete Assembly],Brick 1 x 2
+2372c01#1,3004#3,inside,20,40,24,0,1,Boat 25 x 10 x 4 1/3 [Complete Assembly],Brick 1 x 2
+2372c01#1,3002#1,inside,60,40,24,0,1,Boat 25 x 10 x 4 1/3 [Complete Assembly],Brick 2 x 3
+2372c01#1,4079#1,inside,20,20,8,0,1,Boat 25 x 10 x 4 1/3 [Complete Assembly],Seat / Chair 2 x 2
+2372c01#1,73090b#1,inside,40,120,24,0,2,Boat 25 x 10 x 4 1/3 [Complete Assembly],Brick Special 2 x 6 x 2 Weight with Seal
+2372c01#1,3040b#1,vert,40,20,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Slope 45° 2 x 1 with Bottom Pin
+2372c01#1,3040b#2,vert,40,20,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Slope 45° 2 x 1 with Bottom Pin
+2372c01#1,3665#1,vert,20,40,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Slope Inverted 45° 2 x 1
+2372c01#1,3665#2,vert,20,40,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Slope Inverted 45° 2 x 1
+2372c01#1,3005#1,vert,20,20,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Brick 1 x 1
+2372c01#1,3005#2,vert,20,20,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Brick 1 x 1
+2372c01#1,3004#5,vert,40,20,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Brick 1 x 2
+2372c01#1,3004#6,vert,40,20,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Brick 1 x 2
+2372c01#1,4873#1,vert,20,120,-16,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Bar 1 x 6 [Open Studs]
+2372c01#1,3297#1,vert,60,80,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Slope 33° 3 x 4
+2372c01#1,3297#2,vert,60,80,0,0,4,Boat 25 x 10 x 4 1/3 [Complete Assembly],Slope 33° 3 x 4
+2372c01#1,4873#3,vert,108,64,-16,0,9,Boat 25 x 10 x 4 1/3 [Complete Assembly],Bar 1 x 6 [Open Studs]
+3004#1,3795#1,lateral,-10,20,0,1,2,Brick 1 x 2,Plate 2 x 6
+3004#2,3795#1,lateral,-10,20,0,1,2,Brick 1 x 2,Plate 2 x 6
+3004#3,3023#1,vert,20,40,0,1,1,Brick 1 x 2,Plate 1 x 2
+3004#3,73090b#1,inside,20,40,16,1,2,Brick 1 x 2,Brick Special 2 x 6 x 2 Weight with Seal
+3004#3,3958#1,vert,20,30,-8,1,3,Brick 1 x 2,Plate 6 x 6
+3002#1,73090b#1,lateral,10,-10,0,1,2,Brick 2 x 3,Brick Special 2 x 6 x 2 Weight with Seal
+3002#1,3003#1,vert,40,30,0,1,2,Brick 2 x 3,Brick 2 x 2
+3002#1,3958#1,vert,50,10,-24,1,3,Brick 2 x 3,Plate 6 x 6
+3002#1,4623#1,lateral,0,10,-32,1,3,Brick 2 x 3,Plate Special 1 x 2 with Bar Up [Horizon
+3002#1,3838#1,lateral,0,16,-32,1,4,Brick 2 x 3,Minifig Neckwear Airtanks
+3023#1,73090b#1,inside,20,40,8,1,2,Plate 1 x 2,Brick Special 2 x 6 x 2 Weight with Seal
+3023#1,3958#1,vert,20,30,0,1,3,Plate 1 x 2,Plate 6 x 6
+4079#1,3795#1,vert,20,20,-16,1,2,Seat / Chair 2 x 2,Plate 2 x 6
+73090b#1,3003#1,lateral,0,0,24,2,2,Brick Special 2 x 6 x 2 Weight with Seal,Brick 2 x 2
+73090b#1,3958#1,vert,40,100,0,2,3,Brick Special 2 x 6 x 2 Weight with Seal,Plate 6 x 6
+73090b#1,3004#4,lateral,-10,10,-8,2,3,Brick Special 2 x 6 x 2 Weight with Seal,Brick 1 x 2
+73090b#1,4623#1,lateral,20,0,-8,2,3,Brick Special 2 x 6 x 2 Weight with Seal,Plate Special 1 x 2 with Bar Up [Horizon
+73090b#1,3842a#1,lateral,-8,-7,3,2,4,Brick Special 2 x 6 x 2 Weight with Seal,Helmet Classic with Thin Chin Guard and 
+73090b#1,3815#2,lateral,-10,20,-40,2,9,Brick Special 2 x 6 x 2 Weight with Seal,Hips
+73090b#1,3816#2,lateral,-10,20,-28,2,9,Brick Special 2 x 6 x 2 Weight with Seal,"Leg, Right"
+73090b#1,3817#2,lateral,-10,20,-28,2,9,Brick Special 2 x 6 x 2 Weight with Seal,"Leg, Left"
+3003#1,3958#1,vert,40,20,0,2,3,Brick 2 x 2,Plate 6 x 6
+3003#1,4623#1,lateral,-10,20,-8,2,3,Brick 2 x 2,Plate Special 1 x 2 with Bar Up [Horizon
+3003#1,3838#1,lateral,-10,16,-8,2,4,Brick 2 x 2,Minifig Neckwear Airtanks
+3958#1,3004#4,vert,20,30,0,3,3,Plate 6 x 6,Brick 1 x 2
+3958#1,4623#1,vert,20,20,0,3,3,Plate 6 x 6,Plate Special 1 x 2 with Bar Up [Horizon
+3958#1,3842a#1,vert,28,13,-21,3,4,Plate 6 x 6,Helmet Classic with Thin Chin Guard and 
+3958#1,3838#1,lateral,20,-3,0,3,4,Plate 6 x 6,Minifig Neckwear Airtanks
+3958#1,3816#1,vert,20,20,-20,3,9,Plate 6 x 6,"Leg, Right"
+3958#1,3817#1,vert,20,20,-20,3,9,Plate 6 x 6,"Leg, Left"
+3958#1,3816#2,vert,20,20,-20,3,9,Plate 6 x 6,"Leg, Right"
+3958#1,3817#2,vert,20,20,-20,3,9,Plate 6 x 6,"Leg, Left"
+3004#4,3040b#1,lateral,0,20,0,3,4,Brick 1 x 2,Slope 45° 2 x 1 with Bottom Pin
+3004#4,3005#1,lateral,-10,10,0,3,4,Brick 1 x 2,Brick 1 x 1
+3004#4,3040b#3,lateral,0,10,-24,3,4,Brick 1 x 2,Slope 45° 2 x 1 with Bottom Pin
+3004#4,3820#4,lateral,-2,7,-21,3,9,Brick 1 x 2,Minifig Hand
+4623#1,3838#1,lateral,20,-3,8,3,4,Plate Special 1 x 2 with Bar Up [Horizon,Minifig Neckwear Airtanks
+3040b#1,3829c01#1,inside,5,20,8,4,4,Slope 45° 2 x 1 with Bottom Pin,Steering Stand 1 x 2 with Black Steering
+3040b#1,3005#1,lateral,20,0,24,4,4,Slope 45° 2 x 1 with Bottom Pin,Brick 1 x 1
+3040b#1,3040b#3,lateral,40,0,0,4,4,Slope 45° 2 x 1 with Bottom Pin,Slope 45° 2 x 1 with Bottom Pin
+3040b#1,3023#4,lateral,40,-10,-24,4,6,Slope 45° 2 x 1 with Bottom Pin,Plate 1 x 2
+3040b#2,3005#2,lateral,20,0,24,4,4,Slope 45° 2 x 1 with Bottom Pin,Brick 1 x 1
+3040b#2,3040b#4,lateral,40,0,0,4,4,Slope 45° 2 x 1 with Bottom Pin,Slope 45° 2 x 1 with Bottom Pin
+3040b#2,3023#5,lateral,40,-10,-24,4,6,Slope 45° 2 x 1 with Bottom Pin,Plate 1 x 2
+3665#1,3004#5,lateral,20,0,24,4,4,Slope Inverted 45° 2 x 1,Brick 1 x 2
+3665#1,3024#1,lateral,20,-10,0,4,4,Slope Inverted 45° 2 x 1,Plate 1 x 1
+3665#1,3297#1,inside,10,40,24,4,4,Slope Inverted 45° 2 x 1,Slope 33° 3 x 4
+3665#1,4286#1,vert,20,10,0,4,5,Slope Inverted 45° 2 x 1,Slope 33° 3 x 1
+3665#1,3023#3,lateral,10,0,-16,4,5,Slope Inverted 45° 2 x 1,Plate 1 x 2
+3665#2,3004#6,lateral,20,0,24,4,4,Slope Inverted 45° 2 x 1,Brick 1 x 2
+3665#2,3024#2,lateral,20,-10,0,4,4,Slope Inverted 45° 2 x 1,Plate 1 x 1
+3665#2,3297#2,inside,10,40,24,4,4,Slope Inverted 45° 2 x 1,Slope 33° 3 x 4
+3665#2,4286#2,vert,20,10,0,4,5,Slope Inverted 45° 2 x 1,Slope 33° 3 x 1
+3665#2,3023#2,lateral,10,0,-16,4,5,Slope Inverted 45° 2 x 1,Plate 1 x 2
+3829c01#1,3040b#3,vert,5,5,-16,4,4,Steering Stand 1 x 2 with Black Steering,Slope 45° 2 x 1 with Bottom Pin
+3829c01#1,3820#4,vert,3,2,-13,4,9,Steering Stand 1 x 2 with Black Steering,Minifig Hand
+3005#1,3040b#3,vert,20,20,0,4,4,Brick 1 x 1,Slope 45° 2 x 1 with Bottom Pin
+3005#1,4862#3,lateral,20,-10,-16,4,5,Brick 1 x 1,Glass for Window 1 x 2 x 2 Plane
+3005#1,3023#4,vert,20,10,-24,4,6,Brick 1 x 1,Plate 1 x 2
+3005#2,3040b#4,vert,20,20,0,4,4,Brick 1 x 1,Slope 45° 2 x 1 with Bottom Pin
+3005#2,4862#1,lateral,20,-10,-16,4,5,Brick 1 x 1,Glass for Window 1 x 2 x 2 Plane
+3005#2,3023#5,vert,20,10,-24,4,6,Brick 1 x 1,Plate 1 x 2
+3004#5,3024#1,vert,20,10,0,4,4,Brick 1 x 2,Plate 1 x 1
+3004#5,3297#1,lateral,20,0,24,4,4,Brick 1 x 2,Slope 33° 3 x 4
+3004#5,4286#1,vert,40,10,0,4,5,Brick 1 x 2,Slope 33° 3 x 1
+3004#5,3023#3,vert,20,20,-16,4,5,Brick 1 x 2,Plate 1 x 2
+3004#5,3021#2,lateral,40,0,-24,4,6,Brick 1 x 2,Plate 2 x 3
+3004#5,2348a#1,lateral,-10,-7,-4,4,7,Brick 1 x 2,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3004#5,2349a#1,lateral,-10,10,-8,4,7,Brick 1 x 2,Hinge Vehicle Roof 4 x 4 Sunroof without
+3004#6,3024#2,vert,20,10,0,4,4,Brick 1 x 2,Plate 1 x 1
+3004#6,3297#2,lateral,20,0,24,4,4,Brick 1 x 2,Slope 33° 3 x 4
+3004#6,4286#2,vert,40,10,0,4,5,Brick 1 x 2,Slope 33° 3 x 1
+3004#6,3023#2,vert,20,20,-16,4,5,Brick 1 x 2,Plate 1 x 2
+3004#6,3021#1,lateral,40,0,-24,4,6,Brick 1 x 2,Plate 2 x 3
+3004#6,2348a#1,lateral,-10,-7,-4,4,7,Brick 1 x 2,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3004#6,2349a#1,lateral,-10,10,-8,4,7,Brick 1 x 2,Hinge Vehicle Roof 4 x 4 Sunroof without
+3024#1,3297#1,lateral,10,-10,0,4,4,Plate 1 x 1,Slope 33° 3 x 4
+3024#1,4286#1,lateral,20,0,8,4,5,Plate 1 x 1,Slope 33° 3 x 1
+3024#1,3023#3,vert,10,20,-8,4,5,Plate 1 x 1,Plate 1 x 2
+3024#1,4862#4,lateral,20,-10,-8,4,5,Plate 1 x 1,Glass for Window 1 x 2 x 2 Plane
+3024#1,3021#2,vert,20,10,-16,4,6,Plate 1 x 1,Plate 2 x 3
+3024#2,3297#2,lateral,10,-10,0,4,4,Plate 1 x 1,Slope 33° 3 x 4
+3024#2,4286#2,lateral,20,0,8,4,5,Plate 1 x 1,Slope 33° 3 x 1
+3024#2,3023#2,vert,10,20,-8,4,5,Plate 1 x 1,Plate 1 x 2
+3024#2,4862#2,lateral,20,-10,-8,4,5,Plate 1 x 1,Glass for Window 1 x 2 x 2 Plane
+3024#2,3021#1,vert,20,10,-16,4,6,Plate 1 x 1,Plate 2 x 3
+4873#1,4599a#1,lateral,10,0,-6,4,4,Bar 1 x 6 [Open Studs],Tap 1 x 1 with Hole in Spout
+4873#1,6141#1,lateral,10,0,-6,4,4,Bar 1 x 6 [Open Studs],Plate Round 1 x 1 with Solid Stud
+3297#1,3460#1,lateral,0,60,-8,4,4,Slope 33° 3 x 4,Plate 1 x 8
+3297#1,4286#1,vert,30,10,0,4,5,Slope 33° 3 x 4,Slope 33° 3 x 1
+3297#1,3023#3,lateral,20,0,-16,4,5,Slope 33° 3 x 4,Plate 1 x 2
+3297#1,3939#1,vert,20,60,0,4,6,Slope 33° 3 x 4,Slope 33° 3 x 6
+3297#1,2349a#1,lateral,30,-10,-8,4,7,Slope 33° 3 x 4,Hinge Vehicle Roof 4 x 4 Sunroof without
+3297#1,4625#1,lateral,0,20,-16,4,8,Slope 33° 3 x 4,Hinge Tile 1 x 4
+3297#1,3794a#1,lateral,0,20,-32,4,8,Slope 33° 3 x 4,Plate Special 1 x 2 with 1 Stud without 
+3297#1,3460#2,lateral,0,80,-24,4,8,Slope 33° 3 x 4,Plate 1 x 8
+3297#2,3460#1,lateral,0,60,-8,4,4,Slope 33° 3 x 4,Plate 1 x 8
+3297#2,4286#2,vert,30,10,0,4,5,Slope 33° 3 x 4,Slope 33° 3 x 1
+3297#2,3023#2,lateral,20,0,-16,4,5,Slope 33° 3 x 4,Plate 1 x 2
+3297#2,3939#1,vert,20,60,0,4,6,Slope 33° 3 x 4,Slope 33° 3 x 6
+3297#2,2349a#1,lateral,30,-10,-8,4,7,Slope 33° 3 x 4,Hinge Vehicle Roof 4 x 4 Sunroof without
+3297#2,4625#1,lateral,0,20,-16,4,8,Slope 33° 3 x 4,Hinge Tile 1 x 4
+3297#2,3794a#1,lateral,0,20,-32,4,8,Slope 33° 3 x 4,Plate Special 1 x 2 with 1 Stud without 
+3297#2,3460#2,lateral,0,80,-24,4,8,Slope 33° 3 x 4,Plate 1 x 8
+3040b#3,4862#3,lateral,40,-10,8,4,5,Slope 45° 2 x 1 with Bottom Pin,Glass for Window 1 x 2 x 2 Plane
+3040b#3,3023#4,vert,40,10,0,4,6,Slope 45° 2 x 1 with Bottom Pin,Plate 1 x 2
+3040b#3,2348a#1,lateral,-10,-3,20,4,7,Slope 45° 2 x 1 with Bottom Pin,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3040b#3,4866#2,vert,20,20,-32,4,9,Slope 45° 2 x 1 with Bottom Pin,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3040b#4,4862#1,lateral,40,-10,8,4,5,Slope 45° 2 x 1 with Bottom Pin,Glass for Window 1 x 2 x 2 Plane
+3040b#4,3023#5,vert,40,10,0,4,6,Slope 45° 2 x 1 with Bottom Pin,Plate 1 x 2
+3040b#4,2348a#1,lateral,-10,-3,20,4,7,Slope 45° 2 x 1 with Bottom Pin,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3040b#4,4866#1,vert,20,20,-32,4,9,Slope 45° 2 x 1 with Bottom Pin,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3460#1,3939#1,inside,20,120,8,4,6,Plate 1 x 8,Slope 33° 3 x 6
+3460#1,2348a#1,inside,20,73,8,4,7,Plate 1 x 8,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3460#1,2349a#1,inside,20,80,8,4,7,Plate 1 x 8,Hinge Vehicle Roof 4 x 4 Sunroof without
+3460#1,4625#1,vert,20,80,0,4,8,Plate 1 x 8,Hinge Tile 1 x 4
+3460#1,3794a#1,vert,20,40,-16,4,8,Plate 1 x 8,Plate Special 1 x 2 with 1 Stud without 
+3460#1,3460#2,vert,20,140,-8,4,8,Plate 1 x 8,Plate 1 x 8
+4863#1,4862#1,lateral,40,0,8,5,5,"Window 1 x 4 x 2 Plane, Solid Studs",Glass for Window 1 x 2 x 2 Plane
+4863#1,4862#2,lateral,40,0,8,5,5,"Window 1 x 4 x 2 Plane, Solid Studs",Glass for Window 1 x 2 x 2 Plane
+4863#1,3939#1,lateral,0,0,8,5,6,"Window 1 x 4 x 2 Plane, Solid Studs",Slope 33° 3 x 6
+4863#1,3021#1,lateral,60,0,0,5,6,"Window 1 x 4 x 2 Plane, Solid Studs",Plate 2 x 3
+4863#1,3070b#1,vert,20,10,0,5,6,"Window 1 x 4 x 2 Plane, Solid Studs",Tile 1 x 1 with Groove
+4863#1,2348a#1,inside,10,20,8,5,7,"Window 1 x 4 x 2 Plane, Solid Studs",Glass for Hinge Car Roof 4 x 4 Sunroof [
+4863#1,2349a#1,inside,10,20,8,5,7,"Window 1 x 4 x 2 Plane, Solid Studs",Hinge Vehicle Roof 4 x 4 Sunroof without
+4863#1,3024#3,vert,20,10,0,5,8,"Window 1 x 4 x 2 Plane, Solid Studs",Plate 1 x 1
+4863#2,4862#3,lateral,40,0,8,5,5,"Window 1 x 4 x 2 Plane, Solid Studs",Glass for Window 1 x 2 x 2 Plane
+4863#2,4862#4,lateral,40,0,8,5,5,"Window 1 x 4 x 2 Plane, Solid Studs",Glass for Window 1 x 2 x 2 Plane
+4863#2,3939#1,lateral,0,0,8,5,6,"Window 1 x 4 x 2 Plane, Solid Studs",Slope 33° 3 x 6
+4863#2,3021#2,lateral,60,0,0,5,6,"Window 1 x 4 x 2 Plane, Solid Studs",Plate 2 x 3
+4863#2,3070b#2,vert,20,10,0,5,6,"Window 1 x 4 x 2 Plane, Solid Studs",Tile 1 x 1 with Groove
+4863#2,2348a#1,inside,10,20,8,5,7,"Window 1 x 4 x 2 Plane, Solid Studs",Glass for Hinge Car Roof 4 x 4 Sunroof [
+4863#2,2349a#1,inside,10,20,8,5,7,"Window 1 x 4 x 2 Plane, Solid Studs",Hinge Vehicle Roof 4 x 4 Sunroof without
+4863#2,3024#4,vert,20,10,0,5,8,"Window 1 x 4 x 2 Plane, Solid Studs",Plate 1 x 1
+4286#1,3023#3,inside,20,10,8,5,5,Slope 33° 3 x 1,Plate 1 x 2
+4286#1,3939#1,lateral,-10,20,24,5,6,Slope 33° 3 x 1,Slope 33° 3 x 6
+4286#1,3021#2,lateral,50,-10,0,5,6,Slope 33° 3 x 1,Plate 2 x 3
+4286#1,2349a#1,lateral,0,0,16,5,7,Slope 33° 3 x 1,Hinge Vehicle Roof 4 x 4 Sunroof without
+4286#2,3023#2,inside,20,10,8,5,5,Slope 33° 3 x 1,Plate 1 x 2
+4286#2,3939#1,lateral,-10,20,24,5,6,Slope 33° 3 x 1,Slope 33° 3 x 6
+4286#2,3021#1,lateral,50,-10,0,5,6,Slope 33° 3 x 1,Plate 2 x 3
+4286#2,2349a#1,lateral,0,0,16,5,7,Slope 33° 3 x 1,Hinge Vehicle Roof 4 x 4 Sunroof without
+3023#2,4862#2,lateral,20,0,8,5,5,Plate 1 x 2,Glass for Window 1 x 2 x 2 Plane
+3023#2,3021#1,vert,20,20,0,5,6,Plate 1 x 2,Plate 2 x 3
+3023#2,2348a#1,lateral,-10,13,8,5,7,Plate 1 x 2,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3023#2,2349a#1,lateral,-10,30,8,5,7,Plate 1 x 2,Hinge Vehicle Roof 4 x 4 Sunroof without
+3023#3,4862#4,lateral,20,0,8,5,5,Plate 1 x 2,Glass for Window 1 x 2 x 2 Plane
+3023#3,3021#2,vert,20,20,0,5,6,Plate 1 x 2,Plate 2 x 3
+3023#3,2348a#1,lateral,-10,13,8,5,7,Plate 1 x 2,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3023#3,2349a#1,lateral,-10,30,8,5,7,Plate 1 x 2,Hinge Vehicle Roof 4 x 4 Sunroof without
+4862#1,3023#5,lateral,40,0,0,5,6,Glass for Window 1 x 2 x 2 Plane,Plate 1 x 2
+4862#1,3070b#1,vert,20,10,0,5,6,Glass for Window 1 x 2 x 2 Plane,Tile 1 x 1 with Groove
+4862#1,2348a#1,lateral,-10,20,8,5,7,Glass for Window 1 x 2 x 2 Plane,Glass for Hinge Car Roof 4 x 4 Sunroof [
+4862#1,2349a#1,lateral,-10,10,8,5,7,Glass for Window 1 x 2 x 2 Plane,Hinge Vehicle Roof 4 x 4 Sunroof without
+4862#1,3024#3,vert,10,10,0,5,8,Glass for Window 1 x 2 x 2 Plane,Plate 1 x 1
+4862#2,3021#1,vert,40,20,0,5,6,Glass for Window 1 x 2 x 2 Plane,Plate 2 x 3
+4862#2,3070b#1,lateral,20,-10,0,5,6,Glass for Window 1 x 2 x 2 Plane,Tile 1 x 1 with Groove
+4862#2,2348a#1,lateral,-10,20,8,5,7,Glass for Window 1 x 2 x 2 Plane,Glass for Hinge Car Roof 4 x 4 Sunroof [
+4862#2,2349a#1,lateral,-10,20,8,5,7,Glass for Window 1 x 2 x 2 Plane,Hinge Vehicle Roof 4 x 4 Sunroof without
+4862#2,3024#3,lateral,10,-10,0,5,8,Glass for Window 1 x 2 x 2 Plane,Plate 1 x 1
+4862#3,3023#4,lateral,40,0,0,5,6,Glass for Window 1 x 2 x 2 Plane,Plate 1 x 2
+4862#3,3070b#2,vert,20,10,0,5,6,Glass for Window 1 x 2 x 2 Plane,Tile 1 x 1 with Groove
+4862#3,2348a#1,lateral,-10,20,8,5,7,Glass for Window 1 x 2 x 2 Plane,Glass for Hinge Car Roof 4 x 4 Sunroof [
+4862#3,2349a#1,lateral,-10,10,8,5,7,Glass for Window 1 x 2 x 2 Plane,Hinge Vehicle Roof 4 x 4 Sunroof without
+4862#3,3024#4,vert,10,10,0,5,8,Glass for Window 1 x 2 x 2 Plane,Plate 1 x 1
+4862#4,3021#2,vert,40,20,0,5,6,Glass for Window 1 x 2 x 2 Plane,Plate 2 x 3
+4862#4,3070b#2,lateral,20,-10,0,5,6,Glass for Window 1 x 2 x 2 Plane,Tile 1 x 1 with Groove
+4862#4,2348a#1,lateral,-10,20,8,5,7,Glass for Window 1 x 2 x 2 Plane,Glass for Hinge Car Roof 4 x 4 Sunroof [
+4862#4,2349a#1,lateral,-10,20,8,5,7,Glass for Window 1 x 2 x 2 Plane,Hinge Vehicle Roof 4 x 4 Sunroof without
+4862#4,3024#4,lateral,10,-10,0,5,8,Glass for Window 1 x 2 x 2 Plane,Plate 1 x 1
+3939#1,3021#1,lateral,0,40,0,6,6,Slope 33° 3 x 6,Plate 2 x 3
+3939#1,3021#2,lateral,0,40,0,6,6,Slope 33° 3 x 6,Plate 2 x 3
+3939#1,2348a#1,inside,60,33,20,6,7,Slope 33° 3 x 6,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3939#1,2349a#1,inside,60,50,16,6,7,Slope 33° 3 x 6,Hinge Vehicle Roof 4 x 4 Sunroof without
+3939#1,4625#1,inside,20,80,8,6,8,Slope 33° 3 x 6,Hinge Tile 1 x 4
+3939#1,3024#3,lateral,-10,-10,0,6,8,Slope 33° 3 x 6,Plate 1 x 1
+3939#1,3024#4,lateral,-10,-10,0,6,8,Slope 33° 3 x 6,Plate 1 x 1
+3939#1,4866#1,lateral,20,0,-32,6,9,Slope 33° 3 x 6,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3939#1,4866#2,lateral,20,0,-32,6,9,Slope 33° 3 x 6,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3939#1,3034#1,vert,40,30,-40,6,10,Slope 33° 3 x 6,Plate 2 x 8
+3939#1,3794a#1,vert,20,40,-8,6,8,Slope 33° 3 x 6,Plate Special 1 x 2 with 1 Stud without 
+3939#1,3460#2,vert,20,120,0,6,8,Slope 33° 3 x 6,Plate 1 x 8
+3939#1,4599a#2,vert,20,20,-32,6,9,Slope 33° 3 x 6,Tap 1 x 1 with Hole in Spout
+3939#1,4740#1,lateral,40,0,-28,6,9,Slope 33° 3 x 6,Dish 2 x 2 Inverted [Radar]
+3023#4,3070b#2,lateral,20,-10,8,6,6,Plate 1 x 2,Tile 1 x 1 with Groove
+3023#4,2348a#1,lateral,-10,7,4,6,7,Plate 1 x 2,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3023#4,2349a#1,lateral,-10,-10,8,6,7,Plate 1 x 2,Hinge Vehicle Roof 4 x 4 Sunroof without
+3023#4,3024#4,lateral,10,-10,8,6,8,Plate 1 x 2,Plate 1 x 1
+3023#4,4866#2,vert,20,20,-24,6,9,Plate 1 x 2,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3023#5,3070b#1,lateral,20,-10,8,6,6,Plate 1 x 2,Tile 1 x 1 with Groove
+3023#5,2348a#1,lateral,-10,7,4,6,7,Plate 1 x 2,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3023#5,2349a#1,lateral,-10,-10,8,6,7,Plate 1 x 2,Hinge Vehicle Roof 4 x 4 Sunroof without
+3023#5,3024#3,lateral,10,-10,8,6,8,Plate 1 x 2,Plate 1 x 1
+3023#5,4866#1,vert,20,20,-24,6,9,Plate 1 x 2,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3021#1,3070b#1,lateral,20,-10,8,6,6,Plate 2 x 3,Tile 1 x 1 with Groove
+3021#1,2348a#1,inside,10,33,4,6,7,Plate 2 x 3,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3021#1,2349a#1,inside,10,40,8,6,7,Plate 2 x 3,Hinge Vehicle Roof 4 x 4 Sunroof without
+3021#1,3024#3,lateral,20,-10,8,6,8,Plate 2 x 3,Plate 1 x 1
+3021#1,4866#1,lateral,40,0,-24,6,9,Plate 2 x 3,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3021#2,3070b#2,lateral,20,-10,8,6,6,Plate 2 x 3,Tile 1 x 1 with Groove
+3021#2,2348a#1,inside,10,33,4,6,7,Plate 2 x 3,Glass for Hinge Car Roof 4 x 4 Sunroof [
+3021#2,2349a#1,inside,10,40,8,6,7,Plate 2 x 3,Hinge Vehicle Roof 4 x 4 Sunroof without
+3021#2,3024#4,lateral,20,-10,8,6,8,Plate 2 x 3,Plate 1 x 1
+3021#2,4866#2,lateral,40,0,-24,6,9,Plate 2 x 3,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3070b#1,3024#3,lateral,0,20,8,6,8,Tile 1 x 1 with Groove,Plate 1 x 1
+3070b#1,4866#1,vert,10,20,-24,6,9,Tile 1 x 1 with Groove,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3070b#2,3024#4,lateral,0,20,8,6,8,Tile 1 x 1 with Groove,Plate 1 x 1
+3070b#2,4866#2,vert,10,20,-24,6,9,Tile 1 x 1 with Groove,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+2348a#1,2349a#1,inside,80,63,20,7,7,Glass for Hinge Car Roof 4 x 4 Sunroof [,Hinge Vehicle Roof 4 x 4 Sunroof without
+2348a#1,4625#1,inside,20,33,8,7,8,Glass for Hinge Car Roof 4 x 4 Sunroof [,Hinge Tile 1 x 4
+2348a#1,3024#3,lateral,0,20,4,7,8,Glass for Hinge Car Roof 4 x 4 Sunroof [,Plate 1 x 1
+2348a#1,3024#4,lateral,0,20,4,7,8,Glass for Hinge Car Roof 4 x 4 Sunroof [,Plate 1 x 1
+2348a#1,4866#1,vert,30,47,-28,7,9,Glass for Hinge Car Roof 4 x 4 Sunroof [,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+2348a#1,4866#2,vert,30,47,-28,7,9,Glass for Hinge Car Roof 4 x 4 Sunroof [,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+2348a#1,3034#1,vert,40,77,-36,7,10,Glass for Hinge Car Roof 4 x 4 Sunroof [,Plate 2 x 8
+2348a#1,3794a#1,lateral,20,-7,-4,7,8,Glass for Hinge Car Roof 4 x 4 Sunroof [,Plate Special 1 x 2 with 1 Stud without 
+2348a#1,3460#2,inside,20,53,4,7,8,Glass for Hinge Car Roof 4 x 4 Sunroof [,Plate 1 x 8
+2349a#1,4625#1,inside,20,50,8,7,8,Hinge Vehicle Roof 4 x 4 Sunroof without,Hinge Tile 1 x 4
+2349a#1,3024#3,lateral,0,20,8,7,8,Hinge Vehicle Roof 4 x 4 Sunroof without,Plate 1 x 1
+2349a#1,3024#4,lateral,0,20,8,7,8,Hinge Vehicle Roof 4 x 4 Sunroof without,Plate 1 x 1
+2349a#1,4866#1,vert,30,30,-24,7,9,Hinge Vehicle Roof 4 x 4 Sunroof without,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+2349a#1,4866#2,vert,30,30,-24,7,9,Hinge Vehicle Roof 4 x 4 Sunroof without,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+2349a#1,3034#1,vert,40,60,-32,7,10,Hinge Vehicle Roof 4 x 4 Sunroof without,Plate 2 x 8
+2349a#1,4289#1,lateral,20,-10,-40,7,8,Hinge Vehicle Roof 4 x 4 Sunroof without,"Boat, Mast 2 x 2 x 3 Inclined with Stud "
+2349a#1,3794a#1,vert,20,10,0,7,8,Hinge Vehicle Roof 4 x 4 Sunroof without,Plate Special 1 x 2 with 1 Stud without 
+2349a#1,3460#2,inside,20,70,8,7,8,Hinge Vehicle Roof 4 x 4 Sunroof without,Plate 1 x 8
+2349a#1,4599a#2,lateral,20,0,-24,7,9,Hinge Vehicle Roof 4 x 4 Sunroof without,Tap 1 x 1 with Hole in Spout
+4625#1,3794a#1,vert,20,40,-8,8,8,Hinge Tile 1 x 4,Plate Special 1 x 2 with 1 Stud without 
+4625#1,3460#2,vert,20,80,0,8,8,Hinge Tile 1 x 4,Plate 1 x 8
+3024#3,4866#1,vert,20,20,-24,8,9,Plate 1 x 1,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+3024#4,4866#2,vert,20,20,-24,8,9,Plate 1 x 1,Windscreen 3 x 4 x 1 1/3 with 6 Studs on
+4866#1,3034#1,vert,10,80,0,9,10,Windscreen 3 x 4 x 1 1/3 with 6 Studs on,Plate 2 x 8
+4866#1,4289#1,lateral,0,20,-8,9,8,Windscreen 3 x 4 x 1 1/3 with 6 Studs on,"Boat, Mast 2 x 2 x 3 Inclined with Stud "
+4866#1,3460#2,lateral,0,20,-24,9,8,Windscreen 3 x 4 x 1 1/3 with 6 Studs on,Plate 1 x 8
+4866#2,3034#1,vert,10,80,0,9,10,Windscreen 3 x 4 x 1 1/3 with 6 Studs on,Plate 2 x 8
+4866#2,4289#1,lateral,0,20,-8,9,8,Windscreen 3 x 4 x 1 1/3 with 6 Studs on,"Boat, Mast 2 x 2 x 3 Inclined with Stud "
+4866#2,3460#2,lateral,0,20,-24,9,8,Windscreen 3 x 4 x 1 1/3 with 6 Studs on,Plate 1 x 8
+3034#1,4289#1,vert,20,20,0,10,8,Plate 2 x 8,"Boat, Mast 2 x 2 x 3 Inclined with Stud "
+3034#1,3794a#1,lateral,20,-10,-24,10,8,Plate 2 x 8,Plate Special 1 x 2 with 1 Stud without 
+3034#1,3626bp01#2,lateral,-8,21,-16,10,9,Plate 2 x 8,Minifig Head [Plain] [Blocked Open Stud]
+3034#1,3624#2,lateral,-8,21,-16,10,9,Plate 2 x 8,"Cap, Police Style"
+4873#2,4349#2,vert,20,20,-8,8,9,Bar 1 x 6 [Open Studs],"Equipment Weapon, Loudhailer / Speaker /"
+4873#2,4073#2,lateral,20,0,-8,8,9,Bar 1 x 6 [Open Studs],4073
+4873#2,4873#3,inside,28,88,8,8,9,Bar 1 x 6 [Open Studs],Bar 1 x 6 [Open Studs]
+3794a#1,3460#2,vert,20,40,0,8,8,Plate Special 1 x 2 with 1 Stud without ,Plate 1 x 8
+3794a#1,4599a#2,vert,20,20,-16,8,9,Plate Special 1 x 2 with 1 Stud without ,Tap 1 x 1 with Hole in Spout
+3794a#1,4740#1,lateral,20,0,-12,8,9,Plate Special 1 x 2 with 1 Stud without ,Dish 2 x 2 Inverted [Radar]
+3460#2,4599a#2,vert,20,20,-24,8,9,Plate 1 x 8,Tap 1 x 1 with Hole in Spout
+3460#2,4740#1,lateral,20,0,-20,8,9,Plate 1 x 8,Dish 2 x 2 Inverted [Radar]
+4349#1,4873#3,vert,20,20,-8,9,9,"Equipment Weapon, Loudhailer / Speaker /",Bar 1 x 6 [Open Studs]
+4599a#2,4740#1,lateral,20,-4,4,9,9,Tap 1 x 1 with Hole in Spout,Dish 2 x 2 Inverted [Radar]
+4073#1,4873#3,lateral,20,0,-8,9,9,4073,Bar 1 x 6 [Open Studs]
+3815#1,3816#1,vert,20,20,-4,9,9,Hips,"Leg, Right"
+3815#1,3817#1,vert,20,20,-4,9,9,Hips,"Leg, Left"
+3815#1,973p1f#1,vert,20,20,-24,9,9,Hips,973p1f
+3815#1,3819#1,vert,20,4,-15,9,9,Hips,"Arm, Left"
+3815#1,3818#1,vert,11,6,-15,9,9,Hips,"Arm, Right"
+3815#1,3820#1,lateral,-1,-1,-13,9,9,Hips,Minifig Hand
+3815#1,3820#2,lateral,9,-3,3,9,9,Hips,Minifig Hand
+3815#1,3962a#1,lateral,-10,0,-16,9,9,Hips,Equipment Radio [Compact Handle]
+3816#1,3817#1,inside,20,20,8,9,9,"Leg, Right","Leg, Left"
+3816#1,3820#2,lateral,9,-3,-9,9,9,"Leg, Right",Minifig Hand
+3817#1,3820#2,lateral,9,-3,-9,9,9,"Leg, Left",Minifig Hand
+973p1f#1,3819#1,vert,20,4,-1,9,9,973p1f,"Arm, Left"
+973p1f#1,3818#1,vert,11,6,-1,9,9,973p1f,"Arm, Right"
+973p1f#1,3820#1,lateral,-1,-1,-3,9,9,973p1f,Minifig Hand
+973p1f#1,3820#2,lateral,9,-3,-19,9,9,973p1f,Minifig Hand
+973p1f#1,3626bp01#1,vert,20,20,-16,9,9,973p1f,Minifig Head [Plain] [Blocked Open Stud]
+973p1f#1,3624#1,vert,20,20,-16,9,9,973p1f,"Cap, Police Style"
+973p1f#1,3962a#1,lateral,-10,0,0,9,9,973p1f,Equipment Radio [Compact Handle]
+3819#1,3820#2,vert,9,13,-10,9,9,"Arm, Left",Minifig Hand
+3818#1,3820#1,lateral,-5,16,6,9,9,"Arm, Right",Minifig Hand
+3820#1,3962a#1,inside,11,21,5,9,9,Minifig Hand,Equipment Radio [Compact Handle]
+3626bp01#1,3624#1,inside,23,23,8,9,9,Minifig Head [Plain] [Blocked Open Stud],"Cap, Police Style"
+3626bp01#1,3962a#1,lateral,-8,2,-24,9,9,Minifig Head [Plain] [Blocked Open Stud],Equipment Radio [Compact Handle]
+3624#1,3962a#1,lateral,-8,2,-24,9,9,"Cap, Police Style",Equipment Radio [Compact Handle]
+3815#2,3816#2,vert,20,20,-4,9,9,Hips,"Leg, Right"
+3815#2,3817#2,vert,20,20,-4,9,9,Hips,"Leg, Left"
+3815#2,973p1g#1,vert,20,20,-24,9,9,Hips,Minifig Torso with Zipper and Old Police
+3815#2,3819#2,vert,5,17,-15,9,9,Hips,"Arm, Left"
+3815#2,3818#2,vert,5,17,-15,9,9,Hips,"Arm, Right"
+3815#2,3820#3,lateral,-3,6,5,9,9,Hips,Minifig Hand
+3815#2,3820#4,lateral,-2,2,-5,9,9,Hips,Minifig Hand
+3816#2,3817#2,inside,20,20,8,9,9,"Leg, Right","Leg, Left"
+3816#2,3820#3,lateral,-3,6,-7,9,9,"Leg, Right",Minifig Hand
+3816#2,3820#4,lateral,-2,2,-17,9,9,"Leg, Right",Minifig Hand
+3817#2,3820#3,lateral,-3,6,-7,9,9,"Leg, Left",Minifig Hand
+3817#2,3820#4,lateral,-2,2,-17,9,9,"Leg, Left",Minifig Hand
+973p1g#1,3819#2,vert,5,17,-1,9,9,Minifig Torso with Zipper and Old Police,"Arm, Left"
+973p1g#1,3818#2,vert,5,17,-1,9,9,Minifig Torso with Zipper and Old Police,"Arm, Right"
+973p1g#1,3820#3,lateral,-3,6,-21,9,9,Minifig Torso with Zipper and Old Police,Minifig Hand
+973p1g#1,3820#4,lateral,-2,2,-11,9,9,Minifig Torso with Zipper and Old Police,Minifig Hand
+973p1g#1,3626bp01#2,vert,20,20,-16,9,9,Minifig Torso with Zipper and Old Police,Minifig Head [Plain] [Blocked Open Stud]
+973p1g#1,3624#2,vert,20,20,-16,9,9,Minifig Torso with Zipper and Old Police,"Cap, Police Style"
+3819#2,3818#2,lateral,-10,17,8,9,9,"Arm, Left","Arm, Right"
+3819#2,3820#4,lateral,14,1,-2,9,9,"Arm, Left",Minifig Hand
+3818#2,3820#3,vert,14,6,-12,9,9,"Arm, Right",Minifig Hand
+3626bp01#2,3624#2,inside,23,23,8,9,9,Minifig Head [Plain] [Blocked Open Stud],"Cap, Police Style"

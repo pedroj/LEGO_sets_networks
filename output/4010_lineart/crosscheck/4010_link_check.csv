@@ -1,0 +1,317 @@
+part_a,part_b,desc_a,desc_b,verdict,studs_coupled,box_gap_ldu,assessment,reason
+2372c01#1,3004#1,Boat Hull Floating 25 x 10 with White Deck,Brick  1 x  2,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+2372c01#1,3004#2,Boat Hull Floating 25 x 10 with White Deck,Brick  1 x  2,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+2372c01#1,3004#3,Boat Hull Floating 25 x 10 with White Deck,Brick  1 x  2,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+2372c01#1,3002#1,Boat Hull Floating 25 x 10 with White Deck,Brick  2 x  3,stud,6,0.0,supported,6 stud(s) of one part sit in the other
+2372c01#1,4079#1,Boat Hull Floating 25 x 10 with White Deck,Minifig Seat  2 x  2,stud,4,0.0,supported,4 stud(s) of one part sit in the other
+2372c01#1,73090b#1,Boat Hull Floating 25 x 10 with White Deck,Brick  2 x  6 x  2 Weight with Plate Bottom,stud,12,0.0,supported,12 stud(s) of one part sit in the other
+2372c01#1,3040b#1,Boat Hull Floating 25 x 10 with White Deck,Slope Brick 45  2 x  1,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+2372c01#1,3040b#2,Boat Hull Floating 25 x 10 with White Deck,Slope Brick 45  2 x  1,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+2372c01#1,3665#1,Boat Hull Floating 25 x 10 with White Deck,~Moved to 3665a,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+2372c01#1,3665#2,Boat Hull Floating 25 x 10 with White Deck,~Moved to 3665a,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+2372c01#1,3005#1,Boat Hull Floating 25 x 10 with White Deck,Brick  1 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+2372c01#1,3005#2,Boat Hull Floating 25 x 10 with White Deck,Brick  1 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+2372c01#1,3004#5,Boat Hull Floating 25 x 10 with White Deck,Brick  1 x  2,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+2372c01#1,3004#6,Boat Hull Floating 25 x 10 with White Deck,Brick  1 x  2,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+2372c01#1,4873#1,Boat Hull Floating 25 x 10 with White Deck,Bar  1 x  6 with Studs Open,stud,6,0.0,supported,6 stud(s) of one part sit in the other
+2372c01#1,3297#1,Boat Hull Floating 25 x 10 with White Deck,Slope Brick 33  3 x  4,stud,12,0.0,supported,12 stud(s) of one part sit in the other
+2372c01#1,3297#2,Boat Hull Floating 25 x 10 with White Deck,Slope Brick 33  3 x  4,stud,12,0.0,supported,12 stud(s) of one part sit in the other
+2372c01#1,4873#3,Boat Hull Floating 25 x 10 with White Deck,Bar  1 x  6 with Studs Open,stud,6,0.0,supported,6 stud(s) of one part sit in the other
+3004#1,3795#1,Brick  1 x  2,Plate  2 x  6,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3004#2,3795#1,Brick  1 x  2,Plate  2 x  6,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3004#3,3023#1,Brick  1 x  2,~Moved To 3023b,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3004#3,73090b#1,Brick  1 x  2,Brick  2 x  6 x  2 Weight with Plate Bottom,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3004#3,3958#1,Brick  1 x  2,Plate  6 x  6,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3002#1,73090b#1,Brick  2 x  3,Brick  2 x  6 x  2 Weight with Plate Bottom,apart,0,40.0,false positive,parts do not touch (gap 40.0 LDU between boxes; >=3 LDU between surfaces)
+3002#1,3003#1,Brick  2 x  3,Brick  2 x  2,stud,4,0.0,supported,4 stud(s) of one part sit in the other
+3002#1,3958#1,Brick  2 x  3,Plate  6 x  6,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3002#1,4623#1,Brick  2 x  3,Plate  1 x  2 with Vertical Bar on Long Side and Long Arm,apart,0,28.0,false positive,parts do not touch (gap 28.0 LDU between boxes; >=3 LDU between surfaces)
+3002#1,3838#1,Brick  2 x  3,Minifig Airtanks,apart,0,6.1,false positive,parts do not touch (gap 6.1 LDU between boxes; >=3 LDU between surfaces)
+3023#1,73090b#1,~Moved To 3023b,Brick  2 x  6 x  2 Weight with Plate Bottom,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3023#1,3958#1,~Moved To 3023b,Plate  6 x  6,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+4079#1,3795#1,Minifig Seat  2 x  2,Plate  2 x  6,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+73090b#1,3003#1,Brick  2 x  6 x  2 Weight with Plate Bottom,Brick  2 x  2,apart,0,40.0,false positive,parts do not touch (gap 40.0 LDU between boxes; >=3 LDU between surfaces)
+73090b#1,3958#1,Brick  2 x  6 x  2 Weight with Plate Bottom,Plate  6 x  6,stud,12,0.0,supported,12 stud(s) of one part sit in the other
+73090b#1,3004#4,Brick  2 x  6 x  2 Weight with Plate Bottom,Brick  1 x  2,apart,0,40.2,false positive,parts do not touch (gap 40.2 LDU between boxes; >=3 LDU between surfaces)
+73090b#1,4623#1,Brick  2 x  6 x  2 Weight with Plate Bottom,Plate  1 x  2 with Vertical Bar on Long Side and Long Arm,apart,0,40.2,false positive,parts do not touch (gap 40.2 LDU between boxes; >=3 LDU between surfaces)
+73090b#1,3842a#1,Brick  2 x  6 x  2 Weight with Plate Bottom,Minifig Helmet Classic with Thin Chin Guard and Visor Dimples,apart,0,40.5,false positive,parts do not touch (gap 40.5 LDU between boxes; >=3 LDU between surfaces)
+73090b#1,3815#2,Brick  2 x  6 x  2 Weight with Plate Bottom,~Minifig Hips (Obsolete),apart,0,23.0,false positive,parts do not touch (gap 23.0 LDU between boxes; >=3 LDU between surfaces)
+73090b#1,3816#2,Brick  2 x  6 x  2 Weight with Plate Bottom,~Minifig Leg Right (Obsolete),apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+73090b#1,3817#2,Brick  2 x  6 x  2 Weight with Plate Bottom,~Minifig Leg Left (Obsolete),apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3003#1,3958#1,Brick  2 x  2,Plate  6 x  6,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3003#1,4623#1,Brick  2 x  2,Plate  1 x  2 with Vertical Bar on Long Side and Long Arm,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3003#1,3838#1,Brick  2 x  2,Minifig Airtanks,apart,0,6.0,false positive,parts do not touch (gap 6.0 LDU between boxes; >=3 LDU between surfaces)
+3958#1,3004#4,Plate  6 x  6,Brick  1 x  2,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3958#1,4623#1,Plate  6 x  6,Plate  1 x  2 with Vertical Bar on Long Side and Long Arm,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3958#1,3842a#1,Plate  6 x  6,Minifig Helmet Classic with Thin Chin Guard and Visor Dimples,apart,0,13.3,false positive,parts do not touch (gap 13.3 LDU between boxes; >=3 LDU between surfaces)
+3958#1,3838#1,Plate  6 x  6,Minifig Airtanks,contact: boxes intersect,0,0.0,false positive,shapes overlap/touch but no connection mechanism
+3958#1,3816#1,Plate  6 x  6,~Minifig Leg Right (Obsolete),stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3958#1,3817#1,Plate  6 x  6,~Minifig Leg Left (Obsolete),stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3958#1,3816#2,Plate  6 x  6,~Minifig Leg Right (Obsolete),stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3958#1,3817#2,Plate  6 x  6,~Minifig Leg Left (Obsolete),stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3004#4,3040b#1,Brick  1 x  2,Slope Brick 45  2 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3004#4,3005#1,Brick  1 x  2,Brick  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3004#4,3040b#3,Brick  1 x  2,Slope Brick 45  2 x  1,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3004#4,3820#4,Brick  1 x  2,Minifig Hand,apart,0,16.4,false positive,parts do not touch (gap 16.4 LDU between boxes; >=3 LDU between surfaces)
+4623#1,3838#1,Plate  1 x  2 with Vertical Bar on Long Side and Long Arm,Minifig Airtanks,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3040b#1,3829c01#1,Slope Brick 45  2 x  1,Car Steering Stand and Wheel (Complete),contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3040b#1,3005#1,Slope Brick 45  2 x  1,Brick  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3040b#1,3040b#3,Slope Brick 45  2 x  1,Slope Brick 45  2 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3040b#1,3023#4,Slope Brick 45  2 x  1,~Moved To 3023b,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3040b#2,3005#2,Slope Brick 45  2 x  1,Brick  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3040b#2,3040b#4,Slope Brick 45  2 x  1,Slope Brick 45  2 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3040b#2,3023#5,Slope Brick 45  2 x  1,~Moved To 3023b,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3665#1,3004#5,~Moved to 3665a,Brick  1 x  2,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3665#1,3024#1,~Moved to 3665a,Plate  1 x  1,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3665#1,3297#1,~Moved to 3665a,Slope Brick 33  3 x  4,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3665#1,4286#1,~Moved to 3665a,Slope Brick 33  3 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3665#1,3023#3,~Moved to 3665a,~Moved To 3023b,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3665#2,3004#6,~Moved to 3665a,Brick  1 x  2,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3665#2,3024#2,~Moved to 3665a,Plate  1 x  1,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3665#2,3297#2,~Moved to 3665a,Slope Brick 33  3 x  4,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3665#2,4286#2,~Moved to 3665a,Slope Brick 33  3 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3665#2,3023#2,~Moved to 3665a,~Moved To 3023b,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3829c01#1,3040b#3,Car Steering Stand and Wheel (Complete),Slope Brick 45  2 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3829c01#1,3820#4,Car Steering Stand and Wheel (Complete),Minifig Hand,contact: boxes intersect,0,0.0,uncertain,minifig hand may grip the steering wheel (cop at the wheel)
+3005#1,3040b#3,Brick  1 x  1,Slope Brick 45  2 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3005#1,4862#3,Brick  1 x  1,Glass for Window  1 x  2 x  2 Plane,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3005#1,3023#4,Brick  1 x  1,~Moved To 3023b,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3005#2,3040b#4,Brick  1 x  1,Slope Brick 45  2 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3005#2,4862#1,Brick  1 x  1,Glass for Window  1 x  2 x  2 Plane,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3005#2,3023#5,Brick  1 x  1,~Moved To 3023b,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3004#5,3024#1,Brick  1 x  2,Plate  1 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3004#5,3297#1,Brick  1 x  2,Slope Brick 33  3 x  4,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3004#5,4286#1,Brick  1 x  2,Slope Brick 33  3 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3004#5,3023#3,Brick  1 x  2,~Moved To 3023b,apart,0,12.0,false positive,parts do not touch (gap 12.0 LDU between boxes; >=3 LDU between surfaces)
+3004#5,3021#2,Brick  1 x  2,Plate  2 x  3,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3004#5,2348a#1,Brick  1 x  2,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,36.1,false positive,parts do not touch (gap 36.1 LDU between boxes; >=3 LDU between surfaces)
+3004#5,2349a#1,Brick  1 x  2,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,28.3,false positive,parts do not touch (gap 28.3 LDU between boxes; >=3 LDU between surfaces)
+3004#6,3024#2,Brick  1 x  2,Plate  1 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3004#6,3297#2,Brick  1 x  2,Slope Brick 33  3 x  4,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3004#6,4286#2,Brick  1 x  2,Slope Brick 33  3 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3004#6,3023#2,Brick  1 x  2,~Moved To 3023b,apart,0,12.0,false positive,parts do not touch (gap 12.0 LDU between boxes; >=3 LDU between surfaces)
+3004#6,3021#1,Brick  1 x  2,Plate  2 x  3,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3004#6,2348a#1,Brick  1 x  2,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,36.1,false positive,parts do not touch (gap 36.1 LDU between boxes; >=3 LDU between surfaces)
+3004#6,2349a#1,Brick  1 x  2,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,28.3,false positive,parts do not touch (gap 28.3 LDU between boxes; >=3 LDU between surfaces)
+3024#1,3297#1,Plate  1 x  1,Slope Brick 33  3 x  4,apart,0,40.0,false positive,parts do not touch (gap 40.0 LDU between boxes; >=3 LDU between surfaces)
+3024#1,4286#1,Plate  1 x  1,Slope Brick 33  3 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3024#1,3023#3,Plate  1 x  1,~Moved To 3023b,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3024#1,4862#4,Plate  1 x  1,Glass for Window  1 x  2 x  2 Plane,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3024#1,3021#2,Plate  1 x  1,Plate  2 x  3,apart,0,12.0,false positive,parts do not touch (gap 12.0 LDU between boxes; >=3 LDU between surfaces)
+3024#2,3297#2,Plate  1 x  1,Slope Brick 33  3 x  4,apart,0,40.0,false positive,parts do not touch (gap 40.0 LDU between boxes; >=3 LDU between surfaces)
+3024#2,4286#2,Plate  1 x  1,Slope Brick 33  3 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3024#2,3023#2,Plate  1 x  1,~Moved To 3023b,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3024#2,4862#2,Plate  1 x  1,Glass for Window  1 x  2 x  2 Plane,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3024#2,3021#1,Plate  1 x  1,Plate  2 x  3,apart,0,12.0,false positive,parts do not touch (gap 12.0 LDU between boxes; >=3 LDU between surfaces)
+4873#1,4599a#1,Bar  1 x  6 with Studs Open,Tap  1 x  1 with Hole in Spout,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+4873#1,6141#1,Bar  1 x  6 with Studs Open,Plate  1 x  1 Round,apart,0,8.0,false positive,parts do not touch (gap 8.0 LDU between boxes; >=3 LDU between surfaces)
+3297#1,3460#1,Slope Brick 33  3 x  4,Plate  1 x  8,apart,0,40.2,false positive,parts do not touch (gap 40.2 LDU between boxes; >=3 LDU between surfaces)
+3297#1,4286#1,Slope Brick 33  3 x  4,Slope Brick 33  3 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3297#1,3023#3,Slope Brick 33  3 x  4,~Moved To 3023b,apart,0,41.8,false positive,parts do not touch (gap 41.8 LDU between boxes; >=3 LDU between surfaces)
+3297#1,3939#1,Slope Brick 33  3 x  4,Slope Brick 33  3 x  6,stud,3,0.0,supported,3 stud(s) of one part sit in the other
+3297#1,2349a#1,Slope Brick 33  3 x  4,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,44.7,false positive,parts do not touch (gap 44.7 LDU between boxes; >=3 LDU between surfaces)
+3297#1,4625#1,Slope Brick 33  3 x  4,Hinge Tile  1 x  4,apart,0,41.8,false positive,parts do not touch (gap 41.8 LDU between boxes; >=3 LDU between surfaces)
+3297#1,3794a#1,Slope Brick 33  3 x  4,Plate  1 x  2 without Groove with 1 Centre Stud,apart,0,34.4,false positive,parts do not touch (gap 34.4 LDU between boxes; >=3 LDU between surfaces)
+3297#1,3460#2,Slope Brick 33  3 x  4,Plate  1 x  8,apart,0,28.3,false positive,parts do not touch (gap 28.3 LDU between boxes; >=3 LDU between surfaces)
+3297#2,3460#1,Slope Brick 33  3 x  4,Plate  1 x  8,apart,0,40.2,false positive,parts do not touch (gap 40.2 LDU between boxes; >=3 LDU between surfaces)
+3297#2,4286#2,Slope Brick 33  3 x  4,Slope Brick 33  3 x  1,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3297#2,3023#2,Slope Brick 33  3 x  4,~Moved To 3023b,apart,0,41.8,false positive,parts do not touch (gap 41.8 LDU between boxes; >=3 LDU between surfaces)
+3297#2,3939#1,Slope Brick 33  3 x  4,Slope Brick 33  3 x  6,stud,3,0.0,supported,3 stud(s) of one part sit in the other
+3297#2,2349a#1,Slope Brick 33  3 x  4,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,44.7,false positive,parts do not touch (gap 44.7 LDU between boxes; >=3 LDU between surfaces)
+3297#2,4625#1,Slope Brick 33  3 x  4,Hinge Tile  1 x  4,apart,0,41.8,false positive,parts do not touch (gap 41.8 LDU between boxes; >=3 LDU between surfaces)
+3297#2,3794a#1,Slope Brick 33  3 x  4,Plate  1 x  2 without Groove with 1 Centre Stud,apart,0,34.4,false positive,parts do not touch (gap 34.4 LDU between boxes; >=3 LDU between surfaces)
+3297#2,3460#2,Slope Brick 33  3 x  4,Plate  1 x  8,apart,0,28.3,false positive,parts do not touch (gap 28.3 LDU between boxes; >=3 LDU between surfaces)
+3040b#3,4862#3,Slope Brick 45  2 x  1,Glass for Window  1 x  2 x  2 Plane,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3040b#3,3023#4,Slope Brick 45  2 x  1,~Moved To 3023b,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3040b#3,2348a#1,Slope Brick 45  2 x  1,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,49.2,false positive,parts do not touch (gap 49.2 LDU between boxes; >=3 LDU between surfaces)
+3040b#3,4866#2,Slope Brick 45  2 x  1,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3040b#4,4862#1,Slope Brick 45  2 x  1,Glass for Window  1 x  2 x  2 Plane,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3040b#4,3023#5,Slope Brick 45  2 x  1,~Moved To 3023b,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3040b#4,2348a#1,Slope Brick 45  2 x  1,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,49.2,false positive,parts do not touch (gap 49.2 LDU between boxes; >=3 LDU between surfaces)
+3040b#4,4866#1,Slope Brick 45  2 x  1,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3460#1,3939#1,Plate  1 x  8,Slope Brick 33  3 x  6,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3460#1,2348a#1,Plate  1 x  8,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3460#1,2349a#1,Plate  1 x  8,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3460#1,4625#1,Plate  1 x  8,Hinge Tile  1 x  4,stud,4,0.0,supported,4 stud(s) of one part sit in the other
+3460#1,3794a#1,Plate  1 x  8,Plate  1 x  2 without Groove with 1 Centre Stud,apart,0,12.0,false positive,parts do not touch (gap 12.0 LDU between boxes; >=3 LDU between surfaces)
+3460#1,3460#2,Plate  1 x  8,Plate  1 x  8,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4863#1,4862#1,Window  1 x  4 x  2 Plane,Glass for Window  1 x  2 x  2 Plane,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+4863#1,4862#2,Window  1 x  4 x  2 Plane,Glass for Window  1 x  2 x  2 Plane,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+4863#1,3939#1,Window  1 x  4 x  2 Plane,Slope Brick 33  3 x  6,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+4863#1,3021#1,Window  1 x  4 x  2 Plane,Plate  2 x  3,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+4863#1,3070b#1,Window  1 x  4 x  2 Plane,Tile  1 x  1 with Groove,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+4863#1,2348a#1,Window  1 x  4 x  2 Plane,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,30.0,false positive,parts do not touch (gap 30.0 LDU between boxes; >=3 LDU between surfaces)
+4863#1,2349a#1,Window  1 x  4 x  2 Plane,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+4863#1,3024#3,Window  1 x  4 x  2 Plane,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+4863#2,4862#3,Window  1 x  4 x  2 Plane,Glass for Window  1 x  2 x  2 Plane,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+4863#2,4862#4,Window  1 x  4 x  2 Plane,Glass for Window  1 x  2 x  2 Plane,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+4863#2,3939#1,Window  1 x  4 x  2 Plane,Slope Brick 33  3 x  6,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+4863#2,3021#2,Window  1 x  4 x  2 Plane,Plate  2 x  3,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+4863#2,3070b#2,Window  1 x  4 x  2 Plane,Tile  1 x  1 with Groove,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+4863#2,2348a#1,Window  1 x  4 x  2 Plane,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,30.0,false positive,parts do not touch (gap 30.0 LDU between boxes; >=3 LDU between surfaces)
+4863#2,2349a#1,Window  1 x  4 x  2 Plane,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+4863#2,3024#4,Window  1 x  4 x  2 Plane,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+4286#1,3023#3,Slope Brick 33  3 x  1,~Moved To 3023b,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+4286#1,3939#1,Slope Brick 33  3 x  1,Slope Brick 33  3 x  6,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+4286#1,3021#2,Slope Brick 33  3 x  1,Plate  2 x  3,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+4286#1,2349a#1,Slope Brick 33  3 x  1,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+4286#2,3023#2,Slope Brick 33  3 x  1,~Moved To 3023b,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+4286#2,3939#1,Slope Brick 33  3 x  1,Slope Brick 33  3 x  6,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+4286#2,3021#1,Slope Brick 33  3 x  1,Plate  2 x  3,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+4286#2,2349a#1,Slope Brick 33  3 x  1,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3023#2,4862#2,~Moved To 3023b,Glass for Window  1 x  2 x  2 Plane,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3023#2,3021#1,~Moved To 3023b,Plate  2 x  3,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3023#2,2348a#1,~Moved To 3023b,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,10.0,false positive,parts do not touch (gap 10.0 LDU between boxes; >=3 LDU between surfaces)
+3023#2,2349a#1,~Moved To 3023b,Hinge Car Roof  4 x  4 Sunroof without Ledges,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3023#3,4862#4,~Moved To 3023b,Glass for Window  1 x  2 x  2 Plane,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3023#3,3021#2,~Moved To 3023b,Plate  2 x  3,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3023#3,2348a#1,~Moved To 3023b,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,10.0,false positive,parts do not touch (gap 10.0 LDU between boxes; >=3 LDU between surfaces)
+3023#3,2349a#1,~Moved To 3023b,Hinge Car Roof  4 x  4 Sunroof without Ledges,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+4862#1,3023#5,Glass for Window  1 x  2 x  2 Plane,~Moved To 3023b,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4862#1,3070b#1,Glass for Window  1 x  2 x  2 Plane,Tile  1 x  1 with Groove,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4862#1,2348a#1,Glass for Window  1 x  2 x  2 Plane,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,42.3,false positive,parts do not touch (gap 42.3 LDU between boxes; >=3 LDU between surfaces)
+4862#1,2349a#1,Glass for Window  1 x  2 x  2 Plane,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,32.2,false positive,parts do not touch (gap 32.2 LDU between boxes; >=3 LDU between surfaces)
+4862#1,3024#3,Glass for Window  1 x  2 x  2 Plane,Plate  1 x  1,apart,0,12.6,false positive,parts do not touch (gap 12.6 LDU between boxes; >=3 LDU between surfaces)
+4862#2,3021#1,Glass for Window  1 x  2 x  2 Plane,Plate  2 x  3,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4862#2,3070b#1,Glass for Window  1 x  2 x  2 Plane,Tile  1 x  1 with Groove,apart,0,5.7,false positive,parts do not touch (gap 5.7 LDU between boxes; >=3 LDU between surfaces)
+4862#2,2348a#1,Glass for Window  1 x  2 x  2 Plane,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,42.2,false positive,parts do not touch (gap 42.2 LDU between boxes; >=3 LDU between surfaces)
+4862#2,2349a#1,Glass for Window  1 x  2 x  2 Plane,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,32.2,false positive,parts do not touch (gap 32.2 LDU between boxes; >=3 LDU between surfaces)
+4862#2,3024#3,Glass for Window  1 x  2 x  2 Plane,Plate  1 x  1,apart,0,13.3,false positive,parts do not touch (gap 13.3 LDU between boxes; >=3 LDU between surfaces)
+4862#3,3023#4,Glass for Window  1 x  2 x  2 Plane,~Moved To 3023b,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4862#3,3070b#2,Glass for Window  1 x  2 x  2 Plane,Tile  1 x  1 with Groove,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4862#3,2348a#1,Glass for Window  1 x  2 x  2 Plane,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,42.3,false positive,parts do not touch (gap 42.3 LDU between boxes; >=3 LDU between surfaces)
+4862#3,2349a#1,Glass for Window  1 x  2 x  2 Plane,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,32.2,false positive,parts do not touch (gap 32.2 LDU between boxes; >=3 LDU between surfaces)
+4862#3,3024#4,Glass for Window  1 x  2 x  2 Plane,Plate  1 x  1,apart,0,12.6,false positive,parts do not touch (gap 12.6 LDU between boxes; >=3 LDU between surfaces)
+4862#4,3021#2,Glass for Window  1 x  2 x  2 Plane,Plate  2 x  3,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4862#4,3070b#2,Glass for Window  1 x  2 x  2 Plane,Tile  1 x  1 with Groove,apart,0,5.7,false positive,parts do not touch (gap 5.7 LDU between boxes; >=3 LDU between surfaces)
+4862#4,2348a#1,Glass for Window  1 x  2 x  2 Plane,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,42.2,false positive,parts do not touch (gap 42.2 LDU between boxes; >=3 LDU between surfaces)
+4862#4,2349a#1,Glass for Window  1 x  2 x  2 Plane,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,32.2,false positive,parts do not touch (gap 32.2 LDU between boxes; >=3 LDU between surfaces)
+4862#4,3024#4,Glass for Window  1 x  2 x  2 Plane,Plate  1 x  1,apart,0,13.3,false positive,parts do not touch (gap 13.3 LDU between boxes; >=3 LDU between surfaces)
+3939#1,3021#1,Slope Brick 33  3 x  6,Plate  2 x  3,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3939#1,3021#2,Slope Brick 33  3 x  6,Plate  2 x  3,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3939#1,2348a#1,Slope Brick 33  3 x  6,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3939#1,2349a#1,Slope Brick 33  3 x  6,Hinge Car Roof  4 x  4 Sunroof without Ledges,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3939#1,4625#1,Slope Brick 33  3 x  6,Hinge Tile  1 x  4,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3939#1,3024#3,Slope Brick 33  3 x  6,Plate  1 x  1,apart,0,60.0,false positive,parts do not touch (gap 60.0 LDU between boxes; >=3 LDU between surfaces)
+3939#1,3024#4,Slope Brick 33  3 x  6,Plate  1 x  1,apart,0,60.0,false positive,parts do not touch (gap 60.0 LDU between boxes; >=3 LDU between surfaces)
+3939#1,4866#1,Slope Brick 33  3 x  6,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,apart,0,60.1,false positive,parts do not touch (gap 60.1 LDU between boxes; >=3 LDU between surfaces)
+3939#1,4866#2,Slope Brick 33  3 x  6,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,apart,0,60.1,false positive,parts do not touch (gap 60.1 LDU between boxes; >=3 LDU between surfaces)
+3939#1,3034#1,Slope Brick 33  3 x  6,Plate  2 x  8,apart,0,87.7,false positive,parts do not touch (gap 87.7 LDU between boxes; >=3 LDU between surfaces)
+3939#1,3794a#1,Slope Brick 33  3 x  6,Plate  1 x  2 without Groove with 1 Centre Stud,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3939#1,3460#2,Slope Brick 33  3 x  6,Plate  1 x  8,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3939#1,4599a#2,Slope Brick 33  3 x  6,Tap  1 x  1 with Hole in Spout,apart,0,12.0,false positive,parts do not touch (gap 12.0 LDU between boxes; >=3 LDU between surfaces)
+3939#1,4740#1,Slope Brick 33  3 x  6,Dish  2 x  2 Inverted,apart,0,12.0,false positive,parts do not touch (gap 12.0 LDU between boxes; >=3 LDU between surfaces)
+3023#4,3070b#2,~Moved To 3023b,Tile  1 x  1 with Groove,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3023#4,2348a#1,~Moved To 3023b,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,35.5,false positive,parts do not touch (gap 35.5 LDU between boxes; >=3 LDU between surfaces)
+3023#4,2349a#1,~Moved To 3023b,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3023#4,3024#4,~Moved To 3023b,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3023#4,4866#2,~Moved To 3023b,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3023#5,3070b#1,~Moved To 3023b,Tile  1 x  1 with Groove,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3023#5,2348a#1,~Moved To 3023b,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,35.5,false positive,parts do not touch (gap 35.5 LDU between boxes; >=3 LDU between surfaces)
+3023#5,2349a#1,~Moved To 3023b,Hinge Car Roof  4 x  4 Sunroof without Ledges,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+3023#5,3024#3,~Moved To 3023b,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3023#5,4866#1,~Moved To 3023b,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3021#1,3070b#1,Plate  2 x  3,Tile  1 x  1 with Groove,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3021#1,2348a#1,Plate  2 x  3,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,10.0,false positive,parts do not touch (gap 10.0 LDU between boxes; >=3 LDU between surfaces)
+3021#1,2349a#1,Plate  2 x  3,Hinge Car Roof  4 x  4 Sunroof without Ledges,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3021#1,3024#3,Plate  2 x  3,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3021#1,4866#1,Plate  2 x  3,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3021#2,3070b#2,Plate  2 x  3,Tile  1 x  1 with Groove,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3021#2,2348a#1,Plate  2 x  3,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,apart,0,10.0,false positive,parts do not touch (gap 10.0 LDU between boxes; >=3 LDU between surfaces)
+3021#2,2349a#1,Plate  2 x  3,Hinge Car Roof  4 x  4 Sunroof without Ledges,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3021#2,3024#4,Plate  2 x  3,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3021#2,4866#2,Plate  2 x  3,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3070b#1,3024#3,Tile  1 x  1 with Groove,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3070b#1,4866#1,Tile  1 x  1 with Groove,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,"contact: stacked, no stud",0,0.0,false positive,one part rests on the other but no stud/anti-stud engages (tile or glass under it)
+3070b#2,3024#4,Tile  1 x  1 with Groove,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3070b#2,4866#2,Tile  1 x  1 with Groove,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,"contact: stacked, no stud",0,0.0,false positive,one part rests on the other but no stud/anti-stud engages (tile or glass under it)
+2348a#1,2349a#1,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,Hinge Car Roof  4 x  4 Sunroof without Ledges,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+2348a#1,4625#1,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,Hinge Tile  1 x  4,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+2348a#1,3024#3,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,Plate  1 x  1,apart,0,10.0,false positive,parts do not touch (gap 10.0 LDU between boxes; >=3 LDU between surfaces)
+2348a#1,3024#4,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,Plate  1 x  1,apart,0,10.0,false positive,parts do not touch (gap 10.0 LDU between boxes; >=3 LDU between surfaces)
+2348a#1,4866#1,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,"contact: stacked, no stud",0,0.0,false positive,one part rests on the other but no stud/anti-stud engages (tile or glass under it)
+2348a#1,4866#2,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,"contact: stacked, no stud",0,0.0,false positive,one part rests on the other but no stud/anti-stud engages (tile or glass under it)
+2348a#1,3034#1,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,Plate  2 x  8,apart,0,37.2,false positive,parts do not touch (gap 37.2 LDU between boxes; >=3 LDU between surfaces)
+2348a#1,3794a#1,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,Plate  1 x  2 without Groove with 1 Centre Stud,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+2348a#1,3460#2,Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges,Plate  1 x  8,apart,0,20.0,false positive,parts do not touch (gap 20.0 LDU between boxes; >=3 LDU between surfaces)
+2349a#1,4625#1,Hinge Car Roof  4 x  4 Sunroof without Ledges,Hinge Tile  1 x  4,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+2349a#1,3024#3,Hinge Car Roof  4 x  4 Sunroof without Ledges,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+2349a#1,3024#4,Hinge Car Roof  4 x  4 Sunroof without Ledges,Plate  1 x  1,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+2349a#1,4866#1,Hinge Car Roof  4 x  4 Sunroof without Ledges,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+2349a#1,4866#2,Hinge Car Roof  4 x  4 Sunroof without Ledges,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+2349a#1,3034#1,Hinge Car Roof  4 x  4 Sunroof without Ledges,Plate  2 x  8,apart,0,28.0,false positive,parts do not touch (gap 28.0 LDU between boxes; >=3 LDU between surfaces)
+2349a#1,4289#1,Hinge Car Roof  4 x  4 Sunroof without Ledges,Boat Mast  2 x  2,apart,0,36.0,false positive,parts do not touch (gap 36.0 LDU between boxes; >=3 LDU between surfaces)
+2349a#1,3794a#1,Hinge Car Roof  4 x  4 Sunroof without Ledges,Plate  1 x  2 without Groove with 1 Centre Stud,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+2349a#1,3460#2,Hinge Car Roof  4 x  4 Sunroof without Ledges,Plate  1 x  8,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+2349a#1,4599a#2,Hinge Car Roof  4 x  4 Sunroof without Ledges,Tap  1 x  1 with Hole in Spout,apart,0,4.5,false positive,parts do not touch (gap 4.5 LDU between boxes; >=3 LDU between surfaces)
+4625#1,3794a#1,Hinge Tile  1 x  4,Plate  1 x  2 without Groove with 1 Centre Stud,"contact: stacked, no stud",0,0.0,false positive,one part rests on the other but no stud/anti-stud engages (tile or glass under it)
+4625#1,3460#2,Hinge Tile  1 x  4,Plate  1 x  8,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3024#3,4866#1,Plate  1 x  1,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3024#4,4866#2,Plate  1 x  1,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+4866#1,3034#1,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,Plate  2 x  8,stud,6,0.0,supported,6 stud(s) of one part sit in the other
+4866#1,4289#1,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,Boat Mast  2 x  2,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4866#1,3460#2,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,Plate  1 x  8,apart,0,60.0,false positive,parts do not touch (gap 60.0 LDU between boxes; >=3 LDU between surfaces)
+4866#2,3034#1,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,Plate  2 x  8,stud,6,0.0,supported,6 stud(s) of one part sit in the other
+4866#2,4289#1,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,Boat Mast  2 x  2,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4866#2,3460#2,Windscreen  3 x  4 x  1 & 1/3 with 6 Studs on Top,Plate  1 x  8,apart,0,60.0,false positive,parts do not touch (gap 60.0 LDU between boxes; >=3 LDU between surfaces)
+3034#1,4289#1,Plate  2 x  8,Boat Mast  2 x  2,stud,4,0.0,supported,4 stud(s) of one part sit in the other
+3034#1,3794a#1,Plate  2 x  8,Plate  1 x  2 without Groove with 1 Centre Stud,apart,0,82.5,false positive,parts do not touch (gap 82.5 LDU between boxes; >=3 LDU between surfaces)
+3034#1,3626bp01#2,Plate  2 x  8,Minifig Head with Standard Grin Pattern (Blocked Hollow Stud),apart,0,37.9,false positive,parts do not touch (gap 37.9 LDU between boxes; >=3 LDU between surfaces)
+3034#1,3624#2,Plate  2 x  8,Minifig Police Hat,apart,0,30.9,false positive,parts do not touch (gap 30.9 LDU between boxes; >=3 LDU between surfaces)
+4873#2,4349#2,Bar  1 x  6 with Studs Open,Minifig Loudhailer,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+4873#2,4073#2,Bar  1 x  6 with Studs Open,~Moved to 6141,apart,0,2.0,false positive,parts do not touch (gap 2.0 LDU between boxes; >=3 LDU between surfaces)
+4873#2,4873#3,Bar  1 x  6 with Studs Open,Bar  1 x  6 with Studs Open,contact: boxes intersect,0,0.0,false positive,shapes overlap/touch but no connection mechanism
+3794a#1,3460#2,Plate  1 x  2 without Groove with 1 Centre Stud,Plate  1 x  8,stud,2,0.0,supported,2 stud(s) of one part sit in the other
+3794a#1,4599a#2,Plate  1 x  2 without Groove with 1 Centre Stud,Tap  1 x  1 with Hole in Spout,stud,1,0.0,supported,1 stud(s) of one part sit in the other
+3794a#1,4740#1,Plate  1 x  2 without Groove with 1 Centre Stud,Dish  2 x  2 Inverted,contact: side by side,0,0.0,false positive,parts only touch side by side; side faces do not join
+3460#2,4599a#2,Plate  1 x  8,Tap  1 x  1 with Hole in Spout,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+3460#2,4740#1,Plate  1 x  8,Dish  2 x  2 Inverted,apart,0,4.0,false positive,parts do not touch (gap 4.0 LDU between boxes; >=3 LDU between surfaces)
+4349#1,4873#3,Minifig Loudhailer,Bar  1 x  6 with Studs Open,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+4599a#2,4740#1,Tap  1 x  1 with Hole in Spout,Dish  2 x  2 Inverted,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+4073#1,4873#3,~Moved to 6141,Bar  1 x  6 with Studs Open,apart,0,2.0,false positive,parts do not touch (gap 2.0 LDU between boxes; >=3 LDU between surfaces)
+3815#1,3816#1,~Minifig Hips (Obsolete),~Minifig Leg Right (Obsolete),joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3815#1,3817#1,~Minifig Hips (Obsolete),~Minifig Leg Left (Obsolete),joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3815#1,973p1f#1,~Minifig Hips (Obsolete),Minifig Torso with Buttons and Police Badge Plain Pattern,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3815#1,3819#1,~Minifig Hips (Obsolete),Minifig Arm Left,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+3815#1,3818#1,~Minifig Hips (Obsolete),Minifig Arm Right,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+3815#1,3820#1,~Minifig Hips (Obsolete),Minifig Hand,apart,0,3.1,false positive,parts do not touch (gap 3.1 LDU between boxes; >=3 LDU between surfaces)
+3815#1,3820#2,~Minifig Hips (Obsolete),Minifig Hand,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+3815#1,3962a#1,~Minifig Hips (Obsolete),Minifig Radio with Short Handle,apart,0,14.9,false positive,parts do not touch (gap 14.9 LDU between boxes; >=3 LDU between surfaces)
+3816#1,3817#1,~Minifig Leg Right (Obsolete),~Minifig Leg Left (Obsolete),apart,0,3.0,false positive,parts do not touch (gap 3.0 LDU between boxes; >=3 LDU between surfaces)
+3816#1,3820#2,~Minifig Leg Right (Obsolete),Minifig Hand,apart,0,17.2,false positive,parts do not touch (gap 17.2 LDU between boxes; >=3 LDU between surfaces)
+3817#1,3820#2,~Minifig Leg Left (Obsolete),Minifig Hand,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+973p1f#1,3819#1,Minifig Torso with Buttons and Police Badge Plain Pattern,Minifig Arm Left,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+973p1f#1,3818#1,Minifig Torso with Buttons and Police Badge Plain Pattern,Minifig Arm Right,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+973p1f#1,3820#1,Minifig Torso with Buttons and Police Badge Plain Pattern,Minifig Hand,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+973p1f#1,3820#2,Minifig Torso with Buttons and Police Badge Plain Pattern,Minifig Hand,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+973p1f#1,3626bp01#1,Minifig Torso with Buttons and Police Badge Plain Pattern,Minifig Head with Standard Grin Pattern (Blocked Hollow Stud),joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+973p1f#1,3624#1,Minifig Torso with Buttons and Police Badge Plain Pattern,Minifig Police Hat,apart,0,5.6,false positive,parts do not touch (gap 5.6 LDU between boxes; >=3 LDU between surfaces)
+973p1f#1,3962a#1,Minifig Torso with Buttons and Police Badge Plain Pattern,Minifig Radio with Short Handle,apart,0,14.9,false positive,parts do not touch (gap 14.9 LDU between boxes; >=3 LDU between surfaces)
+3819#1,3820#2,Minifig Arm Left,Minifig Hand,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3818#1,3820#1,Minifig Arm Right,Minifig Hand,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3820#1,3962a#1,Minifig Hand,Minifig Radio with Short Handle,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3626bp01#1,3624#1,Minifig Head with Standard Grin Pattern (Blocked Hollow Stud),Minifig Police Hat,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3626bp01#1,3962a#1,Minifig Head with Standard Grin Pattern (Blocked Hollow Stud),Minifig Radio with Short Handle,apart,0,9.9,false positive,parts do not touch (gap 9.9 LDU between boxes; >=3 LDU between surfaces)
+3624#1,3962a#1,Minifig Police Hat,Minifig Radio with Short Handle,apart,0,4.2,false positive,parts do not touch (gap 4.2 LDU between boxes; >=3 LDU between surfaces)
+3815#2,3816#2,~Minifig Hips (Obsolete),~Minifig Leg Right (Obsolete),joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3815#2,3817#2,~Minifig Hips (Obsolete),~Minifig Leg Left (Obsolete),joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3815#2,973p1g#1,~Minifig Hips (Obsolete),Minifig Torso with Zipper and Police Badge Plain Pattern,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3815#2,3819#2,~Minifig Hips (Obsolete),Minifig Arm Left,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+3815#2,3818#2,~Minifig Hips (Obsolete),Minifig Arm Right,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+3815#2,3820#3,~Minifig Hips (Obsolete),Minifig Hand,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+3815#2,3820#4,~Minifig Hips (Obsolete),Minifig Hand,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+3816#2,3817#2,~Minifig Leg Right (Obsolete),~Minifig Leg Left (Obsolete),apart,0,3.0,false positive,parts do not touch (gap 3.0 LDU between boxes; >=3 LDU between surfaces)
+3816#2,3820#3,~Minifig Leg Right (Obsolete),Minifig Hand,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+3816#2,3820#4,~Minifig Leg Right (Obsolete),Minifig Hand,apart,0,18.5,false positive,parts do not touch (gap 18.5 LDU between boxes; >=3 LDU between surfaces)
+3817#2,3820#3,~Minifig Leg Left (Obsolete),Minifig Hand,apart,0,17.2,false positive,parts do not touch (gap 17.2 LDU between boxes; >=3 LDU between surfaces)
+3817#2,3820#4,~Minifig Leg Left (Obsolete),Minifig Hand,apart,0,7.4,false positive,parts do not touch (gap 7.4 LDU between boxes; >=3 LDU between surfaces)
+973p1g#1,3819#2,Minifig Torso with Zipper and Police Badge Plain Pattern,Minifig Arm Left,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+973p1g#1,3818#2,Minifig Torso with Zipper and Police Badge Plain Pattern,Minifig Arm Right,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+973p1g#1,3820#3,Minifig Torso with Zipper and Police Badge Plain Pattern,Minifig Hand,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+973p1g#1,3820#4,Minifig Torso with Zipper and Police Badge Plain Pattern,Minifig Hand,contact: boxes intersect,0,0.0,false positive,"minifig parts that overlap but are not joined (hands join arms, arms join torso)"
+973p1g#1,3626bp01#2,Minifig Torso with Zipper and Police Badge Plain Pattern,Minifig Head with Standard Grin Pattern (Blocked Hollow Stud),joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+973p1g#1,3624#2,Minifig Torso with Zipper and Police Badge Plain Pattern,Minifig Police Hat,apart,0,5.6,false positive,parts do not touch (gap 5.6 LDU between boxes; >=3 LDU between surfaces)
+3819#2,3818#2,Minifig Arm Left,Minifig Arm Right,apart,0,13.7,false positive,parts do not touch (gap 13.7 LDU between boxes; >=3 LDU between surfaces)
+3819#2,3820#4,Minifig Arm Left,Minifig Hand,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3818#2,3820#3,Minifig Arm Right,Minifig Hand,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
+3626bp01#2,3624#2,Minifig Head with Standard Grin Pattern (Blocked Hollow Stud),Minifig Police Hat,joint,0,0.0,supported,"non-stud joint (minifig joint, hinge, clip, bar in open stud, glass in frame)"
