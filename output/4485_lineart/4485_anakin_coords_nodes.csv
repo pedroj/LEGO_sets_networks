@@ -1,0 +1,25 @@
+"node","part","desc","category","subtype","x0","y0","x","y","moved","degree"
+"4740#1","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",0,140,-1.73305486557829,150.800646766477,TRUE,1
+"30359b#1","30359b","Bar 1 x 8 with Brick 1 x 2 Curved Top End (Axle Holder Inside Small End)","Special","Bar or antenna",0,130,1.3801619809834,122.174942455182,TRUE,7
+"4740#2","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",0,0,-5.01312509091618,-6.54022796872759,TRUE,1
+"4733#1","4733","Brick Special 1 x 1 Studs on 4 Sides","Brick","Brick modified SNOT",0,140,7.9933641444249,137.45559025005,TRUE,7
+"4070#1","4070","Brick Special 1 x 1 with Headlight","Brick","Brick modified SNOT",0,106,-0.0469716833711022,105.456583181738,FALSE,7
+"2555#1","2555","Tile Special 1 x 1 with Clip and Straight Tips","Special","Clip plate or tile",0,0,5.01312509091618,6.54022796872759,TRUE,2
+"4592#1","4592","Lever Small Base","Special","Clip plate or tile",18,140,20.0235776350741,148.948027160692,TRUE,5
+"4592#2","4592","Lever Small Base","Special","Clip plate or tile",-18,140,-24.9529006559519,133.683505322235,TRUE,5
+"4593#1","4593","Lever Small","Special","Bar or antenna",-18,140,-18.3942037438123,148.87347540439,TRUE,4
+"4593#2","4593","Lever Small","Special","Bar or antenna",18,140,24.0194025459472,132.958736884947,TRUE,4
+"30374#1","30374","Bar 4L (Lightsaber Blade / Wand)","Special","Bar or antenna",40,0,43.8321794472913,-2.69213623295185,TRUE,7
+"4733#2","4733","Brick Special 1 x 1 Studs on 4 Sides","Brick","Brick modified SNOT",34,0,27.8793652434757,1.67115980567825,TRUE,5
+"4733#3","4733","Brick Special 1 x 1 Studs on 4 Sides","Brick","Brick modified SNOT",-34,0,-34,0,FALSE,5
+"6141#1","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",58,0,60.2844457146483,0.440675009930745,FALSE,4
+"6141#2","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",-58,0,-58,0,FALSE,4
+"6141#3","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",-44,18,-44,13.69949,TRUE,6
+"6141#4","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",44,18,44.0065549446964,13.9896419648948,FALSE,6
+"6141#5","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",44,26,43.9974546498883,30.590659452448,TRUE,4
+"6141#6","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",-44,26,-44,30.30051,TRUE,4
+"6141#7","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",0,140,-8.28937535771597,135.64849257429,TRUE,6
+"4589#1","4589","Cone 1 x 1 [No Top Groove]","Brick","Cone",-44,50,-44,50,FALSE,2
+"4589#2","4589","Cone 1 x 1 [No Top Groove]","Brick","Cone",44,50,44,50,FALSE,2
+"2566#1","2566","Bar, 4 Top Bars, Palm Tree Top","Special","Plant or foliage",-44,-38,-44,-38,FALSE,4
+"2566#2","2566","Bar, 4 Top Bars, Palm Tree Top","Special","Plant or foliage",44,-38,44,-38,FALSE,4
