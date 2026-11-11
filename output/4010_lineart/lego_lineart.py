@@ -295,8 +295,17 @@ def main():
         for r in ex.map(work, [(p, a.out, a.size, a.force, a.ldraw_dir) for p in parts]):
             print(f"  {r['part_num']:14s} {r['status']:12s} {r['description'][:50]}", flush=True)
             rows.append(r)
-    with open(os.path.join(a.out, "manifest.csv"), "w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
+    # shared icon library: merge with the existing manifest (keep rows of parts not in this run)
+    mf = os.path.join(a.out, "manifest.csv")
+    if os.path.exists(mf):
+        old = {r["part_num"]: r for r in csv.DictReader(open(mf, newline=""))}
+        for r in rows:
+            if r["status"] in ("ok", "cached") or r["part_num"] not in old: old[r["part_num"]] = r
+        merged = list(old.values())
+    else:
+        merged = rows
+    with open(mf, "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(merged)
     bad = [r["part_num"] for r in rows if r["status"] not in ("ok", "cached")]
     print(f"done: {len(rows) - len(bad)} icons, {len(bad)} missing {bad[:20]}")
 

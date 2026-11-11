@@ -37,6 +37,9 @@ classify_part <- function(name, category = "") {
     return(out("Special", "Wheel holder"))
   if (has("\\bwheel|\\brim\\b")) return(out("Special", "Wheel rim"))
   if (has("technic") || has("technic", ct)) {
+    # technic bricks (studded, with axle/pin holes) and thin beams must not be taken for pins/axles
+    if (has("^technic,? brick\\b") && !has("wheel")) return(out("Technic", "Technic brick (studded beam)"))
+    if (has("beam|liftarm") && !has("^technic,? (pin|axle|bush)")) return(out("Technic", "Technic beam (liftarm)"))
     if (has("\\bpin\\b") && has("ball")) return(out("Technic", "Technic pin with ball"))
     if (has("axle pin|pin.*axle|axle.*pin")) return(out("Technic", "Technic pin with axle"))
     if (has("\\bpin\\b") && !has("connector|joiner|hole")) return(out("Technic", "Technic pin"))
@@ -65,7 +68,11 @@ classify_part <- function(name, category = "") {
   if (has("^(bar|antenna)|\\bbar \\d|antenna|lightsaber|whip|\\brod\\b")) return(out("Special", "Bar or antenna"))
   if (has("baseplate")) return(out("Baseplate", "Baseplate"))
   if (has("windscreen|windshield|canopy")) return(out("Panel", "Windscreen"))
-  if (has("glass|pane\\b|shutter|door\\b(?! ?frame)|\\bgate\\b"))
+  if (has("door rail")) return(out("Plate", "Plate basic"))        # plate with a rail: stud-compatible plate
+  if (has("large figure|figure weapon")) return(out("Minifig", "Minifig accessory (tool; weapon)"))
+  if (has("pneumatic")) return(out("Special", "Hose or flex bar"))
+  if (has("^cylinder")) return(out("Brick", "Brick round"))
+  if (has("glass|pane\\b|shutter|door\\b(?! ?frame| rail)|\\bgate\\b"))
     return(out("Panel", "Window or door leaf"))
   if (has("window|door ?frame|\\bframe\\b")) return(out("Panel", "Window frame"))
   if (has("\\bpanel\\b|\\bwall\\b|\\bfence\\b")) return(out("Panel", "Panel"))

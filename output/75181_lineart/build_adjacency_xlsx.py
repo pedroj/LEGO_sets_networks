@@ -8,7 +8,7 @@ from openpyxl.drawing.image import Image
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter as L
 
-PRE="10174"; SET_TITLE = "LEGO 10174-1 Imperial AT-ST"
+PRE="75181"; SET_TITLE = "LEGO 75181-1 Y-Wing Starfighter"
 H = os.path.dirname(os.path.abspath(__file__))
 rd = lambda f: list(csv.DictReader(open(os.path.join(H, f), encoding="utf-8")))
 nodes = rd(PRE + "_nodes.csv"); edges = rd(PRE + "_edges.csv")
@@ -38,9 +38,11 @@ for e in edges:
 fill = lambda h: PatternFill("solid", fgColor=h)
 thin = Side(style="thin", color="BFBFBF"); box = Border(left=thin, right=thin, top=thin, bottom=thin)
 F9 = Font(size=9); F9B = Font(size=9, bold=True)
-os.makedirs(os.path.join(H, "icons_small"), exist_ok=True)
+ICONS = os.path.join(H, "..", "..", "data", "icons")          # shared icon library
+SMALL = os.path.join(H, "..", "..", "data", "icons_small")     # shared thumbnail cache
+os.makedirs(SMALL, exist_ok=True)
 def icon(p):
-    src = os.path.join(H, "icons", p + ".png"); dst = os.path.join(H, "icons_small", p + ".png")
+    src = os.path.join(ICONS, p + ".png"); dst = os.path.join(SMALL, p + ".png")
     if not os.path.exists(src): return None
     if not os.path.exists(dst): PILImage.open(src).convert("RGBA").resize((156, 156), PILImage.LANCZOS).save(dst)
     im = Image(dst); im.width = im.height = 52; return im
@@ -48,9 +50,9 @@ def icon(p):
 wb = Workbook(); ws = wb.active; ws.title = "Adjacency"
 n = len(parts); R0, C0 = 8, 6
 ws["A1"] = f"{SET_TITLE}: part-type adjacency matrix"; ws["A1"].font = Font(size=13, bold=True)
-ws["A2"] = ("Cell = number of instance-level contacts between two part types (from 10174_adjacency_matrix.csv, instances collapsed). "
+ws["A2"] = ("Cell = number of instance-level contacts between two part types (from 75181_adjacency_matrix.csv, instances collapsed). "
             "Blank = no recorded contact. Diagonal = same part type joined to itself. Light red = contact that the compatibility rules say cannot be a "
-            "direct joint (false positive: not drawn in the network, weight 0 in 10174_edges.csv). Icons rendered from the LDraw library.")
+            "direct joint (false positive: not drawn in the network, weight 0 in 75181_edges.csv). Icons rendered from the LDraw library.")
 ws["A2"].font = Font(size=9, italic=True)
 for r, lab in ((3, "Icon"), (4, "Part"), (5, "Name"), (6, "Subtype"), (7, "Category / Part →")):
     c = ws.cell(r, 5, lab); c.font = F9B; c.alignment = Alignment(horizontal="right", vertical="center")

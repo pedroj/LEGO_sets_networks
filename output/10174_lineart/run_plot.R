@@ -1,5 +1,5 @@
 source("plot_lego_network.R")
-res <- plot_lego_network("10174_adjacency_matrix.csv","icons", set_info="set_info.json",
+res <- plot_lego_network("10174_adjacency_matrix.csv","../../data/icons", set_info="set_info.json",
   parts_meta="rebrickable/set_parts.csv", out_prefix="10174", label="part",
   compat_csv="../../data/lego_compat_out/compat_matrix_subtype_codes.csv")
 e <- res$edges_all; print(table(e$system)); 

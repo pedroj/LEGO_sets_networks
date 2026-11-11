@@ -38,9 +38,11 @@ for e in edges:
 fill = lambda h: PatternFill("solid", fgColor=h)
 thin = Side(style="thin", color="BFBFBF"); box = Border(left=thin, right=thin, top=thin, bottom=thin)
 F9 = Font(size=9); F9B = Font(size=9, bold=True)
-os.makedirs(os.path.join(H, "icons_small"), exist_ok=True)
+ICONS = os.path.join(H, "..", "..", "data", "icons")          # shared icon library
+SMALL = os.path.join(H, "..", "..", "data", "icons_small")     # shared thumbnail cache
+os.makedirs(SMALL, exist_ok=True)
 def icon(p):
-    src = os.path.join(H, "icons", p + ".png"); dst = os.path.join(H, "icons_small", p + ".png")
+    src = os.path.join(ICONS, p + ".png"); dst = os.path.join(SMALL, p + ".png")
     if not os.path.exists(src): return None
     if not os.path.exists(dst): PILImage.open(src).convert("RGBA").resize((156, 156), PILImage.LANCZOS).save(dst)
     im = Image(dst); im.width = im.height = 52; return im
