@@ -2,7 +2,7 @@
 
 RSCRIPT="/Library/Frameworks/R.framework/Resources/bin/Rscript"
 
-APP_DIR="/Users/pedro//Documents/Working/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_part_explorer"
+APP_DIR="/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_part_explorer"
 
 cd "$APP_DIR"
 "$RSCRIPT" run_lego_app.R

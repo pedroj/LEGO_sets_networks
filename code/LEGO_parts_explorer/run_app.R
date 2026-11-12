@@ -6,5 +6,5 @@ for (p in c("shiny", "DT", "data.table", "later")) {
         install.packages(p, repos = "https://cloud.r-project.org")
 }
 
-app_dir <- "/Users/pedro/Documents/Working/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_parts_explorer"
+app_dir <- "/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_parts_explorer"
 shiny::runApp(appDir = app_dir, port = 8766, launch.browser = TRUE)

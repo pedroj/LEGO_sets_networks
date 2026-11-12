@@ -5,8 +5,8 @@
     <key>CFBundleName</key><string>LEGO Sets &amp; Parts Explorer</string>
     <key>CFBundleDisplayName</key><string>LEGO Sets &amp; Parts Explorer</string>
     <key>CFBundleIdentifier</key><string>es.pjordano.legosetspartsexplorer</string>
-    <key>CFBundleVersion</key><string>1.1</string>
-    <key>CFBundleShortVersionString</key><string>1.1</string>
+    <key>CFBundleVersion</key><string>1.3</string>
+    <key>CFBundleShortVersionString</key><string>1.3</string>
     <key>CFBundlePackageType</key><string>APPL</string>
     <key>CFBundleExecutable</key><string>LEGOSetsPartsExplorer</string>
     <key>CFBundleIconFile</key><string>AppIcon</string>

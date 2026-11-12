@@ -5,7 +5,7 @@ import sys, csv, collections, os
 import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lego_lineart as L
-L.LOCAL = "/Users/pedro/Documents/LEGO Creations/Utils/ldraw"
+L.LOCAL = "/Users/pedro/Documentos/LEGO Creations/Utils/ldraw"
 tris, lines = [], []
 L.collect("2372c01.dat", np.eye(4), tris, lines)
 T = np.array(tris); n = np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0]); nn = np.linalg.norm(n, axis=1); a = nn / 2

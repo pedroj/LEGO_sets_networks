@@ -1,8 +1,7 @@
 #!/bin/bash
-
-RSCRIPT="/Library/Frameworks/R.framework/Resources/bin/Rscript"
-
-APP_DIR="/Users/pedro//Documents/Working/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_part_explorer"
-
-cd "$APP_DIR"
-"$RSCRIPT" run_lego_app.R
+# Start the LEGO Sets & Parts Explorer from Terminal (works wherever this folder is).
+cd "$(dirname "$0")"
+for R in /Library/Frameworks/R.framework/Resources/bin/Rscript /usr/local/bin/Rscript /opt/homebrew/bin/Rscript; do
+    [ -x "$R" ] && exec "$R" run_app.R
+done
+echo "Rscript not found"; exit 1

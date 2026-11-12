@@ -1,4 +1,4 @@
-cd "/Users/pedro/Documents/Working/~RCode/MyRCode/LEGO/LEGO_sets_networks/output/4010_lineart"
+cd "/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_sets_networks/output/4010_lineart"
 export LANG=C.UTF-8
 Rscript run_plot.R > plot_new.log 2>&1; echo plot=$?
 cp 4010_icons.pdf 4010_network.pdf

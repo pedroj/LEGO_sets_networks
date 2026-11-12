@@ -13,7 +13,7 @@ library(mgcv)        # GAM smoothing
 library(httr2)       # Rebrickable API calls
 
 # ── 1. Paths & API key ───────────────────────────────────────
-data_dir <- "/Users/pedro/Documents/Working/~RCode/MyRCode/LEGO/LEGO_Parts/inst/extdata"
+data_dir <- "/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_Parts/inst/extdata"
 api_key  <- Sys.getenv("REBRICKABLE_API_KEY")
 if (nchar(api_key) == 0) stop("REBRICKABLE_API_KEY not found in environment.")
 

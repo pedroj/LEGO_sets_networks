@@ -4,10 +4,10 @@ library(dplyr)
 
 # Load data ----
 # Main sets table
-# lego_sets <- read.csv(here::here("/Users/pedro//Documents/Working/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_set_explorer/lego_sets.csv"), stringsAsFactors = FALSE, header = TRUE)
+# lego_sets <- read.csv(here::here("/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_set_explorer/lego_sets.csv"), stringsAsFactors = FALSE, header = TRUE)
 
 # Parts inventory for each set (you need to provide this CSV)
-# set_parts <- read.csv(here::here("/Users/pedro//Documents/Working/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_set_explorer/set_parts.csv"), 
+# set_parts <- read.csv(here::here("/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_set_explorer/set_parts.csv"), 
 #                      stringsAsFactors = FALSE, header = TRUE)
 
 server <- function(input, output, session) {

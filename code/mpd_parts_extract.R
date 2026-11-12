@@ -13,8 +13,8 @@ library(tidyverse)
 
 # --- Configuration -----------------------------------------------------------
 
-MPD_FILE   <- "/Users/pedro/Documents/LEGO Creations/Utils/ldraw/311-1-Ferry.mpd"
-PARTS_LST  <- "/Users/pedro/Documents/LEGO Creations/Utils/ldraw/Parts.lst"
+MPD_FILE   <- "/Users/pedro/Documentos/LEGO Creations/Utils/ldraw/311-1-Ferry.mpd"
+PARTS_LST  <- "/Users/pedro/Documentos/LEGO Creations/Utils/ldraw/Parts.lst"
 
 
 # --- 1. Load Parts.lst -------------------------------------------------------
