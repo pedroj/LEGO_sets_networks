@@ -3,5 +3,5 @@ source("plot_lego_network.R")
 .PAIR_ALLOW <- character(0)
 plot_lego_network_coords("10174_adjacency_matrix.csv", "10174_node_coords.csv", "../../data/icons",
                          parts_meta = "rebrickable/set_parts.csv", out_prefix = "10174", set_info = "set_info.json",
-                         panel_title = "Imperial AT-ST (links checked against geometry and building instructions)",
+                         panel_title = "Imperial AT-ST (links checked against LDraw geometry and compatibility rules)",
                          compat_csv = "../../data/lego_compat_out/compat_matrix_subtype_codes.csv")

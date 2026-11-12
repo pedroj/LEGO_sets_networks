@@ -100,3 +100,9 @@ Desktop.ini
 #   - tests/
 #   - data/*.rda (small, curated datasets)
 #   - DESCRIPTION, NAMESPACE, LICENSE, etc.
+# --- Python / pipeline scratch ------------------------------------------------
+__pycache__/
+*.pyc
+*.pkl
+**/scratch/
+.claude/settings.local.json

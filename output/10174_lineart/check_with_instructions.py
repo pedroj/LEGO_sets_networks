@@ -35,6 +35,35 @@ for i, j, k, cd, inK, o in rows:     # pass 2: isolated parts keep geometry-conf
         acc[(i, j)] = (k, cd, inK, 'keep (geometry-confirmed)',
                        'kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint')
         deg[i] += 1; deg[j] += 1
+# pass 3: bridge sub-assemblies. A sub-model joined to the rest only by hinge/clip/ball/pin joints that the box rules reject would
+# float as a separate component. Candidate bridges are kernel links whose boxes touch in the real LDraw geometry
+# (o >= -1.5 everywhere, >= 3 LDU on two axes); those whose subtype pair has a joint in the matrix come first,
+# then the best-touching ones without a joint. Added until no further merge is possible; one round per component pair.
+par3 = list(range(N))
+def f3(x):
+    while par3[x] != x: par3[x] = par3[par3[x]]; x = par3[x]
+    return x
+for (i, j) in acc: par3[f3(i)] = f3(j)
+def touch(o):
+    o = np.asarray(o); return (o >= -1.5).all() and (o >= 3).sum() >= 2
+for phase in ('joint', 'nojoint'):
+    cand = []
+    for i, j, k, cd, inK, o in rows:
+        if (i, j) in acc or (i, j) in REM or not inK or not touch(o): continue
+        if (cd != '') != (phase == 'joint'): continue
+        cand.append((-float(np.minimum(np.asarray(o), 20).sum()), i, j, k, cd))
+    cand.sort()
+    seen_pairs = set()
+    for _, i, j, k, cd in cand:
+        a_, b_ = f3(i), f3(j)
+        if a_ == b_: continue
+        key = (min(a_, b_), max(a_, b_))
+        if phase == 'nojoint' and key in seen_pairs: continue      # joint-less bridges: only one link per component pair
+        seen_pairs.add(key)
+        acc[(i, j)] = (k, cd, True, 'keep (bridge)', 'sub-assembly bridge: kernel link whose boxes touch in the real geometry' + ('' if cd else '; subtype matrix gives no joint'))
+        par3[f3(i)] = f3(j)
+deg = np.zeros(N, int)
+for (i, j) in acc: deg[i] += 1; deg[j] += 1
 cnt = collections.Counter()
 with open('10174_link_audit.csv', 'w', newline='') as fh:
     w = csv.writer(fh)
@@ -65,7 +94,7 @@ txt = ('# 10174 link audit (LEGO 10174-1 Imperial AT-ST)\n\n'
  'Kernel: %d instance links. Checked: %d links (%d kept from kernel, %d added = false negatives).\n\n'
  'Kernel links removed as false positives: %d (of which %d are candidate pairs failing the geometry rules; the rest are pairs more than 6 LDU apart).\n\n'
  'Connected components: %d (largest %d of %d parts). Isolated parts: %d.\n\n'
- 'Rules: stud engagement (stud insertion of 2-5.5 LDU along an axis with >=8 LDU footprint; flush face or side contact is not a joint); non-stud joints (pin, axle, hinge, bar...) when the boxes touch and the subtype matrix allows the joint; isolated parts keep geometry-confirmed kernel links. The three flexible hoses (73590c02a) are not box-checked: their kernel links (segment by segment) are kept.\n\n'
+ 'Rules: stud engagement (stud insertion of 2-5.5 LDU along an axis with >=8 LDU footprint; flush face or side contact is not a joint); non-stud joints (pin, axle, hinge, bar...) when the boxes touch and the subtype matrix allows the joint; isolated parts keep geometry-confirmed kernel links; sub-assemblies cut off by the rules are bridged by touching kernel links (one round per component pair). The three flexible hoses (73590c02a) are not box-checked: their kernel links (segment by segment) are kept.\n\n'
  'No building-instruction booklet was supplied, so no links were checked by hand against pictures.\n'
  ) % (n_k, len(acc), kept_k, added, n_k - kept_k, cnt['remove'], len(comp), max(comp.values()), N, int((deg == 0).sum()))
 open('10174_link_audit_summary.md', 'w').write(txt)
