@@ -73,4 +73,10 @@ build_adjacency <- function(parts, tol = TOL) {
 
 # the instance-level heatmap is too large (1000+ parts) for ggsave: skip failed kernel figures
 ggsave <- function(...) try(ggplot2::ggsave(...), silent = TRUE)
-res <- run_lego_adjacency("10174-1.mpd", "rebrickable", "10174")
+res <- run_lego_adjacency("10174-1.mpd", "rebrickable", "10174k")
+nm <- ave(seq_along(res$parts), vapply(res$parts, function(p) p$dat, ""), FUN = seq_along)
+inst <- do.call(rbind, lapply(seq_along(res$parts), function(i) { p <- res$parts[[i]]
+  data.frame(i = i, node = paste0(p$dat, "#", nm[i]), dat = p$dat, x = p$x, y = p$y, z = p$z, col = p$colour, step = p$step,
+             grp = p$group, fam = p$fam, nm = substr(p$name, 1, 40), w = p$dims$w, d = p$dims$d, h = p$dims$h,
+             R = paste(round(p$R, 2), collapse = " ")) }))
+write.csv(inst, "10174_instances.csv", row.names = FALSE)

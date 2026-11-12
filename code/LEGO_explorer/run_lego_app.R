@@ -5,7 +5,7 @@ if (!requireNamespace("shiny", quietly = TRUE)) {
 }
 
 # Change this to your actual path
-app_dir <- "/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_part_explorer"
+app_dir <- "/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_parts_explorer"
 
 setwd(app_dir)
 shiny::runApp(appDir = ".", launch.browser = TRUE)

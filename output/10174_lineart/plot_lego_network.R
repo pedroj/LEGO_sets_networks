@@ -1,12 +1,30 @@
 # =============================================================================
 # plot_lego_network.R - LEGO part connection network with line-art part icons
 # plot_lego_network(adj, icons_dir, parts_meta = NULL, out_prefix = "lego_network", ...)
-# Nodes = part types as icons on white discs; ring colour = category; grouped by category,
+# Nodes = part types as icons (opaque, no disc or ring); label rectangle colour = category; grouped by category,
 # ordered by subcategory. Edge colour = joint inferred from subcategory compatibility;
 # pairs the rules say cannot join are dark red dashed ("check").
 # Writes <out_prefix>_icons.png (300 dpi), _icons.pdf, _nodes.csv, _edges.csv
 # =============================================================================
 suppressPackageStartupMessages({ library(igraph); library(ggplot2); library(png) })
+
+
+# --- Optional per-set corrections (define before calling the plot functions) -------------------------------
+# .PART_OVERRIDE : data.frame(part, category, subtype) -> reclassify parts whose name the rules mis-read
+# .PAIR_ALLOW    : named character vector, names "partA|partB" (sorted), value = joint system
+#                  -> joints verified from real geometry / building instructions that the theoretical
+#                     compatibility table does not know (e.g. bar-in-hollow-bar). Drawn instead of "check".
+apply_part_override <- function(df) {
+  if (!exists(".PART_OVERRIDE", inherits = TRUE)) return(df)
+  o <- get(".PART_OVERRIDE", inherits = TRUE); k <- match(df$part, o$part)
+  df$category <- ifelse(is.na(k), df$category, o$category[k]); df$subtype <- ifelse(is.na(k), df$subtype, o$subtype[k]); df
+}
+apply_pair_allow <- function(from, to, system) {
+  if (!exists(".PAIR_ALLOW", inherits = TRUE) || !length(system)) return(system)
+  pa <- get(".PAIR_ALLOW", inherits = TRUE); f <- sub("#.*", "", from); t <- sub("#.*", "", to)
+  k <- ifelse(f <= t, paste(f, t, sep = "|"), paste(t, f, sep = "|"))
+  hit <- system == "check" & k %in% names(pa); system[hit] <- unname(pa[k[hit]]); system
+}
 
 classify_part <- function(name, category = "") {
   n <- tolower(gsub("\\s+", " ", paste(name)))
@@ -54,6 +72,9 @@ classify_part <- function(name, category = "") {
     if (has("beam|liftarm")) return(out("Technic", "Technic beam (liftarm)"))
     return(out("Technic", "Technic connector (cross block; angle)"))
   }
+  # lever: the base is a studded plate with a socket that grips the lever bar (clip-like); the lever itself is a bar
+  if (has("^lever (small )?base")) return(out("Special", "Clip plate or tile"))
+  if (has("^lever\\b")) return(out("Special", "Bar or antenna"))
   if (has("hinge")) return(out("Special", "Click hinge (plate or brick)"))
   if (has("turntable")) return(out("Special", "Turntable"))
   if (has("socket|ball cup")) return(out("Special", "Ball-joint plate (socket)"))
@@ -203,9 +224,11 @@ plot_lego_network <- function(adj, icons_dir, parts_meta = NULL, out_prefix = "l
   }
   cls <- t(mapply(classify_part, nodes$desc, nodes$rb_cat, USE.NAMES = FALSE))
   nodes$category <- cls[, "category"]; nodes$subtype <- cls[, "subtype"]
+  nodes <- apply_part_override(nodes)
 
   st <- setNames(nodes$subtype, nodes$part)
   ed$system <- mapply(joint_system, st[ed$from], st[ed$to])
+  ed$system <- apply_pair_allow(ed$from, ed$to, ed$system)
   # compatibility rules prevail over proximity: pairs the rules say cannot join are false
   # positives. They are not drawn and get weight 0, but stay in the edge table as joint = check
   # (contacts_proximity keeps the proximity-based contact count).
@@ -277,8 +300,7 @@ plot_lego_network <- function(adj, icons_dir, parts_meta = NULL, out_prefix = "l
     data.frame(x = rep(cx, each = n) + rad * cos(t), y = rep(cy, each = n) + rad * sin(t),
                id = rep(id, each = n))
   }
-  ring <- circ(nodes$x, nodes$y, rd + 0.07, nodes$part); ring$category <- rep(nodes$category, each = 60)
-  disc <- circ(nodes$x, nodes$y, rd, nodes$part)
+  disc <- circ(nodes$x, nodes$y, rd, nodes$part)          # white backing so edges stop at the icon (no ring)
 
   ext <- max(abs(c(nodes$x, nodes$y, cat_lab$x, cat_lab$y))) + 1.2
   win <- if (is.null(width_in)) min(max(2 * ext * 0.62, 9), 30) else width_in
@@ -287,8 +309,6 @@ plot_lego_network <- function(adj, icons_dir, parts_meta = NULL, out_prefix = "l
     geom_segment(data = E, aes(x, y, xend = xend, yend = yend, colour = system,
                  linewidth = weight, linetype = system == "check"),
                  alpha = ifelse(E$system == "stud", 0.35, ifelse(E$system == "check", 0.4, 0.85)), lineend = "round") +
-    geom_polygon(data = ring, aes(x, y, group = id, fill = category), colour = NA) +
-    geom_polygon(data = disc, aes(x, y, group = id), fill = "white", colour = NA) +
     scale_colour_manual(values = sys_col, drop = TRUE, name = "Joint (inferred)") +
     scale_fill_manual(values = default_col, name = "Category") +
     scale_linewidth(range = c(0.25, 2.6), limits = c(0, ew_max), name = "Contacts (edge width)",
@@ -297,9 +317,10 @@ plot_lego_network <- function(adj, icons_dir, parts_meta = NULL, out_prefix = "l
     scale_linetype_manual(values = c(`FALSE` = "solid", `TRUE` = "22"), guide = "none") +
     coord_fixed(xlim = c(-ext, ext), ylim = c(-ext, ext), clip = "off") +
     labs(title = NULL, subtitle = NULL,
-         caption = sprintf("Icons rendered from the LDraw library (line art). %d proximity link(s) between part types that the compatibility rules say cannot join directly are treated as false positives and not drawn.", sum(ed_all$system == "check"))) +
+         caption = paste(strwrap(sprintf("Icons rendered from the LDraw library (line art). %d proximity link(s) between part types that the compatibility rules say cannot join directly are treated as false positives and not drawn.", sum(ed_all$system == "check")), 150), collapse = "\n")) +
     theme_void(base_size = 11) +
     theme(plot.background = element_rect(fill = "white", colour = NA), legend.position = "right",
+          plot.caption = element_text(size = 8, colour = "grey40", hjust = 0), plot.caption.position = "plot",
           plot.margin = margin(1.15 * 72, 14, 14, 14))
   for (k in seq_len(nrow(nodes))) {
     f <- file.path(icons_dir, nodes$icon[k])
@@ -307,12 +328,18 @@ plot_lego_network <- function(adj, icons_dir, parts_meta = NULL, out_prefix = "l
       p <- p + annotation_raster(readPNG(f), nodes$x[k] - r, nodes$x[k] + r,
                                  nodes$y[k] - r, nodes$y[k] + r, interpolate = TRUE)
   }
-  if (label != "none") {
-    nodes$lab <- if (label == "part") ifelse(nodes$instances > 1, sprintf("%s (%d)", nodes$part, nodes$instances), nodes$part) else
-      paste0(nodes$part, "\n", vapply(strwrap(nodes$subtype, 16, simplify = FALSE), paste, "", collapse = "\n"))
-    p <- p + geom_text(data = nodes, aes(x, y - rd - 0.12, label = lab), vjust = 1,
-                       size = min(3.2, 0.24 * pt), colour = "grey20", lineheight = 0.85)
-  }
+  # part-number label on a semi-transparent category-coloured filled rectangle (no circle around the icon)
+  nodes$lab <- if (label == "part") ifelse(nodes$instances > 1, sprintf("%s (%d)", nodes$part, nodes$instances), nodes$part) else
+    if (label == "part+subtype") paste0(nodes$part, "\n", vapply(strwrap(nodes$subtype, 16, simplify = FALSE), paste, "", collapse = "\n")) else " "
+  ls <- min(2.4, 0.17 * pt)                                         # text size (mm)
+  nl <- lengths(strsplit(nodes$lab, "\n")); nc <- vapply(strsplit(nodes$lab, "\n"), function(z) max(nchar(z)), 0)
+  pe <- min(win - 2.6, win * 0.88 - 1.9) / (2 * ext) * 25.4        # real mm per layout unit (panel is smaller than the page)
+  lw <- (0.62 * ls * nc + 1.8) / pe; lh <- (ls * nl * 1.0 + 1.4) / pe; bw <- 0   # label box and border (0.3 mm)
+  nodes$ly <- nodes$y - rd - 0.10 - bw - lh / 2
+  p <- p +
+    geom_rect(data = nodes, aes(xmin = x - lw / 2, xmax = x + lw / 2, ymin = ly - lh / 2, ymax = ly + lh / 2, fill = category), colour = NA, alpha = 0.40)
+  if (label != "none")
+    p <- p + geom_text(data = nodes, aes(x, ly, label = lab), size = ls, colour = "black", lineheight = 0.85)
   p <- p + geom_text(data = cat_lab, aes(x, y, label = category), fontface = "bold",
                      size = min(7, 0.55 * pt), colour = default_col[cat_lab$category])
 
@@ -378,6 +405,181 @@ jsonlite_read <- function(f) {
   out
 }
 
+# icon cropped to the bounding box of its visible pixels (alpha > 2%), so every part can be scaled by its longest side
+.crop_icon <- function(f) {
+  im <- readPNG(f); a <- if (dim(im)[3] >= 4) im[, , 4] else matrix(1, dim(im)[1], dim(im)[2])
+  r <- which(rowSums(a > 0.02) > 0); cc <- which(colSums(a > 0.02) > 0)
+  if (!length(r) || !length(cc)) return(list(img = im, w = dim(im)[2], h = dim(im)[1]))
+  pad <- 2; r0 <- max(min(r) - pad, 1); r1 <- min(max(r) + pad, dim(im)[1]); c0 <- max(min(cc) - pad, 1); c1 <- min(max(cc) + pad, dim(im)[2])
+  list(img = im[r0:r1, c0:c1, , drop = FALSE], w = c1 - c0 + 1, h = r1 - r0 + 1)
+}
+
+# ----------------------------------------------------------------------------- 4. network on REAL coordinates
+# plot_lego_network_coords(): instance-level network with the nodes placed at the real model coordinates
+# (top view, x vs z in LDU), drawn like plot_lego_network(): icon on a white disc, ring colour = category,
+# edge colour = joint, same title / subtitle / set-image inset. Pairs the compatibility rules forbid are not
+# drawn (kept in _coords_edges.csv as "check", weight 0). Icons that would overlap are pushed apart just enough
+# to be legible (thin grey tether + dot mark the true position).
+#   adj     instance adjacency matrix (names "3001#2")      coords  CSV with columns node, x, z (LDU)
+#   panel_title  bold line under the title (e.g. "Anakin's Podracer")
+# Writes <out_prefix>_network_coords.pdf and _network_coords_icons.png, _coords_nodes.csv, _coords_edges.csv
+plot_lego_network_coords <- function(adj, coords, icons_dir, parts_meta = NULL, out_prefix = "lego",
+                                     title = NULL, panel_title = NULL, label = c("part", "none"),
+                                     set_info = NULL, set_num = NULL, set_name = NULL, set_image = NULL,
+                                     inset_width = 0.20, compat_csv = NULL, cat_col = NULL, rd_frac = 0.04) {
+  label <- match.arg(label)
+  if (!is.null(compat_csv)) {
+    stopifnot(file.exists(compat_csv))
+    .COMPAT <<- as.matrix(read.csv(compat_csv, row.names = 1, check.names = FALSE, colClasses = "character"))
+  }
+  si <- list(); if (!is.null(set_info) && file.exists(set_info)) si <- jsonlite_read(set_info)
+  set_num <- set_num %||% si$set_num; set_name <- set_name %||% si$name; set_image <- set_image %||% si$image
+  if (is.null(title)) title <- if (!is.null(set_num) && !is.null(set_name))
+    sprintf("LEGO %s — %s", sub("-1$", "", set_num), set_name) else "LEGO part connection network"
+  if (is.character(adj)) adj <- as.matrix(read.csv(adj, row.names = 1, check.names = FALSE))
+  adj <- as.matrix(adj); adj[is.na(adj)] <- 0; colnames(adj) <- rownames(adj)
+  if (is.character(coords)) coords <- read.csv(coords, stringsAsFactors = FALSE)
+  nd <- data.frame(node = rownames(adj), part = sub("#.*$", "", rownames(adj)), stringsAsFactors = FALSE)
+  k <- match(nd$node, coords$node); stopifnot(!anyNA(k))
+  nd$x0 <- coords$x[k]; nd$y0 <- -coords$z[k]            # top view: z grows downwards, as in the kernel plot
+
+  # part-type metadata and classification (as in plot_lego_network)
+  man <- read.csv(file.path(icons_dir, "manifest.csv"), stringsAsFactors = FALSE, colClasses = "character"); man[is.na(man)] <- ""
+  up <- unique(nd$part); tm <- data.frame(part = up, stringsAsFactors = FALSE)
+  m <- match(up, man$part_num)
+  tm$desc <- ifelse(is.na(m), "", man$description[m]); tm$rb_cat <- ifelse(is.na(m), "", man$ldraw_category[m])
+  tm$icon <- ifelse(is.na(m), "", man$icon[m])
+  if (!is.null(parts_meta)) {
+    if (is.character(parts_meta)) parts_meta <- read.csv(parts_meta, stringsAsFactors = FALSE)
+    nm <- intersect(c("part_name", "name"), names(parts_meta))[1]
+    cc <- intersect(c("part_category", "category", "part_cat_name"), names(parts_meta))[1]
+    kk <- match(up, parts_meta$part_num)
+    if (!is.na(nm)) tm$desc <- ifelse(!is.na(kk) & nzchar(parts_meta[[nm]][kk]), parts_meta[[nm]][kk], tm$desc)
+    if (!is.na(cc)) tm$rb_cat <- ifelse(!is.na(kk), parts_meta[[cc]][kk], tm$rb_cat)
+  }
+  cls <- t(mapply(classify_part, tm$desc, tm$rb_cat, USE.NAMES = FALSE))
+  tm$category <- cls[, "category"]; tm$subtype <- cls[, "subtype"]
+  tm <- apply_part_override(tm)
+  j <- match(nd$part, tm$part)
+  nd$desc <- tm$desc[j]; nd$category <- tm$category[j]; nd$subtype <- tm$subtype[j]; nd$icon <- tm$icon[j]
+
+  # instance-level edges, joint from subcategory compatibility
+  idx <- which(upper.tri(adj) & adj > 0, arr.ind = TRUE)
+  ed <- data.frame(from = nd$node[idx[, 1]], to = nd$node[idx[, 2]], stringsAsFactors = FALSE)
+  ed$system <- if (nrow(ed)) mapply(joint_system, nd$subtype[idx[, 1]], nd$subtype[idx[, 2]]) else character(0)
+  ed$system <- apply_pair_allow(ed$from, ed$to, ed$system)
+  ed$weight <- ifelse(ed$system == "check", 0, 1)
+  ed_all <- ed; ed <- ed[ed$system != "check", , drop = FALSE]
+  nd$degree <- as.integer(table(factor(c(ed$from, ed$to), levels = nd$node))[nd$node])
+
+  # positions: real coordinates, relaxed only where icons would overlap
+  span <- max(diff(range(nd$x0)), diff(range(nd$y0)), 1); rd <- rd_frac * span; md <- 2.35 * rd
+  P0 <- cbind(nd$x0, nd$y0); P <- P0; n <- nrow(P)
+  for (it in seq_len(800)) {                       # vectorised relaxation (Jacobi): all overlapping pairs pushed apart at once
+    D <- as.matrix(dist(P)); ov <- which(upper.tri(D) & D < md, arr.ind = TRUE)
+    if (!nrow(ov)) break
+    dv <- P[ov[, 2], , drop = FALSE] - P[ov[, 1], , drop = FALSE]; d <- sqrt(rowSums(dv^2))
+    u <- dv / pmax(d, 1e-6); z <- d < 1e-6
+    if (any(z)) u[z, ] <- cbind(cos(ov[z, 1] * 2.4), sin(ov[z, 1] * 2.4))
+    push <- u * (md - d) / 2
+    dx <- rowsum(rbind(-push[, 1, drop = FALSE], push[, 1, drop = FALSE]), c(ov[, 1], ov[, 2]))
+    dy <- rowsum(rbind(-push[, 2, drop = FALSE], push[, 2, drop = FALSE]), c(ov[, 1], ov[, 2]))
+    ii <- as.integer(rownames(dx)); P[ii, 1] <- P[ii, 1] + 0.7 * dx[, 1]; P[ii, 2] <- P[ii, 2] + 0.7 * dy[, 1]
+    P <- P + 0.015 * (P0 - P)
+  }
+  nd$x <- P[, 1]; nd$y <- P[, 2]
+  nd$moved <- sqrt(rowSums((P - P0)^2)) > 0.6 * rd
+
+  default_col <- c(Brick = "#C91A09", Plate = "#0055BF", Tile = "#C8AE7A", Slope = "#FE8A18", Baseplate = "#4B9F4A",
+                   Panel = "#6C96BF", Technic = "#8A8D91", Special = "#A5499C", Minifig = "#E0B000", Other = "#555555")
+  if (!is.null(cat_col)) default_col[names(cat_col)] <- cat_col
+  sys_col <- c(stud = "grey60", bar = "#F58518", clip = "#E45756", pin = "#2A9D8F", axle = "#54A24B", ball = "#EECA3B",
+               hinge = "#B279A2", turntable = "#FF9DA6", gear = "#9D755D", track = "#7F7F7F", wheel = "#1B9E77",
+               door = "#D95F02", minifig = "#7570B3", check = "#8B0000")
+  xy <- as.matrix(nd[, c("x", "y")]); rownames(xy) <- nd$node
+  E <- data.frame(x = xy[ed$from, 1], y = xy[ed$from, 2], xend = xy[ed$to, 1], yend = xy[ed$to, 2],
+                  system = factor(ed$system, levels = names(sys_col)))
+  E <- E[order(E$system == "stud", decreasing = TRUE), ]
+  circ <- function(cx, cy, rad, id, nn = 60) { t <- seq(0, 2 * pi, length.out = nn)
+    data.frame(x = rep(cx, each = nn) + rad * cos(t), y = rep(cy, each = nn) + rad * sin(t), id = rep(id, each = nn)) }
+  disc <- circ(nd$x, nd$y, rd, nd$node)                      # white backing so edges stop at the icon (no ring)
+
+  pad <- 3.2 * rd
+  xl <- range(c(nd$x, nd$x0)) + c(-pad, pad); yl <- range(c(nd$y, nd$y0)) + c(-pad - rd, pad)
+  pw <- min(max(10 * diff(xl) / max(diff(xl), diff(yl)), 6.5), 14); ph <- pw * diff(yl) / diff(xl)
+  if (ph > 12) { pw <- pw * 12 / ph; ph <- 12 }
+  pw <- max(pw, 6.5); ph <- pw * diff(yl) / diff(xl)
+  win <- pw + 2.6 + 0.9; hgt <- ph + 1.6 + 0.9
+  mm_rd <- pw / diff(xl) * rd * 25.4
+  tether <- nd[nd$moved, , drop = FALSE]
+  p <- ggplot() +
+    geom_segment(data = tether, aes(x = x0, y = y0, xend = x, yend = y), colour = "grey70", linewidth = 0.35) +
+    geom_point(data = tether, aes(x0, y0), colour = "grey55", size = 0.9) +
+    geom_segment(data = E, aes(x, y, xend = xend, yend = yend, colour = system), linewidth = 0.9,
+                 alpha = ifelse(E$system == "stud", 0.45, 0.9), lineend = "round") +
+    scale_colour_manual(values = sys_col, drop = TRUE, name = "Joint (inferred)") +
+    scale_fill_manual(values = default_col, name = "Category") +
+    coord_fixed(xlim = xl, ylim = yl, expand = FALSE, clip = "off") +
+    labs(x = "x (LDU)", y = "z (LDU, top view)",
+         caption = paste(strwrap(sprintf("Icons rendered from the LDraw library (line art). Nodes sit at the real model coordinates (top view); overlapping icons are pushed apart (grey tether and dot = true position). %d proximity link(s) that the compatibility rules say cannot join directly are treated as false positives and not drawn.", nrow(ed_all) - nrow(ed)), 150), collapse = "\n")) +
+    scale_y_continuous(labels = function(v) -v) +
+    theme_minimal(base_size = 11) +
+    theme(plot.background = element_rect(fill = "white", colour = NA), legend.position = "right",
+          panel.grid.minor = element_blank(), panel.grid.major = element_line(colour = "grey93"),
+          plot.caption = element_text(size = 7, colour = "grey40", hjust = 0),
+          plot.margin = margin(1.6 * 72, 14, 14, 14))
+  for (q in seq_len(nrow(nd))) {
+    f <- file.path(icons_dir, nd$icon[q])
+    if (nzchar(nd$icon[q]) && file.exists(f))
+      { ic <- .crop_icon(f)                                         # same size for all icons: longest side of the part = 2 * rd
+        hw <- rd * ic$w / max(ic$w, ic$h); hh <- rd * ic$h / max(ic$w, ic$h)
+        p <- p + annotation_raster(ic$img, nd$x[q] - hw, nd$x[q] + hw, nd$y[q] - hh, nd$y[q] + hh, interpolate = TRUE) }
+  }
+  # part-number label on a semi-transparent category-coloured filled rectangle (no circle around the icon)
+  mmu <- mm_rd / rd                                                  # mm per data unit
+  ls <- min(2.4, 0.30 * mm_rd); nd$lab <- if (label == "part") nd$part else " "
+  lw <- (0.62 * ls * nchar(nd$lab) + 1.8) / mmu; lh <- (ls * 1.0 + 1.4) / mmu; bw <- 0
+  nd$ly <- nd$y - rd - 0.10 * rd - bw - lh / 2
+  p <- p +
+    geom_rect(data = nd, aes(xmin = x - lw / 2, xmax = x + lw / 2, ymin = ly - lh / 2, ymax = ly + lh / 2, fill = category), colour = NA, alpha = 0.40)
+  if (label != "none") p <- p + geom_text(data = nd, aes(x, ly, label = lab), size = ls, colour = "black")
+
+  subtitle <- sprintf("%d part instances, %d part types, %d connected pairs. Nodes at real coordinates (top view); colour = joint inferred from subcategories.",
+                      nrow(nd), length(up), nrow(ed))
+  x0 <- unit(0.3, "in")
+  head <- grid::grobTree(
+    grid::textGrob(title, x = x0, y = unit(hgt, "in") - unit(0.28, "in"), just = c("left", "top"),
+                   gp = grid::gpar(fontsize = 24, fontface = "bold")),
+    if (!is.null(panel_title)) grid::textGrob(panel_title, x = x0, y = unit(hgt, "in") - unit(0.72, "in"),
+                   just = c("left", "top"), gp = grid::gpar(fontsize = 18, fontface = "bold", col = "grey25")),
+    grid::textGrob(subtitle, x = x0, y = unit(hgt, "in") - unit(if (is.null(panel_title)) 0.72 else 1.12, "in"),
+                   just = c("left", "top"), gp = grid::gpar(fontsize = 11, col = "grey30")))
+  out <- grid::grobTree(ggplotGrob(p), head)
+  if (!is.null(set_image) && file.exists(set_image)) {
+    img <- if (grepl("\\.jpe?g$", set_image, ignore.case = TRUE)) jpeg::readJPEG(set_image) else readPNG(set_image)
+    asp <- dim(img)[1] / dim(img)[2]
+    w_in <- min(max(inset_width * win, 2.2), 3.2); w_in <- min(w_in, 0.30 * hgt / asp); h_in <- w_in * asp
+    y0 <- unit(hgt, "in") - unit(1.55, "in")
+    lab <- sprintf("Set %s%s", set_num %||% "", if (isTRUE(si$source_image %in% c("img_url", "cdn"))) " · image: Rebrickable" else "")
+    out <- grid::grobTree(out, grid::grobTree(
+      grid::rectGrob(x = x0, y = y0, width = unit(w_in, "in") + unit(8, "pt"), height = unit(h_in, "in") + unit(8, "pt"),
+                     just = c("left", "top"), gp = grid::gpar(fill = "white", col = "grey70", lwd = 0.8)),
+      grid::rasterGrob(img, x = x0 + unit(4, "pt"), y = y0 - unit(4, "pt"), width = unit(w_in, "in"),
+                       height = unit(h_in, "in"), just = c("left", "top"), interpolate = TRUE),
+      grid::textGrob(lab, x = x0, y = y0 - unit(h_in, "in") - unit(14, "pt"), just = c("left", "top"),
+                     gp = grid::gpar(fontsize = 9, col = "grey35"))))
+  }
+  ggsave(paste0(out_prefix, "_network_coords_icons.png"), out, width = win, height = hgt, dpi = 300, bg = "white", limitsize = FALSE)
+  ggsave(paste0(out_prefix, "_network_coords.pdf"), out, width = win, height = hgt, bg = "white", device = cairo_pdf, limitsize = FALSE)
+  write.csv(nd[, c("node", "part", "desc", "category", "subtype", "x0", "y0", "x", "y", "moved", "degree")],
+            paste0(out_prefix, "_coords_nodes.csv"), row.names = FALSE)
+  write.csv(ed_all, paste0(out_prefix, "_coords_edges.csv"), row.names = FALSE)
+  message(sprintf("%s: %d instances, %d edges drawn, %d check removed, %d icons displaced",
+                  out_prefix, nrow(nd), nrow(ed), nrow(ed_all) - nrow(ed), sum(nd$moved)))
+  invisible(list(nodes = nd, edges = ed, edges_all = ed_all, plot = p))
+}
+
+# CLI: Rscript plot_lego_network.R adj.csv icons_dir [parts_meta.csv] [out_prefix] [set_info.json]
 if (sys.nframe() == 0 && length(commandArgs(TRUE)) >= 2) {
   a <- commandArgs(TRUE)
   plot_lego_network(a[1], a[2], parts_meta = if (length(a) >= 3 && nzchar(a[3])) a[3] else NULL,

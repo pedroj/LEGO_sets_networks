@@ -1,0 +1,67 @@
+"node","part","desc","category","subtype","x0","y0","x","y","moved","degree"
+"32001#1","32001","Technic Plate 2 x 6 [5 Holes]","Technic","Technic plate (with holes)",-30,-10,-9.95818103672116,-53.6233305242414,TRUE,8
+"4032a#1","4032a","Plate Round 2 x 2 with Axle Hole Type 1 (+ Opening)","Technic","Technic plate (with holes)",-30,-10,-46.2027881983103,41.9927815184832,TRUE,3
+"2420#1","2420","Plate 2 x 2 Corner","Plate","Plate basic",-60,-40,-49.7298930638275,-42.3282435588716,TRUE,5
+"2420#2","2420","Plate 2 x 2 Corner","Plate","Plate basic",0,-40,0.0245661369456972,-31.496352925914,TRUE,5
+"2420#3","2420","Plate 2 x 2 Corner","Plate","Plate basic",0,20,13.5997227060746,16.2717046873447,TRUE,5
+"2420#4","2420","Plate 2 x 2 Corner","Plate","Plate basic",-60,20,-74.1582857730994,26.4083074448749,TRUE,5
+"3020#1","3020","Plate 2 x 4","Plate","Plate basic",30,-10,48.1759720662849,-19.2259246382749,TRUE,3
+"3020#2","3020","Plate 2 x 4","Plate","Plate basic",-90,-10,-94.7105523457846,-18.9099642511993,TRUE,3
+"30565#1","30565","Plate Round Corner 4 x 4","Plate","Plate round",-90,50,-78.234122876037,53.9770684753934,TRUE,3
+"30565#2","30565","Plate Round Corner 4 x 4","Plate","Plate round",-90,-70,-97.6969794811933,-60.2528051253608,TRUE,3
+"30565#3","30565","Plate Round Corner 4 x 4","Plate","Plate round",30,-70,17.3894758089608,-76.1346312057282,TRUE,4
+"30565#4","30565","Plate Round Corner 4 x 4","Plate","Plate round",30,50,41.405249715035,55.2141813285368,TRUE,5
+"3710#1","3710","Plate 1 x 4","Plate","Plate basic",-120,-10,-119.040370084985,2.07151293420135,TRUE,6
+"3023#1","3023","Plate 1 x 2","Plate","Plate basic",-30,-60,-16.1113129605297,-77.4296346479329,TRUE,2
+"3023#2","3023","Plate 1 x 2","Plate","Plate basic",-30,40,-21.8119145139806,51.152010409378,TRUE,2
+"2436a#1","2436a","Bracket 1 x 2 - 1 x 4 with Square Corners","Special","Bracket (SNOT)",-120,-10,-119.745919813608,-22.7888359451402,TRUE,2
+"3710#2","3710","Plate 1 x 4","Plate","Plate basic",-142,-10,-141.446732140991,-9.78255581534281,FALSE,3
+"3069b#1","3069b","Tile 1 x 2 with Groove","Tile","Tile basic",-150,-30,-151.28483899738,-33.0235239440794,FALSE,1
+"3069b#2","3069b","Tile 1 x 2 with Groove","Tile","Tile basic",-150,10,-151.457122181585,13.3649392279278,FALSE,1
+"32001#2","32001","Technic Plate 2 x 6 [5 Holes]","Technic","Technic plate (with holes)",-50,-10,-57.6435092039127,-1.91414277786701,TRUE,9
+"30565#5","30565","Plate Round Corner 4 x 4","Plate","Plate round",-110,70,-110.004615379756,70.0134123965469,FALSE,2
+"30565#6","30565","Plate Round Corner 4 x 4","Plate","Plate round",-110,-90,-110,-90,FALSE,2
+"6141#1","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",20,-40,25.025421234816,-28.8139395796668,TRUE,2
+"6141#2","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",20,20,35.8886297828124,26.763118309064,TRUE,2
+"3934#1","3934","Wedge Plate 8 x 4 Wing Right with Stud Notch","Plate","Plate wedge",70,70,66.1114107959959,73.8885892040041,FALSE,4
+"3933#1","3933","Wedge Plate 8 x 4 Wing Left","Plate","Plate wedge",70,-90,68.789549274725,-96.6582448077118,TRUE,4
+"30363#1","30363","Brick Sloped 18° 4 x 2","Slope","Slope standard",20,-10,31.3110175565119,-1.23597010431597,TRUE,2
+"3666#1","3666","Plate 1 x 6","Plate","Plate basic",90,-40,90,-40,FALSE,2
+"3666#2","3666","Plate 1 x 6","Plate","Plate basic",90,20,90,20,FALSE,2
+"2444#1","2444","Plate Special 2 x 2 with 1 Pin Hole [Split Underside Ribs]","Plate","Plate basic",-30,50,-41.8268189524887,66.1658073777635,TRUE,3
+"43093#1","43093","Technic Axle Pin with Friction Ridges Lengthwise","Technic","Technic pin with axle",-30,70,-18.9214241328364,76.169213585205,TRUE,2
+"2444#2","2444","Plate Special 2 x 2 with 1 Pin Hole [Split Underside Ribs]","Plate","Plate basic",-30,-70,-40.5408096698026,-83.9602587624014,TRUE,3
+"43093#2","43093","Technic Axle Pin with Friction Ridges Lengthwise","Technic","Technic pin with axle",-30,-90,-22.4381753823515,-101.433267467009,TRUE,2
+"30565#7","30565","Plate Round Corner 4 x 4","Plate","Plate round",30,50,18.6205822184088,45.3359555547927,TRUE,7
+"30565#8","30565","Plate Round Corner 4 x 4","Plate","Plate round",-90,50,-101.761350115526,46.0098801180835,TRUE,5
+"30565#9","30565","Plate Round Corner 4 x 4","Plate","Plate round",-90,-70,-82.3030485891488,-79.7472518205454,TRUE,5
+"30565#10","30565","Plate Round Corner 4 x 4","Plate","Plate round",30,-70,37.8390655192333,-61.880723018718,TRUE,7
+"2431#1","2431","Tile 1 x 4 with Groove","Tile","Tile basic",0,-10,7.5951875870854,-8.15900261063087,TRUE,3
+"2431#2","2431","Tile 1 x 4 with Groove","Tile","Tile basic",-30,-60,-33.7490633383122,-60.301808522406,FALSE,3
+"2431#3","2431","Tile 1 x 4 with Groove","Tile","Tile basic",-30,40,-27.1527964709375,27.1901573954129,TRUE,3
+"2431#4","2431","Tile 1 x 4 with Groove","Tile","Tile basic",-60,-10,-81.4908215190318,2.19767741422307,TRUE,3
+"3941#1","3941","Brick Round 2 x 2 with Axle Hole","Brick","Brick round",-30,-10,-73.400579052689,-45.9605631301219,TRUE,3
+"3941#2","3941","Brick Round 2 x 2 with Axle Hole","Brick","Brick round",-30,-114,-44.2414020446586,-113.710440363438,TRUE,2
+"4150ps0#1","4150ps0","Tile 2 x 2 Round with Hexagonal Hatch Pattern","Tile","Tile round",-30,-122,-22.9142200717199,-126.790016157587,TRUE,1
+"3941#3","3941","Brick Round 2 x 2 with Axle Hole","Brick","Brick round",-30,94,-39.17015179661,91.2462725784772,TRUE,2
+"4150ps0#2","4150ps0","Tile 2 x 2 Round with Hexagonal Hatch Pattern","Tile","Tile round",-30,102,-22.9820947871468,110.178281332199,TRUE,1
+"6141#3","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",120,40,120,40,FALSE,1
+"6141#4","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",120,-60,120,-60,FALSE,1
+"6141#5","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",80,-80,85.483593121605,-77.7606820259873,FALSE,1
+"6141#6","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",80,60,83.8885892040041,56.1114107959959,FALSE,1
+"2450#1","2450","Wedge Plate 3 x 3 Cut Corner","Plate","Plate wedge",20,100,31.8357589298989,96.206309545625,TRUE,2
+"6541#1","6541","Technic Brick 1 x 1 with Pin Hole","Technic","Technic brick (studded beam)",40,120,29.8786704935175,121.509025523451,TRUE,3
+"4274#1","4274","Technic Pin 1/2 without Friction Ridges","Technic","Technic pin",50,120,54.5592944976683,117.955321372762,FALSE,2
+"2450#2","2450","Wedge Plate 3 x 3 Cut Corner","Plate","Plate wedge",20,100,8.16790356983674,103.746525712311,TRUE,2
+"3961#1","3961","Dish 8 x 8 Inverted [Radar], Solid Studs, Rounded Anti-stud Underside","Special","Dish or radar",-30,-10,-65.4307259394698,-23.3709555618012,TRUE,2
+"4150#1","4150","Tile Round 2 x 2 with Bottom Cross","Tile","Tile round",-30,-10,-16.7345106916398,-13.9224103607398,TRUE,2
+"4032a#2","4032a","Plate Round 2 x 2 with Axle Hole Type 1 (+ Opening)","Technic","Technic plate (with holes)",-30,-10,-50.4779514451927,19.3478297763391,TRUE,2
+"3705#1","3705","Technic Axle 4","Technic","Technic axle",-30,-10,-41.0716893183861,-19.2002755965096,TRUE,7
+"3961ps0#1","3961ps0","Dish 8 x 8 Inverted with Mini Millennium Falcon Pattern","Special","Dish or radar",-30,-10,-33.2454765820233,3.23555389967924,TRUE,5
+"4592#1","4592","Lever Small Base","Special","Clip plate or tile",-20,-20,-25.3863232769995,-36.4826935376222,TRUE,2
+"4593#1","4593","Lever Small","Special","Bar or antenna",-20,-20,14.2111724866718,-51.0568576617402,TRUE,1
+"4592#2","4592","Lever Small Base","Special","Clip plate or tile",-20,0,-3.78806730820069,33.4590801877314,TRUE,2
+"4593#2","4593","Lever Small","Special","Bar or antenna",-20,0,-9.88136451874707,9.44683859628203,TRUE,1
+"30367a#1","30367a","Brick Round 2 x 2 Dome Top, Blocked Open Stud, No Bottom Axle Holder","Brick","Brick round",74,120,79.5583725090785,120.582817845851,FALSE,1
+"4599a#1","4599a","Tap 1 x 1 with Hole in Spout","Brick","Brick basic",40,-80,40.0540900238939,-87.0805686699682,TRUE,2
+"4740#1","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",60,-80,60.7327078165544,-72.7757094290674,TRUE,1

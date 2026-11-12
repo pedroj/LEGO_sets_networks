@@ -20,8 +20,8 @@ library(tidyverse)
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 
-MPD_FILE   <- "/Users/pedro/Documentos/LEGO Creations/Utils/ldraw/311-1-Ferry.mpd"
-PARTS_LST  <- "/Users/pedro/Documentos/LEGO Creations/Utils/ldraw/Parts.lst"
+MPD_FILE   <- "/Users/pedro/Documents/LEGO Creations/Utils/ldraw/311-1-Ferry.mpd"
+PARTS_LST  <- "/Users/pedro/Documents/LEGO Creations/Utils/ldraw/Parts.lst"
 IMAGES_DIR <- "/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_sets_networks/images/alphin"
 OUT_DIR    <- "/Users/pedro/Research/~RCode/MyRCode/LEGO/LEGO_sets_networks/code/LEGO_networks_cl/files"
 

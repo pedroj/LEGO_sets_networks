@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 from scipy import ndimage
 
-LDRAW = os.environ.get("LDRAW_DIR", "/Users/pedro/Documentos/LEGO Creations/Utils/ldraw")
+LDRAW = os.environ.get("LDRAW_DIR", "/Users/pedro/Documents/LEGO Creations/Utils/ldraw")
 _cache = {}
 def fetch(name):
     n = name.lower().replace("\\", "/")
