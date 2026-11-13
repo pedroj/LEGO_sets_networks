@@ -1,0 +1,45 @@
+"node","part","desc","category","subtype","x0","y0","x","y","moved","degree"
+"3005#1","3005","Brick 1 x 1","Brick","Brick basic",-90,30,-90,30,FALSE,2
+"41770#1","41770","Wedge Plate 4 x 2 Left","Plate","Plate wedge",-59.99999,40,-61.2357315639051,47.7399599616042,TRUE,13
+"41770#2","41770","Wedge Plate 4 x 2 Left","Plate","Plate wedge",-59.99999,40,-61.2262469971322,32.2545603611935,TRUE,15
+"6565#1","6565","Brick Wedged, Angled 3 x 2 Left","Brick","Brick basic",-49.99999,39.99999,-47.5379914389627,40.0054696772023,FALSE,19
+"98100#1","98100","Brick Round 2 x 2 Truncated Cone","Brick","Cone",-49,-80,-49,-80,FALSE,5
+"44728#1","44728","Bracket 1 x 2 - 2 x 2","Special","Bracket (SNOT)",-10,-99.99998,-10,-103.813027551455,FALSE,1
+"3039#1","3039","Brick Sloped 45° 2 x 2","Slope","Slope standard",-10,-91.99998,-10,-88.1869324485451,FALSE,1
+"3022#1","3022","Plate 2 x 2","Plate","Plate basic",0,-68,-0.0247225512333343,-68.3857455268474,FALSE,4
+"11211#1","11211","Brick Special 1 x 2 with 2 Studs on 1 Side","Brick","Brick modified SNOT",0,-50,0.984570499384915,-52.6429596964553,FALSE,14
+"60474#1","60474","Plate Round 4 x 4 with Pin Hole","Plate","Plate round",0,0,-17.6068386414943,10.7548008823995,TRUE,25
+"11213#1","11213","Plate Round 6 x 6 with Hole","Plate","Plate round",1e-05,3e-05,-3.07023040757784,16.0324906194253,TRUE,29
+"3023b#1","3023b","","Other","Other",-10,-40,-3.74076723046695,-37.7195978867046,TRUE,14
+"30357#1","30357","Plate Round Corner 3 x 3","Plate","Plate round",9.99999,-10,15.6831737243682,-19.8652376393898,TRUE,24
+"3062b#1","3062b","Brick Round 1 x 1 Open Stud","Brick","Brick round",30,-50,30,-50,FALSE,12
+"3021#1","3021","Plate 2 x 3","Plate","Plate basic",-30.00001,-1e-05,-39.3764387913231,-5.34560827674398,TRUE,22
+"3004#1","3004","Brick 1 x 2","Brick","Brick basic",-30,0,-24.0153519459507,-3.55034011062304,TRUE,19
+"3021#2","3021","Plate 2 x 3","Plate","Plate basic",-30,0,-33.2222883278613,8.9673777472836,TRUE,21
+"4070#1","4070","Brick Special 1 x 1 with Headlight","Brick","Brick modified SNOT",30,-30,29.1230773598297,-30,FALSE,17
+"3001#1","3001","Brick 2 x 4","Brick","Brick basic",0,0,0.253908240443346,-22.6160492725049,TRUE,30
+"30357#2","30357","Plate Round Corner 3 x 3","Plate","Plate round",10,-9.99999,20.0333474722233,-4.94032033044737,TRUE,23
+"3024#1","3024","Plate 1 x 1","Plate","Plate basic",44,-30,44.8769226401703,-30,FALSE,12
+"11213#2","11213","Plate Round 6 x 6 with Hole","Plate","Plate round",1e-05,3e-05,11.1959745573116,21.2258525387766,TRUE,26
+"3023b#2","3023b","","Other","Other",-10,-40,-18.2146877631692,-43.0126483681426,TRUE,14
+"60474#2","60474","Plate Round 4 x 4 with Pin Hole","Plate","Plate round",0,0,-11.32266960799,-12.5998500761537,TRUE,23
+"3023b#3","3023b","","Other","Other",-10.00002,40,-14.9844664600506,43.6581400009697,TRUE,14
+"3062b#2","3062b","Brick Round 1 x 1 Open Stud","Brick","Brick round",49.99999,-10,49.99999,-10,FALSE,13
+"3023b#4","3023b","","Other","Other",-10,40.00001,-0.6304667011299,37.6314453871256,TRUE,13
+"30357#3","30357","Plate Round Corner 3 x 3","Plate","Plate round",9.99999,10.00001,8.95513213935395,6.18284194111506,FALSE,23
+"3062b#3","3062b","Brick Round 1 x 1 Open Stud","Brick","Brick round",49.99999,10.00001,49.99999,10.00001,FALSE,13
+"4070#2","4070","Brick Special 1 x 1 with Headlight","Brick","Brick modified SNOT",30,30.00001,29.1230752404285,30.000011689508,FALSE,14
+"30357#4","30357","Plate Round Corner 3 x 3","Plate","Plate round",10,10.00001,23.3301896224282,11.46733681373,TRUE,22
+"3024#2","3024","Plate 1 x 1","Plate","Plate basic",43.99999,30.00001,44.876920307852,30.0000090415234,FALSE,11
+"3062b#4","3062b","Brick Round 1 x 1 Open Stud","Brick","Brick round",30,50.00002,30,50.00002,FALSE,11
+"6141#1","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",0,0,-5.8535949533319,1.35701945744758,TRUE,9
+"30162#1","30162","Equipment Binoculars","Minifig","Minifig accessory (tool; weapon)",0,0,5.14006866148998,-8.50316306123178,TRUE,0
+"4599b#1","4599b","Tap 1 x 1 without Hole in Spout","Minifig","Minifig accessory (tool; weapon)",-10.00001,30,-12.8693977858113,28.0823053158895,FALSE,1
+"3004#2","3004","Brick 1 x 2","Brick","Brick basic",30,0,34.6570848861786,0.54142523375133,TRUE,14
+"11211#2","11211","Brick Special 1 x 2 with 2 Studs on 1 Side","Brick","Brick modified SNOT",0,50.00002,0.268968551500909,53.215582895382,FALSE,13
+"4150#1","4150","Tile 2 x 2 Round with Cross Underside Stud","Tile","Tile round",0,68.00002,-0.0191230624830043,68.963124017586,FALSE,4
+"3005#2","3005","Brick 1 x 1","Brick","Brick basic",-90,-30,-90,-30,FALSE,3
+"41769#1","41769","Wedge Plate 4 x 2 Right","Plate","Plate wedge",-59.99999,-40,-61.2013372287695,-32.2402636072764,TRUE,15
+"41769#2","41769","Wedge Plate 4 x 2 Right","Plate","Plate wedge",-59.99999,-40,-61.260584509576,-47.725553386766,TRUE,17
+"6564#1","6564","Brick Wedged, Angled 3 x 2 Right","Brick","Brick basic",-50,-40.00001,-47.5380582616544,-40.0341930059576,FALSE,19
+"4740#1","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",-22.56766,30,-28.1190796730902,31.1019066633315,TRUE,6

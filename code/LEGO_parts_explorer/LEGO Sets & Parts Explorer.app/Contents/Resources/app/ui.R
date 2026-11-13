@@ -36,7 +36,15 @@ ui <- navbarPage(
     windowTitle = "LEGO Sets & Parts Explorer",
     id = "tabs",
     header = tagList(
-        tags$head(tags$link(rel = "icon", type = "image/png", href = "favicon.png")),
+        tags$head(
+            tags$link(rel = "icon", type = "image/png", href = "favicon.png"),
+            # iPad / iPhone "Add to Home Screen": icon, name and full-screen mode
+            tags$link(rel = "apple-touch-icon", href = "icon.png"),
+            tags$meta(name = "apple-mobile-web-app-capable", content = "yes"),
+            tags$meta(name = "mobile-web-app-capable", content = "yes"),
+            tags$meta(name = "apple-mobile-web-app-title", content = "LEGO Explorer"),
+            tags$meta(name = "apple-mobile-web-app-status-bar-style", content = "default")
+        ),
         detail_css,
         brand_right
     ),
@@ -106,15 +114,19 @@ ui <- navbarPage(
             h3("Data tables"),
             uiOutput("data_info"),
             hr(),
-            h4("Update the tables"),
-            p("Downloads the latest Rebrickable tables (no API key needed) and rebuilds",
-              code("set_parts.rds"), ",", code("lego_sets.rds"), "and",
-              code("parts_index.rds"), ". To use CSV files you already have, give their folder."),
-            textInput("csv_dir", "Folder with Rebrickable CSVs (leave empty to download)",
-                      width = "100%"),
-            actionButton("rebuild", "Update tables now", icon = icon("rotate")),
-            br(), br(),
-            uiOutput("rebuild_msg")
+            if (!ON_SERVER) tagList(
+                h4("Update the tables"),
+                p("Downloads the latest Rebrickable tables (no API key needed) and rebuilds",
+                  code("set_parts.rds"), ",", code("lego_sets.rds"), "and",
+                  code("parts_index.rds"), ". To use CSV files you already have, give their folder."),
+                textInput("csv_dir", "Folder with Rebrickable CSVs (leave empty to download)",
+                          width = "100%"),
+                actionButton("rebuild", "Update tables now", icon = icon("rotate")),
+                br(), br(),
+                uiOutput("rebuild_msg")
+            ) else p(class = "muted",
+                     "Data from Rebrickable's public downloads. The tables are updated on the",
+                     "author's computer and republished.")
         ))
     )
 )

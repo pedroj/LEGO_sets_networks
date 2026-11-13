@@ -8,6 +8,10 @@ suppressPackageStartupMessages({
     library(data.table)
 })
 
+# Running on shinyapps.io / Shiny Server (web version)? Then the data are read-only.
+ON_SERVER <- identical(Sys.getenv("R_CONFIG_ACTIVE"), "shinyapps") ||
+             nzchar(Sys.getenv("SHINY_SERVER_VERSION"))
+
 # Data folder: set by the launcher app (LEGO_DATA_DIR); otherwise the app folder
 DATA_DIR <- Sys.getenv("LEGO_DATA_DIR", ".")
 dpath <- function(f) file.path(DATA_DIR, f)
@@ -23,7 +27,8 @@ if (!file.exists(dpath("parts_index.rds"))) {
 APP_COLS <- c("set_num", "part_num", "color_id", "color_name", "rgb", "quantity",
               "is_spare", "minifig", "part_img_url", "part_name", "part_category")
 cache_f <- dpath("explorer_cache.rds")
-if (file.exists(cache_f) && file.mtime(cache_f) >= file.mtime(dpath("set_parts.rds"))) {
+sp_f <- dpath("set_parts.rds")
+if (file.exists(cache_f) && (!file.exists(sp_f) || file.mtime(cache_f) >= file.mtime(sp_f))) {
     set_parts <- readRDS(cache_f)
 } else {
     message("Creating fast-start cache (once) ...")

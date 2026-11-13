@@ -619,7 +619,7 @@ run_lego_adjacency <- function(mpd_path, rebrickable_dir = NULL, out_prefix = NU
           axis.text.y = element_text(size = 6, colour = axis_col),
           panel.grid = element_blank(), legend.position = "top")
   ggsave(paste0(out_prefix, "_adjacency_matrix.png"), p1,
-         width = max(7, 0.32*length(raw)), height = max(6.5, 0.32*length(raw)),
+         width = min(max(7, 0.32*length(raw)), 40), height = min(max(6.5, 0.32*length(raw)), 40),   # cap (8000 px at dpi 200): larger crashes ragg
          dpi = 200, limitsize = FALSE)
 
   # (B) network with ggrepel labels, node colour = family

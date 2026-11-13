@@ -1,0 +1,17 @@
+set: "CELEB2015MF"
+name: Mini Millennium Falcon
+set_num: "CELEB2015MF-1"
+instructions: true   # PDF booklet used for the hand checks
+
+subtype_override: {}
+category_override: {}
+pair_allow: []
+flexible_parts: []
+manual_add: []
+manual_remove: []
+
+audit_notes: |
+  (to be written after the booklet cross-check)
+
+plot:
+  panel_title: "Mini Millennium Falcon (links checked against geometry and building instructions)"

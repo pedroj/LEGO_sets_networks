@@ -6,7 +6,7 @@
 make_instances <- function(cfg, pipeline_dir) {
   source(file.path(pipeline_dir, "kernel.R"), local = FALSE)
   .exp <- expand_model
-  is_prim <- function(d) { d <- gsub("\\\\", "/", tolower(d)); grepl("^(48/|s/|stug|stud|rect|box|[0-9]+-[0-9]+)", d) }
+  is_prim <- function(d) { d <- gsub("\\\\", "/", tolower(d)); grepl("^(48/|s/|stug|stud|rect|box|n?peghole|axl[0-9]*hole|[0-9]+-[0-9]+)", d) }
   assign("expand_model", function(...) Filter(function(p) !is_prim(p$dat), .exp(...)), envir = globalenv())
   .rm <- resolve_meta
   assign("resolve_meta", function(dat, meta) {
@@ -14,7 +14,7 @@ make_instances <- function(cfg, pipeline_dir) {
     if (!is.na(m$name)) return(m)
     base <- sub("[a-z]+$", "", dat)
     for (c in unique(c(paste0(dat, c("a", "b", "c")), base, paste0(base, c("a", "b", "c", "d")))))
-      if (exists(c, envir = meta, inherits = FALSE)) return(get(c, envir = meta, inherits = FALSE))
+      if (nzchar(c) && !is.na(c) && exists(c, envir = meta, inherits = FALSE)) return(get(c, envir = meta, inherits = FALSE))
     m
   }, envir = globalenv())
   # per-set MPD fixes from set_config.yaml (all optional):

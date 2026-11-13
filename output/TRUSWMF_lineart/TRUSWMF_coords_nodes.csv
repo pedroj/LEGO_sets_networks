@@ -1,0 +1,24 @@
+"node","part","desc","category","subtype","x0","y0","x","y","moved","degree"
+"4070#1","4070","Brick Special 1 x 1 with Headlight","Brick","Brick modified SNOT",-59.00148,19.99989,-59.00148,19.99989,FALSE,0
+"47905#1","47905","Brick Special 1 x 1 with Studs on 2 Sides","Brick","Brick modified SNOT",-0.99999,29.99989,-1.19700195952775,31.8067673080742,FALSE,4
+"3062b#1","3062b","Brick Round 1 x 1 Open Stud","Brick","Brick round",-49.00118,49.99988,-49.00118,49.3147013886444,FALSE,3
+"98138#1","98138","Tile Round 1 x 1","Tile","Tile round",41.00032,-0.00011,41.6854986113556,-0.00011,FALSE,4
+"98138#2","98138","Tile Round 1 x 1","Tile","Tile round",-49.00118,57.99988,-49.00118,58.6850586113556,FALSE,1
+"98138#3","98138","Tile Round 1 x 1","Tile","Tile round",29,-9.99999,29,-9.31481628218594,FALSE,7
+"14769#1","14769","Tile Round 2 x 2 with Bottom Stud Holder","Tile","Tile round",-0.99999,1e-05,1.51860151316158,5.15953827732091,TRUE,10
+"60474#1","60474","Plate Round 4 x 4 with Pin Hole","Plate","Plate round",-0.99999,1e-05,3.38016921399712,-3.83708164228769,TRUE,18
+"6141#1","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",-11,-33.99998,-11,-33.99998,FALSE,4
+"3024#1","3024","Plate 1 x 1","Plate","Plate basic",-0.99997,61.99988,-0.99997,62.6850683984386,FALSE,1
+"3710#1","3710","Plate 1 x 4","Plate","Plate basic",-1,-17.99999,0.307759092358363,-18.529696433798,FALSE,9
+"3023b#1","3023b","","Other","Other",-1,-25.99998,-1.29601379699343,-27.715324177469,FALSE,10
+"54200#1","54200","Brick Sloped 30° 1 x 1 x 2/3 (Cheese Slope)","Slope","Slope standard",29,-18,29,-18.685173717814,FALSE,9
+"3024#2","3024","Plate 1 x 1","Plate","Plate basic",-0.99997,53.9999,-0.99997,53.3147116015614,FALSE,1
+"60474#2","60474","Plate Round 4 x 4 with Pin Hole","Plate","Plate round",-1,0,-5.46818071998327,-0.903104401634038,TRUE,18
+"98138#4","98138","Tile Round 1 x 1","Tile","Tile round",-30.99998,-9.99999,-30.9999782870535,-9.3148113886588,FALSE,7
+"6141#2","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",8.99999,-33.99998,8.99999,-33.99998,FALSE,4
+"3024#3","3024","Plate 1 x 1","Plate","Plate basic",-0.99999,21.99988,-0.190814715953513,22.5401897312215,FALSE,5
+"3024#4","3024","Plate 1 x 1","Plate","Plate basic",-0.99999,14,-2.52600932257986,13.5437380659365,FALSE,4
+"4733#1","4733","Brick Special 1 x 1 Studs on 4 Sides","Brick","Brick modified SNOT",-1,-9.99999,-3.52845930447922,-10.0651967273642,TRUE,8
+"60477#1","60477","Brick Sloped 18° 4 x 1","Slope","Slope standard",33.00032,-0.00011,32.3151413886444,-0.00011,FALSE,5
+"60477#2","60477","Brick Sloped 18° 4 x 1","Slope","Slope standard",-34.99998,2e-05,-34.99998,2e-05,FALSE,4
+"54200#2","54200","Brick Sloped 30° 1 x 1 x 2/3 (Cheese Slope)","Slope","Slope standard",-31,-17.99999,-31.0000017129465,-18.6851686113412,FALSE,8
