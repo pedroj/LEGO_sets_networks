@@ -109,3 +109,7 @@ __pycache__/
 
 # Python virtual environment for the pipeline (pipeline/setup_env.sh)
 .venv/
+
+# Rebrickable set images (re-downloadable with functions/rebrickable_set_images.R)
+data/rebrickable_set_images/*.jpg
+data/rebrickable_set_images/*.png
