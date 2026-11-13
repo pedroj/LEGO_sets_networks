@@ -21,9 +21,11 @@ setdir <- file.path(root, "output", paste0(S, "_lineart"))
 stopifnot("set folder not found" = dir.exists(setdir), "set_config.yaml missing" = file.exists(file.path(setdir, "set_config.yaml")))
 setwd(setdir)
 source(file.path(RDIR, "set_config.R")); cfg <- read_set_config()
+# Python: the project venv (.venv, made by pipeline/setup_env.sh) when it exists, else python3 from the PATH
+PYBIN <- if (file.exists(file.path(root, ".venv", "bin", "python3"))) file.path(root, ".venv", "bin", "python3") else "python3"
 py <- function(script, ...) {
   cat(sprintf("\n== python %s\n", script))
-  st <- system2("python3", c(shQuote(file.path(PYDIR, script)), ...))
+  st <- system2(PYBIN, c(shQuote(file.path(PYDIR, script)), ...))
   if (st != 0) stop(script, " failed (exit ", st, ")")
 }
 stamp <- format(Sys.time(), "%Y%m%d_%H%M")

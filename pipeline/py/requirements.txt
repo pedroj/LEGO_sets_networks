@@ -1,0 +1,8 @@
+# Python packages for the pipeline audit, xlsx and icon steps (see pipeline/setup_env.sh)
+pyyaml
+numpy
+networkx
+openpyxl
+pillow
+scipy
+matplotlib

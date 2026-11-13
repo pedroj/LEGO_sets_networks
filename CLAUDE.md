@@ -29,6 +29,8 @@ PedroJ). Repo: github.com/pedroj/LEGO_sets_networks.
 ## Pipeline (one set)
 Shared code lives in `pipeline/` (R driver in `pipeline/R/`, Python audit in `pipeline/py/`). Everything set-specific goes in `output/<set>_lineart/set_config.yaml`: subtype/category overrides, `pair_allow`, `manual_add` (by node name, e.g. `3829a#1`), `flexible_parts`, audit notes and plot title. **Never put set constants in shared code, and never copy scripts into a set folder.** Template: `output/6628_lineart/set_config.yaml`.
 
+Python dependencies live in the project virtual environment `.venv/` (gitignored). Create or update it with `pipeline/setup_env.sh` (packages in `pipeline/py/requirements.txt`); `run_set.R` and `regress.sh` use it automatically, and `lego_lineart.py` runs with `.venv/bin/python`.
+
 One entry point, run from the repo root:
 ```
 Rscript pipeline/R/run_set.R <set> [steps]        # default steps: audit,plot,xlsx

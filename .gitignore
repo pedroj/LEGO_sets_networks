@@ -106,3 +106,6 @@ __pycache__/
 *.pkl
 **/scratch/
 .claude/settings.local.json
+
+# Python virtual environment for the pipeline (pipeline/setup_env.sh)
+.venv/

@@ -5,7 +5,7 @@
 set -uo pipefail
 S=$1; WHAT=${2:-all}; ROOT=$(pwd); W=$(mktemp -d); trap 'rm -rf "$W"' EXIT
 mkdir -p "$W/output" "$W/data" "$W/pipeline"
-cp -r "output/${S}_lineart" "$W/output/"; cp -r data/lego_compat_out "$W/data/"; ln -s "$ROOT/data/icons" "$W/data/icons"
+cp -r "output/${S}_lineart" "$W/output/"; cp -r data/lego_compat_out "$W/data/"; ln -s "$ROOT/data/icons" "$W/data/icons"; [ -d .venv ] && ln -s "$ROOT/.venv" "$W/.venv"
 [ -d data/icons_small ] && cp -r data/icons_small "$W/data/"; cp -r pipeline/R pipeline/py "$W/pipeline/"
 REF="$ROOT/output/${S}_lineart"; cd "$W"; fail=0
 same() { if cmp -s "$REF/$1" "output/${S}_lineart/$1"; then echo "  ok   $1"; else echo "  DIFF $1"; fail=1; fi; }
