@@ -1,79 +1,79 @@
 "node","part","desc","category","subtype","x0","y0","x","y","moved","degree"
-"3020#1","3020","Plate 2 x 4","Plate","Plate basic",36,-38,39.1803960699448,-37.7953470402078,FALSE,9
-"3034#1","3034","Plate 2 x 8","Plate","Plate basic",-4,-38,0.336934542829251,-37.1839393135785,FALSE,4
-"2419#1","2419","Wedge Plate 3 x 6 Cut Corners","Plate","Plate wedge",86,-38,81.1956048907906,-37.8381401622883,FALSE,9
-"35480#1","35480","Plate Special 1 x 2 Rounded with 2 Open Studs","Plate","Plate round",56,-68,51.5106800763543,-56.8887658799442,TRUE,2
-"35480#2","35480","Plate Special 1 x 2 Rounded with 2 Open Studs","Plate","Plate round",56,-8,49.1896177697254,-21.3160328577248,TRUE,2
-"4740#1","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",96,-38,100.709047024852,-37.6033247403197,FALSE,1
-"3023#1","3023","Plate 1 x 2","Plate","Plate basic",16,-68,18.1470160360385,-71.8886792775337,FALSE,2
-"3023#2","3023","Plate 1 x 2","Plate","Plate basic",16,-8,1.21567750474617,-3.34216124929721,TRUE,2
-"54384#1","54384","Wedge Plate 6 x 3 Left","Plate","Plate wedge",-44,-8,-57.0234958721492,-1.63696732473844,TRUE,6
-"54383#1","54383","Wedge Plate 6 x 3 Right","Plate","Plate wedge",-44,-68,-49.950160894724,-85.095898942045,TRUE,6
-"13548#1","13548","Brick Wedged, Sloped 45° 2 x 2 Corner","Slope","Slope standard",86,-28,90.6640984870695,-21.0262544103616,TRUE,2
-"13548#2","13548","Brick Wedged, Sloped 45° 2 x 2 Corner","Slope","Slope standard",86,-48,91.0990307934063,-54.4431245268424,TRUE,2
-"73562#1","73562","Bracket 3 x 2 x 1 1/3 with Bottom Stud Holder","Special","Bracket (SNOT)",66,-38,58.6131733916782,-39.0421112931733,TRUE,6
-"3040b#1","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",66,-8,78.3888280652724,-5.83065009611338,TRUE,2
-"3040b#2","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",66,-68,82.0901805922154,-71.7676808383918,TRUE,2
-"3068b#1","3068b","Tile 2 x 2 with Groove","Tile","Tile basic",16,-38,19.6206988731818,-37.4097326214539,FALSE,3
-"3713#1","3713","Technic Bush","Technic","Technic bush",36,12,49.8858393376334,12.2191766229733,TRUE,1
-"18651#1","18651","Technic Axle Pin 3L with Friction Ridges Lengthwise and 2L Axle","Technic","Technic pin with axle",36,12,30.9319791300628,13.109966352427,TRUE,3
-"18651#2","18651","Technic Axle Pin 3L with Friction Ridges Lengthwise and 2L Axle","Technic","Technic pin with axle",36,-86.7,40.8050022101084,-103.468626558059,TRUE,3
-"32064a#1","32064a","Technic Brick 1 x 2 with Axle Hole Type 1 [+ Opening] and Bottom Pin","Technic","Technic brick (studded beam)",36,-68,28.7314202968413,-54.0875056982476,TRUE,3
-"32064a#2","32064a","Technic Brick 1 x 2 with Axle Hole Type 1 [+ Opening] and Bottom Pin","Technic","Technic brick (studded beam)",36,-8,29.870796401236,-20.64430531021,TRUE,3
-"3713#2","3713","Technic Bush","Technic","Technic bush",36,-86.7,29.6637865503933,-88.0029760918289,TRUE,1
-"3040b#3","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",6,-8,-7.99244494945192,13.0650708788596,TRUE,2
-"3040b#4","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",6,-68,-9.08179096367859,-87.8982152337453,TRUE,2
-"42862#1","42862","Brick Wedged, Sloped 45° 3 x 3 Left","Slope","Slope standard",-34,-8,-27.8045531047867,13.3057237899495,TRUE,2
-"48165#1","48165","Brick Wedged, Sloped 45° 3 x 3 Right","Slope","Slope standard",-34,-68,-30.6875706607902,-85.6860721221063,TRUE,2
-"13548#3","13548","Brick Wedged, Sloped 45° 2 x 2 Corner","Slope","Slope standard",-74,-28,-76.5636243819181,-1.76874854533045,TRUE,3
-"13548#4","13548","Brick Wedged, Sloped 45° 2 x 2 Corner","Slope","Slope standard",-74,-48,-78.6187082356939,-67.8684745932592,TRUE,3
-"36840#1","36840","Bracket 1 x 1 - 1 x 1 Inverted","Special","Bracket (SNOT)",66,-8,69.6111740376737,11.1825440222677,TRUE,3
-"36840#2","36840","Bracket 1 x 1 - 1 x 1 Inverted","Special","Bracket (SNOT)",66,-68,62.953762983101,-72.349933138501,TRUE,3
-"85080#1","85080","Brick Round Corner 2 x 2 Macaroni with Stud Notch and Reinforced Underside [New Style]","Brick","Brick round",66,-28,68.7521638581752,-22.8072873822444,TRUE,2
-"85080#2","85080","Brick Round Corner 2 x 2 Macaroni with Stud Notch and Reinforced Underside [New Style]","Brick","Brick round",66,-48,70.6153323792942,-54.2535347210697,TRUE,2
-"36840#3","36840","Bracket 1 x 1 - 1 x 1 Inverted","Special","Bracket (SNOT)",6,-8,20.0612574938067,-3.55978092705518,TRUE,3
-"36840#4","36840","Bracket 1 x 1 - 1 x 1 Inverted","Special","Bracket (SNOT)",6,-68,-0.971463928267974,-70.7788880423791,TRUE,3
-"99207#1","99207","Bracket 1 x 2 - 2 x 2 Inverted","Special","Bracket (SNOT)",36,-8,58.8700371163822,-5.02304134524451,TRUE,3
-"99207#2","99207","Bracket 1 x 2 - 2 x 2 Inverted","Special","Bracket (SNOT)",36,-68,48.685026508173,-85.8326758891364,TRUE,3
-"23950#1","23950","Panel 1 x 3 x 1","Panel","Panel",26,-68,37.6490464227454,-70.2233144504074,TRUE,1
-"23950#2","23950","Panel 1 x 3 x 1","Panel","Panel",26,-8,39.4871802700261,-4.02528708393021,TRUE,1
-"85984#1","85984","Brick Sloped 30° 1 x 2 x 2/3","Slope","Slope standard",-74,-38,-67.9757362264096,-18.7045378667219,TRUE,2
-"32803#1","32803","Brick Curved Inverted 2 x 2 x 2/3","Slope","Slope inverted",-94,-38,-97.4965023387618,-34.2200517408458,TRUE,3
-"35480#3","35480","Plate Special 1 x 2 Rounded with 2 Open Studs","Plate","Plate round",-74,-38,-69.0332092986198,-51.3331684454119,TRUE,3
-"3022#1","3022","Plate 2 x 2","Plate","Plate basic",-84,-38,-78.3144646496981,-34.7822019444021,TRUE,3
-"76766#1","76766","Bracket 5 x 2 x 2 1/3 with Holes, Inside Stud Holder","Special","Bracket (SNOT)",-54,-38,-58.6745760664055,-35.2954017576797,TRUE,10
-"35480#4","35480","Plate Special 1 x 2 Rounded with 2 Open Studs","Plate","Plate round",-34,-38,-49.002549469004,-51.5742898625618,TRUE,3
-"32952#1","32952","Brick Special 1 x 1 x 1 2/3 with Studs on 1 Side","Brick","Brick modified SNOT",-34,-48,-39.7921109557027,-68.6863761231959,TRUE,3
-"32952#2","32952","Brick Special 1 x 1 x 1 2/3 with Studs on 1 Side","Brick","Brick modified SNOT",-34,-28,-37.8368316951179,-2.92471618140066,TRUE,3
-"4865b#1","4865b","Panel 1 x 2 x 1 [Rounded Corners]","Panel","Panel",-14,-38,-8.91785281505291,-20.5102245116541,TRUE,1
-"41682#1","41682","Bracket 2 x 2 with 1 x 2 Vertical Studs","Special","Bracket (SNOT)",-104,-38,-112.90772244804,-45.3074740499882,TRUE,7
-"3020#2","3020","Plate 2 x 4","Plate","Plate basic",-44,-38,-39.0509119009581,-35.7977241476301,TRUE,9
-"85984#2","85984","Brick Sloped 30° 1 x 2 x 2/3","Slope","Slope standard",-84,-28,-86.8830165960051,-17.7996924326324,TRUE,2
-"54200#1","54200","Brick Sloped 30° 1 x 1 x 2/3 (Cheese Slope)","Slope","Slope standard",-54,-28,-48.6310867896667,-18.9992161569464,TRUE,1
-"85984#3","85984","Brick Sloped 30° 1 x 2 x 2/3","Slope","Slope standard",-84,-48,-88.2558753385768,-51.2877217051775,TRUE,2
-"54200#2","54200","Brick Sloped 30° 1 x 1 x 2/3 (Cheese Slope)","Slope","Slope standard",-54,-48,-59.0609429471347,-68.2522972425752,TRUE,1
-"44861#1","44861","Plate Special 1 x 2, Top Clip [Open O]","Special","Clip plate or tile",-24,-28,-18.2158405865906,-3.43937192695608,TRUE,3
-"44861#2","44861","Plate Special 1 x 2, Top Clip [Open O]","Special","Clip plate or tile",-24,-48,-20.3815457570473,-69.5843110692316,TRUE,3
-"3069b#1","3069b","Tile 1 x 2 with Groove","Tile","Tile basic",-34,-38,-29.8731470057552,-52.5554599829325,TRUE,2
-"24299#1","24299","Wedge Plate 2 x 2 Left","Plate","Plate wedge",-4,-66,9.17830907050969,-54.4083387797125,TRUE,1
-"15068#1","15068","Brick Curved 2 x 2 x 2/3","Slope","Slope curved",-24,-58,-10.2432464421353,-53.5275766715489,TRUE,2
-"11458#1","11458","Plate Special 1 x 2 with Pin Hole on Top","Technic","Technic plate (with holes)",-112,-18,-113.063611542868,-22.4372946247917,FALSE,2
-"11458#2","11458","Plate Special 1 x 2 with Pin Hole on Top","Technic","Technic plate (with holes)",-112,-58,-123.433316614186,-61.9002807941834,TRUE,2
-"32803#2","32803","Brick Curved Inverted 2 x 2 x 2/3","Slope","Slope inverted",-112,-38,-128.516784995909,-34.037801477079,TRUE,1
-"24307#1","24307","Wedge Plate 2 x 2 Right","Plate","Plate wedge",-4,-10,10.1798509799177,-20.1108064941365,TRUE,1
-"15068#2","15068","Brick Curved 2 x 2 x 2/3","Slope","Slope curved",-24,-18,-28.5958347482091,-19.3644286240821,FALSE,2
-"27925#1","27925","Tile 2 x 2 Curved, Macaroni","Tile","Tile modified (grille; slope tile)",26,14,11.5524830609726,13.8981066715127,TRUE,2
-"27925#2","27925","Tile 2 x 2 Curved, Macaroni","Tile","Tile modified (grille; slope tile)",46,14,41.3611183633755,29.469375533837,TRUE,2
-"11458#3","11458","Plate Special 1 x 2 with Pin Hole on Top","Technic","Technic plate (with holes)",26,32,21.7802962532038,30.3640944840946,FALSE,2
-"26601#1","26601","Wedge Plate 2 x 2 Cut Corner","Plate","Plate wedge",26,42,28.3276497695872,48.6257056208737,TRUE,1
-"27925#3","27925","Tile 2 x 2 Curved, Macaroni","Tile","Tile modified (grille; slope tile)",46,-90,60.2139162135122,-101.700345119498,TRUE,2
-"27925#4","27925","Tile 2 x 2 Curved, Macaroni","Tile","Tile modified (grille; slope tile)",26,-90,10.3762879093048,-89.8740083959314,TRUE,2
-"26601#2","26601","Wedge Plate 2 x 2 Cut Corner","Plate","Plate wedge",26,-116.7,28.9149430200291,-123.64689194469,TRUE,1
-"11458#4","11458","Plate Special 1 x 2 with Pin Hole on Top","Technic","Technic plate (with holes)",26,-106.7,21.4608273294682,-105.739232884157,FALSE,2
-"92474#1","92474","Windscreen 6 x 2 x 2 with Handle","Special","Bar holder or handle plate",-14,-38,-19.0144514837098,-36.4557152262612,TRUE,2
-"20482#1","20482","Tile Special Round 1 x 1 with Hollow Bar","Tile","Tile round",-106,-8,-110.792916257926,11.1713076833204,TRUE,2
-"20482#2","20482","Tile Special Round 1 x 1 with Hollow Bar","Tile","Tile round",-106,-68,-94.8709748363823,-79.6622007542071,TRUE,2
-"64567#1","64567","Weapon Lightsaber Hilt with Bottom Ring","Minifig","Minifig accessory (tool; weapon)",-106,-8,-121.641980037535,-4.98718590659328,TRUE,1
-"64567#2","64567","Weapon Lightsaber Hilt with Bottom Ring","Minifig","Minifig accessory (tool; weapon)",-106,-68,-104.094682853485,-62.6318792308146,TRUE,1
-"61184#1","61184","Technic Pin 1/2 with 2L Bar Extension","Technic","Technic pin",-106,-8,-102.424892168357,-6.25282008229633,FALSE,2
-"61184#2","61184","Technic Pin 1/2 with 2L Bar Extension","Technic","Technic pin",-106,-68,-114.190043226928,-79.0325497954199,TRUE,2
+"3020#1","3020","Plate 2 x 4","Plate","Plate basic",36,-38.00001,42.828393155746,-41.3987655603009,TRUE,9
+"3034#1","3034","Plate 2 x 8","Plate","Plate basic",-4,-38,9.78836822849205,-39.4448740049463,TRUE,4
+"2419#1","2419","Wedge Plate 3 x 6 Cut Corners","Plate","Plate wedge",85.99998,-38.00002,81.0171540235156,-43.6770987213249,TRUE,9
+"35480#1","35480","Plate Special 1 x 2 Rounded with 2 Open Studs","Plate","Plate round",55.99998,-68,58.4633452465612,-72.0079695188859,FALSE,2
+"35480#2","35480","Plate Special 1 x 2 Rounded with 2 Open Studs","Plate","Plate round",56,-8.00002,61.3585521605552,-13.9242377919187,TRUE,2
+"4740#1","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",95.99998,-38.00002,99.9154845063538,-38.9067175297416,FALSE,1
+"3023#1","3023","Plate 1 x 2","Plate","Plate basic",15.99999,-68,9.73992432098388,-77.3810157420638,TRUE,2
+"3023#2","3023","Plate 1 x 2","Plate","Plate basic",16,-8.00002,12.7745506991369,-0.881100115498722,TRUE,2
+"54384#1","54384","Wedge Plate 6 x 3 Left","Plate","Plate wedge",-44,-8.00001,-54.8812589275215,0.342904444041957,TRUE,6
+"54383#1","54383","Wedge Plate 6 x 3 Right","Plate","Plate wedge",-44,-67.99929,-55.8297196431126,-76.0432011372223,TRUE,6
+"13548#1","13548","Brick Wedged, Sloped 45° 2 x 2 Corner","Slope","Slope standard",86,-28.00002,95.2686544802698,-20.1509166053439,TRUE,1
+"13548#2","13548","Brick Wedged, Sloped 45° 2 x 2 Corner","Slope","Slope standard",85.99998,-48,94.3205484409812,-57.4540087657722,TRUE,1
+"73562#1","73562","Bracket 3 x 2 x 1 1/3 with Bottom Stud Holder","Special","Bracket (SNOT)",66,-38.00002,59.9875700506167,-33.2745272927296,TRUE,4
+"3040b#1","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",66.00002,-8.00002,79.1867780267102,-6.0940028317562,TRUE,3
+"3040b#2","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",65.99998,-68,76.0915161031676,-64.1094956230815,TRUE,3
+"3068b#1","3068b","Tile 2 x 2 with Groove","Tile","Tile basic",16,-38,26.6825049444997,-31.105123971753,TRUE,3
+"3713#1","3713","Technic Bush","Technic","Technic bush",36.00003,12.00024,32.29565905239,26.7760807571106,TRUE,1
+"18651#1","18651","Technic Axle Pin 3L with Friction Ridges Lengthwise and 2L Axle","Technic","Technic pin with axle",36,11.99997,30.487504242623,7.80300683947075,TRUE,3
+"18651#2","18651","Technic Axle Pin 3L with Friction Ridges Lengthwise and 2L Axle","Technic","Technic pin with axle",36,-86.67002,39.2042740927293,-101.467896915775,TRUE,3
+"32064a#1","32064a","Technic Brick 1 x 2 with Axle Hole Type 1 [+ Opening] and Bottom Pin","Technic","Technic brick (studded beam)",35.99999,-68,43.4215146326685,-60.6893848452784,TRUE,3
+"32064a#2","32064a","Technic Brick 1 x 2 with Axle Hole Type 1 [+ Opening] and Bottom Pin","Technic","Technic brick (studded beam)",36,-8.00002,43.9314860316145,-22.1251742656682,TRUE,3
+"3713#2","3713","Technic Bush","Technic","Technic bush",36,-86.67002,42.0965862956372,-82.4200437495195,TRUE,1
+"3040b#3","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",6,-8.00002,-3.50034599473122,8.97041283386377,TRUE,3
+"3040b#4","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",6,-68,-6.82619853583313,-86.389990498281,TRUE,3
+"42862#1","42862","Brick Wedged, Sloped 45° 3 x 3 Left","Slope","Slope standard",-33.99999,-8.00001,-37.8222760282587,9.23379706719871,TRUE,2
+"48165#1","48165","Brick Wedged, Sloped 45° 3 x 3 Right","Slope","Slope standard",-34.00001,-67.99998,-39.2493579881606,-85.4351271190901,TRUE,2
+"13548#3","13548","Brick Wedged, Sloped 45° 2 x 2 Corner","Slope","Slope standard",-74,-28,-72.8241470145463,-9.46434161446423,TRUE,3
+"13548#4","13548","Brick Wedged, Sloped 45° 2 x 2 Corner","Slope","Slope standard",-74,-47.99999,-72.4504707758499,-66.4179425658415,TRUE,3
+"36840#1","36840","Bracket 1 x 1 - 1 x 1 Inverted","Special","Bracket (SNOT)",66.00002,-8.00002,63.7847754007583,5.01753228501843,TRUE,2
+"36840#2","36840","Bracket 1 x 1 - 1 x 1 Inverted","Special","Bracket (SNOT)",65.99998,-68,73.935615590452,-83.1611350555935,TRUE,2
+"85080#1","85080","Brick Round Corner 2 x 2 Macaroni with Stud Notch and Reinforced Underside [New Style]","Brick","Brick round",66.00002,-28.00002,76.8500477473874,-25.1228603144555,TRUE,1
+"85080#2","85080","Brick Round Corner 2 x 2 Macaroni with Stud Notch and Reinforced Underside [New Style]","Brick","Brick round",66,-48.00002,61.0027784008415,-52.3238260380095,TRUE,1
+"36840#3","36840","Bracket 1 x 1 - 1 x 1 Inverted","Special","Bracket (SNOT)",6,-8.00002,11.0011943559216,-19.9725267148729,TRUE,4
+"36840#4","36840","Bracket 1 x 1 - 1 x 1 Inverted","Special","Bracket (SNOT)",6,-68,9.57611664099483,-58.6007900197112,TRUE,4
+"99207#1","99207","Bracket 1 x 2 - 2 x 2 Inverted","Special","Bracket (SNOT)",36,-8.00002,45.7437011575442,-3.07925156493413,TRUE,3
+"99207#2","99207","Bracket 1 x 2 - 2 x 2 Inverted","Special","Bracket (SNOT)",35.99999,-68,27.3202514140726,-70.4795144767165,TRUE,3
+"23950#1","23950","Panel 1 x 3 x 1","Panel","Panel",25.99999,-68,26.6967488646311,-51.3875189509784,TRUE,1
+"23950#2","23950","Panel 1 x 3 x 1","Panel","Panel",26,-8.00002,28.3187736055184,-11.4874743058064,FALSE,1
+"85984#1","85984","Brick Sloped 30° 1 x 2 x 2/3","Slope","Slope standard",-74,-38,-72.3761101057899,-47.1515847473561,TRUE,2
+"32803#1","32803","Brick Curved Inverted 2 x 2 x 2/3","Slope","Slope inverted",-94.00003,-37.99999,-105.361207275135,-48.111168077367,TRUE,2
+"35480#3","35480","Plate Special 1 x 2 Rounded with 2 Open Studs","Plate","Plate round",-74.00002,-37.99999,-72.6258474903921,-28.3616343841112,TRUE,1
+"3022#1","3022","Plate 2 x 2","Plate","Plate basic",-84.00003,-37.99999,-88.9777985099724,-38.053696296376,FALSE,2
+"76766#1","76766","Bracket 5 x 2 x 2 1/3 with Holes, Inside Stud Holder","Special","Bracket (SNOT)",-53.99999,-38,-55.9582759094038,-37.6339196622813,FALSE,7
+"35480#4","35480","Plate Special 1 x 2 Rounded with 2 Open Studs","Plate","Plate round",-34,-37.99999,-39.0812632367962,-28.5868428641639,TRUE,2
+"32952#1","32952","Brick Special 1 x 1 x 1 2/3 with Studs on 1 Side","Brick","Brick modified SNOT",-34,-47.99998,-39.5826147693082,-66.0010652796856,TRUE,3
+"32952#2","32952","Brick Special 1 x 1 x 1 2/3 with Studs on 1 Side","Brick","Brick modified SNOT",-34,-28,-38.5678198087064,-9.97597624460965,TRUE,3
+"4865b#1","4865b","Panel 1 x 2 x 1 [Rounded Corners]","Panel","Panel",-14,-38,-22.6676224589632,-38.0905674128573,TRUE,1
+"41682#1","41682","Bracket 2 x 2 with 1 x 2 Vertical Studs","Special","Bracket (SNOT)",-104.0001,-37.99997,-106.02585817894,-29.7055472960709,TRUE,2
+"3020#2","3020","Plate 2 x 4","Plate","Plate basic",-44,-38.00002,-39.6667616996542,-47.0394572642928,TRUE,10
+"85984#2","85984","Brick Sloped 30° 1 x 2 x 2/3","Slope","Slope standard",-83.99998,-28.00003,-89.6119804418088,-19.1103958470924,TRUE,1
+"54200#1","54200","Brick Sloped 30° 1 x 1 x 2/3 (Cheese Slope)","Slope","Slope standard",-53.99998,-28.00004,-55.7893512625969,-18.8115099105507,TRUE,1
+"85984#3","85984","Brick Sloped 30° 1 x 2 x 2/3","Slope","Slope standard",-83.99997,-48.00004,-88.5308941785475,-56.9464648996101,TRUE,1
+"54200#2","54200","Brick Sloped 30° 1 x 1 x 2/3 (Cheese Slope)","Slope","Slope standard",-53.99999,-48.00002,-56.0362050926399,-56.6761455968986,TRUE,1
+"44861#1","44861","Plate Special 1 x 2, Top Clip [Open O]","Special","Clip plate or tile",-23.99998,-28.00003,-22.1111207246452,-19.4510245010234,TRUE,3
+"44861#2","44861","Plate Special 1 x 2, Top Clip [Open O]","Special","Clip plate or tile",-24,-48.00002,-6.87308095592964,-48.33061579696,TRUE,2
+"3069b#1","3069b","Tile 1 x 2 with Groove","Tile","Tile basic",-33.99999,-38.00002,-23.4526578027008,-56.6766628943166,TRUE,1
+"24299#1","24299","Wedge Plate 2 x 2 Left","Plate","Plate wedge",-4,-65.99995,-6.76507590655483,-67.2748562361653,FALSE,1
+"15068#1","15068","Brick Curved 2 x 2 x 2/3","Slope","Slope curved",-24,-57.99999,-23.1595574139853,-75.7541572545467,TRUE,1
+"11458#1","11458","Plate Special 1 x 2 with Pin Hole on Top","Technic","Technic plate (with holes)",-112.0001,-17.99994,-107.496837463636,-11.4463356529742,TRUE,1
+"11458#2","11458","Plate Special 1 x 2 with Pin Hole on Top","Technic","Technic plate (with holes)",-112,-57.99996,-121.641045686183,-58.5563139839256,TRUE,1
+"32803#2","32803","Brick Curved Inverted 2 x 2 x 2/3","Slope","Slope inverted",-112.0001,-37.99995,-122.643017631448,-39.1557380234558,TRUE,1
+"24307#1","24307","Wedge Plate 2 x 2 Right","Plate","Plate wedge",-4.00001,-10.0001,-5.06050875666146,-10.0523807702878,FALSE,1
+"15068#2","15068","Brick Curved 2 x 2 x 2/3","Slope","Slope curved",-24.00002,-18.00002,-21.547773620601,-0.606535473792848,TRUE,1
+"27925#1","27925","Tile 2 x 2 Curved, Macaroni","Tile","Tile modified (grille; slope tile)",26.00002,13.99999,14.6871112218842,18.3657494652679,TRUE,3
+"27925#2","27925","Tile 2 x 2 Curved, Macaroni","Tile","Tile modified (grille; slope tile)",46.00002,13.99998,48.1880925997821,16.1861989510902,FALSE,3
+"11458#3","11458","Plate Special 1 x 2 with Pin Hole on Top","Technic","Technic plate (with holes)",26,31.99998,16.1787104309642,37.5505613115312,TRUE,2
+"26601#1","26601","Wedge Plate 2 x 2 Cut Corner","Plate","Plate wedge",26.00006,41.99997,33.279347190102,46.2781670297234,TRUE,1
+"27925#3","27925","Tile 2 x 2 Curved, Macaroni","Tile","Tile modified (grille; slope tile)",45.99998,-89.99998,57.1679753954366,-94.24198030115,TRUE,3
+"27925#4","27925","Tile 2 x 2 Curved, Macaroni","Tile","Tile modified (grille; slope tile)",25.99998,-90.00001,24.2046428567479,-89.6587758048493,FALSE,3
+"26601#2","26601","Wedge Plate 2 x 2 Cut Corner","Plate","Plate wedge",26.00008,-116.67,31.1531247302769,-122.617034440106,TRUE,1
+"11458#4","11458","Plate Special 1 x 2 with Pin Hole on Top","Technic","Technic plate (with holes)",25.99999,-106.67,18.6292090214888,-108.051178284939,TRUE,2
+"92474#1","92474","Windscreen 6 x 2 x 2 with Handle","Special","Bar holder or handle plate",-13.99998,-38,-5.98118199542689,-29.2421179540144,TRUE,4
+"20482#1","20482","Tile Special Round 1 x 1 with Hollow Bar","Tile","Tile round",-106,-7.99994,-110.046007959909,7.48457200276142,TRUE,2
+"20482#2","20482","Tile Special Round 1 x 1 with Hollow Bar","Tile","Tile round",-106,-67.99996,-102.025486400385,-85.7604736802476,TRUE,2
+"577b#1","577b","Weapon Lightsaber Hilt with Bottom Ring","Minifig","Minifig accessory (tool; weapon)",-106,-7.99994,-92.2614521613201,0.0703031069307314,TRUE,1
+"577b#2","577b","Weapon Lightsaber Hilt with Bottom Ring","Minifig","Minifig accessory (tool; weapon)",-106,-67.99996,-119.843865557879,-77.928699269114,TRUE,1
+"61184#1","61184","Technic Pin 1/2 with 2L Bar Extension","Technic","Technic pin",-106.0001,-7.99994,-125.075647500433,-4.72464223638054,TRUE,2
+"61184#2","61184","Technic Pin 1/2 with 2L Bar Extension","Technic","Technic pin",-106,-67.99996,-104.351192495689,-67.0951635251009,FALSE,2

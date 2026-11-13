@@ -1,543 +1,428 @@
-part_a,part_b,decision,reason,evidence,in_kernel_matrix
-13548#3,76766#1,add,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,0
-13548#4,76766#1,add,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,0
-27925#1,36840#3,add,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,0
-27925#2,36840#1,add,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,0
-27925#3,36840#2,add,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,0
-27925#4,36840#4,add,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,0
-3023#1,54383#1,add,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,0
-3023#2,54384#1,add,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,0
-32952#1,35480#4,add,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,0
-32952#2,35480#4,add,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,0
-35480#4,76766#1,add,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,0
-41682#1,76766#1,add,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,0
-41682#1,85984#2,add,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,0
-41682#1,85984#3,add,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,0
-42862#1,76766#1,add,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,0
-48165#1,76766#1,add,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,0
-11458#1,41682#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-11458#1,61184#1,keep,"technic pin inserted in a pin hole (PDF steps 10, 41)",geometry + PDF,1
-11458#2,41682#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-11458#2,61184#2,keep,"technic pin inserted in a pin hole (PDF steps 10, 41)",geometry + PDF,1
-11458#3,18651#1,keep,"technic pin inserted in a pin hole (PDF steps 10, 41)",geometry + PDF,1
-11458#3,26601#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-11458#4,18651#2,keep,"technic pin inserted in a pin hole (PDF steps 10, 41)",geometry + PDF,1
-11458#4,26601#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-13548#1,2419#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-13548#1,73562#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-13548#2,2419#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-13548#2,73562#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-13548#3,54384#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-13548#3,85984#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-13548#4,54383#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-13548#4,85984#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-15068#1,24299#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-15068#1,32952#1,keep,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,1
-15068#2,24307#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-15068#2,32952#2,keep,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,1
-18651#1,32064a#2,keep,"technic pin inserted in a pin hole (PDF steps 10, 41)",geometry + PDF,1
-18651#1,3713#1,keep,"technic pin inserted in a pin hole (PDF steps 10, 41)",geometry + PDF,1
-18651#2,32064a#1,keep,"technic pin inserted in a pin hole (PDF steps 10, 41)",geometry + PDF,1
-18651#2,3713#2,keep,"technic pin inserted in a pin hole (PDF steps 10, 41)",geometry + PDF,1
-20482#1,577b#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-20482#1,61184#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-20482#2,577b#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-20482#2,61184#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-23950#1,36840#4,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-23950#2,36840#3,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-2419#1,3034#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-2419#1,3040b#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-2419#1,3040b#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-2419#1,35480#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-2419#1,35480#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-2419#1,4740#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-2419#1,73562#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-27925#1,99207#1,keep,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,1
-27925#2,99207#1,keep,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,1
-27925#3,99207#2,keep,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,1
-27925#4,99207#2,keep,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,1
-3020#1,3023#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#1,3023#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#1,3034#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#1,3068b#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#1,32064a#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#1,32064a#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#1,35480#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#1,35480#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#1,73562#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#2,32952#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#2,32952#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#2,44861#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#2,44861#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#2,54200#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#2,54200#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#2,76766#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#2,85984#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3020#2,85984#3,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3022#1,32803#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3022#1,35480#3,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3022#1,76766#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-3034#1,54383#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3034#1,54384#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3040b#1,36840#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3040b#2,36840#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3040b#3,36840#3,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3040b#3,54384#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3040b#4,36840#4,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3040b#4,54383#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3068b#1,54383#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3068b#1,54384#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-3069b#1,44861#1,keep,1x2 tile held in the top clip of the plate (PDF steps 1-30),geometry + PDF,1
-3069b#1,44861#2,keep,1x2 tile held in the top clip of the plate (PDF steps 1-30),geometry + PDF,1
-32064a#1,99207#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-32064a#2,99207#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-32803#1,35480#3,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-32803#1,41682#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-32803#2,41682#1,keep,stud-height penetration (4 LDU): side/SNOT stud joint,geometry,1
-35480#3,76766#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-36840#1,85080#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-36840#2,85080#2,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-42862#1,54384#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-44861#1,92474#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-44861#2,92474#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-48165#1,54383#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-4865b#1,76766#1,keep,nesting joint (pin/axle/clip/bracket) confirmed by edge list and bbox interpenetration,geometry + edge list,1
-73562#1,85080#1,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-73562#1,85080#2,keep,stud/tube stack: footprints overlap and underside meets studs (PDF steps 1-30),geometry + PDF,1
-11458#1,20482#1,remove,narrow or touching-only contact (no stud engagement),geometry,1
-11458#1,3022#1,remove,vertical gap: parts do not touch,geometry,1
-11458#1,32803#1,remove,vertical gap: parts do not touch,geometry,1
-11458#1,32803#2,remove,volumes overlap but no real joint between these parts,geometry,1
-11458#1,577b#1,remove,vertical gap: parts do not touch,geometry,1
-11458#2,20482#2,remove,narrow or touching-only contact (no stud engagement),geometry,1
-11458#2,3022#1,remove,vertical gap: parts do not touch,geometry,1
-11458#2,32803#1,remove,vertical gap: parts do not touch,geometry,1
-11458#2,32803#2,remove,volumes overlap but no real joint between these parts,geometry,1
-11458#2,577b#2,remove,vertical gap: parts do not touch,geometry,1
-11458#3,23950#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#3,27925#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#3,27925#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#3,3023#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#3,3034#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#3,3040b#3,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-11458#3,32064a#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#3,35480#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#3,36840#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#3,3713#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-11458#3,99207#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,23950#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,27925#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,27925#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,3023#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,3034#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,3040b#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,3040b#4,remove,volumes overlap but no real joint between these parts,geometry,1
-11458#4,32064a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,35480#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,36840#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-11458#4,3713#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-11458#4,99207#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#1,13548#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-13548#1,3020#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#1,3040b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-13548#1,3040b#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#1,35480#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#1,36840#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#1,36840#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#1,4740#1,remove,vertical gap: parts do not touch,geometry,1
-13548#1,85080#1,remove,vertical gap: parts do not touch,geometry,1
-13548#1,85080#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#2,3020#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#2,3040b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#2,3040b#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-13548#2,35480#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#2,36840#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#2,36840#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#2,4740#1,remove,vertical gap: parts do not touch,geometry,1
-13548#2,85080#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#2,85080#2,remove,vertical gap: parts do not touch,geometry,1
-13548#3,13548#4,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-13548#3,15068#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#3,15068#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#3,3022#1,remove,vertical gap: parts do not touch,geometry,1
-13548#3,32803#1,remove,vertical gap: parts do not touch,geometry,1
-13548#3,35480#3,remove,vertical gap: parts do not touch,geometry,1
-13548#3,35480#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#3,42862#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-13548#3,48165#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#3,54383#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#4,15068#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#4,15068#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#4,3022#1,remove,vertical gap: parts do not touch,geometry,1
-13548#4,32803#1,remove,vertical gap: parts do not touch,geometry,1
-13548#4,35480#3,remove,vertical gap: parts do not touch,geometry,1
-13548#4,35480#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#4,42862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-13548#4,48165#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-13548#4,54384#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,3020#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,3040b#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,3069b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,35480#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,36840#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,44861#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,44861#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,48165#1,remove,vertical gap: parts do not touch,geometry,1
-15068#1,4865b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-15068#1,54200#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,76766#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-15068#1,85984#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#1,92474#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,3020#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,3040b#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,3069b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,35480#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,36840#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,42862#1,remove,vertical gap: parts do not touch,geometry,1
-15068#2,44861#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,44861#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,4865b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-15068#2,54200#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,76766#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-15068#2,85984#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-15068#2,92474#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#1,23950#2,remove,vertical gap: parts do not touch,geometry,1
-18651#1,2419#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#1,26601#1,remove,vertical gap: parts do not touch,geometry,1
-18651#1,27925#1,remove,vertical gap: parts do not touch,geometry,1
-18651#1,27925#2,remove,vertical gap: parts do not touch,geometry,1
-18651#1,3023#2,remove,vertical gap: parts do not touch,geometry,1
-18651#1,3034#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#1,3040b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#1,3040b#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#1,35480#2,remove,vertical gap: parts do not touch,geometry,1
-18651#1,36840#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#1,73562#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-18651#1,85080#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#1,99207#1,remove,vertical gap: parts do not touch,geometry,1
-18651#2,23950#1,remove,vertical gap: parts do not touch,geometry,1
-18651#2,2419#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#2,26601#2,remove,vertical gap: parts do not touch,geometry,1
-18651#2,27925#3,remove,vertical gap: parts do not touch,geometry,1
-18651#2,27925#4,remove,vertical gap: parts do not touch,geometry,1
-18651#2,3023#1,remove,vertical gap: parts do not touch,geometry,1
-18651#2,3034#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#2,3040b#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#2,3040b#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#2,35480#1,remove,vertical gap: parts do not touch,geometry,1
-18651#2,36840#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#2,36840#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#2,73562#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-18651#2,85080#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-18651#2,99207#2,remove,vertical gap: parts do not touch,geometry,1
-20482#1,32803#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-20482#1,32803#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-20482#1,41682#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-20482#1,85984#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-20482#2,32803#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-20482#2,32803#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-20482#2,41682#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-20482#2,85984#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-20482#2,85984#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#1,23950#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#1,24299#1,remove,volumes overlap but no real joint between these parts,geometry,1
-23950#1,27925#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#1,27925#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#1,3040b#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#1,3040b#4,remove,vertical gap: parts do not touch,geometry,1
-23950#1,32064a#1,remove,vertical gap: parts do not touch,geometry,1
-23950#1,32064a#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#1,3713#2,remove,vertical gap: parts do not touch,geometry,1
-23950#1,4865b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#1,99207#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#1,99207#2,remove,volumes overlap but no real joint between these parts,geometry,1
-23950#2,24307#1,remove,volumes overlap but no real joint between these parts,geometry,1
-23950#2,27925#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#2,27925#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#2,3040b#3,remove,vertical gap: parts do not touch,geometry,1
-23950#2,32064a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#2,32064a#2,remove,vertical gap: parts do not touch,geometry,1
-23950#2,3713#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#2,4865b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#2,73562#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#2,85080#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-23950#2,99207#1,remove,volumes overlap but no real joint between these parts,geometry,1
-23950#2,99207#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,3020#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-2419#1,3023#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,3023#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,3040b#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,3040b#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,3068b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,32064a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,32064a#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,36840#1,remove,vertical gap: parts do not touch,geometry,1
-2419#1,36840#2,remove,vertical gap: parts do not touch,geometry,1
-2419#1,36840#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,36840#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,3713#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,99207#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-2419#1,99207#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-24299#1,3020#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-24299#1,3040b#4,remove,vertical gap: parts do not touch,geometry,1
-24299#1,32064a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-24299#1,32952#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-24299#1,36840#4,remove,narrow or touching-only contact (no stud engagement),geometry,1
-24299#1,44861#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-24299#1,48165#1,remove,vertical gap: parts do not touch,geometry,1
-24299#1,76766#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-24299#1,92474#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-24299#1,99207#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-24307#1,3020#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-24307#1,3040b#3,remove,vertical gap: parts do not touch,geometry,1
-24307#1,32952#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-24307#1,36840#3,remove,narrow or touching-only contact (no stud engagement),geometry,1
-24307#1,42862#1,remove,vertical gap: parts do not touch,geometry,1
-24307#1,44861#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-24307#1,76766#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-24307#1,92474#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#1,27925#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#1,27925#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#1,3023#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#1,3034#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#1,32064a#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#1,35480#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#1,3713#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#1,99207#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#2,27925#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#2,27925#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#2,3023#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#2,3034#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#2,32064a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#2,35480#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#2,3713#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-26601#2,99207#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-27925#1,27925#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-27925#1,32064a#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-27925#1,3713#1,remove,vertical gap: parts do not touch,geometry,1
-27925#2,32064a#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-27925#2,3713#1,remove,narrow or touching-only contact (no stud engagement),geometry,1
-27925#3,27925#4,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-27925#3,32064a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-27925#3,3713#2,remove,vertical gap: parts do not touch,geometry,1
-27925#4,32064a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-27925#4,3713#2,remove,narrow or touching-only contact (no stud engagement),geometry,1
-27925#4,48165#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,3040b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,3040b#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,3040b#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,3040b#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,36840#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,36840#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,36840#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,42862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,4740#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,48165#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3020#1,54383#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3020#1,54384#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3020#1,99207#1,remove,vertical gap: parts do not touch,geometry,1
-3020#1,99207#2,remove,vertical gap: parts do not touch,geometry,1
-3020#2,3022#1,remove,vertical gap: parts do not touch,geometry,1
-3020#2,3069b#1,remove,vertical gap: parts do not touch,geometry,1
-3020#2,35480#3,remove,vertical gap: parts do not touch,geometry,1
-3020#2,92474#1,remove,volumes overlap but no real joint between these parts,geometry,1
-3022#1,32803#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3022#1,41682#1,remove,volumes overlap but no real joint between these parts,geometry,1
-3022#1,42862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3022#1,48165#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3022#1,54200#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3022#1,54200#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3022#1,61184#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3022#1,85984#1,remove,vertical gap: parts do not touch,geometry,1
-3022#1,85984#2,remove,vertical gap: parts do not touch,geometry,1
-3022#1,85984#3,remove,vertical gap: parts do not touch,geometry,1
-3023#1,3034#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3023#1,3068b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3023#1,32064a#1,remove,vertical gap: parts do not touch,geometry,1
-3023#1,3713#2,remove,vertical gap: parts do not touch,geometry,1
-3023#2,3034#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3023#2,3040b#3,remove,vertical gap: parts do not touch,geometry,1
-3023#2,3068b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3023#2,32064a#2,remove,vertical gap: parts do not touch,geometry,1
-3023#2,3713#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3023#2,42862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3023#2,48165#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3034#1,3040b#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3034#1,3040b#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3034#1,3068b#1,remove,vertical gap: parts do not touch,geometry,1
-3034#1,32064a#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3034#1,32064a#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3034#1,3713#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3034#1,42862#1,remove,vertical gap: parts do not touch,geometry,1
-3034#1,48165#1,remove,vertical gap: parts do not touch,geometry,1
-3040b#1,32064a#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#1,3713#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#1,73562#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#1,85080#1,remove,vertical gap: parts do not touch,geometry,1
-3040b#1,85080#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#1,99207#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#2,3068b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#2,32064a#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#2,35480#1,remove,vertical gap: parts do not touch,geometry,1
-3040b#2,3713#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#2,4740#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#2,73562#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#2,85080#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#2,85080#2,remove,vertical gap: parts do not touch,geometry,1
-3040b#2,99207#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#3,3068b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#3,32064a#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#3,35480#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#3,3713#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#3,42862#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#3,4865b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#3,54383#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#3,99207#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#4,3068b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#4,32064a#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#4,3713#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#4,48165#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3040b#4,4865b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#4,54384#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3040b#4,99207#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3068b#1,32064a#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3068b#1,32064a#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3068b#1,35480#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3068b#1,35480#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3068b#1,35480#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3068b#1,36840#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3068b#1,36840#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3068b#1,42862#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3068b#1,48165#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3068b#1,73562#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3068b#1,99207#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3068b#1,99207#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3069b#1,32952#1,remove,vertical gap: parts do not touch,geometry,1
-3069b#1,32952#2,remove,vertical gap: parts do not touch,geometry,1
-3069b#1,54200#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3069b#1,54200#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3069b#1,76766#1,remove,vertical gap: parts do not touch,geometry,1
-3069b#1,92474#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32064a#1,35480#1,remove,vertical gap: parts do not touch,geometry,1
-32064a#1,36840#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32064a#1,36840#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32064a#1,3713#2,remove,volumes overlap but no real joint between these parts,geometry,1
-32064a#1,73562#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-32064a#1,85080#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32064a#1,85080#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32064a#2,35480#2,remove,vertical gap: parts do not touch,geometry,1
-32064a#2,36840#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32064a#2,3713#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-32064a#2,73562#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-32064a#2,85080#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32064a#2,85080#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32803#1,32803#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32803#1,48165#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32803#1,61184#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32803#1,76766#1,remove,volumes overlap but no real joint between these parts,geometry,1
-32803#1,85984#1,remove,vertical gap: parts do not touch,geometry,1
-32803#1,85984#2,remove,vertical gap: parts do not touch,geometry,1
-32803#1,85984#3,remove,vertical gap: parts do not touch,geometry,1
-32803#2,577b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32803#2,577b#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32952#1,32952#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-32952#1,44861#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32952#1,44861#2,remove,vertical gap: parts do not touch,geometry,1
-32952#1,4865b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-32952#1,54200#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32952#1,54200#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32952#1,76766#1,remove,volumes overlap but no real joint between these parts,geometry,1
-32952#1,92474#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32952#2,44861#1,remove,vertical gap: parts do not touch,geometry,1
-32952#2,44861#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32952#2,4865b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-32952#2,54200#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32952#2,54200#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-32952#2,76766#1,remove,volumes overlap but no real joint between these parts,geometry,1
-32952#2,92474#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#1,3713#2,remove,vertical gap: parts do not touch,geometry,1
-35480#1,4740#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#2,3713#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#2,4740#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#3,35480#4,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#3,42862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#3,48165#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#3,54200#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#3,54200#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#3,85984#1,remove,vertical gap: parts do not touch,geometry,1
-35480#3,85984#2,remove,vertical gap: parts do not touch,geometry,1
-35480#3,85984#3,remove,vertical gap: parts do not touch,geometry,1
-35480#4,36840#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-35480#4,42862#1,remove,vertical gap: parts do not touch,geometry,1
-35480#4,48165#1,remove,vertical gap: parts do not touch,geometry,1
-35480#4,4865b#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-35480#4,54383#1,remove,vertical gap: parts do not touch,geometry,1
-35480#4,54384#1,remove,vertical gap: parts do not touch,geometry,1
-35480#4,85984#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#1,3713#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#1,73562#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-36840#1,85080#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#2,3713#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#2,73562#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-36840#2,85080#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#2,99207#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-36840#3,42862#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#3,4865b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#3,54383#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#3,54384#1,remove,vertical gap: parts do not touch,geometry,1
-36840#3,99207#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-36840#4,3713#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#4,48165#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#4,4865b#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#4,54383#1,remove,vertical gap: parts do not touch,geometry,1
-36840#4,54384#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-36840#4,99207#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-3713#1,99207#1,remove,narrow or touching-only contact (no stud engagement),geometry,1
-3713#2,73562#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3713#2,85080#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-3713#2,99207#2,remove,narrow or touching-only contact (no stud engagement),geometry,1
-41682#1,61184#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-42862#1,48165#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-42862#1,4865b#1,remove,vertical gap: parts do not touch,geometry,1
-42862#1,54383#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-42862#1,85984#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-44861#1,44861#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-44861#1,54200#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-44861#1,76766#1,remove,vertical gap: parts do not touch,geometry,1
-44861#2,54200#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-44861#2,54200#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-44861#2,76766#1,remove,vertical gap: parts do not touch,geometry,1
-48165#1,4865b#1,remove,vertical gap: parts do not touch,geometry,1
-48165#1,54384#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-48165#1,85984#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-54200#1,54200#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-54200#1,76766#1,remove,vertical gap: parts do not touch,geometry,1
-54200#1,85984#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-54200#1,85984#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-54200#2,76766#1,remove,vertical gap: parts do not touch,geometry,1
-54200#2,85984#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-54200#2,85984#3,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-54383#1,54384#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-54383#1,85984#1,remove,vertical gap: parts do not touch,geometry,1
-54384#1,85984#1,remove,vertical gap: parts do not touch,geometry,1
-577b#1,61184#1,remove,vertical gap: parts do not touch,geometry,1
-577b#1,85984#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-577b#2,61184#2,remove,vertical gap: parts do not touch,geometry,1
-577b#2,85984#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-577b#2,85984#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-61184#1,85984#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-61184#2,85984#3,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-73562#1,99207#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-73562#1,99207#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-76766#1,85984#2,remove,vertical gap: parts do not touch,geometry,1
-76766#1,85984#3,remove,vertical gap: parts do not touch,geometry,1
-85080#1,85080#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-85080#1,99207#1,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-85080#1,99207#2,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-85080#2,99207#1,remove,bounding boxes not in contact in real LDraw geometry (kernel box too large),geometry,1
-85080#2,99207#2,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-85984#2,85984#3,remove,parts only touch sideways (no stud/tube/clip engagement),geometry,1
-11458,15068,not_added,edge list links them; instances are >50 LDU apart in the MPD,edge list only,0
-23950,32064a,not_added,edge list links them; 4 LDU vertical gap in the MPD,edge list only,0
-2419,3020,not_added,"side-by-side plates at same level, no stud engagement",edge list only,0
-24307,32952,not_added,"side contact only; symmetric 24299 would give the same, ambiguous",edge list only,0
+inst_a,inst_b,part_a,part_b,kind,joint,in_kernel,decision,reason
+3020#1,2419#1,3020,2419,side,stud,False,reject,no engagement in the real geometry
+3020#1,54384#1,3020,54384,side,stud,False,reject,no engagement in the real geometry
+3020#1,54383#1,3020,54383,side,stud,False,reject,no engagement in the real geometry
+3020#1,3040b#1,3020,3040b,near,stud,False,reject,no engagement in the real geometry
+3020#1,3040b#2,3020,3040b,near,stud,False,reject,no engagement in the real geometry
+3020#1,3713#1,3020,3713,near,,False,reject,compatibility rules: these part types cannot join
+3020#1,18651#1,3020,18651,gap,,False,reject,compatibility rules: these part types cannot join
+3020#1,18651#2,3020,18651,gap,,False,reject,compatibility rules: these part types cannot join
+3020#1,3713#2,3020,3713,stack,,False,reject,compatibility rules: these part types cannot join
+3020#1,3040b#3,3020,3040b,near,stud,False,reject,no engagement in the real geometry
+3020#1,3040b#4,3020,3040b,near,stud,False,reject,no engagement in the real geometry
+3034#1,35480#1,3034,35480,side,stud,False,reject,no engagement in the real geometry
+3034#1,35480#2,3034,35480,side,stud,False,reject,no engagement in the real geometry
+3034#1,4740#1,3034,4740,side,stud,False,reject,no engagement in the real geometry
+3034#1,3023#1,3034,3023,side,stud,False,reject,no engagement in the real geometry
+3034#1,3023#2,3034,3023,side,stud,False,reject,no engagement in the real geometry
+3034#1,13548#1,3034,13548,near,stud,False,reject,no engagement in the real geometry
+3034#1,13548#2,3034,13548,near,stud,False,reject,no engagement in the real geometry
+3034#1,73562#1,3034,73562,gap,stud,False,reject,no engagement in the real geometry
+3034#1,3040b#1,3034,3040b,near,stud,False,reject,no engagement in the real geometry
+3034#1,3040b#2,3034,3040b,near,stud,False,reject,no engagement in the real geometry
+3034#1,3068b#1,3034,3068b,gap,stud,False,reject,no engagement in the real geometry
+3034#1,32064a#1,3034,32064a,near,stud,False,reject,no engagement in the real geometry
+3034#1,32064a#2,3034,32064a,near,stud,False,reject,no engagement in the real geometry
+3034#1,3040b#3,3034,3040b,near,stud,False,reject,no engagement in the real geometry
+3034#1,3040b#4,3034,3040b,near,stud,False,reject,no engagement in the real geometry
+3034#1,42862#1,3034,42862,gap,stud,False,reject,no engagement in the real geometry
+3034#1,48165#1,3034,48165,gap,stud,False,reject,no engagement in the real geometry
+3034#1,13548#3,3034,13548,gap,stud,False,reject,no engagement in the real geometry
+3034#1,13548#4,3034,13548,gap,stud,False,reject,no engagement in the real geometry
+2419#1,32064a#1,2419,32064a,near,stud,False,reject,no engagement in the real geometry
+2419#1,32064a#2,2419,32064a,near,stud,False,reject,no engagement in the real geometry
+35480#1,4740#1,35480,4740,near,stud,False,reject,no engagement in the real geometry
+35480#1,3023#1,35480,3023,side,stud,False,reject,no engagement in the real geometry
+35480#1,13548#2,35480,13548,near,stud,False,reject,no engagement in the real geometry
+35480#1,73562#1,35480,73562,near,stud,False,reject,no engagement in the real geometry
+35480#1,3040b#2,35480,3040b,gap,stud,False,reject,no engagement in the real geometry
+35480#1,3068b#1,35480,3068b,near,stud,False,reject,no engagement in the real geometry
+35480#1,32064a#1,35480,32064a,gap,stud,False,reject,no engagement in the real geometry
+35480#2,4740#1,35480,4740,near,stud,False,reject,no engagement in the real geometry
+35480#2,3023#2,35480,3023,side,stud,False,reject,no engagement in the real geometry
+35480#2,13548#1,35480,13548,near,stud,False,reject,no engagement in the real geometry
+35480#2,73562#1,35480,73562,near,stud,False,reject,no engagement in the real geometry
+35480#2,3040b#1,35480,3040b,gap,stud,False,reject,no engagement in the real geometry
+35480#2,3068b#1,35480,3068b,near,stud,False,reject,no engagement in the real geometry
+35480#2,32064a#2,35480,32064a,gap,stud,False,reject,no engagement in the real geometry
+4740#1,13548#1,4740,13548,gap,stud,False,reject,no engagement in the real geometry
+4740#1,13548#2,4740,13548,gap,stud,False,reject,no engagement in the real geometry
+4740#1,73562#1,4740,73562,gap,stud,False,reject,no engagement in the real geometry
+4740#1,3040b#1,4740,3040b,near,stud,False,reject,no engagement in the real geometry
+4740#1,3040b#2,4740,3040b,near,stud,False,reject,no engagement in the real geometry
+3023#1,73562#1,3023,73562,near,stud,False,reject,no engagement in the real geometry
+3023#1,3068b#1,3023,3068b,near,stud,False,reject,no engagement in the real geometry
+3023#1,32064a#1,3023,32064a,gap,stud,False,reject,no engagement in the real geometry
+3023#1,3040b#4,3023,3040b,gap,stud,False,reject,no engagement in the real geometry
+3023#1,48165#1,3023,48165,near,stud,False,reject,no engagement in the real geometry
+3023#2,73562#1,3023,73562,near,stud,False,reject,no engagement in the real geometry
+3023#2,3068b#1,3023,3068b,near,stud,False,reject,no engagement in the real geometry
+3023#2,32064a#2,3023,32064a,gap,stud,False,reject,no engagement in the real geometry
+3023#2,3040b#3,3023,3040b,gap,stud,False,reject,no engagement in the real geometry
+3023#2,42862#1,3023,42862,near,stud,False,reject,no engagement in the real geometry
+54384#1,54383#1,54384,54383,side,stud,False,reject,no engagement in the real geometry
+54384#1,32064a#2,54384,32064a,near,stud,False,reject,no engagement in the real geometry
+54384#1,48165#1,54384,48165,near,stud,False,reject,no engagement in the real geometry
+54384#1,13548#4,54384,13548,near,stud,False,reject,no engagement in the real geometry
+54384#1,11458#3,54384,11458,near,stud,False,reject,no engagement in the real geometry
+54384#1,26601#1,54384,26601,side,stud,False,reject,no engagement in the real geometry
+54383#1,32064a#1,54383,32064a,near,stud,False,reject,no engagement in the real geometry
+54383#1,42862#1,54383,42862,near,stud,False,reject,no engagement in the real geometry
+54383#1,13548#3,54383,13548,near,stud,False,reject,no engagement in the real geometry
+54383#1,26601#2,54383,26601,side,stud,False,reject,no engagement in the real geometry
+54383#1,11458#4,54383,11458,near,stud,False,reject,no engagement in the real geometry
+13548#1,13548#2,13548,13548,side,stud,False,reject,no engagement in the real geometry
+13548#1,73562#1,13548,73562,inside,stud,False,reject,no engagement in the real geometry
+13548#1,3040b#1,13548,3040b,side,stud,False,reject,no engagement in the real geometry
+13548#1,36840#1,13548,36840,near,stud,False,reject,no engagement in the real geometry
+13548#1,85080#1,13548,85080,gap,stud,False,reject,no engagement in the real geometry
+13548#1,85080#2,13548,85080,near,stud,False,reject,no engagement in the real geometry
+13548#1,27925#2,13548,27925,near,stud,False,reject,no engagement in the real geometry
+13548#2,73562#1,13548,73562,inside,stud,False,reject,no engagement in the real geometry
+13548#2,3040b#2,13548,3040b,side,stud,False,reject,no engagement in the real geometry
+13548#2,36840#2,13548,36840,near,stud,False,reject,no engagement in the real geometry
+13548#2,85080#1,13548,85080,near,stud,False,reject,no engagement in the real geometry
+13548#2,85080#2,13548,85080,gap,stud,False,reject,no engagement in the real geometry
+13548#2,27925#3,13548,27925,near,stud,False,reject,no engagement in the real geometry
+73562#1,3040b#1,73562,3040b,side,stud,False,reject,no engagement in the real geometry
+73562#1,3040b#2,73562,3040b,side,stud,False,reject,no engagement in the real geometry
+73562#1,3068b#1,73562,3068b,side,stud,False,reject,no engagement in the real geometry
+73562#1,18651#1,73562,18651,side,,False,reject,compatibility rules: these part types cannot join
+73562#1,18651#2,73562,18651,side,,False,reject,compatibility rules: these part types cannot join
+73562#1,32064a#1,73562,32064a,side,stud,False,reject,no engagement in the real geometry
+73562#1,32064a#2,73562,32064a,side,stud,False,reject,no engagement in the real geometry
+73562#1,36840#1,73562,36840,side,stud,False,reject,no engagement in the real geometry
+73562#1,36840#2,73562,36840,side,stud,False,reject,no engagement in the real geometry
+73562#1,99207#1,73562,99207,side,stud,False,reject,no engagement in the real geometry
+73562#1,99207#2,73562,99207,side,stud,False,reject,no engagement in the real geometry
+73562#1,23950#1,73562,23950,near,stud,False,reject,no engagement in the real geometry
+73562#1,23950#2,73562,23950,near,stud,False,reject,no engagement in the real geometry
+3040b#1,32064a#2,3040b,32064a,side,stud,False,reject,no engagement in the real geometry
+3040b#1,85080#1,3040b,85080,gap,stud,False,reject,no engagement in the real geometry
+3040b#1,99207#1,3040b,99207,near,stud,False,reject,no engagement in the real geometry
+3040b#1,23950#2,3040b,23950,near,stud,False,reject,no engagement in the real geometry
+3040b#2,32064a#1,3040b,32064a,side,stud,False,reject,no engagement in the real geometry
+3040b#2,85080#2,3040b,85080,gap,stud,False,reject,no engagement in the real geometry
+3040b#2,99207#2,3040b,99207,near,stud,False,reject,no engagement in the real geometry
+3040b#2,23950#1,3040b,23950,near,stud,False,reject,no engagement in the real geometry
+3068b#1,18651#1,3068b,18651,near,,False,reject,compatibility rules: these part types cannot join
+3068b#1,18651#2,3068b,18651,near,,False,reject,compatibility rules: these part types cannot join
+3068b#1,32064a#1,3068b,32064a,side,stud,False,reject,no engagement in the real geometry
+3068b#1,32064a#2,3068b,32064a,side,stud,False,reject,no engagement in the real geometry
+3068b#1,3040b#3,3068b,3040b,side,stud,False,reject,no engagement in the real geometry
+3068b#1,3040b#4,3068b,3040b,side,stud,False,reject,no engagement in the real geometry
+3068b#1,42862#1,3068b,42862,side,stud,False,reject,no engagement in the real geometry
+3068b#1,48165#1,3068b,48165,side,stud,False,reject,no engagement in the real geometry
+3713#1,32064a#2,3713,32064a,side,,False,reject,compatibility rules: these part types cannot join
+3713#1,99207#1,3713,99207,stack,,False,reject,compatibility rules: these part types cannot join
+3713#1,27925#1,3713,27925,gap,,False,reject,compatibility rules: these part types cannot join
+3713#1,27925#2,3713,27925,stack,,False,reject,compatibility rules: these part types cannot join
+3713#1,11458#3,3713,11458,side,,False,reject,compatibility rules: these part types cannot join
+3713#1,26601#1,3713,26601,near,,False,reject,compatibility rules: these part types cannot join
+18651#1,99207#1,18651,99207,gap,,False,reject,compatibility rules: these part types cannot join
+18651#1,27925#1,18651,27925,gap,,False,reject,compatibility rules: these part types cannot join
+18651#1,27925#2,18651,27925,gap,,False,reject,compatibility rules: these part types cannot join
+18651#1,26601#1,18651,26601,gap,,False,reject,compatibility rules: these part types cannot join
+18651#2,99207#2,18651,99207,gap,,False,reject,compatibility rules: these part types cannot join
+18651#2,27925#3,18651,27925,gap,,False,reject,compatibility rules: these part types cannot join
+18651#2,27925#4,18651,27925,gap,,False,reject,compatibility rules: these part types cannot join
+18651#2,26601#2,18651,26601,gap,,False,reject,compatibility rules: these part types cannot join
+32064a#1,3713#2,32064a,3713,side,,False,reject,compatibility rules: these part types cannot join
+32064a#1,3040b#4,32064a,3040b,side,stud,False,reject,no engagement in the real geometry
+32064a#1,36840#2,32064a,36840,near,stud,False,reject,no engagement in the real geometry
+32064a#1,85080#2,32064a,85080,near,stud,False,reject,no engagement in the real geometry
+32064a#1,36840#4,32064a,36840,near,stud,False,reject,no engagement in the real geometry
+32064a#1,23950#1,32064a,23950,gap,stud,False,reject,no engagement in the real geometry
+32064a#1,27925#3,32064a,27925,near,stud,False,reject,no engagement in the real geometry
+32064a#1,27925#4,32064a,27925,near,stud,False,reject,no engagement in the real geometry
+32064a#2,3040b#3,32064a,3040b,side,stud,False,reject,no engagement in the real geometry
+32064a#2,36840#1,32064a,36840,near,stud,False,reject,no engagement in the real geometry
+32064a#2,85080#1,32064a,85080,near,stud,False,reject,no engagement in the real geometry
+32064a#2,36840#3,32064a,36840,near,stud,False,reject,no engagement in the real geometry
+32064a#2,23950#2,32064a,23950,gap,stud,False,reject,no engagement in the real geometry
+32064a#2,27925#1,32064a,27925,near,stud,False,reject,no engagement in the real geometry
+32064a#2,27925#2,32064a,27925,near,stud,False,reject,no engagement in the real geometry
+3713#2,99207#2,3713,99207,stack,,False,reject,compatibility rules: these part types cannot join
+3713#2,27925#3,3713,27925,gap,,False,reject,compatibility rules: these part types cannot join
+3713#2,27925#4,3713,27925,stack,,False,reject,compatibility rules: these part types cannot join
+3713#2,26601#2,3713,26601,near,,False,reject,compatibility rules: these part types cannot join
+3713#2,11458#4,3713,11458,side,,False,reject,compatibility rules: these part types cannot join
+3040b#3,42862#1,3040b,42862,side,stud,False,reject,no engagement in the real geometry
+3040b#3,99207#1,3040b,99207,near,stud,False,reject,no engagement in the real geometry
+3040b#3,23950#2,3040b,23950,gap,stud,False,reject,no engagement in the real geometry
+3040b#3,76766#1,3040b,76766,near,stud,False,reject,no engagement in the real geometry
+3040b#3,4865b#1,3040b,4865b,near,stud,False,reject,no engagement in the real geometry
+3040b#3,11458#3,3040b,11458,side,stud,False,reject,no engagement in the real geometry
+3040b#3,26601#1,3040b,26601,near,stud,False,reject,no engagement in the real geometry
+3040b#4,48165#1,3040b,48165,side,stud,False,reject,no engagement in the real geometry
+3040b#4,99207#2,3040b,99207,near,stud,False,reject,no engagement in the real geometry
+3040b#4,23950#1,3040b,23950,gap,stud,False,reject,no engagement in the real geometry
+3040b#4,76766#1,3040b,76766,near,stud,False,reject,no engagement in the real geometry
+3040b#4,4865b#1,3040b,4865b,near,stud,False,reject,no engagement in the real geometry
+3040b#4,26601#2,3040b,26601,stack,stud,False,reject,no engagement in the real geometry
+3040b#4,11458#4,3040b,11458,side,stud,False,reject,no engagement in the real geometry
+42862#1,48165#1,42862,48165,side,stud,False,reject,no engagement in the real geometry
+42862#1,13548#3,42862,13548,side,stud,False,reject,no engagement in the real geometry
+42862#1,13548#4,42862,13548,near,stud,False,reject,no engagement in the real geometry
+42862#1,36840#3,42862,36840,near,stud,False,reject,no engagement in the real geometry
+42862#1,23950#2,42862,23950,near,stud,False,reject,no engagement in the real geometry
+42862#1,85984#1,42862,85984,near,stud,False,reject,no engagement in the real geometry
+42862#1,35480#4,42862,35480,gap,stud,False,reject,no engagement in the real geometry
+42862#1,4865b#1,42862,4865b,gap,stud,False,reject,no engagement in the real geometry
+42862#1,27925#1,42862,27925,near,stud,False,reject,no engagement in the real geometry
+48165#1,13548#3,48165,13548,near,stud,False,reject,no engagement in the real geometry
+48165#1,13548#4,48165,13548,side,stud,False,reject,no engagement in the real geometry
+48165#1,36840#4,48165,36840,near,stud,False,reject,no engagement in the real geometry
+48165#1,23950#1,48165,23950,near,stud,False,reject,no engagement in the real geometry
+48165#1,85984#1,48165,85984,near,stud,False,reject,no engagement in the real geometry
+48165#1,35480#4,48165,35480,gap,stud,False,reject,no engagement in the real geometry
+48165#1,4865b#1,48165,4865b,gap,stud,False,reject,no engagement in the real geometry
+48165#1,27925#4,48165,27925,near,stud,False,reject,no engagement in the real geometry
+13548#3,13548#4,13548,13548,side,stud,False,reject,no engagement in the real geometry
+36840#1,85080#1,36840,85080,inside,stud,False,reject,no engagement in the real geometry
+36840#1,99207#1,36840,99207,side,stud,False,reject,no engagement in the real geometry
+36840#1,23950#2,36840,23950,side,stud,False,reject,no engagement in the real geometry
+36840#2,85080#2,36840,85080,inside,stud,False,reject,no engagement in the real geometry
+36840#2,99207#2,36840,99207,side,stud,False,reject,no engagement in the real geometry
+36840#2,23950#1,36840,23950,side,stud,False,reject,no engagement in the real geometry
+85080#1,85080#2,85080,85080,side,stud,False,reject,no engagement in the real geometry
+85080#1,99207#1,85080,99207,side,stud,False,reject,no engagement in the real geometry
+85080#1,23950#2,85080,23950,side,stud,False,reject,no engagement in the real geometry
+85080#1,27925#2,85080,27925,near,stud,False,reject,no engagement in the real geometry
+85080#2,99207#2,85080,99207,side,stud,False,reject,no engagement in the real geometry
+85080#2,23950#1,85080,23950,side,stud,False,reject,no engagement in the real geometry
+85080#2,27925#3,85080,27925,near,stud,False,reject,no engagement in the real geometry
+36840#3,99207#1,36840,99207,side,stud,False,reject,no engagement in the real geometry
+36840#3,76766#1,36840,76766,near,stud,False,reject,no engagement in the real geometry
+36840#3,4865b#1,36840,4865b,near,stud,False,reject,no engagement in the real geometry
+36840#3,15068#2,36840,15068,near,stud,False,reject,no engagement in the real geometry
+36840#4,99207#2,36840,99207,side,stud,False,reject,no engagement in the real geometry
+36840#4,76766#1,36840,76766,near,stud,False,reject,no engagement in the real geometry
+36840#4,4865b#1,36840,4865b,near,stud,False,reject,no engagement in the real geometry
+36840#4,15068#1,36840,15068,near,stud,False,reject,no engagement in the real geometry
+99207#1,23950#2,99207,23950,inside,stud,False,reject,no engagement in the real geometry
+99207#1,24307#1,99207,24307,near,stud,False,reject,no engagement in the real geometry
+99207#2,23950#1,99207,23950,inside,stud,False,reject,no engagement in the real geometry
+99207#2,24299#1,99207,24299,side,stud,False,reject,no engagement in the real geometry
+23950#1,76766#1,23950,76766,near,stud,False,reject,no engagement in the real geometry
+23950#1,4865b#1,23950,4865b,near,stud,False,reject,no engagement in the real geometry
+23950#1,24299#1,23950,24299,inside,stud,False,reject,no engagement in the real geometry
+23950#1,15068#1,23950,15068,side,stud,False,reject,no engagement in the real geometry
+23950#1,27925#3,23950,27925,near,stud,False,reject,no engagement in the real geometry
+23950#1,27925#4,23950,27925,near,stud,False,reject,no engagement in the real geometry
+23950#2,76766#1,23950,76766,near,stud,False,reject,no engagement in the real geometry
+23950#2,4865b#1,23950,4865b,near,stud,False,reject,no engagement in the real geometry
+23950#2,24307#1,23950,24307,inside,stud,False,reject,no engagement in the real geometry
+23950#2,15068#2,23950,15068,side,stud,False,reject,no engagement in the real geometry
+23950#2,27925#1,23950,27925,near,stud,False,reject,no engagement in the real geometry
+23950#2,27925#2,23950,27925,near,stud,False,reject,no engagement in the real geometry
+85984#1,76766#1,85984,76766,inside,stud,False,reject,no engagement in the real geometry
+32803#1,35480#3,32803,35480,inside,stud,False,reject,no engagement in the real geometry
+32803#1,76766#1,32803,76766,inside,stud,False,reject,no engagement in the real geometry
+32803#1,32803#2,32803,32803,near,stud,False,reject,no engagement in the real geometry
+32803#1,61184#1,32803,61184,near,,False,reject,compatibility rules: these part types cannot join
+32803#1,61184#2,32803,61184,near,,False,reject,compatibility rules: these part types cannot join
+35480#3,76766#1,35480,76766,inside,stud,False,reject,no engagement in the real geometry
+35480#3,41682#1,35480,41682,near,stud,False,reject,no engagement in the real geometry
+3022#1,76766#1,3022,76766,inside,stud,False,reject,no engagement in the real geometry
+3022#1,41682#1,3022,41682,inside,stud,False,reject,no engagement in the real geometry
+3022#1,3020#2,3022,3020,gap,stud,False,reject,no engagement in the real geometry
+3022#1,32803#2,3022,32803,near,stud,False,reject,no engagement in the real geometry
+3022#1,61184#1,3022,61184,near,,False,reject,compatibility rules: these part types cannot join
+3022#1,61184#2,3022,61184,near,,False,reject,compatibility rules: these part types cannot join
+76766#1,35480#4,76766,35480,inside,stud,False,reject,no engagement in the real geometry
+76766#1,32952#1,76766,32952,inside,stud,False,reject,no engagement in the real geometry
+76766#1,32952#2,76766,32952,inside,stud,False,reject,no engagement in the real geometry
+76766#1,41682#1,76766,41682,inside,stud,False,reject,no engagement in the real geometry
+76766#1,85984#2,76766,85984,gap,stud,False,reject,no engagement in the real geometry
+76766#1,54200#1,76766,54200,gap,stud,False,reject,no engagement in the real geometry
+76766#1,85984#3,76766,85984,gap,stud,False,reject,no engagement in the real geometry
+76766#1,54200#2,76766,54200,gap,stud,False,reject,no engagement in the real geometry
+76766#1,44861#1,76766,44861,gap,stud,False,reject,no engagement in the real geometry
+76766#1,44861#2,76766,44861,gap,stud,False,reject,no engagement in the real geometry
+76766#1,24299#1,76766,24299,side,stud,False,reject,no engagement in the real geometry
+76766#1,15068#1,76766,15068,side,stud,False,reject,no engagement in the real geometry
+76766#1,11458#1,76766,11458,stack,stud,False,reject,no engagement in the real geometry
+76766#1,11458#2,76766,11458,stack,stud,False,reject,no engagement in the real geometry
+76766#1,32803#2,76766,32803,near,stud,False,reject,no engagement in the real geometry
+76766#1,24307#1,76766,24307,side,stud,False,reject,no engagement in the real geometry
+76766#1,15068#2,76766,15068,side,stud,False,reject,no engagement in the real geometry
+76766#1,61184#1,76766,61184,near,,False,reject,compatibility rules: these part types cannot join
+76766#1,61184#2,76766,61184,near,,False,reject,compatibility rules: these part types cannot join
+35480#4,4865b#1,35480,4865b,side,stud,False,reject,no engagement in the real geometry
+35480#4,24299#1,35480,24299,near,stud,False,reject,no engagement in the real geometry
+35480#4,15068#1,35480,15068,near,stud,False,reject,no engagement in the real geometry
+35480#4,24307#1,35480,24307,near,stud,False,reject,no engagement in the real geometry
+35480#4,15068#2,35480,15068,near,stud,False,reject,no engagement in the real geometry
+32952#1,32952#2,32952,32952,side,stud,False,reject,no engagement in the real geometry
+32952#1,4865b#1,32952,4865b,side,stud,False,reject,no engagement in the real geometry
+32952#1,54200#1,32952,54200,near,stud,False,reject,no engagement in the real geometry
+32952#1,54200#2,32952,54200,near,stud,False,reject,no engagement in the real geometry
+32952#1,44861#1,32952,44861,near,stud,False,reject,no engagement in the real geometry
+32952#1,44861#2,32952,44861,gap,stud,False,reject,no engagement in the real geometry
+32952#1,24299#1,32952,24299,side,stud,False,reject,no engagement in the real geometry
+32952#1,92474#1,32952,92474,near,stud+bar,False,reject,no engagement in the real geometry
+32952#2,4865b#1,32952,4865b,side,stud,False,reject,no engagement in the real geometry
+32952#2,54200#1,32952,54200,near,stud,False,reject,no engagement in the real geometry
+32952#2,54200#2,32952,54200,near,stud,False,reject,no engagement in the real geometry
+32952#2,44861#1,32952,44861,gap,stud,False,reject,no engagement in the real geometry
+32952#2,44861#2,32952,44861,near,stud,False,reject,no engagement in the real geometry
+32952#2,24307#1,32952,24307,side,stud,False,reject,no engagement in the real geometry
+32952#2,92474#1,32952,92474,near,stud+bar,False,reject,no engagement in the real geometry
+4865b#1,24299#1,4865b,24299,side,stud,False,reject,no engagement in the real geometry
+4865b#1,15068#1,4865b,15068,side,stud,False,reject,no engagement in the real geometry
+4865b#1,24307#1,4865b,24307,side,stud,False,reject,no engagement in the real geometry
+4865b#1,15068#2,4865b,15068,side,stud,False,reject,no engagement in the real geometry
+41682#1,3020#2,41682,3020,side,stud,False,reject,no engagement in the real geometry
+41682#1,85984#2,41682,85984,inside,stud,False,reject,no engagement in the real geometry
+41682#1,85984#3,41682,85984,inside,stud,False,reject,no engagement in the real geometry
+41682#1,11458#1,41682,11458,inside,stud,False,reject,no engagement in the real geometry
+41682#1,11458#2,41682,11458,inside,stud,False,reject,no engagement in the real geometry
+41682#1,20482#1,41682,20482,near,stud,False,reject,no engagement in the real geometry
+41682#1,20482#2,41682,20482,near,stud,False,reject,no engagement in the real geometry
+41682#1,61184#1,41682,61184,near,,False,reject,compatibility rules: these part types cannot join
+41682#1,61184#2,41682,61184,near,,False,reject,compatibility rules: these part types cannot join
+3020#2,3069b#1,3020,3069b,gap,stud,False,reject,no engagement in the real geometry
+3020#2,24299#1,3020,24299,near,stud,False,reject,no engagement in the real geometry
+3020#2,15068#1,3020,15068,near,stud,False,reject,no engagement in the real geometry
+3020#2,24307#1,3020,24307,near,stud,False,reject,no engagement in the real geometry
+3020#2,15068#2,3020,15068,near,stud,False,reject,no engagement in the real geometry
+85984#2,54200#1,85984,54200,side,stud,False,reject,no engagement in the real geometry
+85984#2,85984#3,85984,85984,side,stud,False,reject,no engagement in the real geometry
+85984#2,54200#2,85984,54200,near,stud,False,reject,no engagement in the real geometry
+85984#2,11458#1,85984,11458,inside,stud,False,reject,no engagement in the real geometry
+85984#2,11458#2,85984,11458,side,stud,False,reject,no engagement in the real geometry
+85984#2,32803#2,85984,32803,near,stud,False,reject,no engagement in the real geometry
+85984#2,20482#1,85984,20482,near,stud,False,reject,no engagement in the real geometry
+85984#2,61184#1,85984,61184,near,,False,reject,compatibility rules: these part types cannot join
+54200#1,85984#3,54200,85984,near,stud,False,reject,no engagement in the real geometry
+54200#1,54200#2,54200,54200,side,stud,False,reject,no engagement in the real geometry
+54200#1,44861#1,54200,44861,side,stud,False,reject,no engagement in the real geometry
+54200#1,44861#2,54200,44861,near,stud,False,reject,no engagement in the real geometry
+54200#1,3069b#1,54200,3069b,side,stud,False,reject,no engagement in the real geometry
+85984#3,54200#2,85984,54200,side,stud,False,reject,no engagement in the real geometry
+85984#3,11458#1,85984,11458,side,stud,False,reject,no engagement in the real geometry
+85984#3,11458#2,85984,11458,inside,stud,False,reject,no engagement in the real geometry
+85984#3,32803#2,85984,32803,near,stud,False,reject,no engagement in the real geometry
+85984#3,20482#2,85984,20482,near,stud,False,reject,no engagement in the real geometry
+85984#3,61184#2,85984,61184,near,,False,reject,compatibility rules: these part types cannot join
+54200#2,44861#1,54200,44861,near,stud,False,reject,no engagement in the real geometry
+54200#2,44861#2,54200,44861,side,stud,False,reject,no engagement in the real geometry
+54200#2,3069b#1,54200,3069b,side,stud,False,reject,no engagement in the real geometry
+44861#1,44861#2,44861,44861,side,stud,False,reject,no engagement in the real geometry
+44861#2,3069b#1,44861,3069b,inside,stud,False,reject,no engagement in the real geometry
+3069b#1,92474#1,3069b,92474,near,stud+bar,False,reject,no engagement in the real geometry
+24299#1,15068#1,24299,15068,inside,stud,False,reject,no engagement in the real geometry
+24299#1,92474#1,24299,92474,near,stud+bar,False,reject,no engagement in the real geometry
+15068#1,92474#1,15068,92474,near,stud+bar,False,reject,no engagement in the real geometry
+11458#1,11458#2,11458,11458,side,stud,False,reject,no engagement in the real geometry
+11458#1,32803#2,11458,32803,inside,stud,False,reject,no engagement in the real geometry
+11458#1,20482#1,11458,20482,stack,stud,False,reject,no engagement in the real geometry
+11458#2,32803#2,11458,32803,inside,stud,False,reject,no engagement in the real geometry
+11458#2,20482#2,11458,20482,stack,stud,False,reject,no engagement in the real geometry
+32803#2,20482#1,32803,20482,near,stud,False,reject,no engagement in the real geometry
+32803#2,20482#2,32803,20482,near,stud,False,reject,no engagement in the real geometry
+32803#2,61184#1,32803,61184,near,,False,reject,compatibility rules: these part types cannot join
+32803#2,61184#2,32803,61184,near,,False,reject,compatibility rules: these part types cannot join
+24307#1,15068#2,24307,15068,inside,stud,False,reject,no engagement in the real geometry
+24307#1,92474#1,24307,92474,near,stud+bar,False,reject,no engagement in the real geometry
+15068#2,92474#1,15068,92474,near,stud+bar,False,reject,no engagement in the real geometry
+27925#1,27925#2,27925,27925,side,,False,reject,compatibility rules: these part types cannot join
+27925#3,27925#4,27925,27925,side,,False,reject,compatibility rules: these part types cannot join
+3020#1,3034#1,3020,3034,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#1,35480#1,3020,35480,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#1,35480#2,3020,35480,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#1,3023#1,3020,3023,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#1,3023#2,3020,3023,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#1,73562#1,3020,73562,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#1,3068b#1,3020,3068b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#1,32064a#1,3020,32064a,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#1,32064a#2,3020,32064a,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3034#1,2419#1,3034,2419,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3034#1,54384#1,3034,54384,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3034#1,54383#1,3034,54383,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2419#1,35480#1,2419,35480,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2419#1,35480#2,2419,35480,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2419#1,4740#1,2419,4740,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2419#1,13548#1,2419,13548,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2419#1,13548#2,2419,13548,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2419#1,73562#1,2419,73562,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2419#1,3040b#1,2419,3040b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2419#1,3040b#2,2419,3040b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3023#1,54383#1,3023,54383,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3023#2,54384#1,3023,54384,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#1,3068b#1,54384,3068b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#1,3040b#3,54384,3040b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#1,42862#1,54384,42862,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#1,13548#3,54384,13548,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54383#1,3068b#1,54383,3068b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54383#1,3040b#4,54383,3040b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54383#1,48165#1,54383,48165,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54383#1,13548#4,54383,13548,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+73562#1,85080#1,73562,85080,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+73562#1,85080#2,73562,85080,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3040b#1,36840#1,3040b,36840,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3040b#1,27925#2,3040b,27925,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3040b#2,36840#2,3040b,36840,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3040b#2,27925#3,3040b,27925,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3713#1,18651#1,3713,18651,inside,axle,True,keep,non-stud joint (axle): boxes interpenetrate/touch
+18651#1,32064a#2,18651,32064a,inside,pin+axle,True,keep,non-stud joint (pin+axle): boxes interpenetrate/touch
+18651#1,11458#3,18651,11458,inside,pin+axle,True,keep,non-stud joint (pin+axle): boxes interpenetrate/touch
+18651#2,32064a#1,18651,32064a,inside,pin+axle,True,keep,non-stud joint (pin+axle): boxes interpenetrate/touch
+18651#2,3713#2,18651,3713,inside,axle,True,keep,non-stud joint (axle): boxes interpenetrate/touch
+18651#2,11458#4,18651,11458,inside,pin+axle,True,keep,non-stud joint (pin+axle): boxes interpenetrate/touch
+32064a#1,99207#2,32064a,99207,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+32064a#2,99207#1,32064a,99207,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3040b#3,36840#3,3040b,36840,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3040b#3,27925#1,3040b,27925,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3040b#4,36840#4,3040b,36840,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3040b#4,27925#4,3040b,27925,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+42862#1,76766#1,42862,76766,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+48165#1,76766#1,48165,76766,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+13548#3,85984#1,13548,85984,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+13548#3,76766#1,13548,76766,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+13548#4,85984#1,13548,85984,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+13548#4,76766#1,13548,76766,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+36840#1,27925#2,36840,27925,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+36840#2,27925#3,36840,27925,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+36840#3,24307#1,36840,24307,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+36840#3,27925#1,36840,27925,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+36840#4,24299#1,36840,24299,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+36840#4,27925#4,36840,27925,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+99207#1,27925#1,99207,27925,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+99207#1,27925#2,99207,27925,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+99207#2,27925#3,99207,27925,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+99207#2,27925#4,99207,27925,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+32803#1,3022#1,32803,3022,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+32803#1,41682#1,32803,41682,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+35480#3,3022#1,35480,3022,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+76766#1,3020#2,76766,3020,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+76766#1,92474#1,76766,92474,inside,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+35480#4,32952#1,35480,32952,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+35480#4,32952#2,35480,32952,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+32952#1,3020#2,32952,3020,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+32952#1,15068#1,32952,15068,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+32952#2,3020#2,32952,3020,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+32952#2,15068#2,32952,15068,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+41682#1,32803#2,41682,32803,inside,stud,True,keep,stud engagement: boxes meet along axis x with 4.0 LDU stud insertion and footprint >= 8
+3020#2,85984#2,3020,85984,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#2,54200#1,3020,54200,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#2,85984#3,3020,85984,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#2,54200#2,3020,54200,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#2,44861#1,3020,44861,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#2,44861#2,3020,44861,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3020#2,92474#1,3020,92474,inside,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+44861#1,92474#1,44861,92474,inside,stud+bar+clip,True,keep,non-stud joint (bar+clip): boxes interpenetrate/touch
+44861#2,92474#1,44861,92474,inside,stud+bar+clip,True,keep,non-stud joint (bar+clip): boxes interpenetrate/touch
+11458#1,61184#1,11458,61184,inside,pin,True,keep,non-stud joint (pin): boxes interpenetrate/touch
+11458#2,61184#2,11458,61184,inside,pin,True,keep,non-stud joint (pin): boxes interpenetrate/touch
+11458#3,26601#1,11458,26601,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+26601#2,11458#4,26601,11458,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+20482#1,577b#1,20482,577b,stack,bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+20482#1,61184#1,20482,61184,stack,bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+20482#2,577b#2,20482,577b,stack,bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+20482#2,61184#2,20482,61184,stack,bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+36840#3,23950#2,36840,23950,inside,stud,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+36840#4,23950#1,36840,23950,inside,stud,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+76766#1,4865b#1,76766,4865b,inside,stud,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+44861#1,3069b#1,44861,3069b,inside,stud,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint

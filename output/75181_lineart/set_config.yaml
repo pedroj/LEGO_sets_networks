@@ -1,0 +1,14 @@
+set: "75181"
+name: Y-Wing Starfighter
+set_num: "75181-1"
+instructions: false
+
+subtype_override: {}
+category_override: {}
+pair_allow: []
+flexible_parts: []
+manual_add: []
+audit_notes: |
+  Ported to the shared pipeline (strict stud rule 2-5.5 LDU). Starting matrix = current curated 75181_adjacency_matrix.csv.
+plot:
+  panel_title: "UCS Y-wing Starfighter (75181)"

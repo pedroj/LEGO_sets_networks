@@ -1,11 +1,11 @@
 # 75344 link audit
 
-Kernel links: 522; kept 89, removed 433, added 16; checked matrix 105 links.
+Starting matrix: 97 instance links. Checked: 97 links (97 kept from kernel, 0 added = false negatives).
 
-Evidence: LDraw bounding-box geometry on every instance pair, instruction PDF (sub-assembly order, low resolution), previous .cys edge list as tie-breaker.
+Starting links removed as false positives: 0 (of which 0 are candidate pairs failing the geometry rules; the rest are pairs more than 6 LDU apart).
 
-Not added although listed in the old edge list:
-- 11458 - 15068: edge list links them; instances are >50 LDU apart in the MPD
-- 23950 - 32064a: edge list links them; 4 LDU vertical gap in the MPD
-- 2419 - 3020: side-by-side plates at same level, no stud engagement
-- 24307 - 32952: side contact only; symmetric 24299 would give the same, ambiguous
+Connected components: 4 (largest 65 of 78 parts). Isolated parts: 0.
+
+Rules: stud engagement (stud insertion of 2-5.5 LDU along an axis with >=8 LDU footprint; flush side contact is not a joint); non-stud joints (hinge, pin, axle, bar, clip...) when the boxes touch and the subtype matrix allows the joint. 0 links were added and 0 removed by hand after comparing the geometry with the instruction pictures.
+Ported to the shared pipeline (13 Nov 2026). Old audit used a bespoke stack/inside rule plus the .cys edge list as tie-breaker; the shared strict stud rule replaces it.
+Old disputed pairs (not added): 11458-15068 (>50 LDU apart), 23950-32064a (4 LDU gap), 2419-3020 (side by side), 24307-32952 (side contact only).

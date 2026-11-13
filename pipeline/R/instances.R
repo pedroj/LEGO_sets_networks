@@ -17,6 +17,29 @@ make_instances <- function(cfg, pipeline_dir) {
       if (exists(c, envir = meta, inherits = FALSE)) return(get(c, envir = meta, inherits = FALSE))
     m
   }, envir = globalenv())
+  # per-set MPD fixes from set_config.yaml (all optional):
+  #   mpd_block_alias: {"<sub-model>.dat": "<official part>.dat"}  replace a custom sub-model by an official LDraw part (4010 hull)
+  #   extra_lines: ["1 15 -20 -110 0 ... part.dat"]               LDraw lines appended to the root model (parts missing from the MPD)
+  #   dims_override: {"<regex on part name>": [w, d, h]}           box size in LDU for parts the kernel cannot size
+  .pm <- parse_mpd
+  assign("parse_mpd", function(path) {
+    b <- .pm(path)
+    has <- vapply(b, function(x) any(grepl("^1 ", x)), TRUE); b <- b[order(!has)]   # an empty header block must not be the root
+    al <- cfg$mpd_block_alias
+    if (length(al)) {
+      b <- b[!tolower(names(b)) %in% tolower(names(al))]
+      for (k in names(al)) b <- lapply(b, function(x) sub(paste0(gsub(".", "\\.", k, fixed = TRUE), "$"), al[[k]], x, ignore.case = TRUE))
+    }
+    if (length(cfg$extra_lines)) b[[1]] <- c(b[[1]], unlist(cfg$extra_lines))
+    b
+  }, envir = globalenv())
+  if (length(cfg$dims_override)) {
+    .dims <- dims_of
+    assign("dims_of", function(name, fam) {
+      for (pat in names(cfg$dims_override)) if (!is.na(name) && grepl(pat, name)) { v <- unlist(cfg$dims_override[[pat]]); return(list(w = v[1], d = v[2], h = v[3])) }
+      .dims(name, fam)
+    }, envir = globalenv())
+  }
   S <- cfg$set
   mpd <- if (!is.null(cfg$mpd)) cfg$mpd else Sys.glob(paste0(S, "*.mpd"))[1]
   stopifnot("no MPD file found in the set folder (set `mpd:` in set_config.yaml)" = !is.na(mpd) && file.exists(mpd))

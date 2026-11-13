@@ -8,13 +8,14 @@
 #   promote    back up the starting matrix to bckp/ and replace it with _checked.csv
 #   plot       network figures from <set>_adjacency_matrix.csv -> _network*.pdf/png, _nodes.csv, _edges.csv
 #   xlsx       adjacency matrix with icons -> _adjacency_matrix_icons.xlsx (python)
-#   all        instances,bboxes,audit,promote,plot,xlsx
+#   widget     interactive HTML adjacency widget -> <set>_adjacency.html (old one moved to bckp/); matrix = <set>_adjacency_matrix.csv
+#   all        instances,bboxes,audit,promote,plot,xlsx,widget
 # Set-specific input lives only in output/<set>_lineart/set_config.yaml.
 args <- commandArgs(trailingOnly = TRUE)
 if (!length(args)) stop("usage: Rscript pipeline/R/run_set.R <set> [steps]")
 S <- args[1]
 steps <- strsplit(if (length(args) > 1) args[2] else "audit,plot,xlsx", ",")[[1]]
-if ("all" %in% steps) steps <- c("instances", "bboxes", "audit", "promote", "plot", "xlsx")
+if ("all" %in% steps) steps <- c("instances", "bboxes", "audit", "promote", "plot", "xlsx", "widget")
 root <- normalizePath(".")
 RDIR <- file.path(root, "pipeline", "R"); PYDIR <- file.path(root, "pipeline", "py")
 setdir <- file.path(root, "output", paste0(S, "_lineart"))
@@ -53,6 +54,10 @@ for (st in steps) {
                                panel_title = title, compat_csv = compat)
       if (file.exists(paste0(S, "_network_coords_icons.png"))) file.rename(paste0(S, "_network_coords_icons.png"), paste0(S, "_network_coords.png")) },
     xlsx      = py("build_adjacency_xlsx.py"),
+    widget    = {
+      source(file.path(RDIR, "widget.R")); out <- paste0(S, "_adjacency.html")
+      if (file.exists(out)) { dir.create("bckp", showWarnings = FALSE); file.copy(out, file.path("bckp", sprintf("%s_adjacency_%s.html", S, stamp))) }
+      cat("widget ->", make_widget(cfg, RDIR), "\n") },
     stop("unknown step: ", st))
 }
 cat("\ndone:", S, paste(steps, collapse = ","), "\n")

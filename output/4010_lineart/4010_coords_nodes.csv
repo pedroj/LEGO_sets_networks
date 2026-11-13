@@ -1,95 +1,95 @@
 "node","part","desc","category","subtype","x0","y0","x","y","moved","degree"
-"2372c01#1","2372c01","Boat 25 x 10 x 4 1/3 [Complete Assembly]","Baseplate","Baseplate",0,0,-30.9870622032645,58.3775634460833,TRUE,19
-"3004#1","3004","Brick 1 x 2","Brick","Brick basic",-50,120,-3.02789396715106,132.913638211125,TRUE,2
-"3004#2","3004","Brick 1 x 2","Brick","Brick basic",50,120,14.4227128234247,169.586830496183,TRUE,2
-"3004#3","3004","Brick 1 x 2","Brick","Brick basic",0,-130,76.7434908635821,-131.407201322166,TRUE,2
-"3002#1","3002","Brick 2 x 3","Brick","Brick basic",40,-10,92.3930767121324,8.21548044706524,TRUE,2
-"3023#1","3023","Plate 1 x 2","Plate","Plate basic",0,-130,-53.9403361059835,-184.751798496113,TRUE,2
-"4079#1","4079","Seat / Chair 2 x 2","Minifig","Minifig seat or chair",0,80,20.4522103859246,101.863395140504,TRUE,1
-"3795#1","3795","Plate 2 x 6","Plate","Plate basic",0,120,-8.59337863748638,201.233331686146,TRUE,2
-"73090b#1","73090b","Brick Special 2 x 6 x 2 Weight with Sealed Bottom and Dimples on Ends","Brick","Brick basic",0,-100,-39.5099900764485,-148.364078971058,TRUE,2
-"3003#1","3003","Brick 2 x 2","Brick","Brick basic",40,-20,80.1931969710843,-27.0880377560285,TRUE,2
-"3958#1","3958","Plate 6 x 6","Plate","Plate basic",0,-80,65.040142274794,-63.8153059695509,TRUE,9
-"3004#4","3004","Brick 1 x 2","Brick","Brick basic",-40,-30,-74.0174633707048,-49.7799400409948,TRUE,2
-"4623#1","4623","Plate Special 1 x 2 with Bar Up [Horizontal Arm 6mm]","Special","Bar holder or handle plate",0,-30,27.4032961205182,-68.8382406766503,TRUE,2
-"3842a#1","3842a","Helmet Classic with Thin Chin Guard and Visor Dimples","Minifig","Minifig headgear or hair",-42,-19,6.35830451582537,63.9679810398189,TRUE,1
-"3040b#1","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",-70,-30,-154.390437365806,-61.0853387107349,TRUE,2
-"3040b#2","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",70,-30,145.275088627,-51.5685338411033,TRUE,2
-"3665#1","3665","Slope Inverted 45° 2 x 1","Slope","Slope inverted",-70,130,-88.6840722023079,189.988480582384,TRUE,3
-"3665#2","3665","Slope Inverted 45° 2 x 1","Slope","Slope inverted",70,130,91.9538094707522,182.398479953609,TRUE,3
-"3829c01#1","3829c01","Steering Stand 1 x 2 with Black Steering Wheel","Special","Bracket (SNOT)",-40,-30,-64.1541740678356,-116.310421628057,TRUE,1
-"3005#1","3005","Brick 1 x 1","Brick","Brick basic",-70,-10,14.5067372571135,-2.58302293066387,TRUE,2
-"3005#2","3005","Brick 1 x 1","Brick","Brick basic",70,-10,157.962997178594,-14.398295586206,TRUE,2
-"3004#5","3004","Brick 1 x 2","Brick","Brick basic",-70,100,-143.997318582597,145.93499468285,TRUE,3
-"3004#6","3004","Brick 1 x 2","Brick","Brick basic",70,100,140.131854777624,119.448597689178,TRUE,3
-"3024#1","3024","Plate 1 x 1","Plate","Plate basic",-70,90,-94.2105457368885,85.3496850602943,TRUE,2
-"3024#2","3024","Plate 1 x 1","Plate","Plate basic",70,90,99.7643843880043,113.864528864726,TRUE,2
-"4873#1","4873","Bar 1 x 6 [Open Studs]","Special","Bar or antenna",0,-150,-29.7651270383544,-216.361984939169,TRUE,0
-"3838#1","3838","Minifig Neckwear Airtanks","Minifig","Minifig neckwear",0,-9,-83.3199016309965,17.48430727826,TRUE,1
-"3297#1","3297","Slope 33° 3 x 4","Slope","Slope standard",-40,150,-49.5094263108982,198.147808516268,TRUE,3
-"3297#2","3297","Slope 33° 3 x 4","Slope","Slope standard",40,150,51.7845081002015,179.957205977401,TRUE,3
-"4599a#1","4599a","Tap 1 x 1 with Hole in Spout","Minifig","Minifig accessory (tool; weapon)",10,-146,-15.319074532895,-179.322830517379,TRUE,0
-"3040b#3","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",-70,-10,-61.8553838239708,-13.1348752385435,FALSE,3
-"3040b#4","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",70,-10,104.795182734241,-56.8318969525406,TRUE,3
-"6141#1","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",10,-170,9.39905544634892,-211.627811257534,TRUE,0
-"3460#1","3460","Plate 1 x 8","Plate","Plate basic",0,90,34.0087297731296,138.552396296478,TRUE,5
-"4863#1","4863","Window 1 x 4 x 2 Plane, Solid Studs","Panel","Window frame",70,40,71.4825110605071,39.0217486785675,FALSE,6
-"4863#2","4863","Window 1 x 4 x 2 Plane, Solid Studs","Panel","Window frame",-70,40,-41.2939609532737,126.733789464498,TRUE,6
-"4286#1","4286","Slope 33° 3 x 1","Slope","Slope standard",-70,110,-104.453668471929,153.903354958388,TRUE,4
-"4286#2","4286","Slope 33° 3 x 1","Slope","Slope standard",70,110,114.931749673757,150.365416311229,TRUE,4
-"3023#2","3023","Plate 1 x 2","Plate","Plate basic",60,90,45.3106509245379,72.1866643264153,TRUE,2
-"3023#3","3023","Plate 1 x 2","Plate","Plate basic",-60,90,-69.7606592485165,54.397466684157,TRUE,2
-"4862#1","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",70,20,132.657294108936,15.7488643435574,TRUE,1
-"4862#2","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",70,60,148.840827302581,52.2533342242513,TRUE,1
-"4862#3","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",-70,20,-123.875323650978,12.6071279680898,TRUE,1
-"4862#4","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",-70,60,-148.272187031719,43.065715288935,TRUE,1
-"3939#1","3939","Slope 33° 3 x 6","Slope","Slope standard",0,110,-64.4547676362429,158.663547355581,TRUE,5
-"3023#4","3023","Plate 1 x 2","Plate","Plate basic",-70,0,-140.072206574434,-24.3059467007225,TRUE,3
-"3023#5","3023","Plate 1 x 2","Plate","Plate basic",70,0,55.3597171767723,2.81909215056855,TRUE,3
-"3021#1","3021","Plate 2 x 3","Plate","Plate basic",60,70,124.127780103677,83.9072290700081,TRUE,2
-"3021#2","3021","Plate 2 x 3","Plate","Plate basic",-60,70,-119.216877621159,116.468593819668,TRUE,2
-"3070b#1","3070b","Tile 1 x 1 with Groove","Tile","Tile basic",70,30,84.27157494422,76.3690575351221,TRUE,2
-"3070b#2","3070b","Tile 1 x 1 with Groove","Tile","Tile basic",-70,30,-22.7380472287723,-5.96687361670526,TRUE,2
-"2348a#1","2348a","Glass for Hinge Car Roof 4 x 4 Sunroof [No Ridges]","Special","Click hinge (plate or brick)",0,43,-8.64109186484781,30.1373018736003,TRUE,1
-"2349a#1","2349a","Hinge Vehicle Roof 4 x 4 Sunroof without Ledges","Special","Click hinge (plate or brick)",0,60,-15.3590097839015,94.0864229662768,TRUE,4
-"4625#1","4625","Hinge Tile 1 x 4","Special","Click hinge (plate or brick)",0,90,74.2049907346944,146.243924760587,TRUE,2
-"3024#3","3024","Plate 1 x 1","Plate","Plate basic",50,30,118.202941296934,-20.8868335332815,TRUE,1
-"3024#4","3024","Plate 1 x 1","Plate","Plate basic",-50,30,-133.019667165738,79.1322223041292,TRUE,1
-"4866#1","4866","Windscreen 3 x 4 x 1 1/3 with 6 Studs on Top","Panel","Windscreen",40,10,107.816483457481,45.5789202578951,TRUE,5
-"4866#2","4866","Windscreen 3 x 4 x 1 1/3 with 6 Studs on Top","Panel","Windscreen",-40,10,-107.085529712425,48.0111753739506,TRUE,5
-"3034#1","3034","Plate 2 x 8","Plate","Plate basic",0,0,-36.5671272883374,-41.8304022205981,TRUE,3
-"4873#2","4873","Bar 1 x 6 [Open Studs]","Special","Bar or antenna",-40,250,-21.9862818507408,247.070927041845,TRUE,0
-"4289#1","4289","Boat, Mast 2 x 2 x 3 Inclined with Stud on Top and Two Sides","Other","Other",0,0,-46.6257520323069,24.1220775579801,TRUE,4
-"3794a#1","3794a","Plate Special 1 x 2 with 1 Stud without Groove (Jumper)","Plate","Plate jumper",0,110,-54.7479531432457,90.8298210857878,TRUE,1
-"3460#2","3460","Plate 1 x 8","Plate","Plate basic",0,110,59.1406169990051,109.290423958178,TRUE,4
-"4349#1","4349","Equipment Weapon, Loudhailer / Speaker / Blaster / Space Gun","Minifig","Minifig accessory (tool; weapon)",46,242,57.9439162628595,233.17124711575,TRUE,0
-"4349#2","4349","Equipment Weapon, Loudhailer / Speaker / Blaster / Space Gun","Minifig","Minifig accessory (tool; weapon)",-46,242,-61.1458269846383,237.089367838259,TRUE,0
-"6141#2","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",0,-10,41.9792097138653,-34.2527624956671,TRUE,1
-"4599a#2","4599a","Tap 1 x 1 with Hole in Spout","Minifig","Minifig accessory (tool; weapon)",0,110,-79.0992511584262,122.795004693261,TRUE,1
-"4073#1","4073","Plate 1 x 1 Round","Plate","Plate round",46,264,53.1530650450945,273.566306585239,TRUE,0
-"4073#2","4073","Plate 1 x 1 Round","Plate","Plate round",-46,264,-50.1721777840796,276.076032222381,TRUE,0
-"4740#1","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",0,124,-24.8468143785499,165.653570719847,TRUE,1
-"4873#3","4873","Bar 1 x 6 [Open Studs]","Special","Bar or antenna",40,250,20.9030812349166,249.262861015693,TRUE,0
-"3815#1","3815","Hips","Minifig","Minifig hips and legs",49,-120,117.019809489458,-127.375738914292,TRUE,3
-"3816#1","3816","Leg, Right","Minifig","Minifig hips and legs",49,-120,15.1532697320096,-105.619552750924,TRUE,2
-"3817#1","3817","Leg, Left","Minifig","Minifig hips and legs",49,-120,102.317753599535,-161.983018233256,TRUE,2
-"973p1f#1","973p1f","Minifig Torso with Buttons and Police Badge Plain Pattern","Minifig","Minifig torso (with arms)",49,-120,23.9432245982951,-174.836108441968,TRUE,4
-"3819#1","3819","Arm, Left","Minifig","Minifig arm",49,-135.552,48.9439270620478,-205.80131948252,TRUE,2
-"3818#1","3818","Arm, Right","Minifig","Minifig arm",49,-104.448,39.0997889492628,-137.516371314133,TRUE,2
-"3820#1","3820","Minifig Hand","Minifig","Minifig hand",70.138,-99.0561,91.7515131101301,-95.6581497488812,TRUE,2
-"3820#2","3820","Minifig Hand","Minifig","Minifig hand",58.8839,-143.6875,89.3108938126205,-200.430033183293,TRUE,1
-"3626bp01#1","3626bp01","Minifig Head with Standard Grin Pattern (Blocked Hollow Stud)","Minifig","Minifig head",49,-120,52.3778419583452,-100.88429148653,TRUE,2
-"3624#1","3624","Cap, Police Style","Minifig","Minifig headgear or hair",49,-120,64.1759631936561,-168.603703945619,TRUE,1
-"3962a#1","3962a","Equipment Radio [Compact Handle]","Minifig","Minifig accessory (tool; weapon)",79.7807,-99.4117,131.521737100861,-88.9872714168257,TRUE,1
-"3815#2","3815","Hips","Minifig","Minifig hips and legs",-40,-71,-103.59013978898,-122.553437329078,TRUE,3
-"3816#2","3816","Leg, Right","Minifig","Minifig hips and legs",-40,-71,2.09714623457467,-38.9798318659592,TRUE,2
-"3817#2","3817","Leg, Left","Minifig","Minifig hips and legs",-40,-71,-26.6038756117478,-112.296787206412,TRUE,2
-"973p1g#1","973p1g","Minifig Torso with Zipper and Old Police Badge Print Town, Police, Uniform, Jacket, Zipper","Minifig","Minifig torso (with arms)",-40,-71,-50.5479384077259,-80.1207806197638,TRUE,4
-"3819#2","3819","Arm, Left","Minifig","Minifig arm",-24.448,-71,-1.36472751785213,-142.670112816037,TRUE,2
-"3818#2","3818","Arm, Right","Minifig","Minifig arm",-55.552,-71,-129.713178025281,-93.1992985499758,TRUE,2
-"3820#3","3820","Minifig Hand","Minifig","Minifig hand",-64.0994,-71.5108,-115.666051995538,-56.6354280515389,TRUE,1
-"3820#4","3820","Minifig Hand","Minifig","Minifig hand",-17.6356,-52.8016,-11.5125076809598,-74.1718172162911,TRUE,1
-"3626bp01#2","3626bp01","Minifig Head with Standard Grin Pattern (Blocked Hollow Stud)","Minifig","Minifig head",-40,-71,-79.5682252226046,-154.08325946625,TRUE,2
-"3624#2","3624","Cap, Police Style","Minifig","Minifig headgear or hair",-40,-71,-89.2275342030845,-86.1595570582794,TRUE,1
-"298c04#1","298c04","Lever Small Base with White Lever","Special","Clip plate or tile",-20,0,-98.5686995344742,-18.8936900321418,TRUE,1
-"298c04#2","298c04","Lever Small Base with White Lever","Special","Clip plate or tile",20,0,31.518187905167,34.590977613367,TRUE,1
+"2372c01#1","2372c01","Boat 25 x 10 x 4 1/3 [Complete Assembly]","Baseplate","Baseplate",0,0,24.826361730821,2.39712681357594,TRUE,19
+"3004#1","3004","Brick 1 x 2","Brick","Brick basic",-50,120,-58.860314141016,157.547701359675,TRUE,2
+"3004#2","3004","Brick 1 x 2","Brick","Brick basic",50,120,46.12361931,149.893951607642,TRUE,2
+"3004#3","3004","Brick 1 x 2","Brick","Brick basic",0,-130,1.57991612424724,-130.767098392439,FALSE,2
+"3002#1","3002","Brick 2 x 3","Brick","Brick basic",40,-10,57.7366709975926,-12.8749305347486,TRUE,2
+"3023#1","3023","Plate 1 x 2","Plate","Plate basic",0,-130,-62.855916276887,-169.231934327525,TRUE,2
+"4079#1","4079","Seat / Chair 2 x 2","Minifig","Minifig seat or chair",0,80,-14.3492052558815,67.959972907932,TRUE,1
+"3795#1","3795","Plate 2 x 6","Plate","Plate basic",0,120,-19.9269938718501,166.49717567902,TRUE,2
+"73090b#1","73090b","Brick Special 2 x 6 x 2 Weight with Sealed Bottom and Dimples on Ends","Brick","Brick basic",0,-100,-30.025920827121,-149.778114836394,TRUE,2
+"3003#1","3003","Brick 2 x 2","Brick","Brick basic",40,-20,60.7629007443477,-49.8861883060729,TRUE,2
+"3958#1","3958","Plate 6 x 6","Plate","Plate basic",0,-80,-1.4737351831337,-91.8055527678106,TRUE,9
+"3004#4","3004","Brick 1 x 2","Brick","Brick basic",-40,-30,-37.9132297122166,-36.5973932508447,FALSE,3
+"4623#1","4623","Plate Special 1 x 2 with Bar Up [Horizontal Arm 6mm]","Special","Bar holder or handle plate",0,-30,28.7915188854625,-70.0088841456904,TRUE,3
+"3842a#1","3842a","Helmet Classic with Thin Chin Guard and Visor Dimples","Minifig","Minifig headgear or hair",-42,-19,-69.2537373348817,-15.4060623839118,TRUE,1
+"3040b#1","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",-70,-30,-134.514404427386,-51.2617015354773,TRUE,2
+"3040b#2","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",70,-30,126.150704181515,-45.8084517202941,TRUE,2
+"3665#1","3665","Slope Inverted 45° 2 x 1","Slope","Slope inverted",-70,130,-86.8652014813111,185.654465183971,TRUE,3
+"3665#2","3665","Slope Inverted 45° 2 x 1","Slope","Slope inverted",70,130,84.1592040180734,161.555073491184,TRUE,3
+"3829c01#1","3829c01","Steering Stand 1 x 2 with Black Steering Wheel","Special","Bracket (SNOT)",-40,-30,-68.6506456732879,-53.2545974971387,TRUE,1
+"3005#1","3005","Brick 1 x 1","Brick","Brick basic",-70,-10,-101.321079779715,-32.0200660049815,TRUE,2
+"3005#2","3005","Brick 1 x 1","Brick","Brick basic",70,-10,91.7751282184972,-28.8678017752124,TRUE,2
+"3004#5","3004","Brick 1 x 2","Brick","Brick basic",-70,100,-106.863185687732,111.508457139342,TRUE,3
+"3004#6","3004","Brick 1 x 2","Brick","Brick basic",70,100,107.073344982276,109.827659174573,TRUE,3
+"3024#1","3024","Plate 1 x 1","Plate","Plate basic",-70,90,-144.350738150209,102.7856668022,TRUE,2
+"3024#2","3024","Plate 1 x 1","Plate","Plate basic",70,90,143.374698053818,96.3961527711358,TRUE,2
+"4873#1","4873","Bar 1 x 6 [Open Studs]","Special","Bar or antenna",0,-150,-28.8723365093681,-189.695065329659,TRUE,0
+"3838#1","3838","Minifig Neckwear Airtanks","Minifig","Minifig neckwear",0,-9,26.9367174022781,-33.6780291780459,TRUE,1
+"3297#1","3297","Slope 33° 3 x 4","Slope","Slope standard",-40,150,-47.6884340856459,195.21588155351,TRUE,3
+"3297#2","3297","Slope 33° 3 x 4","Slope","Slope standard",40,150,55.2933522888168,189.009131530062,TRUE,3
+"4599a#1","4599a","Tap 1 x 1 with Hole in Spout","Minifig","Minifig accessory (tool; weapon)",10,-146,37.7957483650529,-186.414061405645,TRUE,0
+"3040b#3","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",-70,-10,-133.155280229346,-11.2100453993729,TRUE,3
+"3040b#4","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",70,-10,156.002712689362,-20.6502657312666,TRUE,3
+"6141#1","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",10,-170,5.69342220977758,-209.246107727638,TRUE,0
+"3460#1","3460","Plate 1 x 8","Plate","Plate basic",0,90,-3.8059799135993,104.561047057912,TRUE,5
+"4863#1","4863","Window 1 x 4 x 2 Plane, Solid Studs","Panel","Window frame",70,40,83.2143171116559,47.868529333001,TRUE,6
+"4863#2","4863","Window 1 x 4 x 2 Plane, Solid Studs","Panel","Window frame",-70,40,-90.1938667025088,47.0703228203113,TRUE,6
+"4286#1","4286","Slope 33° 3 x 1","Slope","Slope standard",-70,110,-97.867633139326,148.257212538554,TRUE,4
+"4286#2","4286","Slope 33° 3 x 1","Slope","Slope standard",70,110,120.222481455639,146.000196716339,TRUE,4
+"3023#2","3023","Plate 1 x 2","Plate","Plate basic",60,90,72.5088422111212,123.698463638014,TRUE,2
+"3023#3","3023","Plate 1 x 2","Plate","Plate basic",-60,90,-68.9958257632759,120.870113523984,TRUE,2
+"4862#1","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",70,20,152.169925048891,19.3829483507109,TRUE,1
+"4862#2","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",70,60,112.966144105648,71.6481092775323,TRUE,1
+"4862#3","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",-70,20,-159.182999453911,17.8193291653806,TRUE,1
+"4862#4","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",-70,60,-117.789722790746,73.775501333331,TRUE,1
+"3939#1","3939","Slope 33° 3 x 6","Slope","Slope standard",0,110,-41.0099285774906,94.9289806940674,TRUE,5
+"3023#4","3023","Plate 1 x 2","Plate","Plate basic",-70,0,-99.2952666779144,7.90617002544077,TRUE,3
+"3023#5","3023","Plate 1 x 2","Plate","Plate basic",70,0,120.929836457277,-5.41042763253874,TRUE,3
+"3021#1","3021","Plate 2 x 3","Plate","Plate basic",60,70,75.9351174716331,86.2673084326995,TRUE,2
+"3021#2","3021","Plate 2 x 3","Plate","Plate basic",-60,70,-79.8492730630087,84.4904816845523,TRUE,2
+"3070b#1","3070b","Tile 1 x 1 with Groove","Tile","Tile basic",70,30,117.23126376079,33.4229479017836,TRUE,2
+"3070b#2","3070b","Tile 1 x 1 with Groove","Tile","Tile basic",-70,30,-125.938954530177,35.7234427294569,TRUE,2
+"2348a#1","2348a","Glass for Hinge Car Roof 4 x 4 Sunroof [No Ridges]","Special","Click hinge (plate or brick)",0,43,-4.77802554284324,15.0968881958665,TRUE,2
+"2349a#1","2349a","Hinge Vehicle Roof 4 x 4 Sunroof without Ledges","Special","Click hinge (plate or brick)",0,60,20.2644878312008,78.3784564280177,TRUE,4
+"4625#1","4625","Hinge Tile 1 x 4","Special","Click hinge (plate or brick)",0,90,35.6716097429773,111.583451027663,TRUE,3
+"3024#3","3024","Plate 1 x 1","Plate","Plate basic",50,30,49.5593193315539,60.9029033407458,TRUE,1
+"3024#4","3024","Plate 1 x 1","Plate","Plate basic",-50,30,-53.6223461991685,59.2575801107329,TRUE,1
+"4866#1","4866","Windscreen 3 x 4 x 1 1/3 with 6 Studs on Top","Panel","Windscreen",40,10,52.0110929880077,25.0259174536587,TRUE,5
+"4866#2","4866","Windscreen 3 x 4 x 1 1/3 with 6 Studs on Top","Panel","Windscreen",-40,10,-36.8203816745115,-0.454385527069208,TRUE,5
+"3034#1","3034","Plate 2 x 8","Plate","Plate basic",0,0,16.3098118463675,41.5021321880565,TRUE,3
+"4873#2","4873","Bar 1 x 6 [Open Studs]","Special","Bar or antenna",-40,250,-21.2303130527451,248.58571497758,TRUE,0
+"4289#1","4289","Boat, Mast 2 x 2 x 3 Inclined with Stud on Top and Two Sides","Other","Other",0,0,-28.3304853826234,35.6629061613815,TRUE,4
+"3794a#1","3794a","Plate Special 1 x 2 with 1 Stud without Groove (Jumper)","Plate","Plate jumper",0,110,18.0618232133808,175.807685028782,TRUE,1
+"3460#2","3460","Plate 1 x 8","Plate","Plate basic",0,110,-30.4983310657889,130.825498145497,TRUE,4
+"4349#1","4349","Equipment Weapon, Loudhailer / Speaker / Blaster / Space Gun","Minifig","Minifig accessory (tool; weapon)",46,242,57.9019769973353,233.22667442845,TRUE,0
+"4349#2","4349","Equipment Weapon, Loudhailer / Speaker / Blaster / Space Gun","Minifig","Minifig accessory (tool; weapon)",-46,242,-58.8896793605755,234.378763190028,TRUE,0
+"6141#2","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",0,-10,-34.6504990186015,-72.6711126601168,TRUE,1
+"4599a#2","4599a","Tap 1 x 1 with Hole in Spout","Minifig","Minifig accessory (tool; weapon)",0,110,8.17642595428921,139.172516001887,TRUE,1
+"4073#1","4073","Plate 1 x 1 Round","Plate","Plate round",46,264,53.1453396213299,273.575752207227,TRUE,0
+"4073#2","4073","Plate 1 x 1 Round","Plate","Plate round",-46,264,-52.2790712415505,274.430987621064,TRUE,0
+"4740#1","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",0,124,-8.47642635291366,203.785624642292,TRUE,1
+"4873#3","4873","Bar 1 x 6 [Open Studs]","Special","Bar or antenna",40,250,20.9526939384389,249.197618815496,TRUE,0
+"3815#1","3815","Hips","Minifig","Minifig hips and legs",49,-120,102.916127705381,-141.958316250733,TRUE,3
+"3816#1","3816","Leg, Right","Minifig","Minifig hips and legs",49,-120,-30.8305094093975,-111.420322254966,TRUE,2
+"3817#1","3817","Leg, Left","Minifig","Minifig hips and legs",49,-120,70.3691885557822,-163.657145056005,TRUE,2
+"973p1f#1","973p1f","Minifig Torso with Buttons and Police Badge Plain Pattern","Minifig","Minifig torso (with arms)",49,-120,66.2988208407997,-125.541436279623,TRUE,4
+"3819#1","3819","Arm, Left","Minifig","Minifig arm",49,-135.552,72.9170547680198,-202.87165520279,TRUE,2
+"3818#1","3818","Arm, Right","Minifig","Minifig arm",49,-104.448,94.4708483604264,-68.2379809223301,TRUE,2
+"3820#1","3820","Minifig Hand","Minifig","Minifig hand",70.138,-99.0561,97.5780780646197,-104.890871359871,TRUE,2
+"3820#2","3820","Minifig Hand","Minifig","Minifig hand",58.8839,-143.6875,106.052531781812,-180.924713061562,TRUE,1
+"3626bp01#1","3626bp01","Minifig Head with Standard Grin Pattern (Blocked Hollow Stud)","Minifig","Minifig head",49,-120,35.9532588151765,-147.063686441744,TRUE,2
+"3624#1","3624","Cap, Police Style","Minifig","Minifig headgear or hair",49,-120,4.38312373495112,-168.832577945722,TRUE,1
+"3962a#1","3962a","Equipment Radio [Compact Handle]","Minifig","Minifig accessory (tool; weapon)",79.7807,-99.4117,131.044363439984,-85.8483555970225,TRUE,1
+"3815#2","3815","Hips","Minifig","Minifig hips and legs",-40,-71,-6.34738846103638,-20.7796782597315,TRUE,3
+"3816#2","3816","Leg, Right","Minifig","Minifig hips and legs",-40,-71,-97.0987657916317,-148.118146780948,TRUE,2
+"3817#2","3817","Leg, Left","Minifig","Minifig hips and legs",-40,-71,30.5767112651511,-108.492067960212,TRUE,2
+"973p1g#1","973p1g","Minifig Torso with Zipper and Old Police Badge Print Town, Police, Uniform, Jacket, Zipper","Minifig","Minifig torso (with arms)",-40,-71,-99.970595196575,-71.4835087722444,TRUE,4
+"3819#2","3819","Arm, Left","Minifig","Minifig arm",-24.448,-71,61.2117185948004,-87.8043227497761,TRUE,2
+"3818#2","3818","Arm, Right","Minifig","Minifig arm",-55.552,-71,-98.7202285860281,-109.809713702905,TRUE,2
+"3820#3","3820","Minifig Hand","Minifig","Minifig hand",-64.0994,-71.5108,-133.359801819794,-91.4151119648259,TRUE,1
+"3820#4","3820","Minifig Hand","Minifig","Minifig hand",-17.6356,-52.8016,-4.27647526932739,-55.2630043630921,TRUE,1
+"3626bp01#2","3626bp01","Minifig Head with Standard Grin Pattern (Blocked Hollow Stud)","Minifig","Minifig head",-40,-71,-65.564653833681,-91.3157343188398,TRUE,2
+"3624#2","3624","Cap, Police Style","Minifig","Minifig headgear or hair",-40,-71,-63.7751284152188,-129.093979628677,TRUE,1
+"298c04#1","298c04","Lever Small Base with White Lever","Special","Clip plate or tile",-20,0,-63.6556637544909,22.1719935062108,TRUE,1
+"298c04#2","298c04","Lever Small Base with White Lever","Special","Clip plate or tile",20,0,86.031823451071,9.84432223598296,TRUE,1

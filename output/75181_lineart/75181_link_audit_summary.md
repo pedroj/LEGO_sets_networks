@@ -1,10 +1,10 @@
 # 75181 link audit
 
-Kernel: 15816 instance links. Checked: 6005 links (3481 kept from kernel, 2524 added = false negatives).
+Starting matrix: 3040 instance links. Checked: 3040 links (3040 kept from kernel, 0 added = false negatives).
 
-Kernel links removed as false positives: 12335 (of which 5988 are candidate pairs failing the geometry rules; the rest are pairs more than 6 LDU apart).
+Starting links removed as false positives: 0 (of which 0 are candidate pairs failing the geometry rules; the rest are pairs more than 6 LDU apart).
 
-Connected components: 26 (largest 1746 of 1802 parts). Parts with no link to an earlier-built part: 97.
+Connected components: 42 (largest 1690 of 1802 parts). Isolated parts: 8.
 
-Rules: stud engagement (box contact along any axis within -1..5.5 LDU with >=8 LDU footprint, SNOT included); non-stud joints (pin, axle, bar, clip, ball, hinge...) when boxes touch/interpenetrate and the subtype matrix allows the joint; isolated parts keep kernel links that touch in LDraw geometry.
-Build order = instance expansion order in the MPD; the instruction PDF was used for sub-assembly sampling only.
+Rules: stud engagement (stud insertion of 2-5.5 LDU along an axis with >=8 LDU footprint; flush side contact is not a joint); non-stud joints (hinge, pin, axle, bar, clip...) when the boxes touch and the subtype matrix allows the joint. 0 links were added and 0 removed by hand after comparing the geometry with the instruction pictures.
+Ported to the shared pipeline (strict stud rule 2-5.5 LDU). Starting matrix = current curated 75181_adjacency_matrix.csv.

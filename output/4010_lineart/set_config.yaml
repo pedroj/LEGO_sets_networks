@@ -1,0 +1,80 @@
+set: "4010"
+name: Police Rescue Boat
+set_num: "4010-1"
+mpd: 4010_-_Police_rescue_boat.mpd
+instructions: true
+
+# MPD fixes (read by pipeline/R/instances.R)
+mpd_block_alias:            # the MPD hull is a custom sub-model of raw triangles that expands to no part: use the official LDraw hull
+  "4010 - 2372c01.dat": "2372c01.dat"
+extra_lines:                # two 298c04 levers are missing from the MPD (clipped on mast 4289, user-confirmed); position only indicative
+  - "1 15 -20 -110 0 1 0 0 0 1 0 0 0 1 298c04.dat"
+  - "1 15 20 -110 0 1 0 0 0 1 0 0 0 1 298c04.dat"
+dims_override:
+  "^Boat 25 x 10": [214.4, 540.3, 104]
+
+subtype_override: {}
+category_override: {}
+pair_allow: []
+flexible_parts: ["298c04"]    # not in the LDraw library: no box, linked by manual_add only
+manual_add:                 # hand-checked links from the old check_with_instructions.py (PDF = building instructions)
+  - ["298c04#1", "4289#1", clip, "lever clipped on mast 4289 (user-confirmed; lever absent from the MPD)"]
+  - ["298c04#2", "4289#1", clip, "lever clipped on mast 4289 (user-confirmed; lever absent from the MPD)"]
+  - ["3004#4", "3829c01#1", stud, "steering stand 1x2 stands on brick 1x2 (PDF steps 4-6)"]
+  - ["3665#1", "3939#1", stud, "slope 3x6 rests on the inverted slopes (PDF step 6)"]
+  - ["3665#2", "3939#1", stud, "slope 3x6 rests on the inverted slopes (PDF step 6)"]
+  - ["3024#1", "3460#1", stud, "plate 1x8 on the 1x1 plates (PDF steps 5-6)"]
+  - ["3024#2", "3460#1", stud, "plate 1x8 on the 1x1 plates (PDF steps 5-6)"]
+  - ["3460#1", "3023#2", stud, "1x2 plate on 1x8 plate (PDF steps 5-6)"]
+  - ["3460#1", "3023#3", stud, "1x2 plate on 1x8 plate (PDF steps 5-6)"]
+  - ["4863#1", "3023#5", stud, "plate on window frame (PDF steps 6-7)"]
+  - ["4863#2", "3023#4", stud, "plate on window frame (PDF steps 6-7)"]
+  - ["4286#1", "3460#2", stud, "1x8 plate on 3x1 slopes (PDF step 8)"]
+  - ["4286#2", "3460#2", stud, "1x8 plate on 3x1 slopes (PDF step 8)"]
+  - ["4289#1", "6141#2", stud, "round plate on mast top (PDF step 11 inset)"]
+  - ["4349#1", "4073#1", stud, "round plate 4073 at loudhailer end (PDF step 11 inset)"]
+  - ["4349#2", "4073#2", stud, "round plate 4073 at loudhailer end (PDF step 11 inset)"]
+  - ["4599a#1", "6141#1", stud, "round plate on tap (PDF step 6 inset)"]
+  - ["2372c01#1", "3842a#1", stud, "loose diving helmet standing on a cockpit-floor stud next to the airtanks (PDF step 6)"]
+  - ["2372c01#1", "4863#1", stud, "window frame rests on hull deck (PDF step 7)"]
+  - ["2372c01#1", "4863#2", stud, "window frame rests on hull deck (PDF step 7)"]
+  - ["2372c01#1", "4873#2", stud, "bar 1x6 at bow rests on hull deck (PDF step 11)"]
+  - ["2372c01#1", "3002#1", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3004#1", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3004#2", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3004#3", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3004#5", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3004#6", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3005#1", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3005#2", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3040b#1", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3040b#2", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3297#1", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3297#2", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3665#1", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "3665#2", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "4873#1", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["2372c01#1", "73090b#1", stud, "old audit: rests on hull deck/cockpit floor studs (PDF steps 1-5)"]
+  - ["3034#1", "4289#1", stud, "old audit: stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)"]
+  - ["3070b#1", "4866#1", stud, "old audit: stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)"]
+  - ["3070b#2", "4866#2", stud, "old audit: stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)"]
+  - ["3794a#1", "4599a#2", stud, "old audit: stud/tube stack: underside meets studs, footprints overlap (PDF steps 2-8)"]
+  - ["4349#1", "4873#3", stud, "old audit: loudhailer seated on the open stud of the 1x6 bar (PDF step 11 inset)"]
+  - ["4349#2", "4873#2", stud, "old audit: loudhailer seated on the open stud of the 1x6 bar (PDF step 11 inset)"]
+  - ["4599a#1", "4873#1", stud, "old audit: tap seated on the bar stud (PDF step 6 inset)"]
+  - ["2372c01#1", "4873#3", stud, "old audit: bar 1x6 rests on hull deck (PDF step 11)"]
+
+manual_remove:              # false positives of the shared audit (old rule: only head-torso, hips-torso/legs, arm-torso, hand-arm, cap-head, hand-radio join)
+  - ["973p1f#1", "3820#1", "minifig hand joins the arm, not the torso (old audit MF_REMOVE)"]
+  - ["973p1f#1", "3820#2", "minifig hand joins the arm, not the torso (old audit MF_REMOVE)"]
+  - ["973p1g#1", "3820#3", "minifig hand joins the arm, not the torso (old audit MF_REMOVE)"]
+  - ["973p1g#1", "3820#4", "minifig hand joins the arm, not the torso (old audit MF_REMOVE)"]
+  - ["4873#1", "3820#2", "hand only touches the bar; minifig parts join only as listed (old audit MF_REMOVE)"]
+
+audit_notes: |
+  Ported to the shared pipeline (13 Nov 2026). Starting matrix = the old checked matrix (hull rests on deck/cockpit-floor studs, minifig joins, glass/hinge/clip whitelist, 19 manual adds).
+  Hull: the MPD hull is a custom triangle sub-model, replaced by the official LDraw part 2372c01 (mpd_block_alias). Hull links come from the starting matrix and manual_add.
+  Levers 298c04 are not in the MPD (extra_lines) nor in LDraw (flexible_parts); they are linked by manual_add.
+
+plot:
+  panel_title: "Police Rescue Boat (links checked against building instructions)"

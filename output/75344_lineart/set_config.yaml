@@ -1,0 +1,22 @@
+set: "75344"
+name: Boba Fett's Starship Microfighter
+set_num: "75344-1"
+instructions: true
+
+# node 577b = LDraw number of the hilt that Rebrickable lists as 64567 (alias row in rebrickable/set_parts.csv)
+
+subtype_override:
+  "11458": Technic plate (with holes)   # plate with pin hole on top
+category_override:
+  "11458": Technic
+pair_allow:
+  - ["20482", "61184", bar]   # bar of pin 61184 in hollow-bar tile (geometry, step 41)
+  - ["20482", "64567", bar]   # hilt ring in hollow-bar tile (Rebrickable number)
+  - ["20482", "577b", bar]    # same, LDraw number (used by the audit)
+flexible_parts: []
+manual_add: []
+audit_notes: |
+  Ported to the shared pipeline (13 Nov 2026). Old audit used a bespoke stack/inside rule plus the .cys edge list as tie-breaker; the shared strict stud rule replaces it.
+  Old disputed pairs (not added): 11458-15068 (>50 LDU apart), 23950-32064a (4 LDU gap), 2419-3020 (side by side), 24307-32952 (side contact only).
+plot:
+  panel_title: "Boba Fett's Starship Microfighter (links checked against geometry and building instructions)"

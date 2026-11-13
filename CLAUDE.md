@@ -42,7 +42,8 @@ Steps:
 - `promote`: back up the starting matrix to `bckp/` and replace it with `_checked.csv`. Only after Pedro has reviewed the audit.
 - `plot`: network figures from `<set>_adjacency_matrix.csv` → `_network.pdf`, `_network_coords.pdf/.png`, `_nodes/_edges/_coords_*.csv`.
 - `xlsx`: `_adjacency_matrix_icons.xlsx`.
-- `all`: every step in order.
+- `widget`: interactive HTML adjacency widget `<set>_adjacency.html` (the artifact; gitignored, same design as the 75192 reference, inline tooltip) built from `<set>_adjacency_matrix.csv` by `pipeline/R/widget.R`. Old widget is copied to `bckp/` first. Names come from `_nodes.csv`, family colours from `_instances.csv`; independent of instance order.
+- `all`: every step in order (instances,bboxes,audit,promote,plot,xlsx,widget).
 
 After ANY change in `pipeline/`, run `pipeline/tests/regress.sh <set>` for every migrated set (see MIGRATION.md). A FAIL means the change altered results: explain why before keeping it.
 
