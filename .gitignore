@@ -113,3 +113,11 @@ __pycache__/
 # Rebrickable set images (re-downloadable with functions/rebrickable_set_images.R)
 data/rebrickable_set_images/*.jpg
 data/rebrickable_set_images/*.png
+
+# Over GitHub's 100 MB file limit (75192 adjacency matrices, ~110 MB each). Regenerate with
+# pipeline/R/run_set.R 75192; keep them local only.
+output/75192_lineart/75192_adjacency_matrix.csv
+output/75192_lineart/75192_adjacency_matrix_checked.csv
+output/75192_lineart/75192_adjacency_matrix_kernel.csv
+output/75192_lineart/75192k_adjacency_matrix.csv
+output/75192_lineart/bckp/75192_adjacency_matrix_start_*.csv
