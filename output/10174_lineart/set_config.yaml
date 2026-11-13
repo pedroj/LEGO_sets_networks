@@ -1,0 +1,24 @@
+set: "10174"
+name: Imperial AT-ST
+instructions: false   # no building-instruction booklet supplied: no hand checks
+
+subtype_override: {}
+category_override: {}
+pair_allow: []
+
+# the three flexible hoses (one part 73590c02a each) have no rigid box: their kernel links, computed segment by segment, are kept
+flexible_parts: ["73590c02a"]
+
+# sub-assemblies cut off by the box rules are bridged by touching kernel links (one round per component pair)
+bridge_subassemblies: true
+
+manual_add: []
+manual_remove: []
+
+audit_notes: |
+  No building-instruction booklet was supplied, so no links were checked by hand against pictures.
+  The three flexible hoses (73590c02a) are not box-checked: their kernel links (segment by segment) are kept. Sub-assemblies cut off by the rules are bridged by touching kernel links.
+  NOTE: 10174_instances.csv / _kernel.csv come from output/10174_lineart/run_adj.R (custom MPD sub-files, hose collapsing, segment-wise hose contacts), which the shared instances step does not reproduce. Keep run_adj.R if the instances must be regenerated.
+
+plot:
+  panel_title: "Imperial AT-ST (links checked against LDraw geometry and compatibility rules)"

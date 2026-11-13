@@ -1,0 +1,44 @@
+set: "6628"
+name: Shell Tow Truck
+instructions: true   # PDF booklet used for the hand checks
+
+# per-set corrections of the automatic part classification (Python audit AND R plots)
+subtype_override:
+  "4211": Brick basic     # vehicle base
+  "3788": Brick basic     # studded mudguard
+  "3136": Plate jumper    # tow hook, studs both sides
+
+category_override:        # R plots (.PART_OVERRIDE)
+  "4211": Brick
+  "3788": Brick
+  "3136": Plate
+
+# joints allowed although the subtype matrix forbids them: [part_a, part_b, joint]
+pair_allow:
+  - ["122c01", "4084", wheel]   # tyre sits on the red rim of the wheel plate
+  # doors between the plate below and the windscreen above
+  - ["3623", "3821p60", door]
+  - ["3623", "3822p60", door]
+  - ["3821p60", "3823", door]
+  - ["3822p60", "3823", door]
+
+flexible_parts: []
+
+# hand-checked links from geometry + instruction pictures: [node_a, node_b, joint, reason]
+manual_add:
+  - ["3023#2", "4175#1", stud, "ladder plate 4175 sits on plate 3023#2 (stack of 3710#3 > 3023#3 > 3023#2 > 4175; box of 4175 includes its ladder)"]
+  - ["3710#2", "3135#1", stud, "plate 3710#2 sits in the hollow underside of the crane slope 3135 (steps 5-6)"]
+  - ["4211#1", "3829a#1", stud, "steering-wheel stand 3829a plugged into the opening of the vehicle base 4211 (step 5)"]
+  - ["3829a#1", "3828#1", stud, "steering wheel 3828 on its stand 3829a (step 5)"]
+  - ["3822p60#1", "3623#2", door, "right door 3822p60 hinges on the plate 3623 below it (step 7)"]
+  - ["3821p60#1", "3623#1", door, "left door 3821p60 hinges on the plate 3623 below it (step 7)"]
+  - ["3822p60#1", "3823#1", door, "door 3822p60 held by the windscreen 3823 above it (step 8)"]
+  - ["3821p60#1", "3823#1", door, "door 3821p60 held by the windscreen 3823 above it (step 8)"]
+  - ["3135#1", "3136#1", stud, "tow hook 3136 hangs on the tip of the crane 3135 (step 5; kernel left it isolated)"]
+
+audit_notes: |
+  Hand checks covered steps 1-8 and the roof sub-assembly: doors, steering wheel, tow hook, ladder plate, plate inside the crane slope.
+  The MPD lists parts by position (no STEP lines), so it gives no build order; the instruction pictures were used instead. 3 vehicle parts were reclassified (4211 base and 3788 mudguard as bricks, 3136 hook as plate with studs); the tyre-on-wheel joint 122c01-4084 was allowed.
+
+plot:
+  panel_title: "Shell Tow Truck (links checked against geometry and building instructions)"

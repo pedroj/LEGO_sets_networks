@@ -1,0 +1,51 @@
+set: "4488"
+name: Millennium Falcon (mini)
+instructions: true   # PDF booklet used for the hand checks (19 STEP blocks = Falcon pages 3-19; the rest covers 4489-4491)
+
+# per-set corrections of the automatic part classification (Python audit AND R plots)
+subtype_override:
+  "4599a": Brick basic                  # tap = 1x1 brick-like part (studs both ways)
+  "4032a": Technic plate (with holes)   # round plate with axle hole takes the axle
+
+category_override:        # R plots (.PART_OVERRIDE)
+  "4599a": Brick
+  "4032a": Technic
+
+# joints allowed although the subtype matrix forbids them: [part_a, part_b, joint]
+pair_allow:
+  - ["4150", "3705", axle]       # round tile with bottom cross sits on the axle end
+  - ["4150ps0", "3705", axle]
+  - ["4592", "4593", hinge]      # lever on its base
+  - ["4599a", "4740", stud]      # spout of the tap takes the dish pin
+  - ["30367a", "4274", pin]      # pin 1/2 in the dome
+  - ["2444", "43093", pin]       # axle pin through the pin-hole plate
+# allowed in the R plots only (the audit adds this joint through manual_add)
+pair_allow_plot_only:
+  - ["3705", "3961ps0", axle]
+
+flexible_parts: []
+
+# hand-checked links from geometry + instruction pictures: [node_a, node_b, joint, reason]
+manual_add:
+  - ["2436a#1", "3710#1", stud, "bracket 2436a plugs onto the studs of plate 3710#1 (step 7, picture of the sub-assembly 1); its tall flange makes the boxes overlap more than a stud height"]
+  - ["3941#1", "3961ps0#1", stud, "upper dish drops onto the stud of the blue round brick 3941#1 (step 17 and the picture on page 17)"]
+  - ["3705#1", "3961ps0#1", axle, "tip of the axle 3705 enters the upper dish (step 17 picture); the subtype matrix gives no dish-axle joint"]
+  - ["3961#1", "4032a#2", stud, "blue round plate 4032a#2 sits on the lower dish 3961 (step 16 picture); dish studs inside the plate make the overlap too large for the stud rule"]
+  - ["3023#1", "2444#2", stud, "plate 2444#2 sits on plate 3023#1 (step 10 callout and picture); the underside boss of 2444 inflates its box so the stud rule fails"]
+  - ["3023#2", "2444#1", stud, "plate 2444#1 sits on plate 3023#2 (step 10 callout and picture); the underside boss of 2444 inflates its box so the stud rule fails"]
+
+# links that pass the rules but are false positives after the instruction check: [node_a, node_b, reason]
+manual_remove:
+  - ["3961ps0#1", "4593#1", "lever 4593#1 only rests on the dish top (face contact); it is held by its base 4592#1"]
+  - ["3961ps0#1", "4593#2", "lever 4593#2 only rests on the dish top (face contact); it is held by its base 4592#2"]
+  - ["32001#1", "43093#1", "axle pin 43093#1 lies above the end of the 2x6 plate and only touches its edge; it is held by plate 2444#1 and round brick 3941#3 (step 10 callout)"]
+  - ["32001#1", "43093#2", "axle pin 43093#2 lies above the end of the 2x6 plate and only touches its edge; it is held by plate 2444#2 and round brick 3941#2 (step 10 callout)"]
+  - ["4740#1", "30565#10", "dish 4740 is held only by the tap 4599a (callout of the last step); it does not engage the plate under it"]
+
+audit_notes: |
+  Instruction check: the 19 STEP blocks of the MPD match the 19 Falcon steps of the booklet (pages 3-19).
+  Added by hand: bracket 2436a on plate 3710#1, upper dish on round brick 3941#1 and on the axle tip, blue plate 4032a#2 on the lower dish, two plates 2444 on plates 3023. Removed by hand: levers resting on the dish, axle pins above the 2x6 plate end, radar dish 4740 that only hangs on the tap.
+  Reclassified: tap 4599a as 1x1 brick, plate round with axle hole 4032a as technic plate. Extra joints allowed: lever 4593 on base 4592, tap 4599a - dish 4740, dome 30367a - pin 4274, round tile 4150 - axle 3705, plate 2444 - axle pin 43093.
+
+plot:
+  panel_title: "Millennium Falcon (mini) (links checked against geometry and building instructions)"
