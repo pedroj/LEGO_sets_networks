@@ -1,0 +1,51 @@
+set: "4489"
+name: AT-AT Mini
+set_num: "4489-1"
+instructions: true   # PDF booklet used for the hand checks
+
+# per-set corrections of the automatic part classification (Python audit AND R plots)
+subtype_override:
+  "3678a": Slope standard            # sloped brick 65 deg, was "Hose or flex bar"
+  "30000": Brick with pin or axle    # 2x2 brick with 2 pins
+
+category_override:        # R plots (.PART_OVERRIDE)
+  "3678a": Slope
+  "30000": Brick
+
+# joints allowed although the subtype matrix forbids them: [part_a, part_b, joint]
+pair_allow:
+  - ["43093", "30553", pin]    # blue pin of the head enters the hinge cylinder on the body front (head steps 3, 6, p15-16; step 16, p17)
+  - ["30000", "75535", pin]    # round pin connectors on the pins of the 2x2 pin brick (step 13, p10)
+  - ["32062", "30552", axle]   # leg axle through the hinge cylinder (leg sub-assembly, p12)
+  - ["32062", "4032a", axle]   # leg axle through the round plate (p12)
+
+flexible_parts: []
+
+# hand-checked links from geometry + instruction pictures: [node_a, node_b, joint, reason]
+manual_add:
+  - ["6141#3", "4081b#1", stud, "round plate pushed onto the stud of the clip plate (head step 6, sub-step 1, p16); stud insertion 6 LDU is just above the 5.5 rule limit"]
+
+# false positives confirmed by hand: [node_a, node_b, reason]
+manual_remove:
+  - ["3795#1", "2540#1", "flush side contact of handle plate and 2x6 plate (step 3, p4)"]
+  - ["3795#1", "2540#2", "flush side contact of handle plate and 2x6 plate (step 3, p4)"]
+  - ["2540#1", "3003#1", "flush side contact; brick sits on the 2x6 plate only (step 4, p5)"]
+  - ["2540#2", "3003#1", "flush side contact; brick sits on the 2x6 plate only (step 4, p5)"]
+  - ["2540#1", "6564#1", "flush contact at z=20, no stud engagement (steps 5-8, p5-7)"]
+  - ["2540#1", "6565#2", "flush contact at z=20, no stud engagement (steps 5-8, p5-7)"]
+  - ["2540#2", "6565#1", "flush contact at z=20, no stud engagement (steps 5-8, p5-7)"]
+  - ["2540#2", "6564#2", "flush contact at z=20, no stud engagement (steps 5-8, p5-7)"]
+  - ["30365#1", "30365#2", "hinge bricks meet end to end at z=0; fingers point outward to the legs (step 12, p9)"]
+  - ["30365#3", "30365#4", "hinge bricks meet end to end at z=0; fingers point outward to the legs (step 12, p9)"]
+  - ["44567#1", "30365#1", "no volume overlap (ox=0), fingers do not meet"]
+  - ["44567#1", "30365#3", "no volume overlap (ox=0), fingers do not meet"]
+  - ["3031#1", "75535#1", "flush under the plate; connector sits on the pin of 30000 (step 13, p10)"]
+  - ["3031#1", "75535#2", "flush under the plate; connector sits on the pin of 30000 (step 13, p10)"]
+
+audit_notes: |
+  Hand checks covered the whole booklet (body steps 1-16, leg sub-assembly, head steps 1-6) against the MPD STEP lines.
+  Added joints: head pin 43093-30553, pins 30000-75535, leg axle 32062 through 30552 and 4032a, round plate 6141#3 on clip plate 4081b#1.
+  14 flush-contact false positives removed (handle plates 2540, hinge bricks 30365, pin connectors 75535). 3678a reclassified as a slope, 30000 as a brick with pins.
+
+plot:
+  panel_title: "AT-AT Mini (links checked against geometry and building instructions)"

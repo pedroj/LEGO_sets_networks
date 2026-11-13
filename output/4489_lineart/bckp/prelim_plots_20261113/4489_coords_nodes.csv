@@ -1,0 +1,83 @@
+"node","part","desc","category","subtype","x0","y0","x","y","moved","degree"
+"3031#1","3031","Plate 4 x 4","Plate","Plate basic",0,0,33.3594546790841,-27.1867862708695,TRUE,19
+"44567#1","44567","Hinge Plate 1 x 2 Locking with Groove with Single Finger On Side Vertical","Special","Click hinge (plate or brick)",0,50,6.14368686013648,51.916276986417,TRUE,10
+"3795#1","3795","Plate 2 x 6","Plate","Plate basic",0,0,-26.7309363407871,-25.1960031449119,TRUE,18
+"2540#1","2540","Plate Special 1 x 2 Side Handle [Free Ends]","Special","Bar holder or handle plate",30,0,57.2091462228776,2.52040408595995,TRUE,8
+"3023#1","3023","Plate 1 x 2","Plate","Plate basic",30,0,22.8483857620641,-0.31339438082021,TRUE,8
+"2540#2","2540","Plate Special 1 x 2 Side Handle [Free Ends]","Special","Bar holder or handle plate",-30,0,-12.2951972821316,-14.538952114363,TRUE,8
+"3023#2","3023","Plate 1 x 2","Plate","Plate basic",-30,0,-30.449317335873,13.9910151168621,TRUE,8
+"3003#1","3003","Brick 2 x 2","Brick","Brick basic",0,0,-29.7083924954027,-5.69334448923078,TRUE,25
+"30553#1","30553","Hinge Cylinder 1 x 2 Locking with 2 Click Fingers and Axle Hole, 9 Teeth","Special","Click hinge (plate or brick)",0,80,-9.44463540096976,83.0250082263477,TRUE,6
+"6564#1","6564","Brick Wedged, Angled 3 x 2 Right","Brick","Brick basic",20,-50,-12.1452047289911,-62.338553654129,TRUE,14
+"6565#1","6565","Brick Wedged, Angled 3 x 2 Left","Brick","Brick basic",-20,-50,-23.7476445276238,-78.0111159964779,TRUE,13
+"6564#2","6564","Brick Wedged, Angled 3 x 2 Right","Brick","Brick basic",-20,50,6.98630549886743,71.8058194844716,TRUE,16
+"6565#2","6565","Brick Wedged, Angled 3 x 2 Left","Brick","Brick basic",20,50,-10.2582820547586,62.9644330855036,TRUE,15
+"3003#2","3003","Brick 2 x 2","Brick","Brick basic",0,0,15.8582178736292,-19.1398091077339,TRUE,15
+"6565#3","6565","Brick Wedged, Angled 3 x 2 Left","Brick","Brick basic",-20,-50,1.44985548763055,-49.8319831986718,TRUE,10
+"6564#3","6564","Brick Wedged, Angled 3 x 2 Right","Brick","Brick basic",20,-50,22.4757071751209,-78.9145567769798,TRUE,10
+"6564#4","6564","Brick Wedged, Angled 3 x 2 Right","Brick","Brick basic",-20,50,-11.9280308991393,43.5410744464077,TRUE,10
+"6565#4","6565","Brick Wedged, Angled 3 x 2 Left","Brick","Brick basic",20,50,23.8456303387635,60.4579323063242,TRUE,10
+"3678a#1","3678a","Brick Sloped 65° 2 x 2 x 2 Smooth without Bottom Tube","Special","Hose or flex bar",30,0,39.1368134774337,10.0169157574397,TRUE,14
+"3678a#2","3678a","Brick Sloped 65° 2 x 2 x 2 Smooth without Bottom Tube","Special","Hose or flex bar",-30,0,-47.6861159220428,3.05798089032342,TRUE,14
+"3795#2","3795","Plate 2 x 6","Plate","Plate basic",0,0,-13.0851155567885,4.62232767802362,TRUE,15
+"3020#1","3020","Plate 2 x 4","Plate","Plate basic",0,0,21.5268628709836,20.0317237443331,TRUE,15
+"3023#3","3023","Plate 1 x 2","Plate","Plate basic",0,-30,-0.697177165511813,-30.3791592973711,FALSE,10
+"3023#4","3023","Plate 1 x 2","Plate","Plate basic",0,30,-12.6356514913251,24.0239263308464,TRUE,10
+"30365#1","30365","Hinge Brick 1 x 2 Locking with 2 Fingers Vertical End, 9 Teeth","Special","Click hinge (plate or brick)",30,20,39.4251109631216,29.2906171234941,TRUE,7
+"30365#2","30365","Hinge Brick 1 x 2 Locking with 2 Fingers Vertical End, 9 Teeth","Special","Click hinge (plate or brick)",30,-20,40.9153888848867,-9.72207848001039,TRUE,7
+"30365#3","30365","Hinge Brick 1 x 2 Locking with 2 Fingers Vertical End, 9 Teeth","Special","Click hinge (plate or brick)",-30,20,-47.1513871736361,24.4383116448872,TRUE,8
+"30365#4","30365","Hinge Brick 1 x 2 Locking with 2 Fingers Vertical End, 9 Teeth","Special","Click hinge (plate or brick)",-30,-20,-45.7467065766763,-18.3691201217557,TRUE,6
+"30000#1","30000","Brick Special 2 x 2 with 2 Pins and Axle Hole","Brick","Brick basic",0,0,3.823603581939,-5.35767873685806,TRUE,19
+"75535#1","75535","Technic Pin Connector Round [No Slot]","Technic","Technic connector (cross block; angle)",0,40,5.10741500268791,32.5583484175468,TRUE,0
+"75535#2","75535","Technic Pin Connector Round [No Slot]","Technic","Technic connector (cross block; angle)",0,-40,4.71005616598818,-70.1000823153461,TRUE,0
+"2335#1","2335","Flag 2 x 2 Square [Thin Clips]","Special","Clip plate or tile",50,-20,59.7757366633826,-17.6166748863771,TRUE,8
+"2335#2","2335","Flag 2 x 2 Square [Thin Clips]","Special","Clip plate or tile",-50,20,-64.6700897851459,14.6903803982775,TRUE,8
+"3020#2","3020","Plate 2 x 4","Plate","Plate basic",0,0,4.08609973597244,13.1006028307165,TRUE,11
+"30554a#1","30554a","Hinge Cylinder 1 x 3 Locking with 1 Finger and 2 Fingers On Ends, without Hole, 9 Teeth","Special","Click hinge (plate or brick)",30,50,57.1663513057708,38.3028321226956,TRUE,1
+"30554a#2","30554a","Hinge Cylinder 1 x 3 Locking with 1 Finger and 2 Fingers On Ends, without Hole, 9 Teeth","Special","Click hinge (plate or brick)",30,50,25.3835842727516,80.3340765868582,TRUE,1
+"30552#1","30552","Hinge Cylinder 1 x 2 Locking with 1 Finger and Axle Hole On Ends","Special","Click hinge (plate or brick)",30,50,23.0027168298562,40.5477273387281,TRUE,2
+"32198#1","32198","Technic Gear 20 Tooth Bevel","Technic","Technic gear",30,50,58.4845887793948,58.4085899610109,TRUE,1
+"4032a#1","4032a","Plate Round 2 x 2 with Axle Hole Type 1 (+ Opening)","Plate","Plate round",30,50,41.947883552571,69.4443750781677,TRUE,1
+"32062#1","32062","Technic Axle 2 Notched","Technic","Technic axle",30,50,40.5032487390521,49.4717567898359,TRUE,1
+"30554a#3","30554a","Hinge Cylinder 1 x 3 Locking with 1 Finger and 2 Fingers On Ends, without Hole, 9 Teeth","Special","Click hinge (plate or brick)",-30,50,-27.5168736442876,74.0308947426937,TRUE,1
+"30554a#4","30554a","Hinge Cylinder 1 x 3 Locking with 1 Finger and 2 Fingers On Ends, without Hole, 9 Teeth","Special","Click hinge (plate or brick)",-30,50,-62.7619738408182,55.1641982409858,TRUE,1
+"30552#2","30552","Hinge Cylinder 1 x 2 Locking with 1 Finger and Axle Hole On Ends","Special","Click hinge (plate or brick)",-30,50,-29.5870954816731,34.3191894401519,TRUE,2
+"32198#2","32198","Technic Gear 20 Tooth Bevel","Technic","Technic gear",-30,50,-45.3427322148062,65.0828709106323,TRUE,1
+"4032a#2","4032a","Plate Round 2 x 2 with Axle Hole Type 1 (+ Opening)","Plate","Plate round",-30,50,-46.1211244553058,44.7255059283804,TRUE,1
+"32062#2","32062","Technic Axle 2 Notched","Technic","Technic axle",-30,50,-28.5545421721831,54.2240515497091,FALSE,1
+"30554a#5","30554a","Hinge Cylinder 1 x 3 Locking with 1 Finger and 2 Fingers On Ends, without Hole, 9 Teeth","Special","Click hinge (plate or brick)",-30,-50,-57.2638986171471,-36.645690917885,TRUE,1
+"30554a#6","30554a","Hinge Cylinder 1 x 3 Locking with 1 Finger and 2 Fingers On Ends, without Hole, 9 Teeth","Special","Click hinge (plate or brick)",-30,-50,-43.7285224750927,-74.6136162281304,TRUE,1
+"30552#3","30552","Hinge Cylinder 1 x 2 Locking with 1 Finger and Axle Hole On Ends","Special","Click hinge (plate or brick)",-30,-50,-18.0688722637299,-43.3078626432216,TRUE,2
+"32198#3","32198","Technic Gear 20 Tooth Bevel","Technic","Technic gear",-30,-50,-51.3011722919986,-56.0089056953621,TRUE,1
+"4032a#3","4032a","Plate Round 2 x 2 with Axle Hole Type 1 (+ Opening)","Plate","Plate round",-30,-50,-31.2927071401305,-59.0097998153221,TRUE,1
+"32062#3","32062","Technic Axle 2 Notched","Technic","Technic axle",-30,-50,-38.0953847135251,-40.8589052286265,TRUE,1
+"30554a#7","30554a","Hinge Cylinder 1 x 3 Locking with 1 Finger and 2 Fingers On Ends, without Hole, 9 Teeth","Special","Click hinge (plate or brick)",30,-50,38.7741996950633,-67.5234124353381,TRUE,1
+"30554a#8","30554a","Hinge Cylinder 1 x 3 Locking with 1 Finger and 2 Fingers On Ends, without Hole, 9 Teeth","Special","Click hinge (plate or brick)",30,-50,51.8686931304287,-36.0283018781662,TRUE,1
+"30552#4","30552","Hinge Cylinder 1 x 2 Locking with 1 Finger and Axle Hole On Ends","Special","Click hinge (plate or brick)",30,-50,20.5394887746082,-58.7521463723958,TRUE,2
+"32198#4","32198","Technic Gear 20 Tooth Bevel","Technic","Technic gear",30,-50,54.8117620078377,-55.916745848069,TRUE,1
+"4032a#4","4032a","Plate Round 2 x 2 with Axle Hole Type 1 (+ Opening)","Plate","Plate round",30,-50,17.9460382135435,-39.1775241233855,TRUE,1
+"32062#4","32062","Technic Axle 2 Notched","Technic","Technic axle",30,-50,36.2583292701427,-47.4684844731348,TRUE,1
+"3020#3","3020","Plate 2 x 4","Plate","Plate basic",0,140,17.9950526849519,148.006010261214,TRUE,22
+"3023#5","3023","Plate 1 x 2","Plate","Plate basic",0,150,-1.88354148383852,149.382203115521,FALSE,14
+"3023#6","3023","Plate 1 x 2","Plate","Plate basic",0,170,-1.20576115912739,184.012806299717,TRUE,12
+"4070#1","4070","Brick Special 1 x 1 with Headlight","Brick","Brick modified SNOT",10,130,26.7706766851081,109.225560540047,TRUE,11
+"4070#2","4070","Brick Special 1 x 1 with Headlight","Brick","Brick modified SNOT",-10,130,-26.4876673458447,110.832771232753,TRUE,11
+"6141#1","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",24,130,26.5824184489663,129.353867810981,FALSE,5
+"6141#2","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",-24,130,-29.3348584086307,130.437547669533,TRUE,5
+"3700#1","3700","Technic Brick 1 x 2 [1 Pin Hole]","Technic","Technic brick (studded beam)",0,110,-8.87203366796849,102.666322604204,TRUE,10
+"43093#1","43093","Technic Axle Pin with Friction Ridges Lengthwise","Technic","Technic pin with axle",0,100,8.73698184463351,92.405568691672,TRUE,1
+"30602#1","30602","Brick Curved 2 x 2 with Lip, No Studs","Slope","Slope curved",0,160,8.34961426377282,166.035365070863,TRUE,17
+"2412b#1","2412b","Tile Special 1 x 2 Grille with Bottom Groove","Tile","Tile modified (grille; slope tile)",0,130,-10.3998400279352,123.128045703927,TRUE,8
+"3023#7","3023","Plate 1 x 2","Plate","Plate basic",0,110,7.43356807250734,112.686845229132,TRUE,8
+"4740#1","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",31,130,38.1863011830485,145.72223218378,TRUE,5
+"4592#1","4592","Hinge Control Stick Base","Special","Click hinge (plate or brick)",39,130,55.867240233845,135.908006643991,TRUE,3
+"4593#1","4593","Hinge Control Stick","Special","Click hinge (plate or brick)",39,130,44.366643805408,119.427696388892,TRUE,6
+"4740#2","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",-31,130,-45.200105703906,117.857582105797,TRUE,5
+"4592#2","4592","Hinge Control Stick Base","Special","Click hinge (plate or brick)",-39,130,-41.3082487539606,146.664861806868,TRUE,3
+"4593#2","4593","Hinge Control Stick","Special","Click hinge (plate or brick)",-39,130,-57.0264970472286,134.052632737095,TRUE,6
+"6141#3","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",0,140,6.79027205559795,132.134598335849,TRUE,12
+"4081b#1","4081b","Plate Special 1 x 1 with Clip Light, Bar Hole [Thick Ring]","Special","Clip plate or tile",0,140,-20.8994340054474,148.301568700346,TRUE,9
+"4592#3","4592","Hinge Control Stick Base","Special","Click hinge (plate or brick)",12,160,28.8372074215082,164.785644518633,TRUE,7
+"4593#3","4593","Hinge Control Stick","Special","Click hinge (plate or brick)",12,160,19.3264893961939,182.674301716115,TRUE,9
+"4592#4","4592","Hinge Control Stick Base","Special","Click hinge (plate or brick)",-12,160,-31.9591913922182,165.379246122996,TRUE,7
+"4593#4","4593","Hinge Control Stick","Special","Click hinge (plate or brick)",-12,160,-12.0208648675243,166.830235896984,TRUE,9
