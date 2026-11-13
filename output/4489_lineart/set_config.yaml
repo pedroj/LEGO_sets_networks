@@ -5,6 +5,8 @@ instructions: true   # PDF booklet used for the hand checks
 
 # per-set corrections of the automatic part classification (Python audit AND R plots)
 subtype_override:
+  "4592": Click hinge (plate or brick)   # keep the LDraw reading (Hinge Control Stick Base); the shared Rebrickable catalogue calls it "Lever Small Base"
+  "4593": Click hinge (plate or brick)   # LDraw: Hinge Control Stick; Rebrickable: "Lever Small"
   "3678a": Slope standard            # sloped brick 65 deg, was "Hose or flex bar"
   "30000": Brick with pin or axle    # 2x2 brick with 2 pins
 

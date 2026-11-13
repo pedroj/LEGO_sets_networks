@@ -29,6 +29,10 @@ py <- function(script, ...) {
   st <- system2(PYBIN, c(shQuote(file.path(PYDIR, script)), ...))
   if (st != 0) stop(script, " failed (exit ", st, ")")
 }
+# One shared Rebrickable parts catalogue (part_num, part_name, part_category) for every set; per-set rebrickable/set_parts.csv is only a fallback
+CATALOG <- file.path(root, "data", "extdata", "rebrickable-repo", "parts_catalog.csv")
+if (!file.exists(CATALOG)) CATALOG <- "rebrickable/set_parts.csv"
+Sys.setenv(LEGO_PARTS_CATALOG = CATALOG)
 stamp <- format(Sys.time(), "%Y%m%d_%H%M")
 for (st in steps) {
   cat(sprintf("\n######## %s: %s\n", S, st))
@@ -47,10 +51,10 @@ for (st in steps) {
       icons <- file.path(root, "data", "icons")
       title <- if (!is.null(cfg$plot$panel_title)) cfg$plot$panel_title else cfg$name
       plot_lego_network(paste0(S, "_adjacency_matrix.csv"), icons, set_info = "set_info.json",
-                        parts_meta = "rebrickable/set_parts.csv", out_prefix = S, label = "part", compat_csv = compat)
+                        parts_meta = CATALOG, out_prefix = S, label = "part", compat_csv = compat)
       if (file.exists(paste0(S, "_icons.pdf"))) file.rename(paste0(S, "_icons.pdf"), paste0(S, "_network.pdf"))
       plot_lego_network_coords(paste0(S, "_adjacency_matrix.csv"), paste0(S, "_node_coords.csv"), icons,
-                               parts_meta = "rebrickable/set_parts.csv", out_prefix = S, set_info = "set_info.json",
+                               parts_meta = CATALOG, out_prefix = S, set_info = "set_info.json",
                                panel_title = title, compat_csv = compat)
       if (file.exists(paste0(S, "_network_coords_icons.png"))) file.rename(paste0(S, "_network_coords_icons.png"), paste0(S, "_network_coords.png")) },
     xlsx      = py("build_adjacency_xlsx.py"),

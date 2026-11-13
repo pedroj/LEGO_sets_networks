@@ -47,6 +47,8 @@ Steps:
 
 After ANY change in `pipeline/`, run `pipeline/tests/regress.sh <set>` for every migrated set (see MIGRATION.md). A FAIL means the change altered results: explain why before keeping it.
 
+Part names and Rebrickable categories come from ONE shared catalogue, `data/extdata/rebrickable-repo/parts_catalog.csv` (all Rebrickable parts: part_num, part_name, part_category). Never create a per-set `rebrickable/set_parts.csv`; `run_set.R` exports the catalogue path as `LEGO_PARTS_CATALOG`.
+
 Parts.lst parsing: split on the first `=`. Image lookup goes in two passes: the
 exact part number, then with trailing letters stripped (`3062a → 3062`).
 

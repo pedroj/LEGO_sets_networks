@@ -70,14 +70,14 @@
 "2412b#1","2412b","Tile Special 1 x 2 Grille with Bottom Groove","Tile","Tile modified (grille; slope tile)",0,130,-10.3998400279352,123.128045703927,TRUE,2
 "3023#7","3023","Plate 1 x 2","Plate","Plate basic",0,110,7.43356807250734,112.686845229132,TRUE,1
 "4740#1","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",31,130,38.1863011830485,145.72223218378,TRUE,2
-"4592#1","4592","Hinge Control Stick Base","Special","Click hinge (plate or brick)",39,130,55.867240233845,135.908006643991,TRUE,2
-"4593#1","4593","Hinge Control Stick","Special","Click hinge (plate or brick)",39,130,44.366643805408,119.427696388892,TRUE,1
+"4592#1","4592","Lever Small Base",NA,"Click hinge (plate or brick)",39,130,55.867240233845,135.908006643991,TRUE,2
+"4593#1","4593","Lever Small",NA,"Click hinge (plate or brick)",39,130,44.366643805408,119.427696388892,TRUE,1
 "4740#2","4740","Dish 2 x 2 Inverted [Radar]","Special","Dish or radar",-31,130,-45.200105703906,117.857582105797,TRUE,2
-"4592#2","4592","Hinge Control Stick Base","Special","Click hinge (plate or brick)",-39,130,-41.3082487539606,146.664861806868,TRUE,2
-"4593#2","4593","Hinge Control Stick","Special","Click hinge (plate or brick)",-39,130,-57.0264970472286,134.052632737095,TRUE,1
+"4592#2","4592","Lever Small Base",NA,"Click hinge (plate or brick)",-39,130,-41.3082487539606,146.664861806868,TRUE,2
+"4593#2","4593","Lever Small",NA,"Click hinge (plate or brick)",-39,130,-57.0264970472286,134.052632737095,TRUE,1
 "6141#3","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",0,140,6.79027205559795,132.134598335849,TRUE,2
 "4081b#1","4081b","Plate Special 1 x 1 with Clip Light, Bar Hole [Thick Ring]","Special","Clip plate or tile",0,140,-20.8994340054474,148.301568700346,TRUE,3
-"4592#3","4592","Hinge Control Stick Base","Special","Click hinge (plate or brick)",12,160,28.8372074215082,164.785644518633,TRUE,1
-"4593#3","4593","Hinge Control Stick","Special","Click hinge (plate or brick)",12,160,19.3264893961939,182.674301716115,TRUE,2
-"4592#4","4592","Hinge Control Stick Base","Special","Click hinge (plate or brick)",-12,160,-31.9591913922182,165.379246122996,TRUE,1
-"4593#4","4593","Hinge Control Stick","Special","Click hinge (plate or brick)",-12,160,-12.0208648675243,166.830235896984,TRUE,2
+"4592#3","4592","Lever Small Base",NA,"Click hinge (plate or brick)",12,160,28.8372074215082,164.785644518633,TRUE,1
+"4593#3","4593","Lever Small",NA,"Click hinge (plate or brick)",12,160,19.3264893961939,182.674301716115,TRUE,2
+"4592#4","4592","Lever Small Base",NA,"Click hinge (plate or brick)",-12,160,-31.9591913922182,165.379246122996,TRUE,1
+"4593#4","4593","Lever Small",NA,"Click hinge (plate or brick)",-12,160,-12.0208648675243,166.830235896984,TRUE,2

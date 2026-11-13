@@ -1,10 +1,10 @@
 # 911607 link audit
 
-Starting matrix: 207 instance links. Checked: 55 links (55 kept from kernel, 0 added = false negatives).
+Starting matrix: 207 instance links. Checked: 57 links (57 kept from kernel, 0 added = false negatives).
 
-Starting links removed as false positives: 152 (of which 97 are candidate pairs failing the geometry rules; the rest are pairs more than 6 LDU apart).
+Starting links removed as false positives: 150 (of which 95 are candidate pairs failing the geometry rules; the rest are pairs more than 6 LDU apart).
 
 Connected components: 1 (largest 42 of 42 parts). Isolated parts: 0.
 
 Rules: stud engagement (stud insertion of 2-5.5 LDU along an axis with >=8 LDU footprint; flush side contact is not a joint); non-stud joints (hinge, pin, axle, bar, clip...) when the boxes touch and the subtype matrix allows the joint. 0 links were added and 0 removed by hand after comparing the geometry with the instruction pictures.
-(to be written after the booklet cross-check)
+Pedro approved 13 Nov 2026. The PDF for this set is a Rebrickable web page (photo + parts list), not building instructions, so the checks rest on geometry. 3023b (missing in Rebrickable) classed as Plate; tap 4599b as Brick basic; binoculars 30162 allowed on the stud below them.

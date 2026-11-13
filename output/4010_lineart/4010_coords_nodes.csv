@@ -13,10 +13,10 @@
 "3004#4","3004","Brick 1 x 2","Brick","Brick basic",-40,-30,-37.9132297122166,-36.5973932508447,FALSE,3
 "4623#1","4623","Plate Special 1 x 2 with Bar Up [Horizontal Arm 6mm]","Special","Bar holder or handle plate",0,-30,28.7915188854625,-70.0088841456904,TRUE,3
 "3842a#1","3842a","Helmet Classic with Thin Chin Guard and Visor Dimples","Minifig","Minifig headgear or hair",-42,-19,-69.2537373348817,-15.4060623839118,TRUE,1
-"3040b#1","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",-70,-30,-134.514404427386,-51.2617015354773,TRUE,2
-"3040b#2","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",70,-30,126.150704181515,-45.8084517202941,TRUE,2
-"3665#1","3665","Slope Inverted 45° 2 x 1","Slope","Slope inverted",-70,130,-86.8652014813111,185.654465183971,TRUE,3
-"3665#2","3665","Slope Inverted 45° 2 x 1","Slope","Slope inverted",70,130,84.1592040180734,161.555073491184,TRUE,3
+"3040b#1","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",-70,-30,-134.514404427386,-51.2617015354773,TRUE,2
+"3040b#2","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",70,-30,126.150704181515,-45.8084517202941,TRUE,2
+"3665#1","3665","Brick Sloped Inverted 45° 2 x 1","Slope","Slope inverted",-70,130,-86.8652014813111,185.654465183971,TRUE,3
+"3665#2","3665","Brick Sloped Inverted 45° 2 x 1","Slope","Slope inverted",70,130,84.1592040180734,161.555073491184,TRUE,3
 "3829c01#1","3829c01","Steering Stand 1 x 2 with Black Steering Wheel","Special","Bracket (SNOT)",-40,-30,-68.6506456732879,-53.2545974971387,TRUE,1
 "3005#1","3005","Brick 1 x 1","Brick","Brick basic",-70,-10,-101.321079779715,-32.0200660049815,TRUE,2
 "3005#2","3005","Brick 1 x 1","Brick","Brick basic",70,-10,91.7751282184972,-28.8678017752124,TRUE,2
@@ -26,24 +26,24 @@
 "3024#2","3024","Plate 1 x 1","Plate","Plate basic",70,90,143.374698053818,96.3961527711358,TRUE,2
 "4873#1","4873","Bar 1 x 6 [Open Studs]","Special","Bar or antenna",0,-150,-28.8723365093681,-189.695065329659,TRUE,0
 "3838#1","3838","Minifig Neckwear Airtanks","Minifig","Minifig neckwear",0,-9,26.9367174022781,-33.6780291780459,TRUE,1
-"3297#1","3297","Slope 33° 3 x 4","Slope","Slope standard",-40,150,-47.6884340856459,195.21588155351,TRUE,3
-"3297#2","3297","Slope 33° 3 x 4","Slope","Slope standard",40,150,55.2933522888168,189.009131530062,TRUE,3
+"3297#1","3297","Brick Sloped 33° 3 x 4","Slope","Slope standard",-40,150,-47.6884340856459,195.21588155351,TRUE,3
+"3297#2","3297","Brick Sloped 33° 3 x 4","Slope","Slope standard",40,150,55.2933522888168,189.009131530062,TRUE,3
 "4599a#1","4599a","Tap 1 x 1 with Hole in Spout","Minifig","Minifig accessory (tool; weapon)",10,-146,37.7957483650529,-186.414061405645,TRUE,0
-"3040b#3","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",-70,-10,-133.155280229346,-11.2100453993729,TRUE,3
-"3040b#4","3040b","Slope 45° 2 x 1 with Bottom Pin","Slope","Slope standard",70,-10,156.002712689362,-20.6502657312666,TRUE,3
+"3040b#3","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",-70,-10,-133.155280229346,-11.2100453993729,TRUE,3
+"3040b#4","3040b","Brick Sloped 45° 2 x 1 with Bottom Pin","Slope","Slope standard",70,-10,156.002712689362,-20.6502657312666,TRUE,3
 "6141#1","6141","Plate Round 1 x 1 with Solid Stud","Plate","Plate round",10,-170,5.69342220977758,-209.246107727638,TRUE,0
 "3460#1","3460","Plate 1 x 8","Plate","Plate basic",0,90,-3.8059799135993,104.561047057912,TRUE,5
 "4863#1","4863","Window 1 x 4 x 2 Plane, Solid Studs","Panel","Window frame",70,40,83.2143171116559,47.868529333001,TRUE,6
 "4863#2","4863","Window 1 x 4 x 2 Plane, Solid Studs","Panel","Window frame",-70,40,-90.1938667025088,47.0703228203113,TRUE,6
-"4286#1","4286","Slope 33° 3 x 1","Slope","Slope standard",-70,110,-97.867633139326,148.257212538554,TRUE,4
-"4286#2","4286","Slope 33° 3 x 1","Slope","Slope standard",70,110,120.222481455639,146.000196716339,TRUE,4
+"4286#1","4286","Brick Sloped 33° 3 x 1","Slope","Slope standard",-70,110,-97.867633139326,148.257212538554,TRUE,4
+"4286#2","4286","Brick Sloped 33° 3 x 1","Slope","Slope standard",70,110,120.222481455639,146.000196716339,TRUE,4
 "3023#2","3023","Plate 1 x 2","Plate","Plate basic",60,90,72.5088422111212,123.698463638014,TRUE,2
 "3023#3","3023","Plate 1 x 2","Plate","Plate basic",-60,90,-68.9958257632759,120.870113523984,TRUE,2
 "4862#1","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",70,20,152.169925048891,19.3829483507109,TRUE,1
 "4862#2","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",70,60,112.966144105648,71.6481092775323,TRUE,1
 "4862#3","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",-70,20,-159.182999453911,17.8193291653806,TRUE,1
 "4862#4","4862","Glass for Window 1 x 2 x 2 Plane","Panel","Window or door leaf",-70,60,-117.789722790746,73.775501333331,TRUE,1
-"3939#1","3939","Slope 33° 3 x 6","Slope","Slope standard",0,110,-41.0099285774906,94.9289806940674,TRUE,5
+"3939#1","3939","Brick Sloped 33° 3 x 6","Slope","Slope standard",0,110,-41.0099285774906,94.9289806940674,TRUE,5
 "3023#4","3023","Plate 1 x 2","Plate","Plate basic",-70,0,-99.2952666779144,7.90617002544077,TRUE,3
 "3023#5","3023","Plate 1 x 2","Plate","Plate basic",70,0,120.929836457277,-5.41042763253874,TRUE,3
 "3021#1","3021","Plate 2 x 3","Plate","Plate basic",60,70,75.9351174716331,86.2673084326995,TRUE,2

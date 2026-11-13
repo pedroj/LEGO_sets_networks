@@ -1,0 +1,525 @@
+inst_a,inst_b,part_a,part_b,kind,joint,in_kernel,decision,reason
+11213#1,3001#1,11213,3001,gap,stud,True,remove,no engagement in the real geometry
+11213#1,3062b#1,11213,3062b,near,stud,True,remove,no engagement in the real geometry
+11213#1,4070#1,11213,4070,gap,stud,True,remove,no engagement in the real geometry
+11213#1,3062b#2,11213,3062b,gap,stud,True,remove,no engagement in the real geometry
+11213#1,30136#1,11213,30136,gap,stud,True,remove,no engagement in the real geometry
+11213#1,2639#1,11213,2639,gap,stud,True,remove,no engagement in the real geometry
+11213#1,6564#1,11213,6564,gap,stud,True,remove,no engagement in the real geometry
+11213#1,3023b#2,11213,3023b,gap,,True,remove,compatibility rules: these part types cannot join
+11213#1,99781#1,11213,99781,near,stud,True,remove,no engagement in the real geometry
+11213#1,98100#1,11213,98100,near,stud,False,reject,no engagement in the real geometry
+11213#1,3003#2,11213,3003,gap,stud,True,remove,no engagement in the real geometry
+11213#1,6565#1,11213,6565,gap,stud,True,remove,no engagement in the real geometry
+11213#1,2921#1,11213,2921,gap,stud+bar,True,remove,no engagement in the real geometry
+11213#1,3062b#3,11213,3062b,near,stud,True,remove,no engagement in the real geometry
+11213#1,4070#4,11213,4070,gap,stud,True,remove,no engagement in the real geometry
+11213#1,3062b#4,11213,3062b,gap,stud,True,remove,no engagement in the real geometry
+11213#1,2921#2,11213,2921,gap,stud+bar,True,remove,no engagement in the real geometry
+11213#1,2412b#1,11213,2412b,gap,stud,True,remove,no engagement in the real geometry
+11213#1,6134#1,11213,6134,stack,stud,True,remove,no engagement in the real geometry
+11213#1,3023b#6,11213,3023b,near,,True,remove,compatibility rules: these part types cannot join
+11213#1,99781#2,11213,99781,near,stud,True,remove,no engagement in the real geometry
+3023b#1,3001#1,3023b,3001,stack,,True,remove,compatibility rules: these part types cannot join
+3023b#1,30565#1,3023b,30565,side,,True,remove,compatibility rules: these part types cannot join
+3023b#1,2639#1,3023b,2639,near,,False,reject,compatibility rules: these part types cannot join
+3023b#1,54383#1,3023b,54383,side,,True,remove,compatibility rules: these part types cannot join
+3023b#1,3023b#2,3023b,3023b,near,,False,reject,compatibility rules: these part types cannot join
+3023b#1,3003#1,3023b,3003,near,,False,reject,compatibility rules: these part types cannot join
+3023b#1,3023b#3,3023b,3023b,near,,False,reject,compatibility rules: these part types cannot join
+3023b#1,30565#3,3023b,30565,side,,True,remove,compatibility rules: these part types cannot join
+3023b#1,3003#2,3023b,3003,near,,True,remove,compatibility rules: these part types cannot join
+3023b#1,54384#1,3023b,54384,side,,True,remove,compatibility rules: these part types cannot join
+3023b#1,3937#1,3023b,3937,side,,True,remove,compatibility rules: these part types cannot join
+3023b#1,2654#3,3023b,2654,near,,True,remove,compatibility rules: these part types cannot join
+3023b#1,2654#4,3023b,2654,near,,True,remove,compatibility rules: these part types cannot join
+3023b#1,6134#1,3023b,6134,side,,True,remove,compatibility rules: these part types cannot join
+3023b#1,3021#1,3023b,3021,near,,True,remove,compatibility rules: these part types cannot join
+3001#1,3062b#1,3001,3062b,side,stud,False,reject,no engagement in the real geometry
+3001#1,4070#1,3001,4070,side,stud,True,remove,no engagement in the real geometry
+3001#1,3024#1,3001,3024,side,stud,False,reject,no engagement in the real geometry
+3001#1,30136#1,3001,30136,side,stud,True,remove,no engagement in the real geometry
+3001#1,2639#1,3001,2639,side,stud,True,remove,no engagement in the real geometry
+3001#1,54383#1,3001,54383,near,stud,False,reject,no engagement in the real geometry
+3001#1,3023b#2,3001,3023b,near,,True,remove,compatibility rules: these part types cannot join
+3001#1,3003#1,3001,3003,side,stud,True,remove,no engagement in the real geometry
+3001#1,3003#2,3001,3003,side,stud,True,remove,no engagement in the real geometry
+3001#1,54384#1,3001,54384,near,stud,False,reject,no engagement in the real geometry
+3001#1,54384#2,3001,54384,near,stud,False,reject,no engagement in the real geometry
+3001#1,3062b#3,3001,3062b,side,stud,False,reject,no engagement in the real geometry
+3001#1,4070#4,3001,4070,side,stud,True,remove,no engagement in the real geometry
+3001#1,3024#2,3001,3024,side,stud,False,reject,no engagement in the real geometry
+3001#1,3937#1,3001,3937,side,stud,True,remove,no engagement in the real geometry
+3001#1,11213#2,3001,11213,gap,stud,True,remove,no engagement in the real geometry
+3001#1,15573#2,3001,15573,near,stud,True,remove,no engagement in the real geometry
+3001#1,6134#1,3001,6134,side,stud,False,reject,no engagement in the real geometry
+3001#1,3021#1,3001,3021,near,stud,False,reject,no engagement in the real geometry
+30565#1,3024#1,30565,3024,stack,stud,True,remove,no engagement in the real geometry
+30565#1,54383#1,30565,54383,side,stud,False,reject,no engagement in the real geometry
+30565#1,3003#1,30565,3003,near,stud,True,remove,no engagement in the real geometry
+30565#1,3023b#3,30565,3023b,gap,,True,remove,compatibility rules: these part types cannot join
+30565#1,26601#1,30565,26601,gap,stud,True,remove,no engagement in the real geometry
+30565#1,3023b#4,30565,3023b,near,,False,reject,compatibility rules: these part types cannot join
+30565#1,99780#1,30565,99780,near,stud,False,reject,no engagement in the real geometry
+30565#1,30565#3,30565,30565,side,stud,True,remove,no engagement in the real geometry
+30565#1,3062b#3,30565,3062b,near,stud,True,remove,no engagement in the real geometry
+30565#1,2654#1,30565,2654,near,stud,True,remove,no engagement in the real geometry
+30565#1,2654#2,30565,2654,gap,stud,True,remove,no engagement in the real geometry
+30565#1,2654#3,30565,2654,near,stud,True,remove,no engagement in the real geometry
+3062b#1,4070#1,3062b,4070,near,stud,True,remove,no engagement in the real geometry
+3062b#1,3024#1,3062b,3024,side,stud,True,remove,no engagement in the real geometry
+3062b#1,30565#3,3062b,30565,near,stud,True,remove,no engagement in the real geometry
+3062b#1,30565#4,3062b,30565,near,stud,True,remove,no engagement in the real geometry
+3062b#1,3062b#3,3062b,3062b,side,stud,True,remove,no engagement in the real geometry
+3062b#1,11213#2,3062b,11213,near,stud,True,remove,no engagement in the real geometry
+3062b#1,15573#2,3062b,15573,gap,stud,True,remove,no engagement in the real geometry
+30565#2,3024#1,30565,3024,stack,stud,True,remove,no engagement in the real geometry
+30565#2,3003#1,30565,3003,side,stud,True,remove,no engagement in the real geometry
+30565#2,3023b#3,30565,3023b,gap,,True,remove,compatibility rules: these part types cannot join
+30565#2,26601#1,30565,26601,gap,stud,True,remove,no engagement in the real geometry
+30565#2,3023b#4,30565,3023b,near,,False,reject,compatibility rules: these part types cannot join
+30565#2,99780#1,30565,99780,near,stud,False,reject,no engagement in the real geometry
+30565#2,30565#4,30565,30565,side,stud,True,remove,no engagement in the real geometry
+30565#2,3062b#3,30565,3062b,near,stud,True,remove,no engagement in the real geometry
+30565#2,2412b#2,30565,2412b,gap,stud,True,remove,no engagement in the real geometry
+30565#2,3070b#1,30565,3070b,near,stud,True,remove,no engagement in the real geometry
+30565#2,15403#1,30565,15403,gap,stud,True,remove,no engagement in the real geometry
+30565#2,15403#2,30565,15403,near,stud,True,remove,no engagement in the real geometry
+30565#2,15068#1,30565,15068,gap,stud,True,remove,no engagement in the real geometry
+30565#2,11477#1,30565,11477,inside,stud,True,remove,no engagement in the real geometry
+30565#2,54200#4,30565,54200,gap,stud,True,remove,no engagement in the real geometry
+30565#2,98138#2,30565,98138,gap,stud,True,remove,no engagement in the real geometry
+30565#2,98138#4,30565,98138,near,stud,True,remove,no engagement in the real geometry
+30565#2,98138#5,30565,98138,gap,stud,True,remove,no engagement in the real geometry
+4070#1,3062b#2,4070,3062b,side,stud,True,remove,no engagement in the real geometry
+4070#1,30136#1,4070,30136,side,stud,True,remove,no engagement in the real geometry
+4070#1,54200#3,4070,54200,gap,stud,True,remove,no engagement in the real geometry
+4070#1,11213#2,4070,11213,gap,stud,True,remove,no engagement in the real geometry
+4070#1,15573#2,4070,15573,near,stud,True,remove,no engagement in the real geometry
+3024#1,3062b#2,3024,3062b,side,stud,True,remove,no engagement in the real geometry
+3062b#2,30136#1,3062b,30136,side,stud,True,remove,no engagement in the real geometry
+3062b#2,26601#1,3062b,26601,near,stud,True,remove,no engagement in the real geometry
+3062b#2,26601#2,3062b,26601,near,stud,True,remove,no engagement in the real geometry
+3062b#2,54200#3,3062b,54200,gap,stud,True,remove,no engagement in the real geometry
+3062b#2,11213#2,3062b,11213,gap,stud,True,remove,no engagement in the real geometry
+30136#1,2639#1,30136,2639,side,stud,True,remove,no engagement in the real geometry
+30136#1,3023b#3,30136,3023b,side,,True,remove,compatibility rules: these part types cannot join
+30136#1,26601#1,30136,26601,side,stud,False,reject,no engagement in the real geometry
+30136#1,26601#2,30136,26601,side,stud,False,reject,no engagement in the real geometry
+30136#1,54200#3,30136,54200,gap,stud,True,remove,no engagement in the real geometry
+30136#1,11213#2,30136,11213,gap,stud,True,remove,no engagement in the real geometry
+30136#1,11477#1,30136,11477,near,stud,False,reject,no engagement in the real geometry
+2639#1,6564#1,2639,6564,inside,stud,True,remove,no engagement in the real geometry
+2639#1,3023b#3,2639,3023b,stack,,True,remove,compatibility rules: these part types cannot join
+2639#1,26601#2,2639,26601,gap,stud,True,remove,no engagement in the real geometry
+2639#1,33909#1,2639,33909,gap,stud,True,remove,no engagement in the real geometry
+2639#1,99781#1,2639,99781,inside,stud,True,remove,no engagement in the real geometry
+2639#1,98100#1,2639,98100,near,stud,False,reject,no engagement in the real geometry
+2639#1,99780#2,2639,99780,gap,stud,True,remove,no engagement in the real geometry
+2639#1,3937#1,2639,3937,side,stud,False,reject,no engagement in the real geometry
+2639#1,3023b#5,2639,3023b,near,,False,reject,compatibility rules: these part types cannot join
+2639#1,2412b#1,2639,2412b,side,stud,False,reject,no engagement in the real geometry
+2639#1,6134#1,2639,6134,side,stud,False,reject,no engagement in the real geometry
+2639#1,15573#3,2639,15573,near,stud,False,reject,no engagement in the real geometry
+54383#1,6141#1,54383,6141,stack,stud,False,reject,no engagement in the real geometry
+54383#1,3023b#2,54383,3023b,stack,,True,remove,compatibility rules: these part types cannot join
+54383#1,3003#1,54383,3003,gap,stud,True,remove,no engagement in the real geometry
+54383#1,3023b#3,54383,3023b,near,,False,reject,compatibility rules: these part types cannot join
+54383#1,26601#1,54383,26601,near,stud,False,reject,no engagement in the real geometry
+54383#1,3023b#4,54383,3023b,gap,,True,remove,compatibility rules: these part types cannot join
+54383#1,99780#1,54383,99780,near,stud,True,remove,no engagement in the real geometry
+54383#1,99781#1,54383,99781,inside,stud,True,remove,no engagement in the real geometry
+54383#1,98100#1,54383,98100,inside,stud,True,remove,no engagement in the real geometry
+54383#1,3937#1,54383,3937,side,stud,True,remove,no engagement in the real geometry
+54383#1,3023b#5,54383,3023b,side,,True,remove,compatibility rules: these part types cannot join
+54383#1,2654#3,54383,2654,gap,stud,True,remove,no engagement in the real geometry
+54383#1,6134#1,54383,6134,side,stud,True,remove,no engagement in the real geometry
+54383#1,3021#1,54383,3021,near,stud,True,remove,no engagement in the real geometry
+4070#2,6564#1,4070,6564,side,stud,True,remove,no engagement in the real geometry
+6141#1,43722#1,6141,43722,stack,stud,False,reject,no engagement in the real geometry
+43722#1,99781#1,43722,99781,near,stud,True,remove,no engagement in the real geometry
+43722#1,98100#1,43722,98100,side,stud,True,remove,no engagement in the real geometry
+43722#1,99780#2,43722,99780,side,stud,True,remove,no engagement in the real geometry
+43722#1,3710#1,43722,3710,side,stud,True,remove,no engagement in the real geometry
+43722#1,15573#1,43722,15573,near,stud,True,remove,no engagement in the real geometry
+43722#1,11213#2,43722,11213,near,stud,True,remove,no engagement in the real geometry
+43722#1,6134#1,43722,6134,near,stud,False,reject,no engagement in the real geometry
+43722#1,3021#1,43722,3021,side,stud,True,remove,no engagement in the real geometry
+43722#1,2412b#4,43722,2412b,side,stud,True,remove,no engagement in the real geometry
+6564#1,3023b#2,6564,3023b,side,,True,remove,compatibility rules: these part types cannot join
+6564#1,3003#1,6564,3003,side,stud,False,reject,no engagement in the real geometry
+6564#1,3023b#4,6564,3023b,near,,False,reject,compatibility rules: these part types cannot join
+6564#1,33909#1,6564,33909,near,stud,True,remove,no engagement in the real geometry
+6564#1,99781#1,6564,99781,side,stud,True,remove,no engagement in the real geometry
+6564#1,98100#1,6564,98100,side,stud,True,remove,no engagement in the real geometry
+6564#1,99780#2,6564,99780,side,stud,True,remove,no engagement in the real geometry
+6564#1,15573#1,6564,15573,near,stud,True,remove,no engagement in the real geometry
+6564#1,3937#1,6564,3937,near,stud,True,remove,no engagement in the real geometry
+6564#1,3023b#5,6564,3023b,near,,True,remove,compatibility rules: these part types cannot join
+6564#1,2412b#1,6564,2412b,side,stud,True,remove,no engagement in the real geometry
+6564#1,11213#2,6564,11213,gap,stud,True,remove,no engagement in the real geometry
+6564#1,6134#1,6564,6134,side,stud,True,remove,no engagement in the real geometry
+6564#1,3021#1,6564,3021,side,stud,True,remove,no engagement in the real geometry
+6564#1,2412b#4,6564,2412b,side,stud,True,remove,no engagement in the real geometry
+6564#1,15573#3,6564,15573,side,stud,True,remove,no engagement in the real geometry
+3023b#2,3003#1,3023b,3003,stack,,True,remove,compatibility rules: these part types cannot join
+3023b#2,3023b#4,3023b,3023b,near,,True,remove,compatibility rules: these part types cannot join
+3023b#2,33909#1,3023b,33909,near,,True,remove,compatibility rules: these part types cannot join
+3023b#2,99781#1,3023b,99781,near,,False,reject,compatibility rules: these part types cannot join
+3023b#2,99780#2,3023b,99780,near,,False,reject,compatibility rules: these part types cannot join
+3023b#2,3937#1,3023b,3937,side,,False,reject,compatibility rules: these part types cannot join
+3023b#2,3023b#5,3023b,3023b,near,,False,reject,compatibility rules: these part types cannot join
+3023b#2,2412b#1,3023b,2412b,near,,False,reject,compatibility rules: these part types cannot join
+3023b#2,6134#1,3023b,6134,side,,True,remove,compatibility rules: these part types cannot join
+3023b#2,3021#1,3023b,3021,near,,True,remove,compatibility rules: these part types cannot join
+3003#1,3023b#3,3003,3023b,side,,True,remove,compatibility rules: these part types cannot join
+3003#1,26601#1,3003,26601,near,stud,True,remove,no engagement in the real geometry
+3003#1,26601#2,3003,26601,near,stud,True,remove,no engagement in the real geometry
+3003#1,3023b#4,3003,3023b,side,,True,remove,compatibility rules: these part types cannot join
+3003#1,33909#1,3003,33909,side,stud,True,remove,no engagement in the real geometry
+3003#1,99781#1,3003,99781,near,stud,False,reject,no engagement in the real geometry
+3003#1,99780#2,3003,99780,near,stud,False,reject,no engagement in the real geometry
+3003#1,3710#1,3003,3710,side,stud,True,remove,no engagement in the real geometry
+3003#1,15573#1,3003,15573,near,stud,False,reject,no engagement in the real geometry
+3003#1,3937#1,3003,3937,side,stud,False,reject,no engagement in the real geometry
+3003#1,3023b#5,3003,3023b,near,,False,reject,compatibility rules: these part types cannot join
+3003#1,2412b#1,3003,2412b,near,stud,False,reject,no engagement in the real geometry
+3003#1,2412b#2,3003,2412b,near,stud,True,remove,no engagement in the real geometry
+3003#1,3070b#1,3003,3070b,gap,stud,True,remove,no engagement in the real geometry
+3003#1,15403#1,3003,15403,near,stud,True,remove,no engagement in the real geometry
+3003#1,15068#1,3003,15068,near,stud,True,remove,no engagement in the real geometry
+3003#1,11477#1,3003,11477,near,stud,True,remove,no engagement in the real geometry
+3003#1,6134#1,3003,6134,side,stud,True,remove,no engagement in the real geometry
+3003#1,3021#1,3003,3021,side,stud,True,remove,no engagement in the real geometry
+3003#1,2412b#4,3003,2412b,near,stud,False,reject,no engagement in the real geometry
+3023b#3,26601#1,3023b,26601,side,,True,remove,compatibility rules: these part types cannot join
+3023b#3,26601#2,3023b,26601,near,,True,remove,compatibility rules: these part types cannot join
+3023b#3,3023b#4,3023b,3023b,near,,True,remove,compatibility rules: these part types cannot join
+3023b#3,33909#1,3023b,33909,near,,True,remove,compatibility rules: these part types cannot join
+3023b#3,11477#1,3023b,11477,near,,False,reject,compatibility rules: these part types cannot join
+26601#1,3023b#4,26601,3023b,side,,False,reject,compatibility rules: these part types cannot join
+26601#1,33909#1,26601,33909,near,stud,True,remove,no engagement in the real geometry
+26601#1,99780#1,26601,99780,side,stud,True,remove,no engagement in the real geometry
+26601#1,11477#1,26601,11477,gap,stud,True,remove,no engagement in the real geometry
+26601#2,3023b#4,26601,3023b,near,,False,reject,compatibility rules: these part types cannot join
+26601#2,33909#1,26601,33909,side,stud,True,remove,no engagement in the real geometry
+26601#2,99780#1,26601,99780,side,stud,True,remove,no engagement in the real geometry
+26601#2,54200#3,26601,54200,gap,stud,True,remove,no engagement in the real geometry
+26601#2,11213#2,26601,11213,near,stud,True,remove,no engagement in the real geometry
+3023b#4,33909#1,3023b,33909,stack,,True,remove,compatibility rules: these part types cannot join
+3023b#4,99780#1,3023b,99780,side,,True,remove,compatibility rules: these part types cannot join
+3023b#4,99781#1,3023b,99781,side,,True,remove,compatibility rules: these part types cannot join
+3023b#4,99780#2,3023b,99780,near,,True,remove,compatibility rules: these part types cannot join
+3023b#4,3710#1,3023b,3710,near,,True,remove,compatibility rules: these part types cannot join
+3023b#4,11477#1,3023b,11477,near,,True,remove,compatibility rules: these part types cannot join
+33909#1,99780#1,33909,99780,inside,stud,True,remove,no engagement in the real geometry
+33909#1,99781#1,33909,99781,near,stud,True,remove,no engagement in the real geometry
+33909#1,99780#2,33909,99780,side,stud,True,remove,no engagement in the real geometry
+33909#1,3710#1,33909,3710,near,stud,True,remove,no engagement in the real geometry
+33909#1,15573#1,33909,15573,near,stud,True,remove,no engagement in the real geometry
+33909#1,11213#2,33909,11213,near,stud,True,remove,no engagement in the real geometry
+33909#1,11477#1,33909,11477,near,stud,True,remove,no engagement in the real geometry
+99780#1,99781#1,99780,99781,side,stud,True,remove,no engagement in the real geometry
+99780#1,99780#2,99780,99780,side,stud,True,remove,no engagement in the real geometry
+99780#1,3710#1,99780,3710,near,stud,True,remove,no engagement in the real geometry
+99780#1,15573#1,99780,15573,near,stud,True,remove,no engagement in the real geometry
+99780#1,11477#1,99780,11477,near,stud,True,remove,no engagement in the real geometry
+99781#1,3710#1,99781,3710,gap,stud,True,remove,no engagement in the real geometry
+98100#1,3710#1,98100,3710,near,stud,True,remove,no engagement in the real geometry
+98100#1,15573#1,98100,15573,near,stud,False,reject,no engagement in the real geometry
+98100#1,54200#1,98100,54200,near,stud,False,reject,no engagement in the real geometry
+98100#1,11213#2,98100,11213,near,stud,False,reject,no engagement in the real geometry
+99780#2,3710#1,99780,3710,inside,stud,True,remove,no engagement in the real geometry
+99780#2,54200#1,99780,54200,gap,stud,True,remove,no engagement in the real geometry
+99780#2,11213#2,99780,11213,near,stud,True,remove,no engagement in the real geometry
+3710#1,54200#1,3710,54200,gap,stud,True,remove,no engagement in the real geometry
+3710#1,15403#1,3710,15403,near,stud,False,reject,no engagement in the real geometry
+3710#1,6134#1,3710,6134,near,stud,False,reject,no engagement in the real geometry
+3710#1,3021#1,3710,3021,side,stud,False,reject,no engagement in the real geometry
+3710#1,2412b#4,3710,2412b,side,stud,False,reject,no engagement in the real geometry
+3710#1,15573#3,3710,15573,near,stud,False,reject,no engagement in the real geometry
+15573#1,11213#2,15573,11213,side,stud,False,reject,no engagement in the real geometry
+30565#3,54384#1,30565,54384,side,stud,False,reject,no engagement in the real geometry
+30565#3,3024#2,30565,3024,stack,stud,True,remove,no engagement in the real geometry
+30565#3,2654#1,30565,2654,gap,stud,True,remove,no engagement in the real geometry
+30565#3,2654#2,30565,2654,near,stud,True,remove,no engagement in the real geometry
+30565#3,2654#4,30565,2654,near,stud,True,remove,no engagement in the real geometry
+30565#3,99781#2,30565,99781,inside,stud,True,remove,no engagement in the real geometry
+30565#3,15535#1,30565,15535,near,stud,False,reject,no engagement in the real geometry
+3003#2,3937#1,3003,3937,near,stud,True,remove,no engagement in the real geometry
+3003#2,11213#2,3003,11213,gap,stud,True,remove,no engagement in the real geometry
+3003#2,6134#1,3003,6134,near,stud,True,remove,no engagement in the real geometry
+3003#2,3021#1,3003,3021,near,stud,False,reject,no engagement in the real geometry
+3003#2,3023b#6,3003,3023b,side,,True,remove,compatibility rules: these part types cannot join
+3003#2,99781#2,3003,99781,side,stud,True,remove,no engagement in the real geometry
+3003#2,99780#3,3003,99780,side,stud,True,remove,no engagement in the real geometry
+54384#1,6141#2,54384,6141,stack,stud,False,reject,no engagement in the real geometry
+54384#1,3937#1,54384,3937,side,stud,True,remove,no engagement in the real geometry
+54384#1,3023b#5,54384,3023b,side,,True,remove,compatibility rules: these part types cannot join
+54384#1,2412b#1,54384,2412b,near,stud,True,remove,no engagement in the real geometry
+54384#1,2654#4,54384,2654,gap,stud,True,remove,no engagement in the real geometry
+54384#1,6134#1,54384,6134,side,stud,True,remove,no engagement in the real geometry
+54384#1,3021#1,54384,3021,near,stud,True,remove,no engagement in the real geometry
+54384#1,3023b#6,54384,3023b,stack,,False,reject,compatibility rules: these part types cannot join
+54384#1,99781#2,54384,99781,inside,stud,False,reject,no engagement in the real geometry
+54384#1,15535#1,54384,15535,near,stud,True,remove,no engagement in the real geometry
+6565#1,4070#3,6565,4070,side,stud,False,reject,no engagement in the real geometry
+6565#1,3937#1,6565,3937,near,stud,True,remove,no engagement in the real geometry
+6565#1,3023b#5,6565,3023b,near,,True,remove,compatibility rules: these part types cannot join
+6565#1,2412b#1,6565,2412b,side,stud,True,remove,no engagement in the real geometry
+6565#1,11213#2,6565,11213,gap,stud,True,remove,no engagement in the real geometry
+6565#1,3070b#2,6565,3070b,gap,stud,True,remove,no engagement in the real geometry
+6565#1,98138#1,6565,98138,gap,stud,True,remove,no engagement in the real geometry
+6565#1,6134#1,6565,6134,side,stud,True,remove,no engagement in the real geometry
+6565#1,3021#1,6565,3021,side,stud,True,remove,no engagement in the real geometry
+6565#1,2412b#4,6565,2412b,side,stud,True,remove,no engagement in the real geometry
+6565#1,15573#3,6565,15573,side,stud,True,remove,no engagement in the real geometry
+54384#2,6141#2,54384,6141,stack,stud,False,reject,no engagement in the real geometry
+54384#2,30565#4,54384,30565,side,stud,False,reject,no engagement in the real geometry
+54384#2,2412b#3,54384,2412b,near,stud,False,reject,no engagement in the real geometry
+54384#2,92280#1,54384,92280,gap,stud,True,remove,no engagement in the real geometry
+54384#2,15403#2,54384,15403,near,stud,True,remove,no engagement in the real geometry
+54384#2,15068#1,54384,15068,near,stud,False,reject,no engagement in the real geometry
+54384#2,6134#1,54384,6134,near,stud,True,remove,no engagement in the real geometry
+54384#2,3021#1,54384,3021,side,stud,True,remove,no engagement in the real geometry
+54384#2,2412b#4,54384,2412b,side,stud,True,remove,no engagement in the real geometry
+54384#2,15573#3,54384,15573,side,stud,True,remove,no engagement in the real geometry
+54384#2,99781#2,54384,99781,gap,stud,False,reject,no engagement in the real geometry
+54384#2,99780#3,54384,99780,inside,stud,False,reject,no engagement in the real geometry
+54384#2,15535#1,54384,15535,near,stud,True,remove,no engagement in the real geometry
+4070#3,98138#1,4070,98138,near,stud,True,remove,no engagement in the real geometry
+2921#1,11213#2,2921,11213,gap,stud+bar,True,remove,no engagement in the real geometry
+2921#1,3023b#6,2921,3023b,side,,True,remove,compatibility rules: these part types cannot join
+30565#4,3024#2,30565,3024,stack,stud,True,remove,no engagement in the real geometry
+30565#4,2412b#3,30565,2412b,gap,stud,True,remove,no engagement in the real geometry
+30565#4,92280#1,30565,92280,near,stud,True,remove,no engagement in the real geometry
+30565#4,15403#1,30565,15403,near,stud,True,remove,no engagement in the real geometry
+30565#4,15403#2,30565,15403,gap,stud,True,remove,no engagement in the real geometry
+30565#4,15068#1,30565,15068,gap,stud,True,remove,no engagement in the real geometry
+30565#4,54200#4,30565,54200,gap,stud,True,remove,no engagement in the real geometry
+30565#4,98138#2,30565,98138,near,stud,True,remove,no engagement in the real geometry
+30565#4,98138#3,30565,98138,gap,stud,True,remove,no engagement in the real geometry
+30565#4,98138#4,30565,98138,gap,stud,True,remove,no engagement in the real geometry
+30565#4,99781#2,30565,99781,gap,stud,True,remove,no engagement in the real geometry
+30565#4,99780#3,30565,99780,inside,stud,True,remove,no engagement in the real geometry
+30565#4,15535#1,30565,15535,near,stud,False,reject,no engagement in the real geometry
+3062b#3,4070#4,3062b,4070,near,stud,True,remove,no engagement in the real geometry
+3062b#3,3024#2,3062b,3024,side,stud,True,remove,no engagement in the real geometry
+3062b#3,11213#2,3062b,11213,near,stud,True,remove,no engagement in the real geometry
+3062b#3,15573#2,3062b,15573,gap,stud,True,remove,no engagement in the real geometry
+4070#4,3062b#4,4070,3062b,side,stud,True,remove,no engagement in the real geometry
+4070#4,2921#2,4070,2921,near,stud+bar,True,remove,no engagement in the real geometry
+4070#4,54200#2,4070,54200,gap,stud,True,remove,no engagement in the real geometry
+4070#4,11213#2,4070,11213,gap,stud,True,remove,no engagement in the real geometry
+4070#4,15573#2,4070,15573,near,stud,False,reject,no engagement in the real geometry
+3024#2,3062b#4,3024,3062b,side,stud,True,remove,no engagement in the real geometry
+3062b#4,54200#2,3062b,54200,gap,stud,True,remove,no engagement in the real geometry
+3062b#4,11213#2,3062b,11213,gap,stud,True,remove,no engagement in the real geometry
+2921#2,54200#2,2921,54200,gap,stud+bar,True,remove,no engagement in the real geometry
+2921#2,11213#2,2921,11213,gap,stud+bar,True,remove,no engagement in the real geometry
+2921#2,3023b#6,2921,3023b,side,,True,remove,compatibility rules: these part types cannot join
+54200#2,11213#2,54200,11213,inside,stud,True,remove,no engagement in the real geometry
+54200#2,98138#3,54200,98138,inside,stud,True,remove,no engagement in the real geometry
+3937#1,3023b#5,3937,3023b,side,,True,remove,compatibility rules: these part types cannot join
+3937#1,2412b#1,3937,2412b,side,stud,True,remove,no engagement in the real geometry
+3937#1,2654#3,3937,2654,near,stud,True,remove,no engagement in the real geometry
+3937#1,2654#4,3937,2654,near,stud,True,remove,no engagement in the real geometry
+3937#1,3021#1,3937,3021,inside,stud,True,remove,no engagement in the real geometry
+3937#1,2412b#4,3937,2412b,near,stud,True,remove,no engagement in the real geometry
+3023b#5,2412b#1,3023b,2412b,stack,,True,remove,compatibility rules: these part types cannot join
+3023b#5,2654#3,3023b,2654,near,,True,remove,compatibility rules: these part types cannot join
+3023b#5,2654#4,3023b,2654,near,,True,remove,compatibility rules: these part types cannot join
+3023b#5,6134#1,3023b,6134,inside,,True,remove,compatibility rules: these part types cannot join
+3023b#5,3021#1,3023b,3021,gap,,True,remove,compatibility rules: these part types cannot join
+2412b#1,6134#1,2412b,6134,inside,stud,True,remove,no engagement in the real geometry
+2412b#1,3021#1,2412b,3021,stack,stud,True,remove,no engagement in the real geometry
+2654#1,2654#2,2654,2654,side,stud,True,remove,no engagement in the real geometry
+54200#3,11213#2,54200,11213,inside,stud,True,remove,no engagement in the real geometry
+54200#3,98138#5,54200,98138,inside,stud,True,remove,no engagement in the real geometry
+11213#2,3070b#2,11213,3070b,side,stud,True,remove,no engagement in the real geometry
+11213#2,6141#3,11213,6141,gap,stud,True,remove,no engagement in the real geometry
+11213#2,6141#4,11213,6141,gap,stud,True,remove,no engagement in the real geometry
+11213#2,11477#1,11213,11477,side,stud,True,remove,no engagement in the real geometry
+11213#2,15573#2,11213,15573,side,stud,True,remove,no engagement in the real geometry
+11213#2,54200#4,11213,54200,near,stud,True,remove,no engagement in the real geometry
+11213#2,4697b#1,11213,4697b,gap,stud,True,remove,no engagement in the real geometry
+11213#2,3021#1,11213,3021,gap,stud,True,remove,no engagement in the real geometry
+11213#2,2412b#4,11213,2412b,gap,stud,True,remove,no engagement in the real geometry
+11213#2,15573#3,11213,15573,near,stud,True,remove,no engagement in the real geometry
+11213#2,99780#3,11213,99780,near,stud,True,remove,no engagement in the real geometry
+11213#2,85861#1,11213,85861,stack,stud,True,remove,no engagement in the real geometry
+11213#2,15573#4,11213,15573,stack,stud,True,remove,no engagement in the real geometry
+2412b#2,3070b#1,2412b,3070b,side,,True,remove,compatibility rules: these part types cannot join
+2412b#2,15403#1,2412b,15403,side,stud,False,reject,no engagement in the real geometry
+2412b#2,15068#1,2412b,15068,side,,False,reject,compatibility rules: these part types cannot join
+2412b#2,11477#1,2412b,11477,near,,False,reject,compatibility rules: these part types cannot join
+2412b#2,98138#5,2412b,98138,side,,True,remove,compatibility rules: these part types cannot join
+2412b#3,92280#1,2412b,92280,side,stud,True,remove,no engagement in the real geometry
+2412b#3,15403#2,2412b,15403,side,stud,False,reject,no engagement in the real geometry
+2412b#3,15068#1,2412b,15068,side,,False,reject,compatibility rules: these part types cannot join
+2412b#3,4697b#1,2412b,4697b,stack,stud,True,remove,no engagement in the real geometry
+2412b#3,98138#3,2412b,98138,side,,True,remove,compatibility rules: these part types cannot join
+2412b#3,99780#3,2412b,99780,near,stud,True,remove,no engagement in the real geometry
+3070b#1,15403#1,3070b,15403,side,stud,True,remove,no engagement in the real geometry
+3070b#1,15068#1,3070b,15068,near,,True,remove,compatibility rules: these part types cannot join
+3070b#1,15392#2,3070b,15392,near,,True,remove,compatibility rules: these part types cannot join
+92280#1,15403#2,92280,15403,side,stud,True,remove,no engagement in the real geometry
+92280#1,15068#1,92280,15068,near,stud,True,remove,no engagement in the real geometry
+92280#1,15392#1,92280,15392,near,,False,reject,compatibility rules: these part types cannot join
+92280#1,99780#3,92280,99780,near,stud,True,remove,no engagement in the real geometry
+15403#1,15403#2,15403,15403,side,stud,True,remove,no engagement in the real geometry
+15403#1,15068#1,15403,15068,inside,stud,True,remove,no engagement in the real geometry
+15403#1,6141#4,15403,6141,side,stud,False,reject,no engagement in the real geometry
+15403#1,15392#1,15403,15392,side,,True,remove,compatibility rules: these part types cannot join
+15403#1,98138#5,15403,98138,near,stud,True,remove,no engagement in the real geometry
+15403#2,15068#1,15403,15068,inside,stud,True,remove,no engagement in the real geometry
+15403#2,6141#3,15403,6141,side,stud,False,reject,no engagement in the real geometry
+15403#2,15392#2,15403,15392,side,,True,remove,compatibility rules: these part types cannot join
+15403#2,98138#3,15403,98138,near,stud,True,remove,no engagement in the real geometry
+15068#1,98138#2,15068,98138,side,,True,remove,compatibility rules: these part types cannot join
+15068#1,98138#3,15068,98138,side,,True,remove,compatibility rules: these part types cannot join
+15068#1,98138#4,15068,98138,side,,True,remove,compatibility rules: these part types cannot join
+15068#1,98138#5,15068,98138,side,,True,remove,compatibility rules: these part types cannot join
+3070b#2,98138#1,3070b,98138,side,,True,remove,compatibility rules: these part types cannot join
+3070b#2,3021#1,3070b,3021,near,stud,True,remove,no engagement in the real geometry
+3070b#2,2412b#4,3070b,2412b,near,,False,reject,compatibility rules: these part types cannot join
+3070b#2,15573#3,3070b,15573,near,stud,False,reject,no engagement in the real geometry
+6141#3,6141#4,6141,6141,side,stud,True,remove,no engagement in the real geometry
+6141#3,15392#1,6141,15392,side,,True,remove,compatibility rules: these part types cannot join
+6141#3,15392#2,6141,15392,inside,,True,remove,compatibility rules: these part types cannot join
+6141#4,15392#1,6141,15392,inside,,True,remove,compatibility rules: these part types cannot join
+6141#4,15392#2,6141,15392,side,,True,remove,compatibility rules: these part types cannot join
+15573#2,98138#2,15573,98138,near,stud,True,remove,no engagement in the real geometry
+15573#2,98138#4,15573,98138,near,stud,True,remove,no engagement in the real geometry
+54200#4,98138#2,54200,98138,side,stud,True,remove,no engagement in the real geometry
+54200#4,98138#4,54200,98138,side,stud,True,remove,no engagement in the real geometry
+98138#1,3021#1,98138,3021,near,stud,True,remove,no engagement in the real geometry
+98138#1,15573#3,98138,15573,near,stud,False,reject,no engagement in the real geometry
+4697b#1,85861#1,4697b,85861,inside,stud,True,remove,no engagement in the real geometry
+4697b#1,15573#4,4697b,15573,side,stud,False,reject,no engagement in the real geometry
+15392#1,15392#2,15392,15392,near,,True,remove,compatibility rules: these part types cannot join
+98138#2,98138#4,98138,98138,side,,True,remove,compatibility rules: these part types cannot join
+98138#2,98138#5,98138,98138,near,,True,remove,compatibility rules: these part types cannot join
+98138#3,98138#4,98138,98138,near,,True,remove,compatibility rules: these part types cannot join
+6134#1,3021#1,6134,3021,inside,stud,True,remove,no engagement in the real geometry
+6134#1,15573#3,6134,15573,side,stud,True,remove,no engagement in the real geometry
+3021#1,2412b#4,3021,2412b,inside,stud,True,remove,no engagement in the real geometry
+3021#1,15573#3,3021,15573,inside,stud,True,remove,no engagement in the real geometry
+2412b#4,15573#3,2412b,15573,side,stud,True,remove,no engagement in the real geometry
+3023b#6,99781#2,3023b,99781,inside,,True,remove,compatibility rules: these part types cannot join
+3023b#6,99780#3,3023b,99780,gap,,True,remove,compatibility rules: these part types cannot join
+3023b#6,15535#1,3023b,15535,near,,True,remove,compatibility rules: these part types cannot join
+11213#1,30565#1,11213,30565,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#1,54383#1,11213,54383,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#1,30565#3,11213,30565,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#1,54384#1,11213,54384,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#1,3937#1,11213,3937,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#1,2654#1,11213,2654,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#1,2654#2,11213,2654,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#1,2654#3,11213,2654,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#1,2654#4,11213,2654,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3001#1,30565#1,3001,30565,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3001#1,30565#2,3001,30565,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3001#1,30565#3,3001,30565,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3001#1,30565#4,3001,30565,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#1,3062b#1,30565,3062b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#1,4070#1,30565,4070,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#1,3062b#2,30565,3062b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#1,30136#1,30565,30136,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#1,2639#1,30565,2639,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3062b#1,30565#2,3062b,30565,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#2,4070#1,30565,4070,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#2,3062b#2,30565,3062b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#2,30136#1,30565,30136,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#2,26601#2,30565,26601,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#2,54200#3,30565,54200,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#2,11213#2,30565,11213,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#2,15573#2,30565,15573,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+4070#1,3024#1,4070,3024,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+2639#1,54383#1,2639,54383,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2639#1,3003#1,2639,3003,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2639#1,26601#1,2639,26601,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+2639#1,99780#1,2639,99780,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54383#1,4070#2,54383,4070,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54383#1,6564#1,54383,6564,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+4070#2,6141#1,4070,6141,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+4070#2,43722#1,4070,43722,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+43722#1,6564#1,43722,6564,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+6564#1,3710#1,6564,3710,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3003#1,11213#2,3003,11213,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+26601#1,26601#2,26601,26601,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+26601#2,11477#1,26601,11477,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+99781#1,98100#1,99781,98100,inside,stud,False,add (false negative),stud engagement: boxes meet along axis z with 3.0 LDU stud insertion and footprint >= 8
+99781#1,99780#2,99781,99780,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+98100#1,99780#2,98100,99780,inside,stud,False,add (false negative),stud engagement: boxes meet along axis z with 3.0 LDU stud insertion and footprint >= 8
+99780#2,15573#1,99780,15573,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3710#1,15573#1,3710,15573,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3710#1,11213#2,3710,11213,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+15573#1,54200#1,15573,54200,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#3,3003#2,30565,3003,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#3,3062b#3,30565,3062b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#3,4070#4,30565,4070,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#3,3062b#4,30565,3062b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#3,2921#2,30565,2921,stack,stud+bar,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3003#2,54384#1,3003,54384,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3003#2,54384#2,3003,54384,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3003#2,2921#1,3003,2921,side,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+3003#2,30565#4,3003,30565,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+3003#2,2921#2,3003,2921,side,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+54384#1,6565#1,54384,6565,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#1,4070#3,54384,4070,stack,stud,False,add (false negative),stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#1,2921#1,54384,2921,stack,stud+bar,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+6565#1,54384#2,6565,54384,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+6565#1,2921#1,6565,2921,side,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+54384#2,4070#3,54384,4070,stack,stud,False,add (false negative),stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#2,2921#1,54384,2921,stack,stud+bar,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#2,11213#2,54384,11213,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#2,3070b#2,54384,3070b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+54384#2,98138#1,54384,98138,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+4070#3,6141#2,4070,6141,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+2921#1,99781#2,2921,99781,side,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+2921#1,99780#3,2921,99780,side,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+30565#4,3062b#3,30565,3062b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#4,4070#4,30565,4070,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#4,3062b#4,30565,3062b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#4,2921#2,30565,2921,stack,stud+bar,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#4,54200#2,30565,54200,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#4,11213#2,30565,11213,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+30565#4,15573#2,30565,15573,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+4070#4,3024#2,4070,3024,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+3062b#4,2921#2,3062b,2921,side,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+2921#2,99781#2,2921,99781,side,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+2921#2,99780#3,2921,99780,side,stud+bar,True,keep,non-stud joint (bar): boxes interpenetrate/touch
+3937#1,6134#1,3937,6134,inside,stud+hinge,True,keep,non-stud joint (hinge): boxes interpenetrate/touch
+11213#2,2412b#2,11213,2412b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,2412b#3,11213,2412b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,3070b#1,11213,3070b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,92280#1,11213,92280,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,15403#1,11213,15403,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,15403#2,11213,15403,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,15068#1,11213,15068,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,98138#2,11213,98138,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,98138#3,11213,98138,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,98138#4,11213,98138,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+11213#2,98138#5,11213,98138,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+92280#1,4697b#1,92280,4697b,inside,bar+clip,True,keep,non-stud joint (bar+clip): boxes interpenetrate/touch
+15403#1,6141#3,15403,6141,inside,stud,False,add (false negative),stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+15403#2,6141#4,15403,6141,inside,stud,False,add (false negative),stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+15573#2,54200#4,15573,54200,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+6134#1,2412b#4,6134,2412b,stack,stud,True,keep,stud engagement: boxes meet along axis y with 3.1 LDU stud insertion and footprint >= 8
+99781#2,99780#3,99781,99780,stack,stud,True,keep,stud engagement: boxes meet along axis y with 4.0 LDU stud insertion and footprint >= 8
+99781#2,15535#1,99781,15535,inside,stud,True,keep,stud engagement: boxes meet along axis x with 4.0 LDU stud insertion and footprint >= 8
+99780#3,15535#1,99780,15535,inside,stud,True,keep,stud engagement: boxes meet along axis x with 4.0 LDU stud insertion and footprint >= 8
+85861#1,15573#4,85861,15573,inside,stud,True,keep,stud engagement: boxes meet along axis z with 4.0 LDU stud insertion and footprint >= 8
+11213#1,3023b#1,11213,3023b,stack,,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+11213#1,3023b#5,11213,3023b,stack,,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+3001#1,3023b#3,3001,3023b,side,,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+30565#2,33909#1,30565,33909,near,stud,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+2639#1,3023b#2,2639,3023b,inside,,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+2639#1,3023b#4,2639,3023b,stack,,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+2639#1,3021#1,2639,3021,near,stud,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+54383#1,2412b#1,54383,2412b,near,stud,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+43722#1,15573#3,43722,15573,side,stud,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+30565#3,3023b#6,30565,3023b,stack,,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+15403#1,15392#2,15403,15392,inside,,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint
+15403#2,15392#1,15403,15392,inside,,True,keep (geometry-confirmed),kernel link kept: isolated part touches partner in LDraw geometry; subtype matrix gives no joint

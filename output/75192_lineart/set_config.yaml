@@ -6,7 +6,7 @@ instructions: true   # PDF booklet used for the hand checks
 subtype_override: {}
 category_override: {}
 pair_allow: []
-flexible_parts: []
+flexible_parts: ["85532"]   # 1 instance; not in the LDraw library nor in the Rebrickable parts table: no box (to identify)
 manual_add: []
 manual_remove: []
 

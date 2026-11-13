@@ -11,7 +11,8 @@ manual_add: []
 manual_remove: []
 
 audit_notes: |
-  (to be written after the booklet cross-check)
+  her.dat (1 instance in the Studio/LDraw export) is an MLCad rotation helper, not a part (confirmed by Pedro); removed from the set's MPD copy before the analysis.
+  (booklet cross-check still to be written)
 
 plot:
   panel_title: "Millennium Falcon (links checked against geometry and building instructions)"

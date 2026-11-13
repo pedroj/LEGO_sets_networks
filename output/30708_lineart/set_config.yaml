@@ -3,15 +3,22 @@ name: Millennium Falcon Mini-Build
 set_num: "30708-1"
 instructions: true   # PDF booklet used for the hand checks
 
-subtype_override: {}
-category_override: {}
-pair_allow: []
+subtype_override:
+  "3023b": Plate basic
+  "4599b": Brick basic
+category_override:
+  "3023b": Plate
+  "4599b": Brick
+pair_allow:
+  - ["43093", "98100", pin]
+  - ["30162", "85861", stud]
+  - ["4599b", "4740", stud]
 flexible_parts: []
 manual_add: []
 manual_remove: []
 
 audit_notes: |
-  (to be written after the booklet cross-check)
+  Pedro approved 13 Nov 2026. Booklet (2 pages, 18 steps): pin 43093 through Technic brick 73109 into cone 98100 (steps 5-6); binoculars on a round plate on top (step 17). 3023b (missing in Rebrickable) classed as Plate; tap 4599b as Brick basic.
 
 plot:
   panel_title: "Millennium Falcon Mini-Build (links checked against geometry and building instructions)"

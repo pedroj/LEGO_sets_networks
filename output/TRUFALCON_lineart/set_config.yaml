@@ -3,15 +3,21 @@ name: Millennium Falcon
 set_num: "TRUFALCON-1"
 instructions: true   # PDF booklet used for the hand checks
 
-subtype_override: {}
-category_override: {}
-pair_allow: []
+subtype_override:
+  "3023b": Plate basic
+  "4599b": Brick basic
+category_override:
+  "3023b": Plate
+  "4599b": Brick
+pair_allow:
+  - ["30162", "6141", stud]
+  - ["4599b", "4740", stud]
 flexible_parts: []
 manual_add: []
 manual_remove: []
 
 audit_notes: |
-  (to be written after the booklet cross-check)
+  Pedro approved 13 Nov 2026. The PDF for this set is a Rebrickable web page (photo + parts list), not building instructions, so the checks rest on geometry. 3023b (missing in Rebrickable) classed as Plate; tap 4599b as Brick basic; binoculars 30162 allowed on the stud below them.
 
 plot:
   panel_title: "Millennium Falcon (links checked against geometry and building instructions)"

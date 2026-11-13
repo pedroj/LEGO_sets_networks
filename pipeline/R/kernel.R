@@ -106,12 +106,15 @@ expand_model <- function(subfiles, root = NULL, R = diag(3), t = c(0,0,0),
   out
 }
 
-# --- 3. Part metadata from Rebrickable set_parts.csv ------------------------
+# --- 3. Part metadata from the shared Rebrickable parts catalogue ------------------------
 load_part_meta <- function(rebrickable_dir) {
   meta <- new.env(parent = emptyenv())
   if (is.null(rebrickable_dir)) return(meta)
-  f <- file.path(rebrickable_dir, "set_parts.csv")
-  if (!file.exists(f)) { warning("set_parts.csv not found; names/categories unavailable"); return(meta) }
+  # one shared catalogue for every set (env LEGO_PARTS_CATALOG, set by run_set.R: data/extdata/rebrickable-repo/parts_catalog.csv);
+  # falls back to the old per-set <rebrickable_dir>/set_parts.csv
+  f <- Sys.getenv("LEGO_PARTS_CATALOG", "")
+  if (!nzchar(f) || !file.exists(f)) f <- file.path(rebrickable_dir, "set_parts.csv")
+  if (!file.exists(f)) { warning("parts catalogue / set_parts.csv not found; names/categories unavailable"); return(meta) }
   dt <- data.table::fread(f, select = c("part_num", "part_name", "part_category"),
                           showProgress = FALSE)
   dt <- unique(dt, by = "part_num")

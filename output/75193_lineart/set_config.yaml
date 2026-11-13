@@ -3,15 +3,20 @@ name: Millennium Falcon Microfighter
 set_num: "75193-1"
 instructions: true   # PDF booklet used for the hand checks
 
-subtype_override: {}
-category_override: {}
+subtype_override:
+  "3023b": Plate basic
+  "15392": Minifig accessory (tool; weapon)
+category_override:
+  "3023b": Plate
+  "15392": Minifig
 pair_allow: []
 flexible_parts: []
-manual_add: []
+manual_add:
+  - ["85861#1", "4697b#1", clip, "pneumatic T-piece 4697b has its bar held by the open stud of the round plate 85861 (booklet step 39, sub-assembly 3; geometry: same axis, 17 LDU apart)"]
 manual_remove: []
 
 audit_notes: |
-  (to be written after the booklet cross-check)
+  Pedro approved 13 Nov 2026. Booklet step 39: jumper 15573 + round plate 85861 + pneumatic T-piece 4697b form the top turret; the T bar sits in the open stud of 85861 (manual_add). 3023b classed as Plate; trigger 15392 as minifig accessory.
 
 plot:
   panel_title: "Millennium Falcon Microfighter (links checked against geometry and building instructions)"
