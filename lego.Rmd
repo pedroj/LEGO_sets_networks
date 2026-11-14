@@ -79,31 +79,31 @@ dwld <- function(url) {
 }
 #-----------------------------
 themes<- dwld(urlthemes)
-write_csv(themes, "data/rebrickable/themes.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/themes.csv")
 colors <- dwld(urlcolors)
-write_csv(colors, "data/rebrickable/colors.csv")
+write_csv(colors, "data/extdata/rebrickable-repo/colors.csv")
 inventories <- dwld(urlinventories)
-write_csv(inventories, "data/rebrickable/inventories.csv")
+write_csv(inventories, "data/extdata/rebrickable-repo/inventories.csv")
 inventory_parts <- dwld(urlinventory_parts)
-write_csv(inventory_parts, "data/rebrickable/inventory_parts.csv")
+write_csv(inventory_parts, "data/extdata/rebrickable-repo/inventory_parts.csv")
 inventory_sets <- dwld(urlinventory_sets)
-write_csv(themes, "data/rebrickable/inventory_sets.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/inventory_sets.csv")
 part_categories <- dwld(urlpart_categories)
-write_csv(themes, "data/rebrickable/part_categories.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/part_categories.csv")
 parts <- dwld(urlparts)
-write_csv(themes, "data/rebrickable/parts.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/parts.csv")
 sets <- dwld(urlsets)
-write_csv(themes, "data/rebrickable/sets.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/sets.csv")
 themes <- dwld(urlthemes)
-write_csv(themes, "data/rebrickable/themes.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/themes.csv")
 elements <- dwld(urlelements)
-write_csv(themes, "data/rebrickable/elements.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/elements.csv")
 inventory_minifigs <- dwld(urlinventory_minifigs)
-write_csv(themes, "data/rebrickable/inventory_minifigs.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/inventory_minifigs.csv")
 minifigs <- dwld(urlminifigs)
-write_csv(themes, "data/rebrickable/minifigs.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/minifigs.csv")
 part_relationships <- dwld(urlpart_relationships)
-write_csv(themes, "data/rebrickable/part_relationships.csv")
+write_csv(themes, "data/extdata/rebrickable-repo/part_relationships.csv")
 
 
 ```
@@ -123,7 +123,7 @@ Create joined datasets with different informatioon on sets and parts.
 lego_sets <- dplyr::left_join(sets, themes, by=c("theme_id" = "id"))
 lego_sets <- dplyr::rename(lego_sets, "set_name"=name.x, "theme_name"=name.y,
                     "set_img_url"= img_url)
-write_csv(lego_sets, "data/rebrickable/lego_sets.csv")
+write_csv(lego_sets, "data/extdata/rebrickable-repo/lego_sets.csv")
 
 # main<- left_join(dleft06, elements, by=c("part_num","color_id"))
 # names(main)
@@ -166,7 +166,7 @@ lego_parts<- lego_parts %>% dplyr::select(theme_name,
                       parent_id,
                       is_spare,
                       version)
-write_csv(lego_parts, "data/rebrickable/set_parts.csv")
+write_csv(lego_parts, "data/extdata/rebrickable-repo/set_parts.csv")
 
 ```
 
