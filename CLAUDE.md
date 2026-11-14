@@ -40,7 +40,7 @@ Steps:
 - `bboxes`: LDraw bounding boxes → `part_bbox.csv` (env `LDRAW_DIR` overrides the library path).
 - `audit`: starts from **`<set>_adjacency_matrix.csv`** (the curated starting matrix). Geometry + compatibility (`compat_matrix_subtype_codes.csv`) + strict stud rule (2–5.5 LDU insertion; flush contact is not a joint) + hand checks → `_adjacency_matrix_checked.csv`, `_link_audit.csv`, `_link_audit_summary.md`.
 - `promote`: back up the starting matrix to `bckp/` and replace it with `_checked.csv`. Only after Pedro has reviewed the audit.
-- `plot`: network figures from `<set>_adjacency_matrix.csv` → `_network.pdf`, `_network_coords.pdf/.png`, `_nodes/_edges/_coords_*.csv`.
+- `plot`: network figures from `<set>_adjacency_matrix.csv` → `_network.pdf`, `_network_coords.pdf/.png`, `_nodes/_edges/_coords_*.csv`. Links are curved (`ggraph::geom_edge_bend`, alpha 0.4); in the category plot their width = number of instance-level contacts.
 - `xlsx`: `_adjacency_matrix_icons.xlsx`.
 - `widget`: interactive HTML adjacency widget `<set>_adjacency.html` (the artifact; gitignored, same design as the 75192 reference, inline tooltip) built from `<set>_adjacency_matrix.csv` by `pipeline/R/widget.R`. Old widget is copied to `bckp/` first. Names come from `_nodes.csv`, family colours from `_instances.csv`; independent of instance order.
 - `all`: every step in order (instances,bboxes,audit,promote,plot,xlsx,widget).

@@ -6,7 +6,17 @@
 # pairs the rules say cannot join are dark red dashed ("check").
 # Writes <out_prefix>_icons.png (300 dpi), _icons.pdf, _nodes.csv, _edges.csv
 # =============================================================================
-suppressPackageStartupMessages({ library(igraph); library(ggplot2); library(png) })
+suppressPackageStartupMessages({ library(igraph); library(ggplot2); library(ggraph); library(png) })
+
+# ggraph manual layout for curved links (geom_edge_bend): vertices at the given positions, edges ordered so
+# stud links come first (drawn underneath); system is a factor with the full joint palette as levels
+.bend_layout <- function(ed, id, x, y, sys_levels) {
+  ed <- ed[order(ed$system != "stud"), c("from", "to", "system", "weight"), drop = FALSE]
+  ed$system <- factor(ed$system, levels = sys_levels)
+  g <- graph_from_data_frame(ed, directed = FALSE, vertices = data.frame(name = id, stringsAsFactors = FALSE))
+  k <- match(V(g)$name, id); stopifnot(!anyNA(x[k]), !anyNA(y[k]))
+  create_layout(g, layout = "manual", x = x[k], y = y[k])
+}
 
 
 # --- Optional per-set corrections (define before calling the plot functions) -------------------------------
@@ -17,7 +27,9 @@ suppressPackageStartupMessages({ library(igraph); library(ggplot2); library(png)
 apply_part_override <- function(df) {
   if (!exists(".PART_OVERRIDE", inherits = TRUE)) return(df)
   o <- get(".PART_OVERRIDE", inherits = TRUE); k <- match(df$part, o$part)
-  df$category <- ifelse(is.na(k), df$category, o$category[k]); df$subtype <- ifelse(is.na(k), df$subtype, o$subtype[k]); df
+  oc <- o$category[k]; os <- o$subtype[k]       # NA = not overridden (e.g. subtype_override without category_override)
+  df$category <- ifelse(is.na(oc), df$category, oc); df$subtype <- ifelse(is.na(os), df$subtype, os)
+  df$category[is.na(df$category)] <- "Other"; df
 }
 apply_pair_allow <- function(from, to, system) {
   if (!exists(".PAIR_ALLOW", inherits = TRUE) || !length(system)) return(system)
@@ -288,10 +300,8 @@ plot_lego_network <- function(adj, icons_dir, parts_meta = NULL, out_prefix = "l
                ball = "#EECA3B", hinge = "#B279A2", turntable = "#FF9DA6", gear = "#9D755D",
                track = "#7F7F7F", wheel = "#1B9E77", door = "#D95F02", minifig = "#7570B3",
                check = "#8B0000")
-  xy <- as.matrix(nodes[, c("x", "y")]); rownames(xy) <- nodes$part
-  E <- data.frame(x = xy[ed$from, 1], y = xy[ed$from, 2], xend = xy[ed$to, 1], yend = xy[ed$to, 2],
-                  system = factor(ed$system, levels = names(sys_col)), weight = ed$weight)
-  E <- E[order(E$system == "stud", decreasing = TRUE), ]
+  # curved links (ggraph::geom_edge_bend) on the manual layout; stud links first so the other joints sit on top
+  lay <- .bend_layout(ed, nodes$part, nodes$x, nodes$y, names(sys_col))
   ew_max <- max(ed$weight)           # weighted network: edge width grows linearly with number of contacts
   rd <- 0.60
   r  <- rd
@@ -305,16 +315,14 @@ plot_lego_network <- function(adj, icons_dir, parts_meta = NULL, out_prefix = "l
   ext <- max(abs(c(nodes$x, nodes$y, cat_lab$x, cat_lab$y))) + 1.2
   win <- if (is.null(width_in)) min(max(2 * ext * 0.62, 9), 30) else width_in
   pt <- win / (2 * ext) * 25.4
-  p <- ggplot() +
-    geom_segment(data = E, aes(x, y, xend = xend, yend = yend, colour = system,
-                 linewidth = weight, linetype = system == "check"),
-                 alpha = ifelse(E$system == "stud", 0.35, ifelse(E$system == "check", 0.4, 0.85)), lineend = "round") +
-    scale_colour_manual(values = sys_col, drop = TRUE, name = "Joint (inferred)") +
+  p <- ggraph(lay) +
+    geom_edge_bend(aes(edge_colour = system, edge_width = weight), edge_alpha = 0.4, lineend = "round") +
+    scale_edge_colour_manual(values = sys_col, drop = TRUE, name = "Joint (inferred)") +
     scale_fill_manual(values = default_col, name = "Category") +
-    scale_linewidth(range = c(0.25, 2.6), limits = c(0, ew_max), name = "Contacts (edge width)",
-                    breaks = unique(round(seq(1, ew_max, length.out = min(5, ew_max))))) +
-    guides(linewidth = guide_legend(order = 3, override.aes = list(colour = "grey40", linetype = "solid"))) +
-    scale_linetype_manual(values = c(`FALSE` = "solid", `TRUE` = "22"), guide = "none") +
+    scale_edge_width(range = c(0.25, 2.6), limits = c(0, ew_max), name = "Contacts (edge width)",
+                     breaks = unique(round(seq(1, ew_max, length.out = min(5, ew_max))))) +
+    guides(edge_colour = guide_legend(order = 2, override.aes = list(edge_width = 1.2, edge_alpha = 1)),
+           edge_width = guide_legend(order = 3, override.aes = list(edge_colour = "grey40", edge_alpha = 1))) +
     coord_fixed(xlim = c(-ext, ext), ylim = c(-ext, ext), clip = "off") +
     labs(title = NULL, subtitle = NULL,
          caption = paste(strwrap(sprintf("Icons rendered from the LDraw library (line art). %d proximity link(s) between part types that the compatibility rules say cannot join directly are treated as false positives and not drawn.", sum(ed_all$system == "check")), 150), collapse = "\n")) +
@@ -496,10 +504,7 @@ plot_lego_network_coords <- function(adj, coords, icons_dir, parts_meta = NULL, 
   sys_col <- c(stud = "grey60", bar = "#F58518", clip = "#E45756", pin = "#2A9D8F", axle = "#54A24B", ball = "#EECA3B",
                hinge = "#B279A2", turntable = "#FF9DA6", gear = "#9D755D", track = "#7F7F7F", wheel = "#1B9E77",
                door = "#D95F02", minifig = "#7570B3", check = "#8B0000")
-  xy <- as.matrix(nd[, c("x", "y")]); rownames(xy) <- nd$node
-  E <- data.frame(x = xy[ed$from, 1], y = xy[ed$from, 2], xend = xy[ed$to, 1], yend = xy[ed$to, 2],
-                  system = factor(ed$system, levels = names(sys_col)))
-  E <- E[order(E$system == "stud", decreasing = TRUE), ]
+  lay <- .bend_layout(ed, nd$node, nd$x, nd$y, names(sys_col))   # curved links, stud links drawn first
   circ <- function(cx, cy, rad, id, nn = 60) { t <- seq(0, 2 * pi, length.out = nn)
     data.frame(x = rep(cx, each = nn) + rad * cos(t), y = rep(cy, each = nn) + rad * sin(t), id = rep(id, each = nn)) }
   disc <- circ(nd$x, nd$y, rd, nd$node)                      # white backing so edges stop at the icon (no ring)
@@ -512,12 +517,12 @@ plot_lego_network_coords <- function(adj, coords, icons_dir, parts_meta = NULL, 
   win <- pw + 2.6 + 0.9; hgt <- ph + 1.6 + 0.9
   mm_rd <- pw / diff(xl) * rd * 25.4
   tether <- nd[nd$moved, , drop = FALSE]
-  p <- ggplot() +
+  p <- ggraph(lay) +
     geom_segment(data = tether, aes(x = x0, y = y0, xend = x, yend = y), colour = "grey70", linewidth = 0.35) +
     geom_point(data = tether, aes(x0, y0), colour = "grey55", size = 0.9) +
-    geom_segment(data = E, aes(x, y, xend = xend, yend = yend, colour = system), linewidth = 0.9,
-                 alpha = ifelse(E$system == "stud", 0.45, 0.9), lineend = "round") +
-    scale_colour_manual(values = sys_col, drop = TRUE, name = "Joint (inferred)") +
+    geom_edge_bend(aes(edge_colour = system), edge_width = 0.9, edge_alpha = 0.4, lineend = "round") +
+    scale_edge_colour_manual(values = sys_col, drop = TRUE, name = "Joint (inferred)") +
+    guides(edge_colour = guide_legend(override.aes = list(edge_width = 1.2, edge_alpha = 1))) +
     scale_fill_manual(values = default_col, name = "Category") +
     coord_fixed(xlim = xl, ylim = yl, expand = FALSE, clip = "off") +
     labs(x = "x (LDU)", y = "z (LDU, top view)",
