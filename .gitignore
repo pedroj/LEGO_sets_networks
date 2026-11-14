@@ -121,3 +121,6 @@ output/75192_lineart/75192_adjacency_matrix_checked.csv
 output/75192_lineart/75192_adjacency_matrix_kernel.csv
 output/75192_lineart/75192k_adjacency_matrix.csv
 output/75192_lineart/bckp/75192_adjacency_matrix_start_*.csv
+
+# Rebrickable tables (large, re-downloadable; parts_catalog.csv is read by the pipeline). Keep local only.
+data/extdata/rebrickable-repo/
